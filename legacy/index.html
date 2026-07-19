@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFGA — Make Fantasy Great Again</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <div class="nav-brand">
+    <div class="icon">MF</div>
+    <div class="name" id="league-name">MFGA</div>
+  </div>
+  <div class="nav-links">
+    <a href="#standings">Standings</a>
+    <a href="#matchups">Matchups</a>
+    <a href="#tradeblock">Trade block</a>
+    <a href="#playoffs">Playoff picture</a>
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="nav-week">Week <span id="nav-week-num">—</span></div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<!-- SCOREBOARD TICKER -->
+<div class="ticker" id="ticker">
+  <div class="ticker-empty">Loading scores…</div>
+</div>
+
+<!-- STANDINGS -->
+<section class="section" id="standings">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Standings</h2>
+    <div class="line"></div>
+  </div>
+  <div class="standings-grid" id="standings-grid">
+    <!-- populated by league.js -->
+  </div>
+</section>
+
+<!-- THIS WEEK'S MATCHUPS -->
+<section class="section" id="matchups">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2 id="matchups-heading">This week's matchups</h2>
+    <div class="line"></div>
+  </div>
+  <div class="matchups-grid" id="matchups-grid">
+    <!-- populated by league.js -->
+  </div>
+  <div class="bye-row" id="bye-row"></div>
+</section>
+
+<!-- NEXT WEEK'S MATCHUPS -->
+<section class="section" id="next-week">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2 id="next-week-heading">Next week's matchups</h2>
+    <div class="line"></div>
+  </div>
+  <div class="preview-grid" id="next-week-grid">
+    <!-- populated by league.js -->
+  </div>
+</section>
+
+<!-- TRADE BLOCK -->
+<section class="section" id="tradeblock">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Trade block</h2>
+    <div class="line"></div>
+  </div>
+  <div class="trade-scroll">
+    <table class="trade-table">
+      <thead><tr>
+        <th>Player</th><th>Pos</th><th>NFL Team</th><th>Fantasy Team</th><th>Note</th>
+      </tr></thead>
+      <tbody id="trade-block-body">
+        <!-- populated by league.js -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- PLAYOFF PICTURE -->
+<section class="section" id="playoffs">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Playoff picture</h2>
+    <div class="line"></div>
+  </div>
+
+  <div class="section-sub">Clinch scenarios</div>
+  <div class="clinch-list" id="clinch-list">
+    <!-- populated by league.js -->
+  </div>
+
+  <div class="section-sub">Championship odds</div>
+  <div class="chart-wrap">
+    <canvas id="odds-chart"></canvas>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-teams" id="footer-teams">
+    <!-- populated by league.js -->
+  </div>
+  <div class="footer-copy" id="footer-copy">MFGA &bull; 2026 Season</div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/standings.js"></script>
+<script src="js/league.js"></script>
+</body>
+</html>
