@@ -225,4 +225,4 @@ export const SEASON = 2026;
 export const TOTAL_WEEKS = 14;
 export const CURRENT_WEEK = 1;
 export const HOME_HERO = 'MFGA Home hero.png';
-export const HERO_BASE_PATH = '/Images/heros/';
+export const HERO_BASE_PATH = `${import.meta.env.BASE_URL}Images/heros/`;
