@@ -271,11 +271,11 @@ function renderOddsChart(league, teams_by_id) {
       responsive: true,
       maintainAspectRatio: false,
       scales: {
-        x: { beginAtZero: true, max: 100, grid: { color: '#1a1a1a' }, ticks: { color: '#888' } },
-        y: { grid: { color: '#1a1a1a' }, ticks: { color: '#fff', font: { family: 'Barlow Condensed' } } }
+        x: { beginAtZero: true, max: 100, grid: { color: '#E4DDC8' }, ticks: { color: '#6B6358' } },
+        y: { grid: { color: '#E4DDC8' }, ticks: { color: '#1A1A1A', font: { family: 'Barlow Condensed' } } }
       },
       plugins: {
-        legend: { labels: { color: '#888', font: { family: 'Space Grotesk', size: 11 } } }
+        legend: { labels: { color: '#6B6358', font: { family: 'Space Grotesk', size: 11 } } }
       }
     }
   });

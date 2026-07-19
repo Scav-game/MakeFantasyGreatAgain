@@ -4,19 +4,19 @@
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 :root {
-  --bg: #0A0A0A;
-  --surface: #111111;
-  --surface-2: #161616;
-  --border: #1a1a1a;
-  --border-hover: #2a2a2a;
-  --accent: #D4A017;
-  --accent-dim: rgba(212, 160, 23, 0.1);
-  --text: #FFFFFF;
-  --text-2: #888888;
-  --text-3: #444444;
-  --green: #4ADE80;
-  --red: #F87171;
-  --yellow: #FBBF24;
+  --bg: #F7F2E7;
+  --surface: #FFFFFF;
+  --surface-2: #FDF9EF;
+  --border: #E4DDC8;
+  --border-hover: #D2C7A8;
+  --accent: #8A6100;
+  --accent-dim: rgba(138, 97, 0, 0.12);
+  --text: #1A1A1A;
+  --text-2: #6B6358;
+  --text-3: #A79F8E;
+  --green: #16A34A;
+  --red: #DC2626;
+  --yellow: #B45309;
 
   /* Team theme vars — overridden inline / per page on team.html */
   --team-primary: var(--accent);
@@ -39,7 +39,7 @@ img { max-width: 100%; display: block; }
 
 ::-webkit-scrollbar { height: 8px; width: 8px; }
 ::-webkit-scrollbar-track { background: transparent; }
-::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #D2C7A8; border-radius: 4px; }
 
 /* =========================================================
    NAV
@@ -47,7 +47,7 @@ img { max-width: 100%; display: block; }
 .nav {
   display: flex; align-items: center; justify-content: space-between;
   padding: 14px 32px; border-bottom: 1px solid var(--border);
-  position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95);
+  position: sticky; top: 0; z-index: 100; background: rgba(247,242,231,0.92);
   backdrop-filter: blur(12px);
 }
 .nav-brand { display: flex; align-items: center; gap: 10px; }
@@ -93,7 +93,7 @@ img { max-width: 100%; display: block; }
    ========================================================= */
 .ticker {
   display: flex; gap: 0; overflow-x: auto; border-bottom: 1px solid var(--border);
-  scrollbar-width: thin; scrollbar-color: #333 transparent;
+  scrollbar-width: thin; scrollbar-color: #D2C7A8 transparent;
 }
 .ticker-game {
   display: flex; align-items: center; gap: 12px;
@@ -500,8 +500,8 @@ img { max-width: 100%; display: block; }
   display: inline-block; width: 22px; height: 22px; border-radius: 5px; text-align: center; line-height: 22px;
   font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 11px;
 }
-.result-badge.win { background: rgba(74,222,128,0.15); color: var(--green); }
-.result-badge.loss { background: rgba(248,113,113,0.15); color: var(--red); }
+.result-badge.win { background: rgba(22,163,74,0.14); color: var(--green); }
+.result-badge.loss { background: rgba(220,38,38,0.14); color: var(--red); }
 .result-badge.pending { background: var(--surface); color: var(--text-3); }
 .diff-pos { color: var(--green); }
 .diff-neg { color: var(--red); }

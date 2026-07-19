@@ -238,18 +238,18 @@ function renderSeasonStats(team, matchups) {
         labels,
         datasets: [
           { label: 'Points For', data: pf, borderColor: team.secondaryColor, backgroundColor: team.secondaryColor + '33', tension: 0.3, fill: true },
-          { label: 'Points Against', data: pa, borderColor: '#666', backgroundColor: 'transparent', borderDash: [4, 4], tension: 0.3 },
+          { label: 'Points Against', data: pa, borderColor: '#A79F8E', backgroundColor: 'transparent', borderDash: [4, 4], tension: 0.3 },
         ]
       },
       options: {
         responsive: true,
         maintainAspectRatio: false,
         scales: {
-          x: { grid: { color: '#1a1a1a' }, ticks: { color: '#888' } },
-          y: { grid: { color: '#1a1a1a' }, ticks: { color: '#888' } }
+          x: { grid: { color: '#E4DDC8' }, ticks: { color: '#6B6358' } },
+          y: { grid: { color: '#E4DDC8' }, ticks: { color: '#6B6358' } }
         },
         plugins: {
-          legend: { labels: { color: '#888', font: { family: 'Space Grotesk', size: 11 } } }
+          legend: { labels: { color: '#6B6358', font: { family: 'Space Grotesk', size: 11 } } }
         }
       }
     });
