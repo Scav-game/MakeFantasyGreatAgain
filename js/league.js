@@ -3,28 +3,45 @@
    ========================================================= */
 
 (async function init() {
-  const [league, teams, matchups, tradeBlockData] = await Promise.all([
+  const [league, rawTeams, matchups, tradeBlockData] = await Promise.all([
     DataStore.getLeague(),
     DataStore.getTeams(),
     DataStore.getMatchups(),
     DataStore.getTradeBlock(),
   ]);
 
+  // Records (wins/losses/PF/PA/streak) are computed live from game
+  // results in matchups.json — data/teams.json only supplies identity
+  // and theming fields (name, owner, division, colors) now.
+  const { records } = computeClinchElimination(rawTeams, matchups, league);
+  const teams = rawTeams.map(t => enrichTeamWithRecord(t, records[t.id]));
   const teams_by_id = teamMap(teams);
   const currentWeek = matchups.currentWeek;
   const nextWeek = currentWeek + 1;
 
   renderNav(league, currentWeek);
   renderTicker(matchups.weeks[currentWeek] || [], teams_by_id);
-  renderStandings(league, teams);
+  renderStandings(league, teams, records);
   renderMatchups(currentWeek, matchups.weeks[currentWeek] || [], teams, teams_by_id);
   renderNextWeek(nextWeek, matchups.weeks[nextWeek] || [], teams_by_id);
   renderTradeBlock(tradeBlockData, teams_by_id);
-  renderClinchScenarios(league, teams_by_id);
-  renderOddsChart(league, teams_by_id);
+  renderClinchScenarios(rawTeams, matchups, league);
+  renderOddsChart(rawTeams, matchups, league, teams_by_id);
   renderFooter(league, teams);
   wireMobileNav();
 })();
+
+function enrichTeamWithRecord(team, record) {
+  return {
+    ...team,
+    wins: record.wins,
+    losses: record.losses,
+    ties: record.ties,
+    pointsFor: record.pointsFor,
+    pointsAgainst: record.pointsAgainst,
+    streak: record.streak,
+  };
+}
 
 /* ---------- nav ---------- */
 function renderNav(league, currentWeek) {
@@ -73,13 +90,15 @@ function renderTicker(games, teams_by_id) {
 }
 
 /* ---------- standings ---------- */
-function renderStandings(league, teams) {
+function renderStandings(league, teams, records) {
   const grid = document.getElementById('standings-grid');
   const divisions = league.divisions || ['East', 'West'];
-  const playoffSpots = league.playoffSpotsPerDivision || 3;
+  const playoffSpots = league.playoffSpotsPerDivision || 4;
 
   grid.innerHTML = divisions.map(div => {
-    const divTeams = sortStandings(teams.filter(t => t.division === div));
+    const divTeamsUnordered = teams.filter(t => t.division === div);
+    const orderedIds = rankTeams(divTeamsUnordered.map(t => t.id), records);
+    const divTeams = orderedIds.map(id => divTeamsUnordered.find(t => t.id === id));
     const leader = divTeams[0];
     const rows = divTeams.map((t, i) => {
       const streak = fmtStreak(t.streak);
@@ -227,29 +246,34 @@ function renderTradeBlock(tradeBlockData, teams_by_id) {
 }
 
 /* ---------- playoff picture ---------- */
-function renderClinchScenarios(league, teams_by_id) {
-  // TODO: Plug in playoff simulation algorithm.
-  // For now, display placeholder data from league.json (league.clinchScenarios).
+function renderClinchScenarios(rawTeams, matchups, league) {
+  // Computed live — see js/standings.js for the head-to-head/points-for
+  // tiebreaker cascade and the clinch/elimination bound it's built on.
   const list = document.getElementById('clinch-list');
-  const scenarios = league.clinchScenarios || [];
-  if (!scenarios.length) {
-    list.innerHTML = `<div class="empty-state">No teams have clinched. Check back after Week 10.</div>`;
+  const entries = buildClinchScenarios(rawTeams, matchups, league);
+  if (!entries.length) {
+    list.innerHTML = `<div class="empty-state">No teams have clinched or been eliminated yet.</div>`;
     return;
   }
-  list.innerHTML = scenarios.map(s => {
-    const team = teams_by_id[s.team];
+  const teams_by_id = teamMap(rawTeams);
+  list.innerHTML = entries.map(e => {
+    const team = teams_by_id[e.team];
+    const cls = e.type === 'eliminated' ? 'clinch-item eliminated' : 'clinch-item';
     return `
-      <div class="clinch-item">
+      <div class="${cls}">
         ${team ? teamLogoHTML(team) : ''}
-        <span class="scenario"><strong>${escapeHTML(team ? team.name : s.team)}</strong> ${escapeHTML(s.text)}</span>
+        <span class="scenario"><strong>${escapeHTML(team ? team.name : e.team)}</strong> ${escapeHTML(e.text)}</span>
       </div>`;
   }).join('');
 }
 
-function renderOddsChart(league, teams_by_id) {
-  // TODO: Plug in championship odds simulation algorithm.
-  // For now, seeded with placeholder percentages from league.json (league.champOdds).
-  const odds = [...(league.champOdds || [])].sort((a, b) => b.championshipPct - a.championshipPct);
+function renderOddsChart(rawTeams, matchups, league, teams_by_id) {
+  // Live Monte Carlo simulation — see js/standings.js (runSeasonSimulation)
+  // for the scoring model and bracket logic.
+  const simResults = runSeasonSimulation(rawTeams, matchups, league);
+  const odds = rawTeams
+    .map(t => ({ team: t.id, ...simResults[t.id] }))
+    .sort((a, b) => b.championshipPct - a.championshipPct);
   const ctx = document.getElementById('odds-chart');
   if (!ctx || !odds.length) return;
 

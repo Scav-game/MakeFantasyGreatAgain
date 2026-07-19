@@ -3,97 +3,10 @@
   "season": 2026,
   "currentWeek": 1,
   "totalWeeks": 14,
-  "playoffTeams": 6,
-  "playoffSpotsPerDivision": 3,
+  "playoffTeams": 8,
+  "playoffSpotsPerDivision": 4,
   "divisions": [
     "East",
     "West"
-  ],
-  "clinchScenarios": [],
-  "champOdds": [
-    {
-      "team": "BOMB",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "SRZ",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "Butt",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "MOYD",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "TWM",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "Doob",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "ENG",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "TVH",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "GING",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "CPU1",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "FBC",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "ROSE",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "VPDJ",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    },
-    {
-      "team": "MARB",
-      "playoffPct": 43,
-      "divisionPct": 14,
-      "championshipPct": 7
-    }
   ]
 }

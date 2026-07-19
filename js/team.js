@@ -7,7 +7,7 @@ let PENDING_TRADE_PLAYER = null;
 
 (async function init() {
   const teamId = getQueryParam('team');
-  const [league, teams, rosters, matchups, tradeBlockData] = await Promise.all([
+  const [league, rawTeams, rosters, matchups, tradeBlockData] = await Promise.all([
     DataStore.getLeague(),
     DataStore.getTeams(),
     DataStore.getRosters(),
@@ -15,6 +15,18 @@ let PENDING_TRADE_PLAYER = null;
     DataStore.getTradeBlock(),
   ]);
 
+  // Records (wins/losses/PF/PA/streak) are computed live from game
+  // results in matchups.json, same as the league home page.
+  const { records, status: clinchStatus } = computeClinchElimination(rawTeams, matchups, league);
+  const teams = rawTeams.map(t => ({
+    ...t,
+    wins: records[t.id].wins,
+    losses: records[t.id].losses,
+    ties: records[t.id].ties,
+    pointsFor: records[t.id].pointsFor,
+    pointsAgainst: records[t.id].pointsAgainst,
+    streak: records[t.id].streak,
+  }));
   const teams_by_id = teamMap(teams);
   const team = teams_by_id[teamId];
 
@@ -31,7 +43,7 @@ let PENDING_TRADE_PLAYER = null;
   CURRENT_TEAM = team;
   applyTeamTheme(team);
   renderNav(team);
-  renderHero(team, teams, league);
+  renderHero(team, teams, records, clinchStatus[team.id]);
   renderRoster(team, rosters[team.id] || {}, tradeBlockData);
   renderSeasonStats(team, matchups);
   renderSchedule(team, teams_by_id, matchups);
@@ -65,22 +77,29 @@ function wireMobileNav() {
 }
 
 /* ---------- hero ---------- */
-function renderHero(team, teams, league) {
+function renderHero(team, teams, records, clinchStatus) {
   document.getElementById('hero-logo').innerHTML = teamLogoInner(team);
 
   document.getElementById('hero-division-tag').textContent = `${team.division} Division`;
   document.getElementById('hero-name').textContent = team.name;
 
-  const divTeams = sortStandings(teams.filter(t => t.division === team.division));
-  const overallTeams = sortStandings(teams);
-  const divRank = divTeams.findIndex(t => t.id === team.id) + 1;
-  const overallRank = overallTeams.findIndex(t => t.id === team.id) + 1;
+  const divTeamIds = teams.filter(t => t.division === team.division).map(t => t.id);
+  const overallIds = teams.map(t => t.id);
+  const divRank = rankTeams(divTeamIds, records).indexOf(team.id) + 1;
+  const overallRank = rankTeams(overallIds, records).indexOf(team.id) + 1;
+
+  const statusBadge = clinchStatus === 'clinched'
+    ? `<span style="color:var(--green)">Clinched a playoff spot</span>`
+    : clinchStatus === 'eliminated'
+      ? `<span style="color:var(--red)">Eliminated from contention</span>`
+      : '';
 
   document.getElementById('hero-meta').innerHTML = `
     <span>Owner: <strong>${escapeHTML(team.owner)}</strong></span>
     <span>Division: <strong>${escapeHTML(team.division)}</strong></span>
     <span>Div Rank: <strong>#${divRank}</strong></span>
     <span>League Rank: <strong>#${overallRank} of ${teams.length}</strong></span>
+    ${statusBadge}
   `;
 
   document.getElementById('hero-stats').innerHTML = `

@@ -301,6 +301,7 @@ img { max-width: 100%; display: block; }
 .clinch-item .team-logo { width: 24px; height: 24px; font-size: 7px; }
 .clinch-item .scenario { color: var(--text-2); }
 .clinch-item .scenario strong { color: var(--text); font-weight: 600; }
+.clinch-item.eliminated { border-left-color: var(--red); opacity: 0.75; }
 
 .odds-container { margin-top: 24px; overflow-x: auto; }
 .odds-row {

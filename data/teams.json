@@ -2,7 +2,7 @@
   {
     "id": "BOMB",
     "name": "Pakistan Bombers",
-    "owner": "Lucas",
+    "owner": "Lucas Fawcett",
     "division": "East",
     "primaryColor": "#01411C",
     "secondaryColor": "#E8C547",
@@ -17,7 +17,7 @@
   {
     "id": "SRZ",
     "name": "Pluto Shraazinatorz",
-    "owner": "Shrey",
+    "owner": "Shreyus Saxena",
     "division": "West",
     "primaryColor": "#4B0082",
     "secondaryColor": "#9B59B6",
@@ -32,7 +32,7 @@
   {
     "id": "Butt",
     "name": "Nabers In Paris",
-    "owner": "Carter",
+    "owner": "Stephen Cerquone",
     "division": "East",
     "primaryColor": "#C2185B",
     "secondaryColor": "#F06292",
@@ -47,7 +47,7 @@
   {
     "id": "MOYD",
     "name": "Mount Olympus Yogurt Dressing",
-    "owner": "Steve",
+    "owner": "Liam Hughes",
     "division": "East",
     "primaryColor": "#FF8C00",
     "secondaryColor": "#FFD54F",
@@ -62,7 +62,7 @@
   {
     "id": "TWM",
     "name": "The Watermark",
-    "owner": "Liam",
+    "owner": "Preston Schneider",
     "division": "West",
     "primaryColor": "#1565C0",
     "secondaryColor": "#64B5F6",
@@ -77,7 +77,7 @@
   {
     "id": "Doob",
     "name": "Doob's Agency",
-    "owner": "Andrew",
+    "owner": "Matt Gingrich",
     "division": "West",
     "primaryColor": "#2E7D32",
     "secondaryColor": "#81C784",
@@ -92,7 +92,7 @@
   {
     "id": "ENG",
     "name": "Englewood Ninjas",
-    "owner": "Harrison",
+    "owner": "Drew Flynn",
     "division": "West",
     "primaryColor": "#212121",
     "secondaryColor": "#E53935",
@@ -107,7 +107,7 @@
   {
     "id": "TVH",
     "name": "The Vile Horrendous",
-    "owner": "Drew",
+    "owner": "Evan Brockway",
     "division": "East",
     "primaryColor": "#8B0000",
     "secondaryColor": "#E57373",
@@ -122,7 +122,7 @@
   {
     "id": "GING",
     "name": "I Love Gingers",
-    "owner": "Preston",
+    "owner": "Carter Cole",
     "division": "West",
     "primaryColor": "#D32F2F",
     "secondaryColor": "#FF8A65",
@@ -137,7 +137,7 @@
   {
     "id": "CPU1",
     "name": "Amon Ra Dawgin",
-    "owner": "Evan",
+    "owner": "Andrew Grossman",
     "division": "West",
     "primaryColor": "#F9A825",
     "secondaryColor": "#0B162A",
@@ -152,7 +152,7 @@
   {
     "id": "FBC",
     "name": "Fort Bragg Confederates",
-    "owner": "Miles",
+    "owner": "Harrison Bragg",
     "division": "East",
     "primaryColor": "#5D4037",
     "secondaryColor": "#A1887F",
@@ -167,7 +167,7 @@
   {
     "id": "ROSE",
     "name": "Chicago Zestiest Man",
-    "owner": "Zach",
+    "owner": "Zach Ehrig",
     "division": "East",
     "primaryColor": "#E91E63",
     "secondaryColor": "#F48FB1",
@@ -182,7 +182,7 @@
   {
     "id": "VPDJ",
     "name": "VancouverPantiesDeJarome",
-    "owner": "Josh",
+    "owner": "Josh P",
     "division": "West",
     "primaryColor": "#00695C",
     "secondaryColor": "#4DB6AC",
@@ -197,7 +197,7 @@
   {
     "id": "MARB",
     "name": "Beer",
-    "owner": "Matt",
+    "owner": "Marty Hughes",
     "division": "East",
     "primaryColor": "#795548",
     "secondaryColor": "#FFC107",

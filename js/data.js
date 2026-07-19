@@ -31,7 +31,7 @@ function fmtScore(score) {
 }
 
 function fmtRecord(team) {
-  return `${team.wins}-${team.losses}`;
+  return team.ties ? `${team.wins}-${team.losses}-${team.ties}` : `${team.wins}-${team.losses}`;
 }
 
 function fmtStreak(streak) {
@@ -55,14 +55,6 @@ function teamMap(teams) {
   const map = {};
   teams.forEach(t => { map[t.id] = t; });
   return map;
-}
-
-/* Sort teams by wins desc, then pointsFor desc (tiebreaker) */
-function sortStandings(teams) {
-  return [...teams].sort((a, b) => {
-    if (b.wins !== a.wins) return b.wins - a.wins;
-    return b.pointsFor - a.pointsFor;
-  });
 }
 
 /* Games back calculation relative to division leader */
