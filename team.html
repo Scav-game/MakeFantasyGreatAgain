@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Team — MFGA</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a class="nav-back" href="index.html">← Back to league</a>
+  <div class="nav-brand" id="nav-team-brand">
+    <!-- populated by team.js -->
+  </div>
+  <div style="display:flex;align-items:center;gap:16px;">
+    <div class="nav-record" id="nav-team-record">—</div>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu">☰</button>
+  </div>
+</nav>
+
+<!-- TEAM HERO -->
+<div class="team-hero" id="team-hero">
+  <div class="team-hero-inner">
+    <div class="team-hero-logo" id="hero-logo"></div>
+    <div class="team-hero-info">
+      <span class="division-tag" id="hero-division-tag">—</span>
+      <h1 id="hero-name">Loading…</h1>
+      <div class="team-hero-meta" id="hero-meta"></div>
+      <div class="team-hero-stats" id="hero-stats"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ROSTER -->
+<section class="section" id="roster">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Roster</h2>
+    <div class="line"></div>
+  </div>
+  <div id="roster-groups">
+    <!-- populated by team.js -->
+  </div>
+</section>
+
+<!-- SEASON STATS -->
+<section class="section" id="season-stats">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Season stats</h2>
+    <div class="line"></div>
+  </div>
+  <div class="chart-wrap" style="height:320px;">
+    <canvas id="scoring-chart"></canvas>
+  </div>
+  <div class="stats-summary" id="stats-summary"></div>
+</section>
+
+<!-- SCHEDULE -->
+<section class="section" id="schedule">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Schedule &amp; results</h2>
+    <div class="line"></div>
+  </div>
+  <div class="roster-scroll">
+    <table class="schedule-table">
+      <thead><tr>
+        <th style="width:60px">Wk</th><th>Opponent</th><th>Result</th><th class="num">Score</th><th class="num">Diff</th>
+      </tr></thead>
+      <tbody id="schedule-body">
+        <!-- populated by team.js -->
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- DRAFT PICKS -->
+<section class="section" id="draft-picks">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Draft picks</h2>
+    <div class="line"></div>
+  </div>
+  <div id="draft-picks-body">
+    <!-- populated by team.js -->
+  </div>
+</section>
+
+<!-- TEAM FOOTER -->
+<footer class="footer team-footer">
+  <a class="footer-team-link" href="index.html">← Back to league</a>
+  <div class="footer-copy" id="footer-copy" style="margin-top:16px;">MFGA &bull; 2026 Season</div>
+</footer>
+
+<!-- TRADE MODAL -->
+<div class="modal-overlay hidden" id="trade-modal">
+  <div class="modal-box">
+    <h3 id="trade-modal-player">Add to trade block</h3>
+    <p>Optional note for other owners (e.g. "Looking for RB help")</p>
+    <input type="text" id="trade-modal-note" placeholder="Add a note…" maxlength="120">
+    <div class="modal-actions">
+      <button class="modal-btn" id="trade-modal-cancel">Cancel</button>
+      <button class="modal-btn primary" id="trade-modal-confirm">Add to block</button>
+    </div>
+  </div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/team.js"></script>
+</body>
+</html>

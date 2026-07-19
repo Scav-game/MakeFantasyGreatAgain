@@ -1,0 +1,544 @@
+/* =========================================================
+   MFGA — Global Design System
+   ========================================================= */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+:root {
+  --bg: #0A0A0A;
+  --surface: #111111;
+  --surface-2: #161616;
+  --border: #1a1a1a;
+  --border-hover: #2a2a2a;
+  --accent: #D4A017;
+  --accent-dim: rgba(212, 160, 23, 0.1);
+  --text: #FFFFFF;
+  --text-2: #888888;
+  --text-3: #444444;
+  --green: #4ADE80;
+  --red: #F87171;
+  --yellow: #FBBF24;
+
+  /* Team theme vars — overridden inline / per page on team.html */
+  --team-primary: var(--accent);
+  --team-secondary: var(--accent);
+  --team-text: #FFFFFF;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  min-height: 100vh;
+}
+
+a { color: inherit; text-decoration: none; }
+button { font-family: inherit; cursor: pointer; }
+img { max-width: 100%; display: block; }
+
+::-webkit-scrollbar { height: 8px; width: 8px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #2a2a2a; border-radius: 4px; }
+
+/* =========================================================
+   NAV
+   ========================================================= */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 32px; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; }
+.nav-brand .icon {
+  width: 30px; height: 30px; border: 2px solid var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 11px; color: var(--accent);
+  flex-shrink: 0;
+}
+.nav-brand .name {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--accent);
+}
+.nav-back {
+  font-size: 11px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-2); transition: color 0.2s;
+  display: flex; align-items: center; gap: 6px;
+}
+.nav-back:hover { color: var(--text); }
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+  font-size: 11px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-3); transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-week {
+  font-family: 'Space Grotesk', monospace; font-size: 11px; font-weight: 500;
+  letter-spacing: 2px; color: var(--text-3);
+}
+.nav-week span { color: var(--accent); }
+.nav-record {
+  font-family: 'Space Grotesk', monospace; font-size: 13px; font-weight: 700;
+  letter-spacing: 1px; color: var(--team-primary);
+}
+
+.nav-toggle {
+  display: none; background: none; border: 1px solid var(--border); color: var(--text);
+  width: 34px; height: 34px; border-radius: 6px; font-size: 16px; align-items: center; justify-content: center;
+}
+
+/* =========================================================
+   SCOREBOARD TICKER
+   ========================================================= */
+.ticker {
+  display: flex; gap: 0; overflow-x: auto; border-bottom: 1px solid var(--border);
+  scrollbar-width: thin; scrollbar-color: #333 transparent;
+}
+.ticker-game {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 24px; border-right: 1px solid var(--border);
+  min-width: 240px; cursor: pointer; transition: background 0.2s; flex-shrink: 0;
+}
+.ticker-game:hover { background: var(--surface); }
+.ticker-team { display: flex; align-items: center; gap: 8px; min-width: 80px; }
+.ticker-logo {
+  width: 22px; height: 22px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 7px; color: #fff;
+  flex-shrink: 0; overflow: hidden;
+}
+.ticker-logo img { width: 100%; height: 100%; object-fit: cover; }
+.ticker-abbr { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 13px; }
+.ticker-score {
+  font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 14px;
+  min-width: 40px; text-align: right;
+}
+.ticker-vs { color: var(--text-3); font-size: 10px; }
+.ticker-status {
+  font-family: 'Space Grotesk', monospace; font-size: 9px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase; margin-left: auto;
+}
+.ticker-status.live { color: var(--green); }
+.ticker-status.final { color: var(--text-3); }
+.ticker-status.upcoming { color: var(--text-3); }
+.ticker-empty {
+  padding: 14px 24px; color: var(--text-3); font-size: 12px;
+  font-family: 'Space Grotesk', monospace; letter-spacing: 1px;
+}
+
+/* =========================================================
+   SECTION
+   ========================================================= */
+.section { padding: 48px 32px; border-bottom: 1px solid var(--border); }
+.section-header {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+}
+.section-header .line { flex: 1; height: 1px; background: var(--border); }
+.section-header h2 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 13px; font-weight: 600;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--accent);
+  white-space: nowrap;
+}
+.section-sub {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--accent); margin-bottom: 16px;
+}
+.empty-state {
+  color: var(--text-3); font-size: 13px; font-family: 'Space Grotesk', monospace;
+  padding: 24px; text-align: center; border: 1px dashed var(--border); border-radius: 8px;
+}
+
+/* =========================================================
+   STANDINGS
+   ========================================================= */
+.standings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.standings-scroll { overflow-x: auto; }
+.division-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 18px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--text);
+  padding-bottom: 12px; border-bottom: 2px solid var(--accent);
+  margin-bottom: 0;
+}
+.standings-table { width: 100%; border-collapse: collapse; min-width: 480px; }
+.standings-table th {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  text-align: left; padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.standings-table th.num { text-align: right; }
+.standings-table td {
+  padding: 12px 8px; border-bottom: 1px solid var(--border);
+  font-size: 13px; vertical-align: middle;
+}
+.standings-table td.num {
+  text-align: right; font-family: 'Space Grotesk', monospace; font-weight: 500;
+}
+.standings-table tr { transition: background 0.15s; }
+.standings-table tbody tr { cursor: pointer; }
+.standings-table tbody tr:hover { background: var(--surface); }
+.standings-table tr.playoff { border-left: 2px solid var(--accent); }
+.team-cell { display: flex; align-items: center; gap: 10px; }
+.team-logo {
+  width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 8px; color: #fff;
+  flex-shrink: 0; overflow: hidden;
+}
+.team-logo img { width: 100%; height: 100%; object-fit: cover; }
+.team-name-col { display: flex; flex-direction: column; }
+.team-name-col .name {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.team-name-col .owner { font-size: 10px; color: var(--text-3); }
+.record { font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 16px; }
+.streak-w { color: var(--green); }
+.streak-l { color: var(--red); }
+.streak-none { color: var(--text-3); }
+
+/* =========================================================
+   MATCHUPS
+   ========================================================= */
+.matchups-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.matchup-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 20px; display: flex; align-items: center; justify-content: space-between;
+  transition: border-color 0.2s; cursor: pointer; min-width: 0;
+}
+.matchup-card:hover { border-color: var(--border-hover); }
+.matchup-team { display: flex; align-items: center; gap: 12px; flex: 1; min-width: 0; }
+.matchup-team.away { flex-direction: row-reverse; text-align: right; }
+.matchup-logo {
+  width: 40px; height: 40px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 11px; color: #fff;
+  flex-shrink: 0; overflow: hidden;
+}
+.matchup-logo img { width: 100%; height: 100%; object-fit: cover; }
+.matchup-info { min-width: 0; }
+.matchup-info .name {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 15px;
+  letter-spacing: 0.5px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+.matchup-info .record-small { font-size: 11px; color: var(--text-3); }
+.matchup-info .top-scorer { font-size: 10px; color: var(--text-2); margin-top: 2px; font-family: 'Space Grotesk', monospace; }
+.matchup-score {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 28px;
+  min-width: 48px; text-align: center;
+}
+.matchup-score.winner { color: var(--accent); }
+.matchup-center {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 0 16px; flex-shrink: 0;
+}
+.matchup-center .vs {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; color: var(--text-3);
+  letter-spacing: 2px;
+}
+.matchup-center .status {
+  font-family: 'Space Grotesk', monospace; font-size: 9px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase; white-space: nowrap;
+}
+.matchup-center .status.live { color: var(--green); }
+.matchup-center .status.final { color: var(--text-3); }
+.matchup-center .status.upcoming { color: var(--text-3); }
+.bye-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 14px 20px; display: flex; align-items: center; gap: 10px;
+  opacity: 0.5;
+}
+.bye-card .team-logo { width: 24px; height: 24px; font-size: 7px; }
+.bye-label {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-3);
+}
+.bye-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+
+.preview-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.preview-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 16px 20px; display: flex; align-items: center; justify-content: center; gap: 16px;
+  min-width: 0;
+}
+.preview-team { display: flex; align-items: center; gap: 10px; flex: 1; }
+.preview-team.away { flex-direction: row-reverse; text-align: right; }
+.preview-team .name { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; }
+.preview-vs { font-family: 'Space Grotesk', monospace; font-size: 10px; color: var(--text-3); letter-spacing: 2px; flex-shrink: 0; }
+
+/* =========================================================
+   TRADE BLOCK
+   ========================================================= */
+.trade-table { width: 100%; border-collapse: collapse; min-width: 600px; }
+.trade-table th {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border);
+}
+.trade-table td {
+  padding: 14px 12px; border-bottom: 1px solid var(--border); font-size: 13px;
+}
+.trade-table tr:hover { background: var(--surface); }
+.trade-player { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 15px; }
+.trade-pos {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 600;
+  letter-spacing: 1px; background: var(--accent-dim); color: var(--accent);
+}
+.trade-note { font-style: italic; color: var(--text-2); font-size: 12px; }
+.trade-scroll { overflow-x: auto; }
+
+/* =========================================================
+   PLAYOFF PICTURE
+   ========================================================= */
+.clinch-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; }
+.clinch-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; background: var(--surface); border-radius: 6px;
+  border-left: 3px solid var(--accent); font-size: 13px;
+}
+.clinch-item .team-logo { width: 24px; height: 24px; font-size: 7px; }
+.clinch-item .scenario { color: var(--text-2); }
+.clinch-item .scenario strong { color: var(--text); font-weight: 600; }
+
+.odds-container { margin-top: 24px; overflow-x: auto; }
+.odds-row {
+  display: grid; grid-template-columns: 160px 1fr 1fr 1fr;
+  gap: 12px; align-items: center; padding: 10px 0;
+  border-bottom: 1px solid var(--border); min-width: 560px;
+}
+.odds-row.header {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  border-bottom: 1px solid var(--border-hover);
+}
+.odds-team { display: flex; align-items: center; gap: 8px; }
+.odds-team .team-logo { width: 22px; height: 22px; font-size: 7px; }
+.odds-team .name { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 13px; }
+.odds-bar-cell { display: flex; align-items: center; gap: 8px; }
+.odds-bar {
+  height: 18px; border-radius: 3px; min-width: 2px;
+  transition: width 0.6s ease;
+}
+.odds-pct {
+  font-family: 'Space Grotesk', monospace; font-size: 12px; font-weight: 500;
+  color: var(--text-2); min-width: 36px;
+}
+.chart-wrap { position: relative; height: 420px; margin-top: 24px; }
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.footer {
+  padding: 32px; text-align: center; border-top: 1px solid var(--border);
+}
+.footer-teams {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  margin-bottom: 20px;
+}
+.footer-team-link {
+  padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px;
+  font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 1px; color: var(--text-3); transition: all 0.2s;
+}
+.footer-team-link:hover { border-color: var(--accent); color: var(--accent); }
+.footer-copy {
+  font-family: 'Space Grotesk', monospace; font-size: 11px; color: var(--text-3);
+  letter-spacing: 2px;
+}
+.footer.team-footer { border-top: 3px solid var(--team-primary); }
+
+/* =========================================================
+   TEAM PAGE — HERO
+   ========================================================= */
+.team-hero {
+  position: relative; padding: 56px 32px; overflow: hidden;
+  border-bottom: 1px solid var(--border);
+  background:
+    linear-gradient(135deg, color-mix(in srgb, var(--team-primary) 22%, transparent) 0%, transparent 60%),
+    var(--bg);
+}
+.team-hero-inner {
+  display: flex; align-items: center; gap: 32px; flex-wrap: wrap; position: relative; z-index: 1;
+}
+.team-hero-logo {
+  width: 120px; height: 120px; border-radius: 16px; flex-shrink: 0;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 28px; color: #fff;
+  border: 2px solid var(--team-secondary); overflow: hidden;
+}
+.team-hero-logo img { width: 100%; height: 100%; object-fit: cover; }
+.team-hero-info { flex: 1; min-width: 240px; }
+.team-hero-info .division-tag {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 3px;
+  text-transform: uppercase; color: var(--team-secondary); margin-bottom: 8px; display: block;
+}
+.team-hero-info h1 {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: clamp(40px, 7vw, 72px);
+  line-height: 1; letter-spacing: 1px; margin-bottom: 12px;
+}
+.team-hero-meta {
+  display: flex; gap: 24px; flex-wrap: wrap; font-family: 'Space Grotesk', monospace;
+  font-size: 12px; color: var(--text-2);
+}
+.team-hero-meta strong { color: var(--text); font-weight: 600; }
+.team-hero-stats {
+  display: flex; gap: 32px; flex-wrap: wrap; margin-top: 24px;
+}
+.team-hero-stat .label {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-3); margin-bottom: 4px;
+}
+.team-hero-stat .value {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 40px; color: var(--text);
+}
+.team-hero-stat .value.accent { color: var(--team-secondary); }
+
+/* =========================================================
+   TEAM PAGE — ROSTER
+   ========================================================= */
+.roster-group { margin-bottom: 28px; }
+.roster-group-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--team-secondary);
+  padding-bottom: 8px; border-bottom: 2px solid var(--border); margin-bottom: 4px;
+}
+.roster-scroll { overflow-x: auto; }
+.roster-table { width: 100%; border-collapse: collapse; min-width: 680px; }
+.roster-table th {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--border);
+}
+.roster-table th.num, .roster-table td.num { text-align: right; }
+.roster-table td {
+  padding: 10px; border-bottom: 1px solid var(--border); font-size: 13px;
+}
+.roster-table tr:hover { background: var(--surface); }
+.roster-player-name { font-family: 'Barlow Condensed', sans-serif; font-weight: 600; font-size: 14px; }
+.roster-pos-tag {
+  display: inline-block; padding: 2px 7px; border-radius: 4px;
+  font-family: 'Space Grotesk', monospace; font-size: 9px; font-weight: 700;
+  letter-spacing: 1px; background: color-mix(in srgb, var(--team-primary) 30%, transparent);
+  color: var(--team-secondary);
+}
+.trade-btn {
+  background: none; border: 1px solid var(--border); color: var(--text-2);
+  padding: 5px 10px; border-radius: 5px; font-size: 11px; font-family: 'Space Grotesk', monospace;
+  letter-spacing: 1px; transition: all 0.15s;
+}
+.trade-btn:hover { border-color: var(--team-secondary); color: var(--team-secondary); }
+.trade-btn.on-block {
+  background: var(--accent-dim); border-color: var(--accent); color: var(--accent); cursor: default;
+}
+.roster-empty-row td { color: var(--text-3); font-style: italic; font-size: 12px; }
+
+/* Trade modal */
+.modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 1000;
+  display: flex; align-items: center; justify-content: center; padding: 20px;
+}
+.modal-overlay.hidden { display: none; }
+.modal-box {
+  background: var(--surface-2); border: 1px solid var(--border-hover); border-radius: 10px;
+  padding: 28px; max-width: 380px; width: 100%;
+}
+.modal-box h3 {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 20px; letter-spacing: 1px; margin-bottom: 4px;
+}
+.modal-box p { color: var(--text-2); font-size: 12px; margin-bottom: 16px; }
+.modal-box input {
+  width: 100%; background: var(--bg); border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px 12px; color: var(--text); font-family: 'Inter', sans-serif; font-size: 13px; margin-bottom: 16px;
+}
+.modal-box input:focus { outline: none; border-color: var(--team-secondary); }
+.modal-actions { display: flex; gap: 10px; justify-content: flex-end; }
+.modal-btn {
+  padding: 9px 18px; border-radius: 6px; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.5px; border: 1px solid var(--border);
+  background: none; color: var(--text-2);
+}
+.modal-btn.primary { background: var(--team-primary); border-color: var(--team-primary); color: var(--team-text); }
+.toast {
+  position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%) translateY(20px);
+  background: var(--surface-2); border: 1px solid var(--accent); color: var(--text);
+  padding: 12px 22px; border-radius: 8px; font-size: 13px; z-index: 1001;
+  opacity: 0; transition: all 0.25s; pointer-events: none;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+/* =========================================================
+   TEAM PAGE — SEASON STATS
+   ========================================================= */
+.stats-summary { display: flex; gap: 40px; margin-top: 20px; flex-wrap: wrap; }
+.stats-summary .stat .label {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-3); margin-bottom: 4px;
+}
+.stats-summary .stat .value {
+  font-family: 'Barlow Condensed', sans-serif; font-weight: 700; font-size: 32px;
+}
+.stats-summary .stat .value.pf { color: var(--team-secondary); }
+.stats-summary .stat .value.pa { color: var(--text-2); }
+
+/* =========================================================
+   TEAM PAGE — SCHEDULE
+   ========================================================= */
+.schedule-table { width: 100%; border-collapse: collapse; min-width: 520px; }
+.schedule-table th {
+  font-family: 'Space Grotesk', monospace; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border);
+}
+.schedule-table td {
+  padding: 12px; border-bottom: 1px solid var(--border); font-size: 13px;
+}
+.schedule-table tr.current-week { background: color-mix(in srgb, var(--team-primary) 12%, transparent); }
+.schedule-table tr.bye-row-item td { color: var(--text-3); font-style: italic; }
+.result-badge {
+  display: inline-block; width: 22px; height: 22px; border-radius: 5px; text-align: center; line-height: 22px;
+  font-family: 'Space Grotesk', monospace; font-weight: 700; font-size: 11px;
+}
+.result-badge.win { background: rgba(74,222,128,0.15); color: var(--green); }
+.result-badge.loss { background: rgba(248,113,113,0.15); color: var(--red); }
+.result-badge.pending { background: var(--surface); color: var(--text-3); }
+.diff-pos { color: var(--green); }
+.diff-neg { color: var(--red); }
+
+/* =========================================================
+   TEAM PAGE — DRAFT PICKS
+   ========================================================= */
+.draft-year-block { margin-bottom: 24px; }
+.draft-year-label {
+  font-family: 'Barlow Condensed', sans-serif; font-size: 16px; font-weight: 700;
+  letter-spacing: 2px; color: var(--team-secondary); margin-bottom: 10px;
+}
+.draft-picks-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 8px; }
+.draft-pick-chip {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 6px;
+  padding: 10px 12px; font-family: 'Space Grotesk', monospace; font-size: 12px; color: var(--text-2);
+}
+.draft-pick-chip strong { color: var(--text); }
+
+/* =========================================================
+   RESPONSIVE
+   ========================================================= */
+@media (max-width: 860px) {
+  .standings-grid { grid-template-columns: 1fr; }
+  .matchups-grid { grid-template-columns: 1fr; }
+  .preview-grid { grid-template-columns: 1fr; }
+  .team-hero-inner { flex-direction: column; align-items: flex-start; text-align: left; }
+}
+
+@media (max-width: 720px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: flex; }
+  .nav.open .nav-links {
+    display: flex; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--bg); border-bottom: 1px solid var(--border); padding: 16px 32px; gap: 16px;
+  }
+  .section { padding: 36px 18px; }
+  .nav { padding: 12px 18px; }
+  .standings-table, .roster-table, .trade-table, .schedule-table { min-width: 460px; }
+}

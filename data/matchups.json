@@ -1,0 +1,107 @@
+{
+  "currentWeek": 1,
+  "weeks": {
+    "1": [
+      {
+        "home": "BOMB",
+        "away": "TVH",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "SRZ",
+        "away": "Butt",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "MOYD",
+        "away": "TWM",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "Doob",
+        "away": "ENG",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "GING",
+        "away": "CPU1",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "FBC",
+        "away": "ROSE",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "VPDJ",
+        "away": "MARB",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      }
+    ],
+    "2": [
+      {
+        "home": "BOMB",
+        "away": "SRZ",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "Butt",
+        "away": "MOYD",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "TWM",
+        "away": "Doob",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "ENG",
+        "away": "GING",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "CPU1",
+        "away": "FBC",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "ROSE",
+        "away": "VPDJ",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      },
+      {
+        "home": "MARB",
+        "away": "TVH",
+        "homeScore": null,
+        "awayScore": null,
+        "status": "upcoming"
+      }
+    ]
+  }
+}

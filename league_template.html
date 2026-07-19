@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MFGA — Make Fantasy Great Again</title>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700&family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --bg: #0A0A0A; --surface: #111; --surface-2: #161616;
+  --border: #1a1a1a; --border-hover: #2a2a2a;
+  --accent: #D4A017; --accent-dim: rgba(212,160,23,0.1);
+  --text: #fff; --text-2: #888; --text-3: #444;
+  --green: #D4A017; --red: #F87171; --yellow: #FBBF24;
+}
+body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; }
+a { color: inherit; text-decoration: none; }
+
+/* NAV */
+.nav {
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 14px 32px; border-bottom: 1px solid var(--border);
+  position: sticky; top: 0; z-index: 100; background: rgba(10,10,10,0.95);
+  backdrop-filter: blur(12px);
+}
+.nav-brand { display: flex; align-items: center; gap: 10px; }
+.nav-brand .icon {
+  width: 30px; height: 30px; border: 2px solid var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 11px; color: var(--accent);
+}
+.nav-brand .name {
+  font-family: 'Barlow Condensed'; font-weight: 700; font-size: 16px;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--accent);
+}
+.nav-links { display: flex; gap: 24px; }
+.nav-links a {
+  font-size: 11px; font-weight: 600; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-3); transition: color 0.2s;
+}
+.nav-links a:hover { color: var(--text); }
+.nav-week {
+  font-family: 'Space Grotesk'; font-size: 11px; font-weight: 500;
+  letter-spacing: 2px; color: var(--text-3);
+}
+.nav-week span { color: var(--accent); }
+
+/* SCOREBOARD TICKER */
+.ticker {
+  display: flex; gap: 0; overflow-x: auto; border-bottom: 1px solid var(--border);
+  scrollbar-width: thin; scrollbar-color: #333 transparent;
+}
+.ticker-game {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 24px; border-right: 1px solid var(--border);
+  min-width: 240px; cursor: pointer; transition: background 0.2s;
+}
+.ticker-game:hover { background: var(--surface); }
+.ticker-team { display: flex; align-items: center; gap: 8px; min-width: 80px; }
+.ticker-logo {
+  width: 22px; height: 22px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 7px; color: #fff;
+}
+.ticker-abbr { font-family: 'Barlow Condensed'; font-weight: 600; font-size: 13px; }
+.ticker-score {
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 14px;
+  min-width: 40px; text-align: right;
+}
+.ticker-vs { color: var(--text-3); font-size: 10px; }
+.ticker-status {
+  font-family: 'Space Grotesk'; font-size: 9px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase; margin-left: auto;
+}
+.ticker-status.live { color: var(--green); }
+.ticker-status.final { color: var(--text-3); }
+
+/* SECTION */
+.section { padding: 48px 32px; border-bottom: 1px solid var(--border); }
+.section-header {
+  display: flex; align-items: center; gap: 16px; margin-bottom: 28px;
+}
+.section-header .line { flex: 1; height: 1px; background: var(--border); }
+.section-header h2 {
+  font-family: 'Barlow Condensed'; font-size: 13px; font-weight: 600;
+  letter-spacing: 4px; text-transform: uppercase; color: var(--accent);
+  white-space: nowrap;
+}
+
+/* STANDINGS */
+.standings-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+.division-label {
+  font-family: 'Barlow Condensed'; font-size: 18px; font-weight: 700;
+  letter-spacing: 3px; text-transform: uppercase; color: var(--text);
+  padding-bottom: 12px; border-bottom: 2px solid var(--accent);
+  margin-bottom: 0;
+}
+.standings-table { width: 100%; border-collapse: collapse; }
+.standings-table th {
+  font-family: 'Space Grotesk'; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  text-align: left; padding: 10px 8px;
+  border-bottom: 1px solid var(--border);
+}
+.standings-table th.num { text-align: right; }
+.standings-table td {
+  padding: 12px 8px; border-bottom: 1px solid var(--border);
+  font-size: 13px; vertical-align: middle;
+}
+.standings-table td.num {
+  text-align: right; font-family: 'Space Grotesk'; font-weight: 500;
+}
+.standings-table tr { transition: background 0.15s; }
+.standings-table tr:hover { background: var(--surface); }
+.standings-table tr.playoff { border-left: 2px solid var(--accent); }
+.team-cell { display: flex; align-items: center; gap: 10px; }
+.team-logo {
+  width: 28px; height: 28px; border-radius: 6px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 8px; color: #fff;
+  flex-shrink: 0;
+}
+.team-name-col { display: flex; flex-direction: column; }
+.team-name-col .name {
+  font-family: 'Barlow Condensed'; font-weight: 600; font-size: 14px;
+  letter-spacing: 0.5px;
+}
+.team-name-col .owner { font-size: 10px; color: var(--text-3); }
+.record { font-family: 'Barlow Condensed'; font-weight: 700; font-size: 16px; }
+.streak-w { color: var(--green); }
+.streak-l { color: var(--red); }
+
+/* MATCHUPS */
+.matchups-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.matchup-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 20px; display: flex; align-items: center; justify-content: space-between;
+  transition: border-color 0.2s; cursor: pointer;
+}
+.matchup-card:hover { border-color: var(--border-hover); }
+.matchup-team { display: flex; align-items: center; gap: 12px; flex: 1; }
+.matchup-team.away { flex-direction: row-reverse; text-align: right; }
+.matchup-logo {
+  width: 40px; height: 40px; border-radius: 8px;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Space Grotesk'; font-weight: 700; font-size: 11px; color: #fff;
+}
+.matchup-info .name {
+  font-family: 'Barlow Condensed'; font-weight: 600; font-size: 15px;
+  letter-spacing: 0.5px;
+}
+.matchup-info .record-small { font-size: 11px; color: var(--text-3); }
+.matchup-score {
+  font-family: 'Barlow Condensed'; font-weight: 700; font-size: 28px;
+  min-width: 48px; text-align: center;
+}
+.matchup-center {
+  display: flex; flex-direction: column; align-items: center; gap: 2px;
+  padding: 0 16px;
+}
+.matchup-center .vs {
+  font-family: 'Space Grotesk'; font-size: 10px; color: var(--text-3);
+  letter-spacing: 2px;
+}
+.matchup-center .status {
+  font-family: 'Space Grotesk'; font-size: 9px; font-weight: 500;
+  letter-spacing: 1px; text-transform: uppercase;
+}
+.matchup-center .status.live { color: var(--green); }
+.bye-card {
+  background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
+  padding: 14px 20px; display: flex; align-items: center; gap: 10px;
+  opacity: 0.5;
+}
+.bye-card .team-logo { width: 24px; height: 24px; font-size: 7px; }
+.bye-label {
+  font-family: 'Space Grotesk'; font-size: 10px; letter-spacing: 2px;
+  text-transform: uppercase; color: var(--text-3);
+}
+
+/* TRADE BLOCK */
+.trade-table { width: 100%; border-collapse: collapse; }
+.trade-table th {
+  font-family: 'Space Grotesk'; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--border);
+}
+.trade-table td {
+  padding: 14px 12px; border-bottom: 1px solid var(--border); font-size: 13px;
+}
+.trade-table tr:hover { background: var(--surface); }
+.trade-player { font-family: 'Barlow Condensed'; font-weight: 600; font-size: 15px; }
+.trade-pos {
+  display: inline-block; padding: 2px 8px; border-radius: 4px;
+  font-family: 'Space Grotesk'; font-size: 10px; font-weight: 600;
+  letter-spacing: 1px; background: var(--accent-dim); color: var(--accent);
+}
+.trade-note { font-style: italic; color: var(--text-2); font-size: 12px; }
+
+/* PLAYOFF PICTURE */
+.clinch-list { display: flex; flex-direction: column; gap: 8px; margin-bottom: 32px; }
+.clinch-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 12px 16px; background: var(--surface); border-radius: 6px;
+  border-left: 3px solid var(--accent); font-size: 13px;
+}
+.clinch-item .team-logo { width: 24px; height: 24px; font-size: 7px; }
+.clinch-item .scenario { color: var(--text-2); }
+.clinch-item .scenario strong { color: var(--text); font-weight: 600; }
+
+.odds-container { margin-top: 24px; }
+.odds-row {
+  display: grid; grid-template-columns: 160px 1fr 1fr 1fr;
+  gap: 12px; align-items: center; padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.odds-row.header {
+  font-family: 'Space Grotesk'; font-size: 10px; font-weight: 500;
+  letter-spacing: 2px; text-transform: uppercase; color: var(--text-3);
+  border-bottom: 1px solid var(--border-hover);
+}
+.odds-team { display: flex; align-items: center; gap: 8px; }
+.odds-team .team-logo { width: 22px; height: 22px; font-size: 7px; }
+.odds-team .name { font-family: 'Barlow Condensed'; font-weight: 600; font-size: 13px; }
+.odds-bar-cell { display: flex; align-items: center; gap: 8px; }
+.odds-bar {
+  height: 18px; border-radius: 3px; min-width: 2px;
+  transition: width 0.6s ease;
+}
+.odds-pct {
+  font-family: 'Space Grotesk'; font-size: 12px; font-weight: 500;
+  color: var(--text-2); min-width: 36px;
+}
+
+/* FOOTER */
+.footer {
+  padding: 32px; text-align: center; border-top: 1px solid var(--border);
+}
+.footer-teams {
+  display: flex; flex-wrap: wrap; justify-content: center; gap: 8px;
+  margin-bottom: 20px;
+}
+.footer-team-link {
+  padding: 4px 10px; border: 1px solid var(--border); border-radius: 4px;
+  font-family: 'Space Grotesk'; font-size: 10px; font-weight: 500;
+  letter-spacing: 1px; color: var(--text-3); transition: all 0.2s;
+}
+.footer-team-link:hover { border-color: var(--accent); color: var(--accent); }
+.footer-copy {
+  font-family: 'Space Grotesk'; font-size: 11px; color: var(--text-3);
+  letter-spacing: 2px;
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-brand">
+    <div class="icon">MF</div>
+    <div class="name">MFGA</div>
+  </div>
+  <div class="nav-links">
+    <a href="#standings">Standings</a>
+    <a href="#matchups">Matchups</a>
+    <a href="#tradeblock">Trade block</a>
+    <a href="#playoffs">Playoff picture</a>
+  </div>
+  <div class="nav-week">Week <span>7</span></div>
+</nav>
+
+<!-- SCOREBOARD TICKER -->
+<div class="ticker">
+  <div class="ticker-game">
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#01411C">PB</div>
+      <span class="ticker-abbr">BOMB</span>
+      <span class="ticker-score">142.3</span>
+    </div>
+    <span class="ticker-vs">—</span>
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#8B0000">TVH</div>
+      <span class="ticker-abbr">TVH</span>
+      <span class="ticker-score">128.7</span>
+    </div>
+    <span class="ticker-status live">Live</span>
+  </div>
+  <div class="ticker-game">
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#4B0082">SRZ</div>
+      <span class="ticker-abbr">SRZ</span>
+      <span class="ticker-score">156.1</span>
+    </div>
+    <span class="ticker-vs">—</span>
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#C2185B">Butt</div>
+      <span class="ticker-abbr">Butt</span>
+      <span class="ticker-score">99.4</span>
+    </div>
+    <span class="ticker-status final">Final</span>
+  </div>
+  <div class="ticker-game">
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#FF8C00">MOYD</div>
+      <span class="ticker-abbr">MOYD</span>
+      <span class="ticker-score">—</span>
+    </div>
+    <span class="ticker-vs">—</span>
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#1565C0">TWM</div>
+      <span class="ticker-abbr">TWM</span>
+      <span class="ticker-score">—</span>
+    </div>
+    <span class="ticker-status" style="color:var(--text-3)">Sun 1pm</span>
+  </div>
+  <div class="ticker-game">
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#2E7D32">Doob</div>
+      <span class="ticker-abbr">Doob</span>
+      <span class="ticker-score">112.0</span>
+    </div>
+    <span class="ticker-vs">—</span>
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#333">ENG</div>
+      <span class="ticker-abbr">ENG</span>
+      <span class="ticker-score">118.5</span>
+    </div>
+    <span class="ticker-status live">Live</span>
+  </div>
+  <div class="ticker-game">
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#D32F2F">GING</div>
+      <span class="ticker-abbr">GING</span>
+      <span class="ticker-score">134.2</span>
+    </div>
+    <span class="ticker-vs">—</span>
+    <div class="ticker-team">
+      <div class="ticker-logo" style="background:#F9A825">CPU1</div>
+      <span class="ticker-abbr">CPU1</span>
+      <span class="ticker-score">131.8</span>
+    </div>
+    <span class="ticker-status live">Live</span>
+  </div>
+</div>
+
+<!-- STANDINGS -->
+<section class="section" id="standings">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Standings</h2>
+    <div class="line"></div>
+  </div>
+  <div class="standings-grid">
+    <!-- EAST -->
+    <div>
+      <div class="division-label">East Division</div>
+      <table class="standings-table">
+        <thead><tr>
+          <th style="width:30px">#</th><th>Team</th><th>Record</th>
+          <th class="num">PF</th><th class="num">PA</th><th class="num">Strk</th>
+        </tr></thead>
+        <tbody>
+          <tr class="playoff">
+            <td>1</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#01411C">PB</div>
+              <div class="team-name-col"><span class="name">Pakistan Bombers</span><span class="owner">Lucas</span></div>
+            </div></td>
+            <td><span class="record">6-1</span></td>
+            <td class="num">892.4</td><td class="num">724.1</td>
+            <td class="num"><span class="streak-w">W4</span></td>
+          </tr>
+          <tr class="playoff">
+            <td>2</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#8B0000">TVH</div>
+              <div class="team-name-col"><span class="name">The Vile Horrendous</span><span class="owner">Drew</span></div>
+            </div></td>
+            <td><span class="record">5-2</span></td>
+            <td class="num">845.2</td><td class="num">790.3</td>
+            <td class="num"><span class="streak-w">W2</span></td>
+          </tr>
+          <tr class="playoff">
+            <td>3</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#C2185B">Butt</div>
+              <div class="team-name-col"><span class="name">Nabers In Paris</span><span class="owner">Carter</span></div>
+            </div></td>
+            <td><span class="record">4-3</span></td>
+            <td class="num">810.6</td><td class="num">802.1</td>
+            <td class="num"><span class="streak-l">L1</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#FF8C00">MOYD</div>
+              <div class="team-name-col"><span class="name">Mt Olympus Yogurt Dressing</span><span class="owner">Steve</span></div>
+            </div></td>
+            <td><span class="record">4-3</span></td>
+            <td class="num">788.0</td><td class="num">801.5</td>
+            <td class="num"><span class="streak-w">W1</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#5D4037">FBC</div>
+              <div class="team-name-col"><span class="name">Fort Bragg Confederates</span><span class="owner">Miles</span></div>
+            </div></td>
+            <td><span class="record">3-4</span></td>
+            <td class="num">756.2</td><td class="num">780.9</td>
+            <td class="num"><span class="streak-l">L2</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#E91E63">🥀</div>
+              <div class="team-name-col"><span class="name">Chicago Zestiest Man</span><span class="owner">Zach</span></div>
+            </div></td>
+            <td><span class="record">2-5</span></td>
+            <td class="num">698.4</td><td class="num">842.0</td>
+            <td class="num"><span class="streak-l">L3</span></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#795548">MARB</div>
+              <div class="team-name-col"><span class="name">Beer</span><span class="owner">Matt</span></div>
+            </div></td>
+            <td><span class="record">1-6</span></td>
+            <td class="num">620.1</td><td class="num">901.3</td>
+            <td class="num"><span class="streak-l">L5</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <!-- WEST -->
+    <div>
+      <div class="division-label">West Division</div>
+      <table class="standings-table">
+        <thead><tr>
+          <th style="width:30px">#</th><th>Team</th><th>Record</th>
+          <th class="num">PF</th><th class="num">PA</th><th class="num">Strk</th>
+        </tr></thead>
+        <tbody>
+          <tr class="playoff">
+            <td>1</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#4B0082">SRZ</div>
+              <div class="team-name-col"><span class="name">Pluto Shraazinatorz</span><span class="owner">Shrey</span></div>
+            </div></td>
+            <td><span class="record">6-1</span></td>
+            <td class="num">921.8</td><td class="num">712.0</td>
+            <td class="num"><span class="streak-w">W6</span></td>
+          </tr>
+          <tr class="playoff">
+            <td>2</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#2E7D32">Doob</div>
+              <div class="team-name-col"><span class="name">Doob's Agency</span><span class="owner">Andrew</span></div>
+            </div></td>
+            <td><span class="record">5-2</span></td>
+            <td class="num">867.3</td><td class="num">751.2</td>
+            <td class="num"><span class="streak-l">L1</span></td>
+          </tr>
+          <tr class="playoff">
+            <td>3</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#333">ENG</div>
+              <div class="team-name-col"><span class="name">Englewood 🥷s</span><span class="owner">Harrison</span></div>
+            </div></td>
+            <td><span class="record">4-3</span></td>
+            <td class="num">832.9</td><td class="num">798.4</td>
+            <td class="num"><span class="streak-w">W3</span></td>
+          </tr>
+          <tr>
+            <td>4</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#D32F2F">GING</div>
+              <div class="team-name-col"><span class="name">I❤️Gingers 👨🏻‍🦰</span><span class="owner">Preston</span></div>
+            </div></td>
+            <td><span class="record">4-3</span></td>
+            <td class="num">815.7</td><td class="num">820.1</td>
+            <td class="num"><span class="streak-w">W1</span></td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#1565C0">TWM</div>
+              <div class="team-name-col"><span class="name">The Watermark</span><span class="owner">Liam</span></div>
+            </div></td>
+            <td><span class="record">3-4</span></td>
+            <td class="num">778.4</td><td class="num">789.0</td>
+            <td class="num"><span class="streak-l">L1</span></td>
+          </tr>
+          <tr>
+            <td>6</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#F9A825">CPU</div>
+              <div class="team-name-col"><span class="name">Amon Ra Dawgin</span><span class="owner">Evan</span></div>
+            </div></td>
+            <td><span class="record">2-5</span></td>
+            <td class="num">701.2</td><td class="num">835.6</td>
+            <td class="num"><span class="streak-l">L4</span></td>
+          </tr>
+          <tr>
+            <td>7</td>
+            <td><div class="team-cell">
+              <div class="team-logo" style="background:#00695C">VPDJ</div>
+              <div class="team-name-col"><span class="name">VancouverPantiesDeJarome</span><span class="owner">Josh</span></div>
+            </div></td>
+            <td><span class="record">1-6</span></td>
+            <td class="num">654.3</td><td class="num">912.4</td>
+            <td class="num"><span class="streak-l">L6</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- MATCHUPS -->
+<section class="section" id="matchups">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Week 7 matchups</h2>
+    <div class="line"></div>
+  </div>
+  <div class="matchups-grid">
+    <div class="matchup-card">
+      <div class="matchup-team">
+        <div class="matchup-logo" style="background:#01411C">PB</div>
+        <div class="matchup-info"><div class="name">Pakistan Bombers</div><div class="record-small">6-1</div></div>
+      </div>
+      <div class="matchup-center">
+        <div class="matchup-score">142.3</div>
+        <div class="vs">—</div>
+        <div class="matchup-score">128.7</div>
+        <div class="status live">● Live</div>
+      </div>
+      <div class="matchup-team away">
+        <div class="matchup-logo" style="background:#8B0000">TVH</div>
+        <div class="matchup-info"><div class="name">The Vile Horrendous</div><div class="record-small">5-2</div></div>
+      </div>
+    </div>
+    <div class="matchup-card">
+      <div class="matchup-team">
+        <div class="matchup-logo" style="background:#4B0082">SRZ</div>
+        <div class="matchup-info"><div class="name">Pluto Shraazinatorz</div><div class="record-small">6-1</div></div>
+      </div>
+      <div class="matchup-center">
+        <div class="matchup-score">156.1</div>
+        <div class="vs">—</div>
+        <div class="matchup-score">99.4</div>
+        <div class="status final" style="color:var(--text-3)">Final</div>
+      </div>
+      <div class="matchup-team away">
+        <div class="matchup-logo" style="background:#C2185B">Butt</div>
+        <div class="matchup-info"><div class="name">Nabers In Paris</div><div class="record-small">4-3</div></div>
+      </div>
+    </div>
+    <div class="matchup-card">
+      <div class="matchup-team">
+        <div class="matchup-logo" style="background:#2E7D32">Doob</div>
+        <div class="matchup-info"><div class="name">Doob's Agency</div><div class="record-small">5-2</div></div>
+      </div>
+      <div class="matchup-center">
+        <div class="matchup-score">112.0</div>
+        <div class="vs">—</div>
+        <div class="matchup-score">118.5</div>
+        <div class="status live">● Live</div>
+      </div>
+      <div class="matchup-team away">
+        <div class="matchup-logo" style="background:#333">ENG</div>
+        <div class="matchup-info"><div class="name">Englewood 🥷s</div><div class="record-small">4-3</div></div>
+      </div>
+    </div>
+    <div class="matchup-card">
+      <div class="matchup-team">
+        <div class="matchup-logo" style="background:#D32F2F">GING</div>
+        <div class="matchup-info"><div class="name">I❤️Gingers 👨🏻‍🦰</div><div class="record-small">4-3</div></div>
+      </div>
+      <div class="matchup-center">
+        <div class="matchup-score">134.2</div>
+        <div class="vs">—</div>
+        <div class="matchup-score">131.8</div>
+        <div class="status live">● Live</div>
+      </div>
+      <div class="matchup-team away">
+        <div class="matchup-logo" style="background:#F9A825">CPU</div>
+        <div class="matchup-info"><div class="name">Amon Ra Dawgin</div><div class="record-small">2-5</div></div>
+      </div>
+    </div>
+  </div>
+  <div style="display:flex;gap:8px;margin-top:16px;">
+    <div class="bye-card">
+      <div class="team-logo" style="background:#FF8C00">MY</div>
+      <span class="bye-label">MOYD — Bye</span>
+    </div>
+    <div class="bye-card">
+      <div class="team-logo" style="background:#1565C0">TW</div>
+      <span class="bye-label">TWM — Bye</span>
+    </div>
+  </div>
+</section>
+
+<!-- TRADE BLOCK -->
+<section class="section" id="tradeblock">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Trade block</h2>
+    <div class="line"></div>
+  </div>
+  <table class="trade-table">
+    <thead><tr>
+      <th>Player</th><th>Pos</th><th>NFL Team</th><th>Fantasy Team</th><th>Note</th>
+    </tr></thead>
+    <tbody>
+      <tr>
+        <td><span class="trade-player">Tyreek Hill</span></td>
+        <td><span class="trade-pos">WR</span></td>
+        <td>MIA</td>
+        <td><div class="team-cell"><div class="team-logo" style="background:#01411C;width:22px;height:22px;font-size:7px">PB</div> Pakistan Bombers</div></td>
+        <td><span class="trade-note">"Looking for RB depth"</span></td>
+      </tr>
+      <tr>
+        <td><span class="trade-player">Travis Kelce</span></td>
+        <td><span class="trade-pos">TE</span></td>
+        <td>KC</td>
+        <td><div class="team-cell"><div class="team-logo" style="background:#4B0082;width:22px;height:22px;font-size:7px">SRZ</div> Pluto Shraazinatorz</div></td>
+        <td><span class="trade-note">"Will take a WR1 or 1st round pick"</span></td>
+      </tr>
+      <tr>
+        <td><span class="trade-player">Saquon Barkley</span></td>
+        <td><span class="trade-pos">RB</span></td>
+        <td>PHI</td>
+        <td><div class="team-cell"><div class="team-logo" style="background:#333;width:22px;height:22px;font-size:7px">ENG</div> Englewood 🥷s</div></td>
+        <td><span class="trade-note">"Send offers, open to anything"</span></td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- PLAYOFF PICTURE -->
+<section class="section" id="playoffs">
+  <div class="section-header">
+    <div class="line"></div>
+    <h2>Playoff picture</h2>
+    <div class="line"></div>
+  </div>
+
+  <div style="font-family:'Space Grotesk';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:12px;">Clinch scenarios</div>
+  <div class="clinch-list">
+    <div class="clinch-item">
+      <div class="team-logo" style="background:#01411C;width:24px;height:24px;font-size:7px">PB</div>
+      <span class="scenario"><strong>Pakistan Bombers</strong> clinch a playoff spot with a win OR a Beer loss</span>
+    </div>
+    <div class="clinch-item">
+      <div class="team-logo" style="background:#4B0082;width:24px;height:24px;font-size:7px">SRZ</div>
+      <span class="scenario"><strong>Pluto Shraazinatorz</strong> clinch West division with a win AND a Doob's Agency loss</span>
+    </div>
+  </div>
+
+  <div style="font-family:'Space Grotesk';font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:16px;">Championship odds</div>
+  <div class="odds-container">
+    <div class="odds-row header">
+      <div>Team</div><div>Playoffs</div><div>Division</div><div>Championship</div>
+    </div>
+    <div class="odds-row">
+      <div class="odds-team"><div class="team-logo" style="background:#4B0082;width:22px;height:22px;font-size:7px">SRZ</div><span class="name">Shraazinatorz</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:92%;background:#4B0082"></div><span class="odds-pct">92%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:78%;background:#4B0082"></div><span class="odds-pct">78%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:28%;background:#4B0082"></div><span class="odds-pct">28%</span></div>
+    </div>
+    <div class="odds-row">
+      <div class="odds-team"><div class="team-logo" style="background:#01411C;width:22px;height:22px;font-size:7px">PB</div><span class="name">Bombers</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:89%;background:#01411C"></div><span class="odds-pct">89%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:65%;background:#01411C"></div><span class="odds-pct">65%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:22%;background:#01411C"></div><span class="odds-pct">22%</span></div>
+    </div>
+    <div class="odds-row">
+      <div class="odds-team"><div class="team-logo" style="background:#2E7D32;width:22px;height:22px;font-size:7px">Doob</div><span class="name">Doob's Agency</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:76%;background:#2E7D32"></div><span class="odds-pct">76%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:32%;background:#2E7D32"></div><span class="odds-pct">32%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:14%;background:#2E7D32"></div><span class="odds-pct">14%</span></div>
+    </div>
+    <div class="odds-row">
+      <div class="odds-team"><div class="team-logo" style="background:#8B0000;width:22px;height:22px;font-size:7px">TVH</div><span class="name">Vile Horrendous</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:71%;background:#8B0000"></div><span class="odds-pct">71%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:28%;background:#8B0000"></div><span class="odds-pct">28%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:11%;background:#8B0000"></div><span class="odds-pct">11%</span></div>
+    </div>
+    <div class="odds-row">
+      <div class="odds-team"><div class="team-logo" style="background:#333;width:22px;height:22px;font-size:7px">ENG</div><span class="name">Englewood</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:58%;background:#555"></div><span class="odds-pct">58%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:18%;background:#555"></div><span class="odds-pct">18%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:7%;background:#555"></div><span class="odds-pct">7%</span></div>
+    </div>
+    <div class="odds-row">
+      <div class="odds-team"><div class="team-logo" style="background:#C2185B;width:22px;height:22px;font-size:7px">Butt</div><span class="name">Nabers In Paris</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:44%;background:#C2185B"></div><span class="odds-pct">44%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:12%;background:#C2185B"></div><span class="odds-pct">12%</span></div>
+      <div class="odds-bar-cell"><div class="odds-bar" style="width:4%;background:#C2185B"></div><span class="odds-pct">4%</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-teams">
+    <a class="footer-team-link" href="team.html?team=BOMB">BOMB</a>
+    <a class="footer-team-link" href="team.html?team=SRZ">SRZ</a>
+    <a class="footer-team-link" href="team.html?team=Butt">Butt</a>
+    <a class="footer-team-link" href="team.html?team=MOYD">MOYD</a>
+    <a class="footer-team-link" href="team.html?team=TWM">TWM</a>
+    <a class="footer-team-link" href="team.html?team=Doob">Doob</a>
+    <a class="footer-team-link" href="team.html?team=ENG">ENG</a>
+    <a class="footer-team-link" href="team.html?team=TVH">TVH</a>
+    <a class="footer-team-link" href="team.html?team=GING">GING</a>
+    <a class="footer-team-link" href="team.html?team=CPU1">CPU1</a>
+    <a class="footer-team-link" href="team.html?team=FBC">FBC</a>
+    <a class="footer-team-link" href="team.html?team=ROSE">ROSE</a>
+    <a class="footer-team-link" href="team.html?team=VPDJ">VPDJ</a>
+    <a class="footer-team-link" href="team.html?team=MARB">MARB</a>
+  </div>
+  <div class="footer-copy">MFGA — Make Fantasy Great Again &bull; 2026 Season</div>
+</footer>
+
+</body>
+</html>
