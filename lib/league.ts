@@ -85,6 +85,26 @@ export type CustomNewsRow = {
 }
 export const CUSTOM_NEWS: CustomNewsRow[] = leagueData.CUSTOM_NEWS as CustomNewsRow[]
 
+export type PastTeam = {
+  slug: string
+  name: string
+  hero: string
+  colors: {
+    primary: string
+    accent: string
+    dark: string
+    light: string
+  }
+  yearJoined: number
+  yearLeft: number
+  allTimeRecord: { wins: number; losses: number }
+  totalPointsFor: number
+  playoffAppearances: number
+  playoffWins: number
+  championships: number
+}
+export const PAST_TEAMS: PastTeam[] = leagueData.PAST_TEAMS as PastTeam[]
+
 export function getTeam(slug: string): Team | undefined {
   return TEAMS.find((t) => t.slug === slug)
 }

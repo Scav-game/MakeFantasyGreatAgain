@@ -2,7 +2,7 @@
 
 Everything on the site — standings, streaks, points, the clinch scenarios,
 championship odds, record comparisons, news, and the League History page —
-is computed from the six CSV files in this folder. Edit them in Excel,
+is computed from the seven CSV files in this folder. Edit them in Excel,
 Numbers, or Google Sheets (export/save back to CSV, same filename, same
 folder), then tell Claude to refresh the site. Nothing here is hand-edited
 code — these are just data.
@@ -126,6 +126,32 @@ show up (the same one-line step used for team logos). Until a photo exists,
 that author gets an initials badge (e.g. "MH") instead — never a broken
 image.
 
+## past-teams.csv — one row per team that's no longer in the league
+
+This is the "Past Teams" section on `/history` — a card grid like the
+Franchises section on the homepage, except clicking a card zooms into a
+popup with that team's all-time stats.
+
+| Column | Meaning |
+|---|---|
+| `slug` | Unique id for this team — just like `teams.csv`, doesn't need to match anything else. |
+| `name` | **Put the team name here.** This is the only place past teams' names go — they don't belong in `teams.csv`, which is only the 14 current franchises. |
+| `hero` | Path to their hero photo under `/public`, e.g. `/Images/heros/old-team-name.png` — that's `public\Images\heros\`, the same folder the current teams' hero photos already live in. |
+| `colorPrimary` / `colorAccent` / `colorDark` / `colorLight` | Same as `teams.csv` — hex colors for the card and popup styling. |
+| `yearJoined` / `yearLeft` | The years they were in the league. |
+| `allTimeWins` / `allTimeLosses` | Their all-time record while active. |
+| `totalPointsFor` | All-time total points scored. |
+| `playoffAppearances` / `playoffWins` / `championships` | Same meaning as `history.csv`. |
+
+This file starts empty (header row only) — add a row per departed team
+whenever you have one. There are currently 11 placeholder rows (Bildo's
+Army, Derek's Car, Deshaun Watson's Bed, Errect Logomamanator, F Drew
+Flynn, Marbins Jew, Michael Vick's Dog Pound, North Korea Pigs, The
+Deflatgators, Doob's Daring Team, Drew Flynn Butt Toys) set up from the
+hero photos you already dropped in — their `hero` paths are correct, but
+the years, record, points, and colors are all just zeroed-out
+placeholders. Fill in the real numbers whenever you have them.
+
 ## What's pre-filled right now
 
 `teams.csv`, `schedule.csv`, `rosters.csv`, `draft-picks.csv`, and
@@ -134,4 +160,5 @@ image.
 correcting/replacing values, not starting from a blank sheet. `teams.csv`,
 `draft-picks.csv`, and `history.csv` will probably only need setting up once;
 `schedule.csv` and `rosters.csv` are the ones you'll touch weekly. `news.csv`
-is all yours — add, edit, or remove stories whenever you want.
+is all yours — add, edit, or remove stories whenever you want. `past-teams.csv`
+starts completely empty — nothing to correct, just add rows as needed.

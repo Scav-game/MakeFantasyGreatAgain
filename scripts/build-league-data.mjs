@@ -72,6 +72,7 @@ const rostersCsv = readCsvRecords("rosters.csv")
 const draftPicksCsv = readCsvRecords("draft-picks.csv")
 const historyCsv = readCsvRecords("history.csv")
 const newsCsv = readCsvRecords("news.csv")
+const pastTeamsCsv = readCsvRecords("past-teams.csv")
 
 const TOTAL_WEEKS = 14
 
@@ -184,12 +185,28 @@ const CUSTOM_NEWS = newsCsv.map((n) => ({
   author: n.author || null,
 }))
 
+const PAST_TEAMS = pastTeamsCsv
+  .filter((p) => p.slug && p.name)
+  .map((p) => ({
+    slug: p.slug,
+    name: p.name,
+    hero: p.hero,
+    colors: { primary: p.colorPrimary, accent: p.colorAccent, dark: p.colorDark, light: p.colorLight },
+    yearJoined: Number(p.yearJoined),
+    yearLeft: Number(p.yearLeft),
+    allTimeRecord: { wins: Number(p.allTimeWins || 0), losses: Number(p.allTimeLosses || 0) },
+    totalPointsFor: Number(p.totalPointsFor || 0),
+    playoffAppearances: Number(p.playoffAppearances || 0),
+    playoffWins: Number(p.playoffWins || 0),
+    championships: Number(p.championships || 0),
+  }))
+
 mkdirSync(OUT_DIR, { recursive: true })
 writeFileSync(
   path.join(OUT_DIR, "league-data.json"),
-  JSON.stringify({ CURRENT_WEEK, TEAMS, CUSTOM_NEWS }, null, 2),
+  JSON.stringify({ CURRENT_WEEK, TEAMS, CUSTOM_NEWS, PAST_TEAMS }, null, 2),
 )
 
 console.log(
-  `Built lib/generated/league-data.json — ${TEAMS.length} teams, CURRENT_WEEK=${CURRENT_WEEK}, ${CUSTOM_NEWS.length} custom news stories`,
+  `Built lib/generated/league-data.json — ${TEAMS.length} teams, CURRENT_WEEK=${CURRENT_WEEK}, ${CUSTOM_NEWS.length} custom news stories, ${PAST_TEAMS.length} past teams`,
 )

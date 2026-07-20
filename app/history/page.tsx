@@ -4,6 +4,7 @@ import { SiteFooter } from "@/components/home/site-footer"
 import { SectionHeading } from "@/components/home/section-heading"
 import { HistoryTable } from "@/components/history/history-table"
 import { NewsArchive } from "@/components/history/news-archive"
+import { PastTeamsSection } from "@/components/history/past-teams-section"
 
 export const metadata: Metadata = {
   title: "League History — MFGA",
@@ -30,12 +31,20 @@ export default function HistoryPage() {
           <NewsArchive />
         </section>
 
-        <section id="stats">
+        <section id="stats" className="mb-16">
           <SectionHeading title="Franchise History" />
           <p className="mb-6 max-w-2xl text-sm text-muted-foreground">
             Click any column to sort — best (or worst) team by any stat, at a glance.
           </p>
           <HistoryTable />
+        </section>
+
+        <section id="past-teams">
+          <SectionHeading title="Past Teams" />
+          <p className="mb-6 max-w-2xl text-sm text-muted-foreground">
+            Franchises that are no longer part of the league. Click one to see their all-time stats.
+          </p>
+          <PastTeamsSection />
         </section>
       </main>
 
