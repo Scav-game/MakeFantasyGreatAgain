@@ -92,10 +92,12 @@ fill in: **Win %** (`allTimeWins` / total games) and **PF / Year**
 | `body` | Story text (a couple sentences reads best, but nothing stops you writing more). |
 | `team` | Optional. A team's `slug` to give the story that team's colored border and logo. Leave blank for a general league story (shows the gold MFGA mark instead). |
 
-Add as many rows as you want — every row becomes its own card, in file order
-top to bottom. There's no auto-generated filler anymore — whatever's in this
-file is exactly what shows up in League News, so an empty file means an empty
-section.
+Add as many rows as you want — every row becomes its own card. **Order
+matters: put your newest story first, oldest last.** The homepage League
+News section only shows the top 5 rows; everything (including those 5) is
+searchable on the `/history` News Archive. There's no auto-generated filler
+— whatever's in this file is exactly what shows up, so an empty file means
+an empty section.
 
 ## What's pre-filled right now
 

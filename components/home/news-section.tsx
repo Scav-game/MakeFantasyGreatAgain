@@ -1,13 +1,29 @@
-import { generateNewsArticles } from "@/lib/news"
+import Link from "next/link"
+import { getAllNewsArticles, getHomepageNewsArticles } from "@/lib/news"
 import { TeamLogo } from "@/components/team/team-logo"
-import { SectionHeading } from "./section-heading"
 
 export function NewsSection() {
-  const articles = generateNewsArticles()
+  const articles = getHomepageNewsArticles()
+  const hasMore = getAllNewsArticles().length > articles.length
 
   return (
     <section id="news" className="scroll-mt-24">
-      <SectionHeading title="League News" />
+      <div className="mb-5 flex items-center justify-between gap-4">
+        <div className="flex items-center gap-3">
+          <span className="h-6 w-1 rounded-full bg-gold" />
+          <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground md:text-3xl">
+            League News
+          </h2>
+        </div>
+        {hasMore && (
+          <Link
+            href="/history#archive"
+            className="font-display text-xs font-semibold uppercase tracking-widest text-gold/80 transition-colors hover:text-gold"
+          >
+            View Full Archive →
+          </Link>
+        )}
+      </div>
       <div className="flex flex-col gap-4">
         {articles.map((article) => (
           <article

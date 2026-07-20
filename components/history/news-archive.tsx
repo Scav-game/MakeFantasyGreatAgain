@@ -1,11 +1,11 @@
 "use client"
 
 import { useMemo, useState } from "react"
-import { generateNewsArticles } from "@/lib/news"
+import { getAllNewsArticles } from "@/lib/news"
 import { TeamLogo } from "@/components/team/team-logo"
 
 export function NewsArchive() {
-  const articles = generateNewsArticles()
+  const articles = getAllNewsArticles()
   const [query, setQuery] = useState("")
 
   const filtered = useMemo(() => {
