@@ -3,6 +3,7 @@ import type { Team } from "@/lib/league"
 import { TeamLogo } from "./team-logo"
 
 const NAV_LINKS = ["HOME", "TEAM", "SCHEDULE", "NEWS"]
+const HISTORY_LINK = { label: "HISTORY", href: "/history" }
 
 export function TeamNav({ team }: { team: Team }) {
   return (
@@ -34,6 +35,12 @@ export function TeamNav({ team }: { team: Team }) {
               {link}
             </Link>
           ))}
+          <Link
+            href={HISTORY_LINK.href}
+            className="font-display text-sm font-medium uppercase tracking-widest text-white/70 transition-colors hover:text-white"
+          >
+            {HISTORY_LINK.label}
+          </Link>
         </div>
 
         <Link

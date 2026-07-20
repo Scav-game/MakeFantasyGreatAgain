@@ -33,8 +33,12 @@ export type TeamHistory = {
   allTimeRecord: { wins: number; losses: number }
   totalPointsFor: number
   playoffAppearances: number
+  playoffWins: number
   championships: number
 }
+
+/** Season year used for "points per year" — bump this each offseason. */
+export const CURRENT_SEASON_YEAR = 2026
 
 export type Team = {
   slug: string

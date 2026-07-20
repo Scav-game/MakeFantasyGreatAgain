@@ -4,6 +4,8 @@ import { TEAMS, getStandings } from "@/lib/league"
 import { TeamLogo } from "@/components/team/team-logo"
 import { assetPath } from "@/lib/asset-path"
 import { HeroSection } from "@/components/home/hero-section"
+import { SiteHeader } from "@/components/home/site-header"
+import { SiteFooter } from "@/components/home/site-footer"
 import { SubNav } from "@/components/home/sub-nav"
 import { ClinchSection } from "@/components/home/clinch-section"
 import { OddsSection } from "@/components/home/odds-section"
@@ -97,27 +99,7 @@ export default function LeagueHome() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="sticky top-0 z-50 border-b border-border/60 bg-background/85 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 md:px-6">
-          <div className="flex items-center gap-3">
-            <span className="flex h-10 w-10 items-center justify-center rounded-md border border-gold/50 bg-gold/10 font-display text-lg font-bold text-gold">
-              M
-            </span>
-            <div>
-              <p className="font-display text-lg font-bold uppercase leading-none tracking-wide text-foreground">
-                MFGA
-              </p>
-              <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
-                Make Fantasy Great Again
-              </p>
-            </div>
-          </div>
-          <span className="hidden font-display text-xs uppercase tracking-[0.2em] text-muted-foreground sm:block">
-            2026 Season · 14 Teams
-          </span>
-        </div>
-      </header>
+      <SiteHeader />
 
       <SubNav />
 
@@ -172,14 +154,7 @@ export default function LeagueHome() {
         <NewsSection />
       </main>
 
-      <footer className="border-t border-border/60 bg-card/40">
-        <div className="mx-auto max-w-7xl px-4 py-8 text-center md:px-6">
-          <p className="font-display text-sm font-bold uppercase tracking-[0.2em] text-gold">
-            MFGA — Make Fantasy Great Again
-          </p>
-          <p className="mt-1 text-xs text-muted-foreground">2026 Fantasy Football League</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   )
 }

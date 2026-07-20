@@ -1,10 +1,11 @@
 # League data
 
 Everything on the site — standings, streaks, points, the clinch scenarios,
-championship odds, record comparisons, and news — is computed from the six
-CSV files in this folder. Edit them in Excel, Numbers, or Google Sheets
-(export/save back to CSV, same filename, same folder), then tell Claude to
-refresh the site. Nothing here is hand-edited code — these are just data.
+championship odds, record comparisons, news, and the League History page —
+is computed from the six CSV files in this folder. Edit them in Excel,
+Numbers, or Google Sheets (export/save back to CSV, same filename, same
+folder), then tell Claude to refresh the site. Nothing here is hand-edited
+code — these are just data.
 
 **Workflow:** edit a CSV → save it in this folder under the same name → ask
 to have the site rebuilt and redeployed. Behind the scenes that runs
@@ -74,7 +75,13 @@ to agree on anything, just fill in each team's own perspective.
 | `allTimeWins` / `allTimeLosses` | All-time regular season record. |
 | `totalPointsFor` | All-time total points scored. |
 | `playoffAppearances` | Count of playoff appearances. |
+| `playoffWins` | Count of playoff game wins. |
 | `championships` | Count of championships won. |
+
+This is also what powers the sortable table on the `/history` page — plus
+two stats it computes for you from these columns, not separate fields to
+fill in: **Win %** (`allTimeWins` / total games) and **PF / Year**
+(`totalPointsFor` / seasons since `yearJoined`).
 
 ## news.csv — one row per news story, this is the entire League News section
 

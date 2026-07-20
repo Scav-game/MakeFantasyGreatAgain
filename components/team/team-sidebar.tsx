@@ -134,6 +134,7 @@ function TeamHistoryCard({ team }: { team: Team }) {
         />
         <HistoryRow label="Total Points For" value={history.totalPointsFor.toLocaleString()} />
         <HistoryRow label="Playoff Appearances" value={String(history.playoffAppearances)} />
+        <HistoryRow label="Playoff Wins" value={String(history.playoffWins)} />
         <HistoryRow
           label="Championships"
           value={String(history.championships)}

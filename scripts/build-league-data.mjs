@@ -142,9 +142,17 @@ const TEAMS = teamsCsv.map((t) => {
         allTimeRecord: { wins: Number(historyRow.allTimeWins), losses: Number(historyRow.allTimeLosses) },
         totalPointsFor: Number(historyRow.totalPointsFor),
         playoffAppearances: Number(historyRow.playoffAppearances),
+        playoffWins: Number(historyRow.playoffWins || 0),
         championships: Number(historyRow.championships),
       }
-    : { yearJoined: 2018, allTimeRecord: { wins: 0, losses: 0 }, totalPointsFor: 0, playoffAppearances: 0, championships: 0 }
+    : {
+        yearJoined: 2018,
+        allTimeRecord: { wins: 0, losses: 0 },
+        totalPointsFor: 0,
+        playoffAppearances: 0,
+        playoffWins: 0,
+        championships: 0,
+      }
 
   return {
     slug: t.slug,
