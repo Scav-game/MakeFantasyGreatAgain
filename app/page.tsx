@@ -67,7 +67,7 @@ function StandingsTable({ division }: { division: Division }) {
         </thead>
         <tbody>
           {rows.map((t) => (
-            <tr key={t.slug} className="border-t border-border/60 transition-colors hover:bg-white/[0.03]">
+            <tr key={t.slug} className="border-t border-border/60 transition-colors hover:bg-black/[0.03]">
               <td className="px-4 py-2.5 font-display font-semibold text-muted-foreground">
                 {t.divisionRank}
               </td>

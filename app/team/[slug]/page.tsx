@@ -39,7 +39,7 @@ export default async function TeamPage({
     <div
       className="min-h-screen"
       style={{
-        background: `linear-gradient(180deg, ${team.colors.dark} 0%, #0a0a0a 60%)`,
+        background: `linear-gradient(180deg, ${team.colors.light} 0%, #f7f2e7 55%)`,
       }}
     >
       <TeamNav team={team} />
@@ -64,14 +64,17 @@ export default async function TeamPage({
 
       <footer
         className="border-t"
-        style={{ borderColor: `${team.colors.accent}22`, backgroundColor: `${team.colors.dark}99` }}
+        style={{ borderColor: `${team.colors.accent}22`, backgroundColor: `${team.colors.light}cc` }}
       >
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-8 text-center md:flex-row md:px-6 md:text-left">
           <div>
-            <p className="font-display text-sm font-bold uppercase tracking-widest text-white">
+            <p
+              className="font-display text-sm font-bold uppercase tracking-widest"
+              style={{ color: team.colors.dark }}
+            >
               {team.name}
             </p>
-            <p className="text-xs text-white/50">
+            <p className="text-xs" style={{ color: `${team.colors.dark}99` }}>
               {team.stadium.name} · {team.stadium.city}
             </p>
           </div>
@@ -80,7 +83,8 @@ export default async function TeamPage({
           </p>
           <Link
             href="/"
-            className="font-display text-xs font-semibold uppercase tracking-widest text-white/60 transition-colors hover:text-white"
+            className="font-display text-xs font-semibold uppercase tracking-widest opacity-70 transition-opacity hover:opacity-100"
+            style={{ color: team.colors.dark }}
           >
             ← All Teams
           </Link>
