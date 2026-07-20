@@ -1,11 +1,12 @@
-import { CURRENT_WEEK, TEAMS, getStandings, getTeam, type Team } from "./league"
+import { CURRENT_WEEK, CUSTOM_NEWS, TEAMS, getStandings, getTeam, type Team } from "./league"
 
 export type NewsArticle = {
   id: string
   headline: string
   body: string
-  team: Team
+  team: Team | null
   generatedAt: string
+  isCustom?: boolean
 }
 
 function generatedTimestamp(offsetMinutes: number): string {
@@ -137,9 +138,20 @@ function rivalryAlertArticle(): NewsArticle | null {
   }
 }
 
+function customNewsArticles(): NewsArticle[] {
+  return CUSTOM_NEWS.filter((n) => n.headline && n.body).map((n, i) => ({
+    id: `custom-${i}`,
+    headline: n.headline,
+    body: n.body,
+    team: n.teamSlug ? (getTeam(n.teamSlug) ?? null) : null,
+    generatedAt: n.date,
+    isCustom: true,
+  }))
+}
+
 export function generateNewsArticles(): NewsArticle[] {
   const recapWeek = CURRENT_WEEK - 1
-  return [
+  const generated = [
     weekRecap(recapWeek),
     winStreakArticle(),
     tradeBlockArticle(),
@@ -147,4 +159,6 @@ export function generateNewsArticles(): NewsArticle[] {
     powerRankingsArticle(),
     rivalryAlertArticle(),
   ].filter((a): a is NewsArticle => a !== null)
+
+  return [...customNewsArticles(), ...generated]
 }

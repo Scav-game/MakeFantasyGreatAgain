@@ -71,6 +71,7 @@ const scheduleCsv = readCsvRecords("schedule.csv")
 const rostersCsv = readCsvRecords("rosters.csv")
 const draftPicksCsv = readCsvRecords("draft-picks.csv")
 const historyCsv = readCsvRecords("history.csv")
+const newsCsv = readCsvRecords("news.csv")
 
 const TOTAL_WEEKS = 14
 
@@ -167,7 +168,19 @@ const TEAMS = teamsCsv.map((t) => {
   }
 })
 
-mkdirSync(OUT_DIR, { recursive: true })
-writeFileSync(path.join(OUT_DIR, "league-data.json"), JSON.stringify({ CURRENT_WEEK, TEAMS }, null, 2))
+const CUSTOM_NEWS = newsCsv.map((n) => ({
+  date: n.date,
+  headline: n.headline,
+  body: n.body,
+  teamSlug: n.team || null,
+}))
 
-console.log(`Built lib/generated/league-data.json — ${TEAMS.length} teams, CURRENT_WEEK=${CURRENT_WEEK}`)
+mkdirSync(OUT_DIR, { recursive: true })
+writeFileSync(
+  path.join(OUT_DIR, "league-data.json"),
+  JSON.stringify({ CURRENT_WEEK, TEAMS, CUSTOM_NEWS }, null, 2),
+)
+
+console.log(
+  `Built lib/generated/league-data.json — ${TEAMS.length} teams, CURRENT_WEEK=${CURRENT_WEEK}, ${CUSTOM_NEWS.length} custom news stories`,
+)

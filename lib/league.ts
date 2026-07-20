@@ -72,6 +72,14 @@ export type Team = {
 export const CURRENT_WEEK: number = leagueData.CURRENT_WEEK
 export const TEAMS: Team[] = leagueData.TEAMS as Team[]
 
+export type CustomNewsRow = {
+  date: string
+  headline: string
+  body: string
+  teamSlug: string | null
+}
+export const CUSTOM_NEWS: CustomNewsRow[] = leagueData.CUSTOM_NEWS as CustomNewsRow[]
+
 export function getTeam(slug: string): Team | undefined {
   return TEAMS.find((t) => t.slug === slug)
 }

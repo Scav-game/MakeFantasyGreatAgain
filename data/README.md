@@ -1,7 +1,7 @@
 # League data
 
 Everything on the site — standings, streaks, points, the clinch scenarios,
-championship odds, record comparisons, and news — is computed from the five
+championship odds, record comparisons, and news — is computed from the six
 CSV files in this folder. Edit them in Excel, Numbers, or Google Sheets
 (export/save back to CSV, same filename, same folder), then tell Claude to
 refresh the site. Nothing here is hand-edited code — these are just data.
@@ -77,10 +77,28 @@ to agree on anything, just fill in each team's own perspective.
 | `playoffAppearances` | Count of playoff appearances. |
 | `championships` | Count of championships won. |
 
+## news.csv — one row per custom news story, shown at the top of League News
+
+| Column | Meaning |
+|---|---|
+| `date` | Whatever you want shown as the story's date — free text, e.g. `Jul 20 2026`. |
+| `headline` | Story headline. |
+| `body` | Story text (a couple sentences reads best, but nothing stops you writing more). |
+| `team` | Optional. A team's `slug` to give the story that team's colored border and logo. Leave blank for a general league story (shows the gold MFGA mark instead). |
+
+Add as many rows as you want — every row becomes its own card, newest-looking
+first is up to you (they display in file order, top to bottom). These sit
+above the auto-generated stories (Week Recap, Power Rankings, etc.), which
+keep appearing below and don't need any input from you — they're written
+automatically from `schedule.csv`.
+
 ## What's pre-filled right now
 
-These five files were seeded from whatever the site was already showing
+`teams.csv`, `schedule.csv`, `rosters.csv`, `draft-picks.csv`, and
+`history.csv` were seeded from whatever the site was already showing
 (placeholder data), so they're already in the right shape — you're
 correcting/replacing values, not starting from a blank sheet. `teams.csv`,
 `draft-picks.csv`, and `history.csv` will probably only need setting up once;
-`schedule.csv` and `rosters.csv` are the ones you'll touch weekly.
+`schedule.csv` and `rosters.csv` are the ones you'll touch weekly. `news.csv`
+starts with one example row — replace or add to it whenever you have a real
+story.
