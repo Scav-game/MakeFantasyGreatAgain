@@ -93,12 +93,13 @@ fill in: **Win %** (`allTimeWins` / total games) and **PF / Year**
 | `team` | Optional. A team's `slug` to give the story that team's colored border. Leave blank for a general league story (colored gold). |
 | `author` | Optional. The writer's name, e.g. `Marty Hughes`. Shown as a byline ("By Marty Hughes") and controls the picture badge — see below. |
 
-Add as many rows as you want — every row becomes its own card. **Order
-matters: put your newest story first, oldest last.** The homepage League
-News section only shows the top 5 rows; everything (including those 5) is
-searchable on the `/history` News Archive. There's no auto-generated filler
-— whatever's in this file is exactly what shows up, so an empty file means
-an empty section.
+Add as many rows as you want — every row becomes its own card. **Just
+append new stories at the bottom of the file** — the last row is treated as
+the newest and shows up first on the site, so there's no need to insert
+rows at the top. The homepage League News section only shows the 5 most
+recent; everything (including those 5) is searchable on the `/history` News
+Archive. There's no auto-generated filler — whatever's in this file is
+exactly what shows up, so an empty file means an empty section.
 
 ### Reporter staff & profile pictures
 
