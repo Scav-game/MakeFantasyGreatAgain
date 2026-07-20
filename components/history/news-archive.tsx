@@ -3,6 +3,8 @@
 import { useMemo, useState } from "react"
 import { getAllNewsArticles } from "@/lib/news"
 import { TeamLogo } from "@/components/team/team-logo"
+import { AuthorAvatar } from "./author-avatar"
+import { Highlight } from "./highlight"
 
 export function NewsArchive() {
   const articles = getAllNewsArticles()
@@ -12,7 +14,11 @@ export function NewsArchive() {
     const q = query.trim().toLowerCase()
     if (!q) return articles
     return articles.filter(
-      (a) => a.headline.toLowerCase().includes(q) || a.body.toLowerCase().includes(q) || a.team?.name.toLowerCase().includes(q),
+      (a) =>
+        a.headline.toLowerCase().includes(q) ||
+        a.body.toLowerCase().includes(q) ||
+        a.team?.name.toLowerCase().includes(q) ||
+        a.author?.toLowerCase().includes(q),
     )
   }, [articles, query])
 
@@ -39,7 +45,9 @@ export function NewsArchive() {
               style={{ borderLeftColor: article.team?.colors.accent ?? "#D4A017", borderLeftWidth: 4 }}
             >
               <div className="flex items-start gap-4">
-                {article.team ? (
+                {article.author ? (
+                  <AuthorAvatar name={article.author} size="sm" />
+                ) : article.team ? (
                   <TeamLogo team={article.team} size="sm" />
                 ) : (
                   <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-gold/50 bg-gold/10 font-display text-xs font-bold text-gold">
@@ -49,13 +57,20 @@ export function NewsArchive() {
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <h3 className="font-display text-base font-bold uppercase tracking-wide text-foreground">
-                      {article.headline}
+                      <Highlight text={article.headline} query={query} />
                     </h3>
                     <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
                       {article.generatedAt}
                     </span>
                   </div>
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{article.body}</p>
+                  {article.author && (
+                    <p className="mt-0.5 text-[11px] uppercase tracking-wider text-gold/70">
+                      By <Highlight text={article.author} query={query} />
+                    </p>
+                  )}
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                    <Highlight text={article.body} query={query} />
+                  </p>
                 </div>
               </div>
             </article>

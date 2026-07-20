@@ -5,6 +5,7 @@ export type NewsArticle = {
   headline: string
   body: string
   team: Team | null
+  author: string | null
   generatedAt: string
 }
 
@@ -20,6 +21,7 @@ export function getAllNewsArticles(): NewsArticle[] {
     headline: n.headline,
     body: n.body,
     team: n.teamSlug ? (getTeam(n.teamSlug) ?? null) : null,
+    author: n.author,
     generatedAt: n.date,
   }))
 }

@@ -90,7 +90,8 @@ fill in: **Win %** (`allTimeWins` / total games) and **PF / Year**
 | `date` | Whatever you want shown as the story's date — free text, e.g. `Jul 20 2026`. |
 | `headline` | Story headline. |
 | `body` | Story text (a couple sentences reads best, but nothing stops you writing more). |
-| `team` | Optional. A team's `slug` to give the story that team's colored border and logo. Leave blank for a general league story (shows the gold MFGA mark instead). |
+| `team` | Optional. A team's `slug` to give the story that team's colored border. Leave blank for a general league story (colored gold). |
+| `author` | Optional. The writer's name, e.g. `Marty Hughes`. Shown as a byline ("By Marty Hughes") and controls the picture badge — see below. |
 
 Add as many rows as you want — every row becomes its own card. **Order
 matters: put your newest story first, oldest last.** The homepage League
@@ -98,6 +99,31 @@ News section only shows the top 5 rows; everything (including those 5) is
 searchable on the `/history` News Archive. There's no auto-generated filler
 — whatever's in this file is exactly what shows up, so an empty file means
 an empty section.
+
+### Reporter staff & profile pictures
+
+The little square badge on each article picks a picture in this order:
+1. The `author`'s photo, if one exists (see below).
+2. Otherwise the `team`'s logo, if a team is set.
+3. Otherwise the gold "M" mark.
+
+The six MFGA reporters (Rick "The Hammer" Dalton, Maya Chen, DeShawn
+"Showtime" Harris, Claire Westbrook, Tommy "T-Bone" Mancini, Valentina
+Rojas) already have photos wired up in `public\Images\Reporters\`. Use
+their exact names (with the nicknames, quotes and all) in the `author`
+column to get their photo and byline. `data\reporters\personalities.pdf`
+has each reporter's voice, tone, and catchphrases — it's a private
+reference file (not part of the published site) for keeping their writing
+style consistent when drafting new articles as them.
+
+To add a photo for a new author: drop an SVG or PNG into
+`public\Images\Reporters\`, named after their slugified name — lowercase,
+spaces and punctuation turned into hyphens (e.g. "Marty Hughes" →
+`marty-hughes.svg`). Tell Claude once the file's there — the filename needs
+to be registered in `components/history/author-avatar.tsx` before it'll
+show up (the same one-line step used for team logos). Until a photo exists,
+that author gets an initials badge (e.g. "MH") instead — never a broken
+image.
 
 ## What's pre-filled right now
 

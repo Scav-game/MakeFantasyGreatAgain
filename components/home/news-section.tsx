@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { getAllNewsArticles, getHomepageNewsArticles } from "@/lib/news"
 import { TeamLogo } from "@/components/team/team-logo"
+import { AuthorAvatar } from "@/components/history/author-avatar"
 
 export function NewsSection() {
   const articles = getHomepageNewsArticles()
@@ -32,7 +33,9 @@ export function NewsSection() {
             style={{ borderLeftColor: article.team?.colors.accent ?? "#D4A017", borderLeftWidth: 4 }}
           >
             <div className="flex items-start gap-4">
-              {article.team ? (
+              {article.author ? (
+                <AuthorAvatar name={article.author} size="sm" />
+              ) : article.team ? (
                 <TeamLogo team={article.team} size="sm" />
               ) : (
                 <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md border border-gold/50 bg-gold/10 font-display text-xs font-bold text-gold">
@@ -48,6 +51,9 @@ export function NewsSection() {
                     {article.generatedAt}
                   </span>
                 </div>
+                {article.author && (
+                  <p className="mt-0.5 text-[11px] uppercase tracking-wider text-gold/70">By {article.author}</p>
+                )}
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{article.body}</p>
               </div>
             </div>

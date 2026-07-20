@@ -181,6 +181,7 @@ const CUSTOM_NEWS = newsCsv.map((n) => ({
   headline: n.headline,
   body: n.body,
   teamSlug: n.team || null,
+  author: n.author || null,
 }))
 
 mkdirSync(OUT_DIR, { recursive: true })

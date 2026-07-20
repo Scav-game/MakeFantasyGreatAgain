@@ -81,6 +81,7 @@ export type CustomNewsRow = {
   headline: string
   body: string
   teamSlug: string | null
+  author: string | null
 }
 export const CUSTOM_NEWS: CustomNewsRow[] = leagueData.CUSTOM_NEWS as CustomNewsRow[]
 
