@@ -14,3 +14,6 @@ node_modules
 .next/
 out/
 .DS_Store
+
+# Generated from /data CSVs by scripts/build-league-data.mjs
+lib/generated/

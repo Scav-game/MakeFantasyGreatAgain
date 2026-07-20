@@ -3,8 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/build-league-data.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/build-league-data.mjs",
     "build": "next build",
+    "build:data": "node scripts/build-league-data.mjs",
     "start": "next start",
     "lint": "eslint ."
   },

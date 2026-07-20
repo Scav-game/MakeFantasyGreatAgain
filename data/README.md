@@ -1,0 +1,86 @@
+# League data
+
+Everything on the site — standings, streaks, points, the clinch scenarios,
+championship odds, record comparisons, and news — is computed from the five
+CSV files in this folder. Edit them in Excel, Numbers, or Google Sheets
+(export/save back to CSV, same filename, same folder), then tell Claude to
+refresh the site. Nothing here is hand-edited code — these are just data.
+
+**Workflow:** edit a CSV → save it in this folder under the same name → ask
+to have the site rebuilt and redeployed. Behind the scenes that runs
+`npm run build:data` (turns these CSVs into `lib/generated/league-data.json`)
+followed by `npm run build`.
+
+There is no separate "current week" field to update — `CURRENT_WEEK` is
+figured out automatically from `schedule.csv`: it's the first week that
+doesn't yet have scores filled in for every game. Just fill in scores as
+games get played; the site figures out where the season is.
+
+## teams.csv — one row per team, rarely changes
+
+| Column | Meaning |
+|---|---|
+| `slug` | Unique id used everywhere else in these CSVs to reference this team (e.g. `pakistan-bombers`). Don't change once set — every other CSV points to it. |
+| `name` | Full team name. |
+| `nameLine1` / `nameLine2` | The team name split across two lines for the big hero headline (e.g. "PAKISTAN" / "BOMBERS"). |
+| `accentLine` | `0` or `1` — which of the two name lines gets the team's accent color on the hero. |
+| `division` | `East` or `West`. |
+| `tagline` | Short tagline shown on the team page. |
+| `theme` | Short theme description (e.g. "Military · Explosive · War Zone"). |
+| `stadiumName` / `stadiumCity` | Home stadium name and city. |
+| `hero` | Path to the team's hero photo under `/public` (e.g. `/teams/pakistan-bombers.png`). |
+| `colorPrimary` / `colorAccent` / `colorDark` / `colorLight` | Hex colors used throughout the team's page and cards. `light` and `dark` should stay a light/dark pastel-and-ink pair — they're used as the page background and text ink now, not just accents. |
+
+## schedule.csv — one row per team per week (14 teams × 14 weeks = 196 rows)
+
+| Column | Meaning |
+|---|---|
+| `slug` | Team this row belongs to. |
+| `week` | Week number, 1–14. |
+| `opponent` | Opponent's `slug`. |
+| `date` | Display date, e.g. `Sep 7, 2026`. |
+| `time` | Display kickoff time, e.g. `1:00 PM`. |
+| `home` | `yes` if this team is home, `no` if away. |
+| `teamScore` / `oppScore` | This team's score and the opponent's score. **Leave both blank for games that haven't been played yet.** Filling these in is what advances the season and moves `CURRENT_WEEK` forward. |
+
+Each team's row is independent — you don't need the two teams in a matchup
+to agree on anything, just fill in each team's own perspective.
+
+## rosters.csv — one row per player
+
+| Column | Meaning |
+|---|---|
+| `teamSlug` | Team this player belongs to. |
+| `group` | `starter` or `bench`. |
+| `pos` | Position (QB, RB, WR, TE, FLEX, K, DEF, …). |
+| `name` | Player name. |
+| `nflTeam` | Player's NFL team abbreviation. |
+| `points` | Season points scored so far. |
+
+## draft-picks.csv — one row per owned future draft pick
+
+| Column | Meaning |
+|---|---|
+| `teamSlug` | Team that owns the pick. |
+| `year` | Draft year. |
+| `round` | e.g. `1st Round`. |
+| `origin` | `Own` or the name of the team the pick was acquired from. |
+
+## history.csv — one row per team, mostly one-time setup
+
+| Column | Meaning |
+|---|---|
+| `slug` | Team. |
+| `yearJoined` | Year the franchise joined the league. |
+| `allTimeWins` / `allTimeLosses` | All-time regular season record. |
+| `totalPointsFor` | All-time total points scored. |
+| `playoffAppearances` | Count of playoff appearances. |
+| `championships` | Count of championships won. |
+
+## What's pre-filled right now
+
+These five files were seeded from whatever the site was already showing
+(placeholder data), so they're already in the right shape — you're
+correcting/replacing values, not starting from a blank sheet. `teams.csv`,
+`draft-picks.csv`, and `history.csv` will probably only need setting up once;
+`schedule.csv` and `rosters.csv` are the ones you'll touch weekly.
