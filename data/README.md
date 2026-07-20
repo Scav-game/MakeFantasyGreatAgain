@@ -77,7 +77,7 @@ to agree on anything, just fill in each team's own perspective.
 | `playoffAppearances` | Count of playoff appearances. |
 | `championships` | Count of championships won. |
 
-## news.csv — one row per custom news story, shown at the top of League News
+## news.csv — one row per news story, this is the entire League News section
 
 | Column | Meaning |
 |---|---|
@@ -86,11 +86,10 @@ to agree on anything, just fill in each team's own perspective.
 | `body` | Story text (a couple sentences reads best, but nothing stops you writing more). |
 | `team` | Optional. A team's `slug` to give the story that team's colored border and logo. Leave blank for a general league story (shows the gold MFGA mark instead). |
 
-Add as many rows as you want — every row becomes its own card, newest-looking
-first is up to you (they display in file order, top to bottom). These sit
-above the auto-generated stories (Week Recap, Power Rankings, etc.), which
-keep appearing below and don't need any input from you — they're written
-automatically from `schedule.csv`.
+Add as many rows as you want — every row becomes its own card, in file order
+top to bottom. There's no auto-generated filler anymore — whatever's in this
+file is exactly what shows up in League News, so an empty file means an empty
+section.
 
 ## What's pre-filled right now
 
@@ -100,5 +99,4 @@ automatically from `schedule.csv`.
 correcting/replacing values, not starting from a blank sheet. `teams.csv`,
 `draft-picks.csv`, and `history.csv` will probably only need setting up once;
 `schedule.csv` and `rosters.csv` are the ones you'll touch weekly. `news.csv`
-starts with one example row — replace or add to it whenever you have a real
-story.
+is all yours — add, edit, or remove stories whenever you want.

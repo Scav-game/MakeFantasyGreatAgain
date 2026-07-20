@@ -29,7 +29,7 @@ export function NewsSection() {
                     {article.headline}
                   </h3>
                   <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
-                    {article.isCustom ? article.generatedAt : `Generated ${article.generatedAt}`}
+                    {article.generatedAt}
                   </span>
                 </div>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{article.body}</p>
