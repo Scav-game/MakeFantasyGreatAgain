@@ -81,54 +81,54 @@ function PastTeamModal({ team, onClose }: { team: PastTeam; onClose: () => void 
       onClick={onClose}
     >
       <div
-        className={`relative flex w-full max-w-3xl flex-col overflow-hidden rounded-2xl border shadow-2xl transition-all duration-300 sm:flex-row ${
+        className={`relative w-full max-w-lg overflow-hidden rounded-2xl border shadow-2xl transition-all duration-300 ${
           entered ? "scale-100 opacity-100" : "scale-90 opacity-0"
         }`}
-        style={{ borderColor: `${team.colors.accent}66`, backgroundColor: team.colors.dark }}
+        style={{ borderColor: `${team.colors.accent}55`, backgroundColor: team.colors.dark }}
         onClick={(e) => e.stopPropagation()}
       >
-        <button
-          type="button"
-          onClick={onClose}
-          aria-label="Close"
-          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/50 text-white transition-colors hover:bg-black/70"
-        >
-          ✕
-        </button>
-
-        {/* Full, uncropped image — always shown in color once you've clicked in */}
-        <div className="flex items-center justify-center sm:w-1/2" style={{ backgroundColor: team.colors.dark }}>
+        <div className="relative h-48">
           <img
             src={assetPath(team.hero || "/placeholder.svg")}
             alt={`${team.name} hero`}
-            className="max-h-[40vh] w-full object-contain sm:max-h-[75vh] sm:w-full sm:flex-1"
+            className="absolute inset-0 h-full w-full object-cover object-center"
           />
-        </div>
-
-        {/* Stats */}
-        <div className="flex flex-col justify-center p-6 sm:w-1/2">
-          <p className="font-display text-2xl font-bold uppercase" style={{ color: team.colors.light }}>
-            {team.name}
-          </p>
-          <p className="mb-4 text-xs uppercase tracking-wider" style={{ color: team.colors.accent }}>
-            {team.yearJoined} – {team.yearLeft} · {seasons} season{seasons === 1 ? "" : "s"}
-          </p>
-          <div>
-            <StatRow
-              label="All-Time Record"
-              value={`${team.allTimeRecord.wins}-${team.allTimeRecord.losses}`}
-              accent={team.colors.accent}
-            />
-            <StatRow label="Win %" value={`${winPct.toFixed(1)}%`} />
-            <StatRow label="Total Points For" value={team.totalPointsFor.toLocaleString()} />
-            <StatRow label="Playoff Appearances" value={String(team.playoffAppearances)} />
-            <StatRow label="Playoff Wins" value={String(team.playoffWins)} />
-            <StatRow
-              label="Championships"
-              value={String(team.championships)}
-              accent={team.championships > 0 ? team.colors.accent : undefined}
-            />
+          <div
+            className="absolute inset-0"
+            style={{ background: `linear-gradient(0deg, ${team.colors.dark} 10%, transparent 90%)` }}
+          />
+          <button
+            type="button"
+            onClick={onClose}
+            aria-label="Close"
+            className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/50 text-white transition-colors hover:bg-black/70"
+          >
+            ✕
+          </button>
+          <div className="absolute bottom-4 left-5">
+            <p className="font-display text-2xl font-bold uppercase" style={{ color: team.colors.light }}>
+              {team.name}
+            </p>
+            <p className="text-xs uppercase tracking-wider" style={{ color: team.colors.accent }}>
+              {team.yearJoined} – {team.yearLeft} · {seasons} season{seasons === 1 ? "" : "s"}
+            </p>
           </div>
+        </div>
+        <div className="p-5">
+          <StatRow
+            label="All-Time Record"
+            value={`${team.allTimeRecord.wins}-${team.allTimeRecord.losses}`}
+            accent={team.colors.accent}
+          />
+          <StatRow label="Win %" value={`${winPct.toFixed(1)}%`} />
+          <StatRow label="Total Points For" value={team.totalPointsFor.toLocaleString()} />
+          <StatRow label="Playoff Appearances" value={String(team.playoffAppearances)} />
+          <StatRow label="Playoff Wins" value={String(team.playoffWins)} />
+          <StatRow
+            label="Championships"
+            value={String(team.championships)}
+            accent={team.championships > 0 ? team.colors.accent : undefined}
+          />
         </div>
       </div>
     </div>
