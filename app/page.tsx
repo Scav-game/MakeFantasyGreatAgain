@@ -127,11 +127,10 @@ export default function LeagueHome() {
         {/* Intro */}
         <section className="mb-12 max-w-3xl">
           <h1 className="font-display text-5xl font-bold uppercase leading-[0.9] tracking-tight text-balance text-foreground md:text-7xl">
-            The League of <span className="text-gold">Legends</span>
+            Make <span className="text-gold">Fantasy</span> Great Again
           </h1>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Fourteen franchises. Two divisions. One title. Explore every team&apos;s home,
-            from the Faisal Mosque to the surface of Pluto. Pick a franchise to enter their world.
+            2026 Season
           </p>
         </section>
 

@@ -2,7 +2,7 @@ import Link from "next/link"
 import type { Team } from "@/lib/league"
 import { TeamLogo } from "./team-logo"
 
-const NAV_LINKS = ["HOME", "TEAM", "SCHEDULE", "NEWS", "SHOP", "CONTACT"]
+const NAV_LINKS = ["HOME", "TEAM", "SCHEDULE", "NEWS"]
 
 export function TeamNav({ team }: { team: Team }) {
   return (

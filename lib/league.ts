@@ -1,10 +1,5 @@
 export type Division = "East" | "West"
 
-export type MerchItem = {
-  name: string
-  type: "jersey" | "hat" | "hoodie"
-}
-
 export type Player = {
   name: string
   pos: string
@@ -56,7 +51,6 @@ export type Team = {
     dark: string
     light: string
   }
-  merch: MerchItem[]
   record: { wins: number; losses: number }
   pointsFor: number
   pointsAgainst: number
@@ -246,11 +240,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Bomber Stadium", city: "Islamabad, Pakistan" },
     hero: "/teams/pakistan-bombers.png",
     colors: { primary: "#C62828", accent: "#D4A017", dark: "#170707", light: "#F5E9D0" },
-    merch: [
-      { name: "Home Red Jersey", type: "jersey" },
-      { name: "Dynamite Snapback", type: "hat" },
-      { name: "Stencil Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "nabers-in-paris",
@@ -263,11 +252,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Stade de Nabers", city: "Paris, France" },
     hero: "/teams/nabers-in-paris.png",
     colors: { primary: "#1A1A4E", accent: "#C0392B", dark: "#0A0A1F", light: "#EDE7DA" },
-    merch: [
-      { name: "Couture Navy Jersey", type: "jersey" },
-      { name: "Eiffel Skyline Cap", type: "hat" },
-      { name: "Maison Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "mount-olympus",
@@ -280,11 +264,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "The Pantheon Arena", city: "Mount Olympus, Greece" },
     hero: "/teams/mount-olympus.png",
     colors: { primary: "#EC5829", accent: "#D4A017", dark: "#161211", light: "#F3ECE2" },
-    merch: [
-      { name: "Olympian White Jersey", type: "jersey" },
-      { name: "Laurel Wreath Cap", type: "hat" },
-      { name: "Marble Texture Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "vile-horrendous",
@@ -297,11 +276,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "The Dungeon", city: "Shadowmoor" },
     hero: "/teams/vile-horrendous.png",
     colors: { primary: "#1C75BC", accent: "#BE2026", dark: "#080810", light: "#DCE4EF" },
-    merch: [
-      { name: "Castle Crest Jersey", type: "jersey" },
-      { name: "Red-Stitch Cap", type: "hat" },
-      { name: "Fraktur Gothic Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "fort-bragg",
@@ -314,11 +288,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Bragg Field", city: "Fayetteville, NC" },
     hero: "/teams/fort-bragg.png",
     colors: { primary: "#A26F64", accent: "#D4A017", dark: "#14100D", light: "#E8DFCE" },
-    merch: [
-      { name: "Camo Field Jersey", type: "jersey" },
-      { name: "Olive Drab Cap", type: "hat" },
-      { name: "Stencil Corps Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "chicago-zestiest",
@@ -331,11 +300,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Zest Field", city: "Chicago, IL" },
     hero: "/teams/chicago-zestiest.png",
     colors: { primary: "#42A5F5", accent: "#F48FB1", dark: "#0B1524", light: "#EAF4FE" },
-    merch: [
-      { name: "Zest Blue Jersey", type: "jersey" },
-      { name: "Cartoon Logo Snapback", type: "hat" },
-      { name: "Skyline Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "beer",
@@ -348,11 +312,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "The Brewery", city: "Milwaukee, WI" },
     hero: "/teams/beer.png",
     colors: { primary: "#BCBEC0", accent: "#D4A017", dark: "#151210", light: "#EFEBE4" },
-    merch: [
-      { name: "Silver Serif Jersey", type: "jersey" },
-      { name: "Leather Mug Cap", type: "hat" },
-      { name: "Brewery Henley Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "pluto-shraazinatorz",
@@ -365,11 +324,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Shraaz Station", city: "Pluto Orbital" },
     hero: "/teams/pluto-shraazinatorz.png",
     colors: { primary: "#00A14B", accent: "#EEC42C", dark: "#08110B", light: "#E4F5E9" },
-    merch: [
-      { name: "Circuit Black Jersey", type: "jersey" },
-      { name: "Gold Visor Cap", type: "hat" },
-      { name: "Star Map Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "the-watermark",
@@ -382,11 +336,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Tidal Arena", city: "Watermark Bay, CA" },
     hero: "/teams/the-watermark.png",
     colors: { primary: "#ED2246", accent: "#F15E60", dark: "#120A0C", light: "#F6E2E5" },
-    merch: [
-      { name: "Flame Fade Jersey", type: "jersey" },
-      { name: "Ember Icon Cap", type: "hat" },
-      { name: "Gradient Blaze Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "doobs-agency",
@@ -399,11 +348,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "The Compound", city: "Location: CLASSIFIED" },
     hero: "/teams/doobs-agency.png",
     colors: { primary: "#29ABE2", accent: "#AC620E", dark: "#0A0F14", light: "#E1F0F8" },
-    merch: [
-      { name: "Classified Charcoal Jersey", type: "jersey" },
-      { name: "Leather DA Cap", type: "hat" },
-      { name: "Tactical Stencil Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "englewood-ninjas",
@@ -416,11 +360,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Shadow Dojo", city: "Englewood, IL" },
     hero: "/teams/englewood-ninjas.png",
     colors: { primary: "#FAAF42", accent: "#C7EAFB", dark: "#0C0D0F", light: "#F5EAD4" },
-    merch: [
-      { name: "Shuriken Black Jersey", type: "jersey" },
-      { name: "Gold Emblem Cap", type: "hat" },
-      { name: "Kanji Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "i-heart-gingers",
@@ -433,11 +372,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Ginger Field", city: "Dublin, Ireland" },
     hero: "/teams/i-heart-gingers.png",
     colors: { primary: "#FF7043", accent: "#D4A017", dark: "#140C08", light: "#F5E8DA" },
-    merch: [
-      { name: "Celtic Knot Jersey", type: "jersey" },
-      { name: "Tweed Flat Cap", type: "hat" },
-      { name: "Handwritten Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "amon-ra-dawgin",
@@ -450,11 +384,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Temple of Ra", city: "Giza, Egypt" },
     hero: "/teams/amon-ra-dawgin.png",
     colors: { primary: "#E9BC52", accent: "#8A5A2B", dark: "#120C05", light: "#F5EAD0" },
-    merch: [
-      { name: "Hieroglyph Jersey", type: "jersey" },
-      { name: "Cobra Snapback", type: "hat" },
-      { name: "Pyramid Hoodie", type: "hoodie" },
-    ],
   },
   {
     slug: "vancouver-panties",
@@ -467,11 +396,6 @@ const BASE_TEAMS: BaseTeam[] = [
     stadium: { name: "Liberty Stadium", city: "Vancouver, BC" },
     hero: "/teams/vancouver-panties.png",
     colors: { primary: "#1E3A5A", accent: "#C62828", dark: "#0A1018", light: "#EDE5D6" },
-    merch: [
-      { name: "Star & Stripe Jersey", type: "jersey" },
-      { name: "VPDJ Military Cap", type: "hat" },
-      { name: "We Exist Hoodie", type: "hoodie" },
-    ],
   },
 ]
 

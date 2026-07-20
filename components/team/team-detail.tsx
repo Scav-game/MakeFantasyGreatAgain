@@ -1,7 +1,6 @@
 import type { Player, Team } from "@/lib/league"
 import { CURRENT_WEEK, getTeam } from "@/lib/league"
 import { TeamLogo } from "./team-logo"
-import { MerchCard } from "./merch-card"
 
 function SectionHeading({ team, id, label }: { team: Team; id: string; label: string }) {
   return (
@@ -166,15 +165,6 @@ export function TeamDetail({ team }: { team: Team }) {
       <section className="flex flex-col gap-6">
         <SectionHeading team={team} id="draft" label="Draft Capital" />
         <DraftPicks team={team} />
-      </section>
-
-      <section id="shop" className="scroll-mt-20 flex flex-col gap-6">
-        <SectionHeading team={team} id="shop-all" label="Team Shop" />
-        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 md:grid-cols-3">
-          {team.merch.map((item) => (
-            <MerchCard key={item.name} item={item} team={team} />
-          ))}
-        </div>
       </section>
     </div>
   )
