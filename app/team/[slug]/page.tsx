@@ -39,7 +39,12 @@ export default async function TeamPage({
     <div
       className="min-h-screen"
       style={{
-        background: `linear-gradient(180deg, ${team.colors.light} 0%, #f7f2e7 55%)`,
+        background: [
+          `radial-gradient(ellipse 900px 700px at 10% 0%, ${team.colors.primary}59 0%, transparent 55%)`,
+          `radial-gradient(ellipse 900px 700px at 95% 10%, ${team.colors.accent}4d 0%, transparent 55%)`,
+          `radial-gradient(ellipse 1200px 800px at 50% 100%, ${team.colors.primary}26 0%, transparent 60%)`,
+          `linear-gradient(180deg, ${team.colors.dark} 0%, #0a0a0a 70%)`,
+        ].join(", "),
       }}
     >
       <TeamNav team={team} />
@@ -64,17 +69,14 @@ export default async function TeamPage({
 
       <footer
         className="border-t"
-        style={{ borderColor: `${team.colors.accent}22`, backgroundColor: `${team.colors.light}cc` }}
+        style={{ borderColor: `${team.colors.accent}22`, backgroundColor: `${team.colors.dark}99` }}
       >
         <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-4 py-8 text-center md:flex-row md:px-6 md:text-left">
           <div>
-            <p
-              className="font-display text-sm font-bold uppercase tracking-widest"
-              style={{ color: team.colors.dark }}
-            >
+            <p className="font-display text-sm font-bold uppercase tracking-widest text-white">
               {team.name}
             </p>
-            <p className="text-xs" style={{ color: `${team.colors.dark}99` }}>
+            <p className="text-xs text-white/50">
               {team.stadium.name} · {team.stadium.city}
             </p>
           </div>
@@ -83,8 +85,7 @@ export default async function TeamPage({
           </p>
           <Link
             href="/"
-            className="font-display text-xs font-semibold uppercase tracking-widest opacity-70 transition-opacity hover:opacity-100"
-            style={{ color: team.colors.dark }}
+            className="font-display text-xs font-semibold uppercase tracking-widest text-white/60 transition-colors hover:text-white"
           >
             ← All Teams
           </Link>

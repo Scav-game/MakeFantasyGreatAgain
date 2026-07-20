@@ -15,19 +15,23 @@ export function getInitials(name: string): string {
 }
 
 // Only teams with a file here get a real logo; everyone else falls back to
-// an initials badge until a matching /public/Images/Logos/<slug>.svg exists.
-const LOGO_SLUGS = new Set([
-  "amon-ra-dawgin",
-  "beer",
-  "doobs-agency",
-  "englewood-ninjas",
-  "fort-bragg",
-  "mount-olympus",
-  "nabers-in-paris",
-  "pluto-shraazinatorz",
-  "the-watermark",
-  "vile-horrendous",
-])
+// an initials badge until a matching /public/Images/Logos/<slug>.<ext> exists.
+const LOGO_EXTENSION: Record<string, string> = {
+  "amon-ra-dawgin": "svg",
+  beer: "svg",
+  "chicago-zestiest": "png",
+  "doobs-agency": "svg",
+  "englewood-ninjas": "svg",
+  "fort-bragg": "svg",
+  "i-heart-gingers": "png",
+  "mount-olympus": "svg",
+  "nabers-in-paris": "svg",
+  "pakistan-bombers": "png",
+  "pluto-shraazinatorz": "svg",
+  "the-watermark": "svg",
+  "vancouver-panties": "png",
+  "vile-horrendous": "svg",
+}
 
 type TeamLogoProps = {
   team: Pick<Team, "slug" | "name" | "colors">
@@ -42,7 +46,8 @@ const SIZES = {
 }
 
 export function TeamLogo({ team, size = "md", className }: TeamLogoProps) {
-  if (LOGO_SLUGS.has(team.slug)) {
+  const ext = LOGO_EXTENSION[team.slug]
+  if (ext) {
     return (
       <span
         className={cn(
@@ -56,7 +61,7 @@ export function TeamLogo({ team, size = "md", className }: TeamLogoProps) {
         }}
       >
         <img
-          src={assetPath(`/Images/Logos/${team.slug}.svg`)}
+          src={assetPath(`/Images/Logos/${team.slug}.${ext}`)}
           alt={`${team.name} logo`}
           className="h-[80%] w-[80%] object-contain"
         />

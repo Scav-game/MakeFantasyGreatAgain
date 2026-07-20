@@ -40,8 +40,8 @@ export const metadata: Metadata = {
 }
 
 export const viewport: Viewport = {
-  colorScheme: 'light',
-  themeColor: '#f7f2e7',
+  colorScheme: 'dark',
+  themeColor: '#0a0a0a',
 }
 
 export default function RootLayout({
@@ -50,7 +50,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className={`light ${oswald.variable} ${inter.variable} bg-background`}>
+    <html lang="en" className={`dark ${oswald.variable} ${inter.variable} bg-background`}>
       <body className="antialiased font-sans">
         {children}
         {process.env.NODE_ENV === 'production' && <Analytics />}

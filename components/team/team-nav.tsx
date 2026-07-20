@@ -9,7 +9,7 @@ export function TeamNav({ team }: { team: Team }) {
     <header
       className="sticky top-0 z-50 border-b backdrop-blur-md"
       style={{
-        backgroundColor: `${team.colors.light}f2`,
+        backgroundColor: `${team.colors.dark}f2`,
         borderColor: `${team.colors.accent}33`,
       }}
     >
@@ -18,7 +18,7 @@ export function TeamNav({ team }: { team: Team }) {
           <TeamLogo team={team} size="sm" />
           <span
             className="font-display text-base font-bold uppercase leading-none tracking-wide md:text-lg"
-            style={{ color: team.colors.dark }}
+            style={{ color: team.colors.light }}
           >
             {team.name}
           </span>
@@ -29,8 +29,7 @@ export function TeamNav({ team }: { team: Team }) {
             <Link
               key={link}
               href={link === "HOME" ? `/team/${team.slug}` : `/team/${team.slug}#${link.toLowerCase()}`}
-              className="font-display text-sm font-medium uppercase tracking-widest opacity-70 transition-opacity hover:opacity-100"
-              style={{ color: team.colors.dark }}
+              className="font-display text-sm font-medium uppercase tracking-widest text-white/70 transition-colors hover:text-white"
             >
               {link}
             </Link>

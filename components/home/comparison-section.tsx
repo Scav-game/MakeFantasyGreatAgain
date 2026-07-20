@@ -27,7 +27,7 @@ function ComparisonRow({
   return (
     <>
       <tr
-        className="cursor-pointer border-t border-border/60 transition-colors hover:bg-black/[0.03]"
+        className="cursor-pointer border-t border-border/60 transition-colors hover:bg-white/[0.03]"
         onClick={() => setExpanded((v) => !v)}
       >
         <td className="px-4 py-3">
@@ -67,7 +67,7 @@ function ComparisonRow({
         </td>
       </tr>
       {expanded && (
-        <tr className="border-t border-border/40 bg-black/[0.02]">
+        <tr className="border-t border-border/40 bg-white/[0.02]">
           <td colSpan={4} className="px-4 py-4">
             <p className="mb-3 text-xs uppercase tracking-wider text-muted-foreground">
               {team.name}&apos;s record against every schedule

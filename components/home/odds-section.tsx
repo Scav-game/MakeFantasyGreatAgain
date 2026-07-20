@@ -9,7 +9,7 @@ function OddsBar({ label, pct, color }: { label: string; pct: number; color: str
       <span className="w-[92px] shrink-0 text-[10px] uppercase tracking-wider text-muted-foreground">
         {label}
       </span>
-      <div className="h-2 flex-1 overflow-hidden rounded-full bg-black/10">
+      <div className="h-2 flex-1 overflow-hidden rounded-full bg-white/10">
         <div
           className="h-full rounded-full transition-[width]"
           style={{ width: `${width}%`, backgroundColor: color }}

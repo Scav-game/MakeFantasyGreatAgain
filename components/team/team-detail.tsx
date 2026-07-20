@@ -7,7 +7,7 @@ function SectionHeading({ team, id, label }: { team: Team; id: string; label: st
     <div id={id} className="scroll-mt-20">
       <div className="flex items-center gap-3">
         <span className="h-6 w-1 rounded-full" style={{ backgroundColor: team.colors.accent }} />
-        <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground md:text-3xl">
+        <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-white md:text-3xl">
           {label}
         </h2>
       </div>
@@ -18,8 +18,8 @@ function SectionHeading({ team, id, label }: { team: Team; id: string; label: st
 function RosterTable({ team, players, title }: { team: Team; players: Player[]; title: string }) {
   return (
     <div
-      className="overflow-hidden rounded-xl border bg-card"
-      style={{ borderColor: `${team.colors.accent}2e` }}
+      className="overflow-hidden rounded-xl border"
+      style={{ borderColor: `${team.colors.accent}2e`, backgroundColor: `${team.colors.dark}66` }}
     >
       <div
         className="px-5 py-3 font-display text-xs font-bold uppercase tracking-[0.2em]"
@@ -29,7 +29,7 @@ function RosterTable({ team, players, title }: { team: Team; players: Player[]; 
       </div>
       <table className="w-full text-left text-sm">
         <thead>
-          <tr className="text-[11px] uppercase tracking-wider text-muted-foreground">
+          <tr className="text-[11px] uppercase tracking-wider text-white/50">
             <th className="px-5 py-2 font-medium">Pos</th>
             <th className="px-2 py-2 font-medium">Player</th>
             <th className="px-2 py-2 font-medium">NFL</th>
@@ -38,18 +38,18 @@ function RosterTable({ team, players, title }: { team: Team; players: Player[]; 
         </thead>
         <tbody>
           {players.map((p, i) => (
-            <tr key={`${p.name}-${i}`} className="border-t border-border">
+            <tr key={`${p.name}-${i}`} className="border-t border-white/[0.06]">
               <td className="px-5 py-2.5">
                 <span
                   className="inline-flex min-w-9 justify-center rounded px-1.5 py-0.5 font-display text-[11px] font-bold uppercase"
-                  style={{ backgroundColor: `${team.colors.primary}33`, color: team.colors.dark }}
+                  style={{ backgroundColor: `${team.colors.primary}33`, color: team.colors.light }}
                 >
                   {p.pos}
                 </span>
               </td>
-              <td className="px-2 py-2.5 font-medium text-foreground">{p.name}</td>
-              <td className="px-2 py-2.5 text-muted-foreground">{p.nflTeam}</td>
-              <td className="px-5 py-2.5 text-right font-display font-semibold text-foreground">
+              <td className="px-2 py-2.5 font-medium text-white">{p.name}</td>
+              <td className="px-2 py-2.5 text-white/60">{p.nflTeam}</td>
+              <td className="px-5 py-2.5 text-right font-display font-semibold text-white">
                 {p.points.toFixed(1)}
               </td>
             </tr>
@@ -63,12 +63,12 @@ function RosterTable({ team, players, title }: { team: Team; players: Player[]; 
 function FullSchedule({ team }: { team: Team }) {
   return (
     <div
-      className="overflow-hidden rounded-xl border bg-card"
-      style={{ borderColor: `${team.colors.accent}2e` }}
+      className="overflow-hidden rounded-xl border"
+      style={{ borderColor: `${team.colors.accent}2e`, backgroundColor: `${team.colors.dark}66` }}
     >
       <table className="w-full text-left text-sm">
         <thead>
-          <tr className="text-[11px] uppercase tracking-wider text-muted-foreground">
+          <tr className="text-[11px] uppercase tracking-wider text-white/50">
             <th className="px-4 py-2.5 font-medium">Wk</th>
             <th className="px-2 py-2.5 font-medium">Opponent</th>
             <th className="px-2 py-2.5 font-medium">Date</th>
@@ -82,33 +82,33 @@ function FullSchedule({ team }: { team: Team }) {
             return (
               <tr
                 key={game.week}
-                className="border-t border-border"
+                className="border-t border-white/[0.06]"
                 style={isCurrent ? { backgroundColor: `${team.colors.accent}14` } : undefined}
               >
-                <td className="px-4 py-2.5 font-display font-semibold text-muted-foreground">{game.week}</td>
+                <td className="px-4 py-2.5 font-display font-semibold text-white/70">{game.week}</td>
                 <td className="px-2 py-2.5">
                   <div className="flex items-center gap-2">
                     {opp && <TeamLogo team={opp} size="sm" />}
-                    <span className="font-medium text-foreground">
-                      <span className="text-muted-foreground">{game.home ? "vs " : "@ "}</span>
+                    <span className="font-medium text-white">
+                      <span className="text-white/50">{game.home ? "vs " : "@ "}</span>
                       {opp?.name ?? game.opponent}
                     </span>
                   </div>
                 </td>
-                <td className="px-2 py-2.5 text-muted-foreground">{game.date}</td>
+                <td className="px-2 py-2.5 text-white/60">{game.date}</td>
                 <td className="px-4 py-2.5 text-right">
                   {game.result ? (
                     <span
                       className="font-display font-semibold"
                       style={{
-                        color: game.result.outcome === "W" ? "#16a34a" : "#dc2626",
+                        color: game.result.outcome === "W" ? "#4ade80" : "#f87171",
                       }}
                     >
                       {game.result.outcome} {game.result.teamScore.toFixed(1)}–
                       {game.result.oppScore.toFixed(1)}
                     </span>
                   ) : (
-                    <span className="text-xs uppercase tracking-wide text-muted-foreground">
+                    <span className="text-xs uppercase tracking-wide text-white/40">
                       {game.time}
                     </span>
                   )}
@@ -128,14 +128,14 @@ function DraftPicks({ team }: { team: Team }) {
       {team.draftPicks.map((pick, i) => (
         <div
           key={i}
-          className="flex items-center justify-between rounded-xl border bg-card px-5 py-4"
-          style={{ borderColor: `${team.colors.accent}2e` }}
+          className="flex items-center justify-between rounded-xl border px-5 py-4"
+          style={{ borderColor: `${team.colors.accent}2e`, backgroundColor: `${team.colors.dark}66` }}
         >
           <div>
-            <p className="font-display text-lg font-bold text-foreground">
+            <p className="font-display text-lg font-bold text-white">
               {pick.year} · {pick.round}
             </p>
-            <p className="text-xs text-muted-foreground">Origin: {pick.origin}</p>
+            <p className="text-xs text-white/50">Origin: {pick.origin}</p>
           </div>
           <span className="font-display text-2xl font-bold" style={{ color: team.colors.accent }}>
             {pick.year}

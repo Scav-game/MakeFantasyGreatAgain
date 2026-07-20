@@ -7,8 +7,8 @@ export function ScheduleStrip({ team }: { team: Team }) {
 
   return (
     <section
-      className="rounded-xl border bg-card"
-      style={{ borderColor: `${team.colors.accent}2e` }}
+      className="rounded-xl border"
+      style={{ borderColor: `${team.colors.accent}2e`, backgroundColor: `${team.colors.dark}66` }}
     >
       <div className="flex items-center justify-between px-5 py-3">
         <h2
@@ -19,12 +19,12 @@ export function ScheduleStrip({ team }: { team: Team }) {
         </h2>
         <a
           href="#schedule"
-          className="font-display text-xs font-semibold uppercase tracking-widest text-muted-foreground transition-colors hover:text-foreground"
+          className="font-display text-xs font-semibold uppercase tracking-widest text-white/60 transition-colors hover:text-white"
         >
           View Full Schedule →
         </a>
       </div>
-      <div className="grid grid-cols-2 divide-x divide-y divide-border border-t border-border sm:grid-cols-3 md:grid-cols-5 md:divide-y-0">
+      <div className="grid grid-cols-2 divide-x divide-y divide-white/10 border-t border-white/10 sm:grid-cols-3 md:grid-cols-5 md:divide-y-0">
         {upcoming.map((game) => {
           const opp = getTeam(game.opponent)
           if (!opp) return null
@@ -32,13 +32,13 @@ export function ScheduleStrip({ team }: { team: Team }) {
             <div key={game.week} className="flex items-center gap-3 px-4 py-4">
               <TeamLogo team={opp} size="sm" />
               <div className="min-w-0">
-                <p className="text-[11px] uppercase tracking-wider text-muted-foreground">
+                <p className="text-[11px] uppercase tracking-wider text-white/50">
                   Wk {game.week} · {game.home ? "vs" : "@"}
                 </p>
-                <p className="truncate font-display text-xs font-semibold uppercase text-foreground">
+                <p className="truncate font-display text-xs font-semibold uppercase text-white">
                   {opp.name}
                 </p>
-                <p className="text-[11px] text-muted-foreground">{game.date}</p>
+                <p className="text-[11px] text-white/50">{game.date}</p>
               </div>
             </div>
           )
