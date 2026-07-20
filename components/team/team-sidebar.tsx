@@ -58,7 +58,8 @@ function NextGameCard({ team }: { team: Team }) {
           Week {game.week} · {game.date}
         </p>
         <p className="text-xs text-white/60">
-          {game.time} · {game.home ? team.stadium.city : (opp.stadium.city)}
+          {game.time ? `${game.time} · ` : ""}
+          {game.home ? team.stadium.city : opp.stadium.city}
         </p>
       </div>
     </Card>

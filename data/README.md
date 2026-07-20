@@ -39,7 +39,6 @@ games get played; the site figures out where the season is.
 | `week` | Week number, 1–14. |
 | `opponent` | Opponent's `slug`. |
 | `date` | Display date, e.g. `Sep 7, 2026`. |
-| `time` | Display kickoff time, e.g. `1:00 PM`. |
 | `home` | `yes` if this team is home, `no` if away. |
 | `teamScore` / `oppScore` | This team's score and the opponent's score. **Leave both blank for games that haven't been played yet.** Filling these in is what advances the season and moves `CURRENT_WEEK` forward. |
 

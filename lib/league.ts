@@ -13,7 +13,7 @@ export type Game = {
   week: number
   opponent: string // slug
   date: string
-  time: string
+  time?: string
   home: boolean
   result?: {
     outcome: "W" | "L"

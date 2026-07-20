@@ -96,7 +96,7 @@ const TEAMS = teamsCsv.map((t) => {
         week: Number(r.week),
         opponent: r.opponent,
         date: r.date,
-        time: r.time,
+        ...(r.time ? { time: r.time } : {}),
         home: r.home.toLowerCase() === "yes" || r.home.toLowerCase() === "true",
       }
       if (r.teamScore !== "" && r.oppScore !== "") {
