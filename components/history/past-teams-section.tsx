@@ -1,21 +1,26 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useState, type CSSProperties } from "react"
 import { PAST_TEAMS, type PastTeam } from "@/lib/league"
 import { assetPath } from "@/lib/asset-path"
 
 function PastTeamCard({ team, onSelect }: { team: PastTeam; onSelect: () => void }) {
+  const colorVars = {
+    "--team-accent": team.colors.accent,
+    "--team-light": team.colors.light,
+  } as CSSProperties
+
   return (
     <button
       type="button"
       onClick={onSelect}
-      className="group relative flex h-64 flex-col justify-end overflow-hidden rounded-xl border text-left transition-transform hover:-translate-y-1"
-      style={{ borderColor: `${team.colors.accent}33` }}
+      style={colorVars}
+      className="group relative flex h-64 flex-col justify-end overflow-hidden rounded-xl border border-white/15 text-left transition-[border-color,transform] duration-300 hover:-translate-y-1 hover:[border-color:var(--team-accent)]"
     >
       <img
         src={assetPath(team.hero || "/placeholder.svg")}
         alt={`${team.name} team hero`}
-        className="absolute inset-0 h-full w-full object-cover object-center grayscale transition-transform duration-500 group-hover:scale-105"
+        className="absolute inset-0 h-full w-full object-cover object-center grayscale transition-[filter,transform] duration-500 group-hover:scale-105 group-hover:grayscale-0"
       />
       <div
         className="absolute inset-0"
@@ -25,13 +30,10 @@ function PastTeamCard({ team, onSelect }: { team: PastTeam; onSelect: () => void
       />
       <div className="relative flex items-center gap-3 p-4">
         <div className="min-w-0">
-          <p
-            className="truncate font-display text-lg font-bold uppercase leading-tight"
-            style={{ color: team.colors.light }}
-          >
+          <p className="truncate font-display text-lg font-bold uppercase leading-tight text-white/90 transition-colors duration-300 group-hover:[color:var(--team-light)]">
             {team.name}
           </p>
-          <p className="truncate text-xs text-white/70">
+          <p className="truncate text-xs text-white/60">
             {team.yearJoined}–{team.yearLeft}
           </p>
         </div>
@@ -79,54 +81,54 @@ function PastTeamModal({ team, onClose }: { team: PastTeam; onClose: () => void 
       onClick={onClose}
     >
       <div
-        className={`relative w-full max-w-lg overflow-hidden rounded-2xl border shadow-2xl transition-all duration-300 ${
+        className={`relative flex w-full max-w-3xl flex-col overflow-hidden rounded-2xl border shadow-2xl transition-all duration-300 sm:flex-row ${
           entered ? "scale-100 opacity-100" : "scale-90 opacity-0"
         }`}
-        style={{ borderColor: `${team.colors.accent}55`, backgroundColor: team.colors.dark }}
+        style={{ borderColor: `${team.colors.accent}66`, backgroundColor: team.colors.dark }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="relative h-48">
+        <button
+          type="button"
+          onClick={onClose}
+          aria-label="Close"
+          className="absolute right-3 top-3 z-10 flex h-8 w-8 items-center justify-center rounded-full bg-black/50 text-white transition-colors hover:bg-black/70"
+        >
+          ✕
+        </button>
+
+        {/* Full, uncropped image — always shown in color once you've clicked in */}
+        <div className="flex items-center justify-center sm:w-1/2" style={{ backgroundColor: team.colors.dark }}>
           <img
             src={assetPath(team.hero || "/placeholder.svg")}
             alt={`${team.name} hero`}
-            className="absolute inset-0 h-full w-full object-cover object-center grayscale"
+            className="max-h-[40vh] w-full object-contain sm:max-h-[75vh] sm:w-full sm:flex-1"
           />
-          <div
-            className="absolute inset-0"
-            style={{ background: `linear-gradient(0deg, ${team.colors.dark} 10%, transparent 90%)` }}
-          />
-          <button
-            type="button"
-            onClick={onClose}
-            aria-label="Close"
-            className="absolute right-3 top-3 flex h-8 w-8 items-center justify-center rounded-full bg-black/50 text-white transition-colors hover:bg-black/70"
-          >
-            ✕
-          </button>
-          <div className="absolute bottom-4 left-5">
-            <p className="font-display text-2xl font-bold uppercase" style={{ color: team.colors.light }}>
-              {team.name}
-            </p>
-            <p className="text-xs uppercase tracking-wider" style={{ color: team.colors.accent }}>
-              {team.yearJoined} – {team.yearLeft} · {seasons} season{seasons === 1 ? "" : "s"}
-            </p>
-          </div>
         </div>
-        <div className="p-5">
-          <StatRow
-            label="All-Time Record"
-            value={`${team.allTimeRecord.wins}-${team.allTimeRecord.losses}`}
-            accent={team.colors.accent}
-          />
-          <StatRow label="Win %" value={`${winPct.toFixed(1)}%`} />
-          <StatRow label="Total Points For" value={team.totalPointsFor.toLocaleString()} />
-          <StatRow label="Playoff Appearances" value={String(team.playoffAppearances)} />
-          <StatRow label="Playoff Wins" value={String(team.playoffWins)} />
-          <StatRow
-            label="Championships"
-            value={String(team.championships)}
-            accent={team.championships > 0 ? team.colors.accent : undefined}
-          />
+
+        {/* Stats */}
+        <div className="flex flex-col justify-center p-6 sm:w-1/2">
+          <p className="font-display text-2xl font-bold uppercase" style={{ color: team.colors.light }}>
+            {team.name}
+          </p>
+          <p className="mb-4 text-xs uppercase tracking-wider" style={{ color: team.colors.accent }}>
+            {team.yearJoined} – {team.yearLeft} · {seasons} season{seasons === 1 ? "" : "s"}
+          </p>
+          <div>
+            <StatRow
+              label="All-Time Record"
+              value={`${team.allTimeRecord.wins}-${team.allTimeRecord.losses}`}
+              accent={team.colors.accent}
+            />
+            <StatRow label="Win %" value={`${winPct.toFixed(1)}%`} />
+            <StatRow label="Total Points For" value={team.totalPointsFor.toLocaleString()} />
+            <StatRow label="Playoff Appearances" value={String(team.playoffAppearances)} />
+            <StatRow label="Playoff Wins" value={String(team.playoffWins)} />
+            <StatRow
+              label="Championships"
+              value={String(team.championships)}
+              accent={team.championships > 0 ? team.colors.accent : undefined}
+            />
+          </div>
         </div>
       </div>
     </div>
