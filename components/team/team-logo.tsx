@@ -18,7 +18,7 @@ export function getInitials(name: string): string {
 // an initials badge until a matching /public/Images/Logos/<slug>.<ext> exists.
 const LOGO_EXTENSION: Record<string, string> = {
   "amon-ra-dawgin": "svg",
-  beer: "svg",
+  beer: "png",
   "chicago-zestiest": "png",
   "doobs-agency": "svg",
   "englewood-ninjas": "svg",
