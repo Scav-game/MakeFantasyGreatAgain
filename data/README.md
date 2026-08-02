@@ -51,11 +51,14 @@ to agree on anything, just fill in each team's own perspective.
 | Column | Meaning |
 |---|---|
 | `teamSlug` | Team this player belongs to. |
-| `group` | `starter` or `bench`. |
-| `pos` | Position (QB, RB, WR, TE, FLEX, K, DEF, …). |
-| `name` | Player name. |
+| `pos` | Position — `QB`, `RB`, `WR`, `TE`, `D/ST`, or `K`. Use `IR` for a player on injured reserve; they'll show in a separate "Injured Reserve" section instead of the main roster. |
+| `name` | Player name. Leave the whole row out (don't add a blank row) if a slot is unfilled. |
 | `nflTeam` | Player's NFL team abbreviation. |
 | `points` | Season points scored so far. |
+
+There's no starters/bench split anymore — the site just lists each team's
+roster grouped by position in the order QB, RB, WR, TE, D/ST, K, and
+alphabetically by name within each position.
 
 ## draft-picks.csv — one row per owned future draft pick
 

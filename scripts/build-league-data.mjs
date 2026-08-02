@@ -76,6 +76,12 @@ const pastTeamsCsv = readCsvRecords("past-teams.csv")
 
 const TOTAL_WEEKS = 14
 
+const ROSTER_POSITION_ORDER = ["QB", "RB", "WR", "TE", "D/ST", "K"]
+function posRank(pos) {
+  const i = ROSTER_POSITION_ORDER.indexOf(pos)
+  return i === -1 ? ROSTER_POSITION_ORDER.length : i
+}
+
 function computeCurrentWeek(scheduleRows) {
   const weeks = [...new Set(scheduleRows.map((r) => Number(r.week)))].sort((a, b) => a - b)
   for (const week of weeks) {
@@ -125,12 +131,15 @@ const TEAMS = teamsCsv.map((t) => {
     streak = `${lastOutcome}${count}`
   }
 
-  const roster = { starters: [], bench: [] }
+  const roster = { active: [], ir: [] }
   for (const p of rostersCsv.filter((r) => r.teamSlug === t.slug)) {
+    if (!p.name) continue
     const player = { name: p.name, pos: p.pos, nflTeam: p.nflTeam, points: Number(p.points) }
-    if (p.group === "starter") roster.starters.push(player)
-    else roster.bench.push(player)
+    if (p.pos === "IR") roster.ir.push(player)
+    else roster.active.push(player)
   }
+  roster.active.sort((a, b) => posRank(a.pos) - posRank(b.pos) || a.name.localeCompare(b.name))
+  roster.ir.sort((a, b) => a.name.localeCompare(b.name))
 
   const draftPicks = draftPicksCsv
     .filter((d) => d.teamSlug === t.slug)

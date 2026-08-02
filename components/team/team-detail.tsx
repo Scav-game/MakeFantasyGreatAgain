@@ -151,9 +151,11 @@ export function TeamDetail({ team }: { team: Team }) {
     <div className="flex flex-col gap-12">
       <section id="team" className="scroll-mt-20 flex flex-col gap-6">
         <SectionHeading team={team} id="roster" label="Roster" />
-        <div className="grid gap-6 lg:grid-cols-2">
-          <RosterTable team={team} players={team.roster.starters} title="Starters" />
-          <RosterTable team={team} players={team.roster.bench} title="Bench" />
+        <div className={`grid gap-6 ${team.roster.ir.length > 0 ? "lg:grid-cols-2" : ""}`}>
+          <RosterTable team={team} players={team.roster.active} title="Roster" />
+          {team.roster.ir.length > 0 && (
+            <RosterTable team={team} players={team.roster.ir} title="Injured Reserve" />
+          )}
         </div>
       </section>
 

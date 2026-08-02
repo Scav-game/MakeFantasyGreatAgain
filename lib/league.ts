@@ -61,7 +61,7 @@ export type Team = {
   pointsFor: number
   pointsAgainst: number
   streak: string
-  roster: { starters: Player[]; bench: Player[] }
+  roster: { active: Player[]; ir: Player[] }
   draftPicks: DraftPick[]
   schedule: Game[]
   history: TeamHistory
