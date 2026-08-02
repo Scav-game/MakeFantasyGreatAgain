@@ -1,7 +1,7 @@
 import { CURRENT_WEEK, TEAMS, type Division, type Team } from "./league"
 
 const TOTAL_WEEKS = 14
-const PLAYOFF_SPOTS_PER_DIVISION = 3
+const PLAYOFF_SPOTS_PER_DIVISION = 4
 
 export type ClinchStatus =
   | { kind: "division"; team: Team }

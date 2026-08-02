@@ -75,33 +75,36 @@ export function simulateChampionshipOdds(): TeamOdds[] {
       finalWins.set(t.slug, wins)
     }
 
-    const playoffTeams: Team[] = []
+    // Each division's top 4 (by simulated final wins, tiebreak: pointsFor) make
+    // the playoffs and are seeded 1-4 within their own division.
+    const divisionChampions: Team[] = []
     for (const division of divisions) {
       const standings = TEAMS.filter((t) => t.division === division).sort((a, b) => {
         const diff = finalWins.get(b.slug)! - finalWins.get(a.slug)!
         if (diff !== 0) return diff
         return b.pointsFor - a.pointsFor
       })
-      standings.slice(0, 3).forEach((t, i) => {
-        playoffCount.set(t.slug, playoffCount.get(t.slug)! + 1)
-        playoffTeams.push(t)
-        if (i === 0) divisionCount.set(t.slug, divisionCount.get(t.slug)! + 1)
-      })
+      const [d1, d2, d3, d4] = standings
+      for (const t of [d1, d2, d3, d4]) playoffCount.set(t.slug, playoffCount.get(t.slug)! + 1)
+      divisionCount.set(d1.slug, divisionCount.get(d1.slug)! + 1)
+
+      // Division semifinals: 1 seed vs 4 seed, 2 seed vs 3 seed. Winners meet
+      // in the division final; that winner is the division's playoff champion.
+      const semiA = pickWinner(rand, d1, finalWins.get(d1.slug)!, d4, finalWins.get(d4.slug)!)
+      const semiB = pickWinner(rand, d2, finalWins.get(d2.slug)!, d3, finalWins.get(d3.slug)!)
+      const divisionChamp = pickWinner(rand, semiA, finalWins.get(semiA.slug)!, semiB, finalWins.get(semiB.slug)!)
+      divisionChampions.push(divisionChamp)
     }
 
-    // Seed the 6 playoff teams 1-6 by simulated final wins (tiebreak: pointsFor).
-    const seeded = [...playoffTeams].sort((a, b) => {
-      const diff = finalWins.get(b.slug)! - finalWins.get(a.slug)!
-      if (diff !== 0) return diff
-      return b.pointsFor - a.pointsFor
-    })
-    const [s1, s2, s3, s4, s5, s6] = seeded
-
-    const r1a = pickWinner(rand, s4, finalWins.get(s4.slug)!, s5, finalWins.get(s5.slug)!)
-    const r1b = pickWinner(rand, s3, finalWins.get(s3.slug)!, s6, finalWins.get(s6.slug)!)
-    const semiA = pickWinner(rand, s1, finalWins.get(s1.slug)!, r1a, finalWins.get(r1a.slug)!)
-    const semiB = pickWinner(rand, s2, finalWins.get(s2.slug)!, r1b, finalWins.get(r1b.slug)!)
-    const champion = pickWinner(rand, semiA, finalWins.get(semiA.slug)!, semiB, finalWins.get(semiB.slug)!)
+    // Championship: the East champion vs. the West champion.
+    const [eastChamp, westChamp] = divisionChampions
+    const champion = pickWinner(
+      rand,
+      eastChamp,
+      finalWins.get(eastChamp.slug)!,
+      westChamp,
+      finalWins.get(westChamp.slug)!,
+    )
     championCount.set(champion.slug, championCount.get(champion.slug)! + 1)
   }
 

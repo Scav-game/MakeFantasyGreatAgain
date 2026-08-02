@@ -30,7 +30,8 @@ export function OddsSection() {
       <SectionHeading title="Championship Odds" />
       <p className="mb-6 max-w-2xl text-sm text-muted-foreground">
         Based on 10,000 simulations of the remaining schedule, weighted by each team&apos;s current
-        win rate, followed by a simulated playoff bracket.
+        win rate. Each division&apos;s top 4 make the playoffs (1 vs. 4, 2 vs. 3), the two semifinal
+        winners play a division final, and the two division champions meet for the title.
       </p>
       <div className="flex flex-col divide-y divide-border rounded-xl border border-border bg-card/60">
         {odds.map(({ team, playoffPct, divisionPct, championshipPct }) => (
