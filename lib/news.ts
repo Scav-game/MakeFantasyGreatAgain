@@ -33,3 +33,8 @@ export function getAllNewsArticles(): NewsArticle[] {
 export function getHomepageNewsArticles(): NewsArticle[] {
   return getAllNewsArticles().slice(0, HOMEPAGE_NEWS_LIMIT)
 }
+
+/** Short-form stories (headline "TWEET") for the homepage ticker banner. */
+export function getTweetArticles(): NewsArticle[] {
+  return getAllNewsArticles().filter((a) => a.headline.trim().toUpperCase() === "TWEET")
+}

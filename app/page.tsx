@@ -11,6 +11,7 @@ import { ClinchSection } from "@/components/home/clinch-section"
 import { OddsSection } from "@/components/home/odds-section"
 import { ComparisonSection } from "@/components/home/comparison-section"
 import { NewsSection } from "@/components/home/news-section"
+import { NewsTicker } from "@/components/home/news-ticker"
 
 function TeamCard({ slug }: { slug: string }) {
   const team = TEAMS.find((t) => t.slug === slug)!
@@ -116,6 +117,8 @@ export default function LeagueHome() {
           </p>
         </section>
 
+        <NewsTicker />
+
         {/* Team grid */}
         <section id="teams" className="mb-16 scroll-mt-24">
           <h2 className="mb-5 font-display text-2xl font-bold uppercase tracking-wide text-foreground">
@@ -140,6 +143,10 @@ export default function LeagueHome() {
         </section>
 
         <div className="mb-16">
+          <NewsSection />
+        </div>
+
+        <div className="mb-16">
           <ClinchSection />
         </div>
 
@@ -150,8 +157,6 @@ export default function LeagueHome() {
         <div className="mb-16">
           <ComparisonSection />
         </div>
-
-        <NewsSection />
       </main>
 
       <SiteFooter />

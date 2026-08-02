@@ -3,10 +3,10 @@ import Link from "next/link"
 const ANCHOR_LINKS = [
   { label: "Teams", href: "#teams" },
   { label: "Standings", href: "#standings" },
+  { label: "News", href: "#news" },
   { label: "Clinch Scenarios", href: "#clinch" },
   { label: "Championship Odds", href: "#odds" },
   { label: "Record Comparison", href: "#comparison" },
-  { label: "News", href: "#news" },
 ]
 
 const linkClassName =
