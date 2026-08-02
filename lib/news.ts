@@ -10,7 +10,7 @@ export type NewsArticle = {
 }
 
 /** How many of the most recent stories show on the homepage. Everything
- * beyond this is still in the full archive on /history. "Most recent" means
+ * beyond this is still in the full archive on /news. "Most recent" means
  * bottom-to-top order in data/news.csv — just append new stories at the
  * end of the file, no need to insert rows at the top. */
 export const HOMEPAGE_NEWS_LIMIT = 5
@@ -32,9 +32,4 @@ export function getAllNewsArticles(): NewsArticle[] {
 /** Just the most recent stories, for the homepage News section. */
 export function getHomepageNewsArticles(): NewsArticle[] {
   return getAllNewsArticles().slice(0, HOMEPAGE_NEWS_LIMIT)
-}
-
-/** Short-form stories (headline "TWEET") for the homepage ticker banner. */
-export function getTweetArticles(): NewsArticle[] {
-  return getAllNewsArticles().filter((a) => a.headline.trim().toUpperCase() === "TWEET")
 }

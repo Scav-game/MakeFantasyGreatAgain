@@ -11,7 +11,6 @@ import { ClinchSection } from "@/components/home/clinch-section"
 import { OddsSection } from "@/components/home/odds-section"
 import { ComparisonSection } from "@/components/home/comparison-section"
 import { NewsSection } from "@/components/home/news-section"
-import { NewsTicker } from "@/components/home/news-ticker"
 
 function TeamCard({ slug }: { slug: string }) {
   const team = TEAMS.find((t) => t.slug === slug)!
@@ -116,8 +115,6 @@ export default function LeagueHome() {
             2026 Season
           </p>
         </section>
-
-        <NewsTicker />
 
         {/* Team grid */}
         <section id="teams" className="mb-16 scroll-mt-24">

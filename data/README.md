@@ -100,8 +100,8 @@ Add as many rows as you want — every row becomes its own card. **Just
 append new stories at the bottom of the file** — the last row is treated as
 the newest and shows up first on the site, so there's no need to insert
 rows at the top. The homepage League News section only shows the 5 most
-recent; everything (including those 5) is searchable on the `/history` News
-Archive. There's no auto-generated filler — whatever's in this file is
+recent; everything (including those 5) is searchable on the `/news`
+Archive page. There's no auto-generated filler — whatever's in this file is
 exactly what shows up, so an empty file means an empty section.
 
 ### Reporter staff & profile pictures

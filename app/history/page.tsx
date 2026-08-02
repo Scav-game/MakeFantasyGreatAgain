@@ -3,12 +3,11 @@ import { SiteHeader } from "@/components/home/site-header"
 import { SiteFooter } from "@/components/home/site-footer"
 import { SectionHeading } from "@/components/home/section-heading"
 import { HistoryTable } from "@/components/history/history-table"
-import { NewsArchive } from "@/components/history/news-archive"
 import { PastTeamsSection } from "@/components/history/past-teams-section"
 
 export const metadata: Metadata = {
   title: "League History — MFGA",
-  description: "All-time franchise history and a searchable archive of every MFGA league news story.",
+  description: "All-time franchise history for every MFGA team.",
 }
 
 export default function HistoryPage() {
@@ -22,13 +21,8 @@ export default function HistoryPage() {
             League <span className="text-gold">History</span>
           </h1>
           <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-            Every franchise&apos;s all-time record, and every story the league has ever run.
+            Every franchise&apos;s all-time record.
           </p>
-        </section>
-
-        <section id="archive" className="mb-16">
-          <SectionHeading title="News Archive" />
-          <NewsArchive />
         </section>
 
         <section id="stats" className="mb-16">

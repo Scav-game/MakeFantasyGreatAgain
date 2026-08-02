@@ -18,7 +18,7 @@ export function NewsSection() {
         </div>
         {hasMore && (
           <Link
-            href="/history#archive"
+            href="/news"
             className="font-display text-xs font-semibold uppercase tracking-widest text-gold/80 transition-colors hover:text-gold"
           >
             View Full Archive →
