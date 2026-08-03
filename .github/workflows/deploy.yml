@@ -60,7 +60,7 @@ jobs:
           # time the provider changes — API keys generally aren't
           # re-viewable after creation.
           BREVO_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
+          EMAIL_RECIPIENTS: ${{ vars.EMAIL_RECIPIENTS }}
           BEFORE_SHA: ${{ github.event.before }}
           SEND_LATEST_ONLY: ${{ github.event.inputs.send_latest_news_email }}
         run: node scripts/send-news-email.js
