@@ -136,7 +136,7 @@ function getPreviousNewsCsv(beforeSha) {
 }
 
 async function main() {
-  const { GMAIL_USER, GMAIL_APP_PASSWORD, EMAIL_RECIPIENTS, BEFORE_SHA } = process.env
+  const { GMAIL_USER, GMAIL_APP_PASSWORD, EMAIL_RECIPIENTS, BEFORE_SHA, SEND_LATEST_ONLY } = process.env
 
   const recipients = (EMAIL_RECIPIENTS || "")
     .split(",")
@@ -159,14 +159,25 @@ async function main() {
   const currentText = fs.readFileSync(NEWS_CSV, "utf8")
   const currentArticles = toArticles(currentText)
 
-  const previousText = getPreviousNewsCsv(BEFORE_SHA)
-  if (previousText === null) {
-    console.log("No previous version of data/news.csv to diff against — skipping to avoid a false flood.")
-    return
+  let newArticles
+  if (SEND_LATEST_ONLY === "true") {
+    // Manual override (workflow_dispatch checkbox): resend the single most
+    // recent story regardless of what's changed since the last push.
+    if (currentArticles.length === 0) {
+      console.log("data/news.csv has no articles — nothing to send.")
+      return
+    }
+    newArticles = currentArticles.slice(-1)
+    console.log("Manual send-latest requested — bypassing the new-since-last-push diff.")
+  } else {
+    const previousText = getPreviousNewsCsv(BEFORE_SHA)
+    if (previousText === null) {
+      console.log("No previous version of data/news.csv to diff against — skipping to avoid a false flood.")
+      return
+    }
+    const previousArticles = toArticles(previousText)
+    newArticles = currentArticles.slice(previousArticles.length)
   }
-  const previousArticles = toArticles(previousText)
-
-  const newArticles = currentArticles.slice(previousArticles.length)
 
   if (newArticles.length === 0) {
     console.log("No new articles appended — skipping.")

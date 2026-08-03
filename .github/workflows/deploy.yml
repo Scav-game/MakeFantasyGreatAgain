@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      send_latest_news_email:
+        description: "Also email the single most recent news.csv story (bypasses the new-since-last-push check)"
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -38,7 +43,7 @@ jobs:
 
   send-email:
     needs: build
-    if: github.event_name == 'push'
+    if: github.event_name == 'push' || github.event.inputs.send_latest_news_email == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -54,4 +59,5 @@ jobs:
           GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
           BEFORE_SHA: ${{ github.event.before }}
+          SEND_LATEST_ONLY: ${{ github.event.inputs.send_latest_news_email }}
         run: node scripts/send-news-email.js
