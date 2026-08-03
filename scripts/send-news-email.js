@@ -166,9 +166,11 @@ async function sendViaBrevo({ apiKey, fromEmail, fromName, to, bcc, subject, tex
       htmlContent: html,
     }),
   })
+  const body = await res.text()
   if (!res.ok) {
-    throw new Error(`Brevo API error ${res.status}: ${await res.text()}`)
+    throw new Error(`Brevo API error ${res.status}: ${body}`)
   }
+  console.log(`Brevo response (${res.status}): ${body}`)
 }
 
 async function main() {
@@ -226,11 +228,15 @@ async function main() {
 
   const subject = `MFGA News: ${newArticles.length} New ${newArticles.length === 1 ? "Story" : "Stories"}`
   const [to, ...bcc] = recipients
+  const fromEmail = FROM_EMAIL || DEFAULT_FROM_EMAIL
+  const fromName = FROM_NAME || DEFAULT_FROM_NAME
+
+  console.log(`Sending from "${fromName} <${fromEmail}>" to ${JSON.stringify(to)}, bcc ${JSON.stringify(bcc)}`)
 
   await sendViaBrevo({
     apiKey: BREVO_API_KEY,
-    fromEmail: FROM_EMAIL || DEFAULT_FROM_EMAIL,
-    fromName: FROM_NAME || DEFAULT_FROM_NAME,
+    fromEmail,
+    fromName,
     to,
     bcc,
     subject,
