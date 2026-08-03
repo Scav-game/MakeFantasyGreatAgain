@@ -6,7 +6,7 @@ export function HeroSection() {
       className="relative flex min-h-[450px] flex-col items-center justify-center overflow-hidden bg-cover px-4 text-center"
       style={{
         backgroundImage: `url("${encodeURI(assetPath("/Images/heros/MFGA Home hero.png"))}")`,
-        backgroundPosition: "center 20%",
+        backgroundPosition: "center bottom",
       }}
     >
       <div
