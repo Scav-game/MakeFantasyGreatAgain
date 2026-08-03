@@ -14,8 +14,9 @@ const path = require("path")
 const NEWS_CSV = path.join(__dirname, "..", "data", "news.csv")
 const SITE_URL = "https://scav-game.github.io/MakeFantasyGreatAgain/news/"
 const MAX_SANE_NEW_ARTICLES = 10 // guards against a bad diff flooding everyone's inbox
-// mfga.news@gmail.com is verified in SendGrid via Single Sender Verification
-// (no domain needed) — sending "from" anything else will be rejected.
+// mfga.news@gmail.com must be a verified sender in Brevo (Senders, Domains
+// & Dedicated IPs → add sender → confirm via email, no domain needed) —
+// sending "from" anything else will be rejected.
 const DEFAULT_FROM_EMAIL = "mfga.news@gmail.com"
 const DEFAULT_FROM_NAME = "MFGA News Desk"
 
@@ -147,36 +148,31 @@ function getPreviousNewsCsv(beforeSha) {
   }
 }
 
-/** SendGrid's v3 Mail Send API — a plain POST, no SDK or SMTP needed. */
-async function sendViaSendGrid({ apiKey, fromEmail, fromName, to, bcc, subject, text, html }) {
-  const res = await fetch("https://api.sendgrid.com/v3/mail/send", {
+/** Brevo's transactional email API — a plain POST, no SDK or SMTP needed. */
+async function sendViaBrevo({ apiKey, fromEmail, fromName, to, bcc, subject, text, html }) {
+  const res = await fetch("https://api.brevo.com/v3/smtp/email", {
     method: "POST",
     headers: {
-      Authorization: `Bearer ${apiKey}`,
+      "api-key": apiKey,
       "Content-Type": "application/json",
+      Accept: "application/json",
     },
     body: JSON.stringify({
-      personalizations: [
-        {
-          to: [{ email: to }],
-          ...(bcc.length > 0 ? { bcc: bcc.map((email) => ({ email })) } : {}),
-        },
-      ],
-      from: { email: fromEmail, name: fromName },
+      sender: { email: fromEmail, name: fromName },
+      to: [{ email: to }],
+      ...(bcc.length > 0 ? { bcc: bcc.map((email) => ({ email })) } : {}),
       subject,
-      content: [
-        { type: "text/plain", value: text },
-        { type: "text/html", value: html },
-      ],
+      textContent: text,
+      htmlContent: html,
     }),
   })
   if (!res.ok) {
-    throw new Error(`SendGrid API error ${res.status}: ${await res.text()}`)
+    throw new Error(`Brevo API error ${res.status}: ${await res.text()}`)
   }
 }
 
 async function main() {
-  const { SENDGRID_API_KEY, FROM_EMAIL, FROM_NAME, EMAIL_RECIPIENTS, BEFORE_SHA, SEND_LATEST_ONLY } = process.env
+  const { BREVO_API_KEY, FROM_EMAIL, FROM_NAME, EMAIL_RECIPIENTS, BEFORE_SHA, SEND_LATEST_ONLY } = process.env
 
   const recipients = (EMAIL_RECIPIENTS || "")
     .split(",")
@@ -187,8 +183,8 @@ async function main() {
     console.log("No EMAIL_RECIPIENTS configured — skipping.")
     return
   }
-  if (!SENDGRID_API_KEY) {
-    console.log("SENDGRID_API_KEY not set — skipping.")
+  if (!BREVO_API_KEY) {
+    console.log("BREVO_API_KEY not set — skipping.")
     return
   }
   if (!fs.existsSync(NEWS_CSV)) {
@@ -231,8 +227,8 @@ async function main() {
   const subject = `MFGA News: ${newArticles.length} New ${newArticles.length === 1 ? "Story" : "Stories"}`
   const [to, ...bcc] = recipients
 
-  await sendViaSendGrid({
-    apiKey: SENDGRID_API_KEY,
+  await sendViaBrevo({
+    apiKey: BREVO_API_KEY,
     fromEmail: FROM_EMAIL || DEFAULT_FROM_EMAIL,
     fromName: FROM_NAME || DEFAULT_FROM_NAME,
     to,
