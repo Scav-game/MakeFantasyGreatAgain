@@ -113,6 +113,20 @@ function readTransactionLog() {
   }
 }
 
+/** Cutoff for "new since last check" comes from this script's own log, not
+ * sync-espn.js's last-sync.json — that file only updates when the roster
+ * *content* changes, so a transaction that nets out to no diff (an add
+ * immediately reversed by a drop) would never advance it, causing already-
+ * reported transactions to be re-reported on the next run. Falls back to
+ * last-sync.json only to bootstrap the very first run, before any log
+ * entries exist. */
+function determineCutoffMs(log) {
+  const logTimestamps = log.map((e) => e.sourceTimestamp).filter((t) => typeof t === "number")
+  if (logTimestamps.length > 0) return Math.max(...logTimestamps)
+  const lastSync = readLastSync()
+  return lastSync ? new Date(lastSync).getTime() : null
+}
+
 const WAIVER_TEMPLATES = [
   (p) => `WIRE: ${p.team} claims ${p.player} (${p.pos}, ${p.nfl}) off waivers. Roster spot well spent if you ask me.`,
   (p) => `WAIVER ALERT: ${p.player} (${p.nfl} ${p.pos}) is heading to ${p.team}. Interesting pickup.`,
@@ -164,7 +178,7 @@ function buildTweets(transactions, teamSlugById, playerMap) {
         const ctx = { team: TEAM_DISPLAY_NAMES[slug] ?? slug, player: info.name, pos: info.pos, nfl: info.nfl }
         const template =
           item.type === "DROP" ? pick(DROP_TEMPLATES) : pick(tx.type === "WAIVER" ? WAIVER_TEMPLATES : FREEAGENT_TEMPLATES)
-        tweets.push({ team: slug, body: template(ctx) })
+        tweets.push({ team: slug, body: template(ctx), sourceTimestamp: tx.proposedDate })
       }
     } else if (items.some((i) => i.type === "TRADE")) {
       const tradeItems = items.filter((i) => i.type === "TRADE")
@@ -187,7 +201,7 @@ function buildTweets(transactions, teamSlugById, playerMap) {
         players1: byTeam.get(idA).join(" + "),
         players2: byTeam.get(idB).join(" + "),
       }
-      tweets.push({ team: teamA, body: pick(TRADE_TEMPLATES)(ctx) })
+      tweets.push({ team: teamA, body: pick(TRADE_TEMPLATES)(ctx), sourceTimestamp: tx.proposedDate })
     }
   }
 
@@ -207,12 +221,14 @@ function appendToNewsCsv(tweets) {
 }
 
 async function main() {
-  const lastSync = readLastSync()
-  const sinceMs = lastSync ? new Date(lastSync).getTime() : null
+  const log = readTransactionLog()
+  const sinceMs = determineCutoffMs(log)
 
-  console.log(`Fetching transactions for league ${LEAGUE_ID}${sinceMs ? ` since ${lastSync}` : " (no last-sync.json — processing nothing, run sync first)"}...`)
+  console.log(
+    `Fetching transactions for league ${LEAGUE_ID}${sinceMs ? ` since ${new Date(sinceMs).toISOString()}` : " (no cutoff available — run sync first)"}...`,
+  )
   if (sinceMs === null) {
-    console.log("No last-sync.json found. Run `npm run sync` first so there's a cutoff timestamp.")
+    console.log("No transaction-log.json or last-sync.json found. Run `npm run sync` first so there's a cutoff timestamp.")
     return
   }
 
@@ -256,9 +272,8 @@ async function main() {
 
   appendToNewsCsv(tweets)
 
-  const log = readTransactionLog()
   const now = new Date().toISOString()
-  for (const t of tweets) log.push({ timestamp: now, team: t.team, body: t.body })
+  for (const t of tweets) log.push({ timestamp: now, team: t.team, body: t.body, sourceTimestamp: t.sourceTimestamp })
   fs.writeFileSync(TRANSACTION_LOG_FILE, JSON.stringify(log, null, 2) + "\n")
 
   console.log(`Appended ${tweets.length} Jake "The Wire" Russo tweet(s) to data/news.csv:`)

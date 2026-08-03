@@ -1,0 +1,49 @@
+name: Sync ESPN Rosters
+
+on:
+  schedule:
+    - cron: "0 */6 * * *" # Every 6 hours
+  workflow_dispatch: # Manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - run: npm ci
+
+      # Runs before sync-espn.js on purpose: it needs the *previous* run's
+      # last-sync.json as a bootstrap cutoff before that file potentially
+      # gets overwritten below. After the first run it tracks its own cursor
+      # in transaction-log.json regardless of this ordering.
+      - name: Check for new transactions (Jake's tweets)
+        run: node scripts/check-transactions.js
+
+      - name: Sync rosters from ESPN
+        run: node scripts/sync-espn.js
+
+      - name: Check for changes
+        id: check
+        run: |
+          if git diff --quiet; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push updates
+        if: steps.check.outputs.changed == 'true'
+        run: |
+          git config --local user.email "mfga-bot@users.noreply.github.com"
+          git config --local user.name "MFGA Roster Bot"
+          git add data/rosters.csv data/news.csv last-sync.json transaction-log.json
+          git commit -m "Auto-sync rosters from ESPN $(date +%Y-%m-%d)"
+          git push
