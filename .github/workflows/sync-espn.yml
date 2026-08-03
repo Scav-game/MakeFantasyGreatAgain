@@ -1,15 +1,39 @@
 name: Sync ESPN Rosters
 
 on:
+  # Fires every 30 minutes; the "gate" job below restricts actual work to
+  # 8 AM-midnight Eastern — see its "Check time window" step.
   schedule:
-    - cron: "0 * * * *" # Every hour
+    - cron: "*/30 * * * *"
   workflow_dispatch: # Manual trigger
 
 permissions:
   contents: write
 
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      in_window: ${{ steps.window.outputs.in_window }}
+    steps:
+      - name: Check time window (8 AM-midnight Eastern)
+        id: window
+        run: |
+          # Computed live in America/New_York so this self-adjusts for
+          # Daylight Saving without needing the cron schedule touched twice
+          # a year. Window is 8:00 AM through 11:30 PM, plus the exact
+          # midnight (00:00) run — nothing between 12:30 AM and 7:30 AM.
+          hour=$(TZ='America/New_York' date +%H)
+          minute=$(TZ='America/New_York' date +%M)
+          if [ "$hour" -ge 8 ] || { [ "$hour" -eq 0 ] && [ "$minute" -eq 0 ]; }; then
+            echo "in_window=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "in_window=false" >> "$GITHUB_OUTPUT"
+          fi
+
   sync:
+    needs: gate
+    if: needs.gate.outputs.in_window == 'true'
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
