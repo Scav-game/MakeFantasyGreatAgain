@@ -175,7 +175,7 @@ async function main() {
   const { BREVO_API_KEY, FROM_EMAIL, FROM_NAME, EMAIL_RECIPIENTS, BEFORE_SHA, SEND_LATEST_ONLY } = process.env
 
   const recipients = (EMAIL_RECIPIENTS || "")
-    .split(",")
+    .split(/[,;\r\n]+/) // accepts commas, semicolons, or one-per-line
     .map((e) => e.trim())
     .filter(Boolean)
 
