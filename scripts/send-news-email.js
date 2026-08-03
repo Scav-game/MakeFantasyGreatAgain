@@ -85,31 +85,48 @@ function escapeHtml(s) {
   return s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
 }
 
-/** Deliberately plain: a dark promotional-looking template with a big CTA
- * button and an emoji subject reads as bulk/marketing mail to spam filters,
- * especially from a low-reputation sending account. This favors looking
- * like a normal email over looking on-brand. */
+/** MFGA-branded dark/gold theme, matching the site. Deliverability turned
+ * out to hinge on sender reputation (fixed by moving off Gmail SMTP to
+ * SendGrid), not on how "promotional" the HTML looks — so no need to keep
+ * this deliberately plain anymore. */
 function buildEmailHtml(articles) {
   const articleCount = articles.length
   const articlesHtml = articles
     .map(
       (article) => `
-  <p style="margin:0 0 4px;">
-    <a href="${SITE_URL}" style="font-size:16px; font-weight:bold; color:#1a1a1a;">${escapeHtml(article.headline)}</a>
-  </p>
-  ${article.author ? `<p style="margin:0 0 6px; font-size:12px; color:#666666;">${escapeHtml(article.author)}</p>` : ""}
-  <p style="margin:0 0 20px; font-size:14px; color:#333333; line-height:1.5;">
-    ${escapeHtml(trimToWord(article.body, 200))}...
-  </p>`,
+  <div style="padding:16px 20px; border-bottom:1px solid #1A1A1A;">
+    <a href="${SITE_URL}" style="font-size:18px; font-weight:bold; color:#D4A017; text-decoration:none;">
+      ${escapeHtml(article.headline)} &rarr;
+    </a>
+    ${
+      article.author
+        ? `<div style="font-size:12px; color:#888888; margin-top:4px; font-style:italic;">${escapeHtml(article.author)}</div>`
+        : ""
+    }
+    <div style="font-size:14px; color:#CCCCCC; margin-top:8px; line-height:1.5;">
+      ${escapeHtml(trimToWord(article.body, 200))}...
+    </div>
+  </div>`,
     )
     .join("")
 
   return `
-<div style="font-family:Arial,Helvetica,sans-serif; max-width:600px; margin:0 auto; color:#1a1a1a;">
-  <p style="font-size:13px; color:#666666;">MFGA News Desk</p>
-  <p>${articleCount} new ${articleCount === 1 ? "story" : "stories"} on the league site:</p>
+<div style="background-color:#0A0A0A; color:#F0F0F0; font-family:Arial,Helvetica,sans-serif; max-width:600px; margin:0 auto; padding:0;">
+  <div style="background-color:#111111; padding:24px 20px; text-align:center; border-bottom:2px solid #D4A017;">
+    <div style="font-size:26px; font-weight:bold; color:#D4A017; letter-spacing:3px;">MFGA</div>
+    <div style="font-size:11px; color:#888888; letter-spacing:2px; margin-top:4px;">NEWS DESK &mdash; MAKE FANTASY GREAT AGAIN</div>
+  </div>
+  <div style="padding:20px; font-size:14px; color:#AAAAAA;">
+    ${articleCount} new ${articleCount === 1 ? "story" : "stories"} just dropped:
+  </div>
   ${articlesHtml}
-  <p style="font-size:13px;"><a href="${SITE_URL}" style="color:#1a1a1a;">Read all articles: ${SITE_URL}</a></p>
+  <div style="padding:20px; text-align:center;">
+    <a href="${SITE_URL}"
+       style="display:inline-block; padding:10px 24px; background-color:#D4A017; color:#0A0A0A;
+              font-weight:bold; font-size:13px; letter-spacing:1px; text-decoration:none; border-radius:4px;">
+      READ ALL ARTICLES
+    </a>
+  </div>
 </div>`
 }
 
