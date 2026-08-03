@@ -54,8 +54,11 @@ jobs:
           node-version: 22
       - name: Send news email if new articles were added
         env:
-          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
-          RESEND_FROM: ${{ secrets.RESEND_FROM }}
+          # The GitHub secret is still named RESEND_API_KEY from the earlier
+          # Resend attempt — it now holds a SendGrid key. Renamed here rather
+          # than making Lucas re-enter it (SendGrid keys aren't re-viewable
+          # after creation).
+          SENDGRID_API_KEY: ${{ secrets.RESEND_API_KEY }}
           EMAIL_RECIPIENTS: ${{ secrets.EMAIL_RECIPIENTS }}
           BEFORE_SHA: ${{ github.event.before }}
           SEND_LATEST_ONLY: ${{ github.event.inputs.send_latest_news_email }}

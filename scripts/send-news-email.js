@@ -14,12 +14,10 @@ const path = require("path")
 const NEWS_CSV = path.join(__dirname, "..", "data", "news.csv")
 const SITE_URL = "https://scav-game.github.io/MakeFantasyGreatAgain/news/"
 const MAX_SANE_NEW_ARTICLES = 10 // guards against a bad diff flooding everyone's inbox
-// Resend's sandbox sender — works with zero setup, but can only deliver to
-// the email address the Resend account itself was signed up with. Once a
-// domain is verified in the Resend dashboard, set RESEND_FROM to an address
-// on that domain (e.g. "MFGA News Desk <news@yourdomain.com>") to lift that
-// restriction and send to the full recipient list.
-const DEFAULT_FROM = "MFGA News Desk <onboarding@resend.dev>"
+// mfga.news@gmail.com is verified in SendGrid via Single Sender Verification
+// (no domain needed) — sending "from" anything else will be rejected.
+const DEFAULT_FROM_EMAIL = "mfga.news@gmail.com"
+const DEFAULT_FROM_NAME = "MFGA News Desk"
 
 function parseCsv(text) {
   const rows = []
@@ -132,31 +130,36 @@ function getPreviousNewsCsv(beforeSha) {
   }
 }
 
-/** Resend's HTTP API — a plain POST, no SDK or SMTP needed. */
-async function sendViaResend({ apiKey, from, to, bcc, subject, text, html }) {
-  const res = await fetch("https://api.resend.com/emails", {
+/** SendGrid's v3 Mail Send API — a plain POST, no SDK or SMTP needed. */
+async function sendViaSendGrid({ apiKey, fromEmail, fromName, to, bcc, subject, text, html }) {
+  const res = await fetch("https://api.sendgrid.com/v3/mail/send", {
     method: "POST",
     headers: {
       Authorization: `Bearer ${apiKey}`,
       "Content-Type": "application/json",
     },
     body: JSON.stringify({
-      from,
-      to: [to],
-      ...(bcc.length > 0 ? { bcc } : {}),
+      personalizations: [
+        {
+          to: [{ email: to }],
+          ...(bcc.length > 0 ? { bcc: bcc.map((email) => ({ email })) } : {}),
+        },
+      ],
+      from: { email: fromEmail, name: fromName },
       subject,
-      text,
-      html,
+      content: [
+        { type: "text/plain", value: text },
+        { type: "text/html", value: html },
+      ],
     }),
   })
   if (!res.ok) {
-    throw new Error(`Resend API error ${res.status}: ${await res.text()}`)
+    throw new Error(`SendGrid API error ${res.status}: ${await res.text()}`)
   }
-  return res.json()
 }
 
 async function main() {
-  const { RESEND_API_KEY, RESEND_FROM, EMAIL_RECIPIENTS, BEFORE_SHA, SEND_LATEST_ONLY } = process.env
+  const { SENDGRID_API_KEY, FROM_EMAIL, FROM_NAME, EMAIL_RECIPIENTS, BEFORE_SHA, SEND_LATEST_ONLY } = process.env
 
   const recipients = (EMAIL_RECIPIENTS || "")
     .split(",")
@@ -167,8 +170,8 @@ async function main() {
     console.log("No EMAIL_RECIPIENTS configured — skipping.")
     return
   }
-  if (!RESEND_API_KEY) {
-    console.log("RESEND_API_KEY not set — skipping.")
+  if (!SENDGRID_API_KEY) {
+    console.log("SENDGRID_API_KEY not set — skipping.")
     return
   }
   if (!fs.existsSync(NEWS_CSV)) {
@@ -211,9 +214,10 @@ async function main() {
   const subject = `MFGA News: ${newArticles.length} New ${newArticles.length === 1 ? "Story" : "Stories"}`
   const [to, ...bcc] = recipients
 
-  await sendViaResend({
-    apiKey: RESEND_API_KEY,
-    from: RESEND_FROM || DEFAULT_FROM,
+  await sendViaSendGrid({
+    apiKey: SENDGRID_API_KEY,
+    fromEmail: FROM_EMAIL || DEFAULT_FROM_EMAIL,
+    fromName: FROM_NAME || DEFAULT_FROM_NAME,
     to,
     bcc,
     subject,
