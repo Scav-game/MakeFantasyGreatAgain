@@ -46,7 +46,17 @@ jobs:
     if: needs.gate.outputs.in_window == 'true'
     runs-on: ubuntu-latest
     steps:
+      # Uses a PAT (SYNC_PUSH_TOKEN), not the default GITHUB_TOKEN, so this
+      # job's push actually triggers deploy.yml. Pushes made with the
+      # default token are deliberately excluded from triggering other
+      # workflows (GitHub's anti-recursion safeguard) — without this, the
+      # commit lands but the site never rebuilds and no email goes out.
       - uses: actions/checkout@v4
+        with:
+          # Falls back to the default token if the PAT secret isn't set yet,
+          # so this doesn't hard-break the workflow — it just won't trigger
+          # deploy.yml until SYNC_PUSH_TOKEN is added.
+          token: ${{ secrets.SYNC_PUSH_TOKEN || secrets.GITHUB_TOKEN }}
 
       - uses: actions/setup-node@v4
         with:
