@@ -1,10 +1,11 @@
 name: Sync ESPN Rosters
 
 on:
-  # Fires every 30 minutes; the "gate" job below restricts actual work to
-  # 8 AM-midnight Eastern — see its "Check time window" step.
+  # Fires every 3 minutes (GitHub's finest supported granularity); the
+  # "gate" job below restricts actual work to the real target cadence —
+  # see its "Check time window" step.
   schedule:
-    - cron: "*/30 * * * *"
+    - cron: "*/3 * * * *"
   workflow_dispatch: # Manual trigger
 
 permissions:
@@ -16,20 +17,29 @@ jobs:
     outputs:
       in_window: ${{ steps.window.outputs.in_window }}
     steps:
-      - name: Check time window (8 AM-midnight Eastern)
+      - name: Check time window (Eastern time)
         id: window
         run: |
           # Computed live in America/New_York so this self-adjusts for
           # Daylight Saving without needing the cron schedule touched twice
-          # a year. Window is 8:00 AM through 11:30 PM, plus the exact
-          # midnight (00:00) run — nothing between 12:30 AM and 7:30 AM.
+          # a year.
+          #   8:00 AM - 8:57 PM  -> every 3 min  (matches the cron cadence)
+          #   9:00 PM - 11:30 PM -> every 30 min (minute is :00 or :30)
+          #   Midnight (00:00)   -> one final check
+          #   12:30 AM - 7:57 AM -> nothing
           hour=$(TZ='America/New_York' date +%H)
           minute=$(TZ='America/New_York' date +%M)
-          if [ "$hour" -ge 8 ] || { [ "$hour" -eq 0 ] && [ "$minute" -eq 0 ]; }; then
-            echo "in_window=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "in_window=false" >> "$GITHUB_OUTPUT"
+
+          in_window=false
+          if [ "$hour" -ge 8 ] && [ "$hour" -le 20 ]; then
+            in_window=true
+          elif [ "$hour" -ge 21 ] && [ "$hour" -le 23 ] && { [ "$minute" = "00" ] || [ "$minute" = "30" ]; }; then
+            in_window=true
+          elif [ "$hour" -eq 0 ] && [ "$minute" = "00" ]; then
+            in_window=true
           fi
+
+          echo "in_window=$in_window" >> "$GITHUB_OUTPUT"
 
   sync:
     needs: gate
