@@ -45,7 +45,9 @@ export function NewsSection() {
               <div className="min-w-0 flex-1">
                 <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                   <h3 className="font-display text-base font-bold uppercase tracking-wide text-foreground">
-                    {article.headline}
+                    <Link href={`/news/${article.id}`} className="transition-colors hover:text-gold">
+                      {article.headline}
+                    </Link>
                   </h3>
                   <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
                     {article.generatedAt}

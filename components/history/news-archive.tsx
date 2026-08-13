@@ -1,6 +1,7 @@
 "use client"
 
 import { useMemo, useState } from "react"
+import Link from "next/link"
 import { getAllNewsArticles } from "@/lib/news"
 import { TeamLogo } from "@/components/team/team-logo"
 import { AuthorAvatar } from "./author-avatar"
@@ -57,7 +58,9 @@ export function NewsArchive() {
                 <div className="min-w-0 flex-1">
                   <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <h3 className="font-display text-base font-bold uppercase tracking-wide text-foreground">
-                      <Highlight text={article.headline} query={query} />
+                      <Link href={`/news/${article.id}`} className="transition-colors hover:text-gold">
+                        <Highlight text={article.headline} query={query} />
+                      </Link>
                     </h3>
                     <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
                       {article.generatedAt}
