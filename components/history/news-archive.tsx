@@ -71,9 +71,15 @@ export function NewsArchive() {
                       By <Highlight text={article.author} query={query} />
                     </p>
                   )}
-                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
                     <Highlight text={article.body} query={query} />
                   </p>
+                  <Link
+                    href={`/news/${article.id}`}
+                    className="mt-1.5 inline-block text-xs font-semibold uppercase tracking-wider text-gold/70 transition-colors hover:text-gold"
+                  >
+                    Continue Reading →
+                  </Link>
                 </div>
               </div>
             </article>

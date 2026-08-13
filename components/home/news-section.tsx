@@ -56,7 +56,13 @@ export function NewsSection() {
                 {article.author && (
                   <p className="mt-0.5 text-[11px] uppercase tracking-wider text-gold/70">By {article.author}</p>
                 )}
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{article.body}</p>
+                <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">{article.body}</p>
+                <Link
+                  href={`/news/${article.id}`}
+                  className="mt-1.5 inline-block text-xs font-semibold uppercase tracking-wider text-gold/70 transition-colors hover:text-gold"
+                >
+                  Continue Reading →
+                </Link>
               </div>
             </div>
           </article>

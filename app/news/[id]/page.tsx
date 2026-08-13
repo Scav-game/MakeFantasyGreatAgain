@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/home/site-footer"
 import { AuthorAvatar } from "@/components/history/author-avatar"
 import { TeamLogo } from "@/components/team/team-logo"
 import { TeamReportArticle } from "@/components/history/team-report-article"
-import { getAllNewsArticles } from "@/lib/news"
+import { getAllNewsArticles, splitParagraphs } from "@/lib/news"
 import { isTeamReport } from "@/lib/team-report"
 
 export function generateStaticParams() {
@@ -55,7 +55,11 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
           {isTeamReport(article.body) ? (
             <TeamReportArticle body={article.body} />
           ) : (
-            <p className="text-base leading-relaxed whitespace-pre-line text-muted-foreground">{article.body}</p>
+            splitParagraphs(article.body).map((paragraph, i) => (
+              <p key={i} className="mb-4 text-base leading-relaxed text-muted-foreground">
+                {paragraph}
+              </p>
+            ))
           )}
         </article>
       </main>

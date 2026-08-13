@@ -33,3 +33,14 @@ export function getAllNewsArticles(): NewsArticle[] {
 export function getHomepageNewsArticles(): NewsArticle[] {
   return getAllNewsArticles().slice(0, HOMEPAGE_NEWS_LIMIT)
 }
+
+/** Splits a body into paragraphs on blank lines / line breaks, for
+ * articles typed with real newlines in news.csv. If the text was pasted
+ * into the spreadsheet as one unbroken line, this just returns it as a
+ * single paragraph — there's no line-break information left to recover. */
+export function splitParagraphs(body: string): string[] {
+  return body
+    .split(/\n+/)
+    .map((p) => p.trim())
+    .filter(Boolean)
+}
