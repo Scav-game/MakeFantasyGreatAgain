@@ -27,6 +27,27 @@ const NFL_TEAMS = {
   30: "JAX", 33: "BAL", 34: "HOU",
 }
 
+// ESPN team IDs are stable even when owners rename their team for a joke
+// (e.g. "Nabers In Paris" briefly became "Starving Ethiopians"). Match on
+// this first; keyword matching below is only a fallback for leagues/teams
+// not in this map.
+const TEAM_ID_SLUG = {
+  1: "pakistan-bombers",
+  2: "pluto-shraazinatorz",
+  3: "nabers-in-paris",
+  4: "mount-olympus",
+  5: "the-watermark",
+  6: "doobs-agency",
+  7: "englewood-ninjas",
+  8: "vile-horrendous",
+  9: "i-heart-gingers",
+  10: "amon-ra-dawgin",
+  11: "fort-bragg",
+  12: "chicago-zestiest",
+  13: "vancouver-panties",
+  14: "beer",
+}
+
 // Matched by substring against the ESPN team name (case-insensitive). Order
 // matters only in that the first match wins — these are distinct enough
 // that it shouldn't matter in practice.
@@ -121,7 +142,7 @@ function buildRosterRows(league) {
   const unmatchedTeams = []
 
   for (const team of league.teams ?? []) {
-    const slug = slugForTeamName(team.name ?? "")
+    const slug = TEAM_ID_SLUG[team.id] ?? slugForTeamName(team.name ?? "")
     if (!slug) {
       unmatchedTeams.push(team.name)
       continue
