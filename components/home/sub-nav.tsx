@@ -4,6 +4,7 @@ const NAV_LINKS = [
   { label: "Teams", href: "#teams", kind: "anchor" as const },
   { label: "Standings", href: "#standings", kind: "anchor" as const },
   { label: "News", href: "/news", kind: "page" as const },
+  { label: "Predictions", href: "/predictions", kind: "page" as const },
   { label: "Clinch Scenarios", href: "#clinch", kind: "anchor" as const },
   { label: "Championship Odds", href: "#odds", kind: "anchor" as const },
   { label: "Record Comparison", href: "#comparison", kind: "anchor" as const },

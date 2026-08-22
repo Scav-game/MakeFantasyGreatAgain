@@ -1,0 +1,82 @@
+[
+  {
+    "id": "gerald-manning",
+    "name": "Gerald \"The Professor\" Manning",
+    "shortName": "Gerald",
+    "age": 62,
+    "title": "Retired Actuary",
+    "description": "Retired actuary from Hartford. 35 years calculating risk. Treats every matchup like an actuarial table.",
+    "avatar": "/images/predictors/gerald-manning.png",
+    "accentColor": "#1B5E20"
+  },
+  {
+    "id": "rico-delgado",
+    "name": "Rico \"Dynamite\" Delgado",
+    "shortName": "Rico",
+    "age": 29,
+    "title": "Sports Radio Outcast",
+    "description": "Former sports radio caller banned from three shows. Runs a podcast called Blow It Up with 214 subscribers.",
+    "avatar": "/images/predictors/rico-delgado.png",
+    "accentColor": "#E65100"
+  },
+  {
+    "id": "earl-hutchinson",
+    "name": "Earl Hutchinson",
+    "shortName": "Earl",
+    "age": 71,
+    "title": "Retired HS Football Coach",
+    "description": "38 years coaching high school football. Four state championships. Still calls running backs tailbacks.",
+    "avatar": "/images/predictors/earl-hutchinson.png",
+    "accentColor": "#4E342E"
+  },
+  {
+    "id": "priya-nair",
+    "name": "Priya Nair",
+    "shortName": "Priya",
+    "age": 26,
+    "title": "Data Science Grad Student",
+    "description": "Georgia Tech grad student. Built a custom Python model tracking 14-day rolling averages. Wears the same Braves hat every pick day.",
+    "avatar": "/images/predictors/priya-nair.png",
+    "accentColor": "#6A1B9A"
+  },
+  {
+    "id": "vinny-esposito",
+    "name": "Vincent \"Vinny\" Esposito",
+    "shortName": "Vinny",
+    "age": 45,
+    "title": "Math Teacher / Cable Host",
+    "description": "Staten Island math teacher. Hosts Vinny's Verdict on local access. Has a whiteboard war room in his basement.",
+    "avatar": "/images/predictors/vinny-esposito.png",
+    "accentColor": "#0D47A1"
+  },
+  {
+    "id": "sandy-kowalski",
+    "name": "Sandra \"Sandy\" Kowalski",
+    "shortName": "Sandy",
+    "age": 54,
+    "title": "Former Event Planner",
+    "description": "25 years in event logistics. Won her office fantasy league 3 times. Sees football as situational planning.",
+    "avatar": "/images/predictors/sandy-kowalski.png",
+    "accentColor": "#AD1457"
+  },
+  {
+    "id": "marcus-whitfield",
+    "name": "Marcus Whitfield",
+    "shortName": "Marcus",
+    "age": 38,
+    "title": "Professional Poker Player",
+    "description": "Las Vegas poker player. Cashed at the WSOP. Sees predictions as a game theory problem, not a football problem.",
+    "avatar": "/images/predictors/marcus-whitfield.png",
+    "accentColor": "#212121"
+  },
+  {
+    "id": "destiny-carter",
+    "name": "Destiny Carter",
+    "shortName": "Destiny",
+    "age": 31,
+    "title": "Yoga Instructor / Astrologer",
+    "description": "Sedona yoga instructor. Picks based on energy, karma, and team narratives. Has a crystal named Kevin.",
+    "avatar": "/images/predictors/destiny-carter.png",
+    "accentColor": "#00897B"
+  }
+]

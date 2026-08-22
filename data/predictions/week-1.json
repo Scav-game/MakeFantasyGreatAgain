@@ -1,0 +1,132 @@
+{
+  "week": 1,
+  "status": "pending",
+  "matchups": [
+    {
+      "id": "bomb-vs-nip",
+      "away": "pakistan-bombers",
+      "home": "nabers-in-paris",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null,
+      "predictions": [
+        { "predictorId": "gerald-manning", "pick": "pakistan-bombers", "reasoning": "Bombers project to a 22-point differential before you even account for the Ethiopians' offseason turnover. The actuarial tables don't care about home openers." },
+        { "predictorId": "rico-delgado", "pick": "nabers-in-paris", "reasoning": "Everyone's picking the Bombers. That's exactly why I'm not. New identity, new jerseys, upset written all over it." },
+        { "predictorId": "earl-hutchinson", "pick": "pakistan-bombers", "reasoning": "Robinson and Jeanty in the same backfield is the kind of thing that wins championships, not season openers. But I'll still take 'em." },
+        { "predictorId": "priya-nair", "pick": "pakistan-bombers", "reasoning": "Model has Bombers at 71% win probability, 14-day rolling roster grade heavily favors Pakistan. Straightforward pick." },
+        { "predictorId": "vinny-esposito", "pick": "pakistan-bombers", "reasoning": "Put it on the whiteboard: Bombers by double digits. This isn't calculus, folks." },
+        { "predictorId": "sandy-kowalski", "pick": "pakistan-bombers", "reasoning": "A home opener needs a crowd that believes, and Starving Ethiopians fans are still figuring out who they're cheering for. Bombers handle it." },
+        { "predictorId": "marcus-whitfield", "pick": "pakistan-bombers", "reasoning": "Everyone's all in on Pakistan and for once the crowd's actually right. I'm not fading a pot-committed favorite just to be different." },
+        { "predictorId": "destiny-carter", "pick": "pakistan-bombers", "reasoning": "Pakistan's energy this offseason has been championship-or-bust. That kind of intention manifests." }
+      ]
+    },
+    {
+      "id": "pluto-vs-van",
+      "away": "pluto-shraazinatorz",
+      "home": "vancouver-panties",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null,
+      "predictions": [
+        { "predictorId": "gerald-manning", "pick": "vancouver-panties", "reasoning": "Lamar-Achane-Lamb is a top-four starting core by my numbers. Home field tips a close one." },
+        { "predictorId": "rico-delgado", "pick": "pluto-shraazinatorz", "reasoning": "Josh Allen throws that team to 30 points before Vancouver figures out their gameplan. Book it." },
+        { "predictorId": "earl-hutchinson", "pick": "pluto-shraazinatorz", "reasoning": "Henry's a load and Allen's the best arm in this league not named Hurts or Daniels. I trust the vets." },
+        { "predictorId": "priya-nair", "pick": "vancouver-panties", "reasoning": "Model gives Vancouver a slight but real edge, driven mostly by receiver efficiency." },
+        { "predictorId": "vinny-esposito", "pick": "vancouver-panties", "reasoning": "Achane in space against this Pluto secondary is a math problem they can't solve." },
+        { "predictorId": "sandy-kowalski", "pick": "pluto-shraazinatorz", "reasoning": "Vancouver's running back room is three deep and thin as a paper plate. Pluto exploits it." },
+        { "predictorId": "marcus-whitfield", "pick": "vancouver-panties", "reasoning": "Small edge, but home field is worth a half-point in my book and that's enough to lean Vancouver." },
+        { "predictorId": "destiny-carter", "pick": "vancouver-panties", "reasoning": "Vancouver's roster feels settled. Settled energy wins close games." }
+      ]
+    },
+    {
+      "id": "gingers-vs-olympus",
+      "away": "i-heart-gingers",
+      "home": "mount-olympus",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null,
+      "predictions": [
+        { "predictorId": "gerald-manning", "pick": "i-heart-gingers", "reasoning": "Chase and Higgins is the best receiver duo in the league by a wide margin. The math isn't close." },
+        { "predictorId": "rico-delgado", "pick": "i-heart-gingers", "reasoning": "Ja'Marr Chase against ANYONE is appointment viewing and a Gingers cover. Book it, Dalton." },
+        { "predictorId": "earl-hutchinson", "pick": "mount-olympus", "reasoning": "McCaffrey and Hall behind a real offensive identity beats a great receiver room on the road. I'll take the run game." },
+        { "predictorId": "priya-nair", "pick": "i-heart-gingers", "reasoning": "Gingers project as a top-three roster league-wide. Small sample, big talent gap." },
+        { "predictorId": "vinny-esposito", "pick": "i-heart-gingers", "reasoning": "Chase, Higgins, Diggs, that's a full chalkboard of touchdowns waiting to happen." },
+        { "predictorId": "sandy-kowalski", "pick": "mount-olympus", "reasoning": "Home openers reward the team that's actually organized, and Liam Hughes runs the tightest ship in this league." },
+        { "predictorId": "marcus-whitfield", "pick": "i-heart-gingers", "reasoning": "The talent gap here is wide enough that I don't need to get cute. Gingers." },
+        { "predictorId": "destiny-carter", "pick": "i-heart-gingers", "reasoning": "Chase carries main character energy into every matchup." }
+      ]
+    },
+    {
+      "id": "beer-vs-watermark",
+      "away": "beer",
+      "home": "the-watermark",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null,
+      "predictions": [
+        { "predictorId": "gerald-manning", "pick": "beer", "reasoning": "Stafford, Stroud, St. Brown, Harrison Jr. This roster was rebuilt correctly and it shows in the numbers." },
+        { "predictorId": "rico-delgado", "pick": "beer", "reasoning": "Miles Hughes turned seven running backs into a CONTENDER. I'm not betting against that kind of hot streak." },
+        { "predictorId": "earl-hutchinson", "pick": "the-watermark", "reasoning": "Gibbs is a load and a home opener with a chip on your shoulder after all the criticism I've thrown at 'em? I've seen teams rally off less." },
+        { "predictorId": "priya-nair", "pick": "beer", "reasoning": "Beer's roster grade jumped more than any team in the league this offseason. Model loves the momentum." },
+        { "predictorId": "vinny-esposito", "pick": "beer", "reasoning": "Stafford's arm plus that receiver room, I don't need a whiteboard for this one." },
+        { "predictorId": "sandy-kowalski", "pick": "beer", "reasoning": "Every piece of that Beer roster was acquired with a plan. Planning wins openers." },
+        { "predictorId": "marcus-whitfield", "pick": "beer", "reasoning": "The market's right on this one. Beer's the better team and I'm not paying to be contrarian." },
+        { "predictorId": "destiny-carter", "pick": "beer", "reasoning": "Pavel's rebirth energy is undeniable right now. The universe rewards transformation." }
+      ]
+    },
+    {
+      "id": "doobs-vs-vile",
+      "away": "doobs-agency",
+      "home": "vile-horrendous",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null,
+      "predictions": [
+        { "predictorId": "gerald-manning", "pick": "doobs-agency", "reasoning": "Seven viable receivers is the deepest room in the league. Depth wins in Week 1 before injuries even start." },
+        { "predictorId": "rico-delgado", "pick": "vile-horrendous", "reasoning": "Youngest core in the league, home crowd, and Cook's still got tread left on those tires. Upset time." },
+        { "predictorId": "earl-hutchinson", "pick": "vile-horrendous", "reasoning": "You take the home team in a pick 'em, that's coaching 101." },
+        { "predictorId": "priya-nair", "pick": "doobs-agency", "reasoning": "Model is nearly 50/50 here but gives Doob's a razor-thin edge on receiver depth alone." },
+        { "predictorId": "vinny-esposito", "pick": "doobs-agency", "reasoning": "Burrow to any of six different guys, that's too many equations for one defense to solve." },
+        { "predictorId": "sandy-kowalski", "pick": "vile-horrendous", "reasoning": "Home openers are about executing your own gameplan, not overthinking the other guy's roster. Vile Horrendous is buttoned up." },
+        { "predictorId": "marcus-whitfield", "pick": "doobs-agency", "reasoning": "Coin flip game. I'll take the side with more ways to win." },
+        { "predictorId": "destiny-carter", "pick": "vile-horrendous", "reasoning": "Young rosters carry fresh energy. I'm following the vibe on this one." }
+      ]
+    },
+    {
+      "id": "ninjas-vs-bragg",
+      "away": "englewood-ninjas",
+      "home": "fort-bragg",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null,
+      "predictions": [
+        { "predictorId": "gerald-manning", "pick": "fort-bragg", "reasoning": "London joins Evans and Moore in a receiver room that projects top-five. Bragg's all-in bet pays off early." },
+        { "predictorId": "rico-delgado", "pick": "englewood-ninjas", "reasoning": "Three quarterbacks and zero cap discipline catches up to Bragg eventually. Might as well be Week 1." },
+        { "predictorId": "earl-hutchinson", "pick": "fort-bragg", "reasoning": "Defending champs at home in the opener. I don't overthink these." },
+        { "predictorId": "priya-nair", "pick": "englewood-ninjas", "reasoning": "Taylor, JSN, Waddle, Bowers is a cleaner roster construction by every efficiency metric I track." },
+        { "predictorId": "vinny-esposito", "pick": "fort-bragg", "reasoning": "London, Evans, Moore, that's three different equations Englewood's secondary can't all solve at once." },
+        { "predictorId": "sandy-kowalski", "pick": "fort-bragg", "reasoning": "The champs know how to handle an opener better than anybody in this league. Experience matters in Week 1." },
+        { "predictorId": "marcus-whitfield", "pick": "fort-bragg", "reasoning": "Bragg's all-in roster is built exactly for spots like this. I'm following the smart money." },
+        { "predictorId": "destiny-carter", "pick": "englewood-ninjas", "reasoning": "Bragg burned four future picks for this moment. That's desperate energy, not championship energy." }
+      ]
+    },
+    {
+      "id": "dawgin-vs-chicago",
+      "away": "amon-ra-dawgin",
+      "home": "chicago-zestiest",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null,
+      "predictions": [
+        { "predictorId": "gerald-manning", "pick": "chicago-zestiest", "reasoning": "Amon Ra Dawgin fields a starting lineup with a hole at defense and kicker. That's a mathematical forfeit of two scoring slots." },
+        { "predictorId": "rico-delgado", "pick": "chicago-zestiest", "reasoning": "Andrew still doesn't have a defense or a kicker?! In WEEK ONE?! Chicago wins this by default, folks." },
+        { "predictorId": "earl-hutchinson", "pick": "chicago-zestiest", "reasoning": "You can't win with two empty spots in your lineup. Simple as that." },
+        { "predictorId": "priya-nair", "pick": "amon-ra-dawgin", "reasoning": "Jefferson and Adams alone project for enough points to overcome the gaps, by a slim margin in my model." },
+        { "predictorId": "vinny-esposito", "pick": "chicago-zestiest", "reasoning": "Zero points from two roster slots is bad math no matter how good Jefferson is." },
+        { "predictorId": "sandy-kowalski", "pick": "chicago-zestiest", "reasoning": "A roster with unfilled spots on opening day is a planning failure, and planning failures lose games." },
+        { "predictorId": "marcus-whitfield", "pick": "chicago-zestiest", "reasoning": "Free equity when the other guy is punting on two lineup slots. Easy value." },
+        { "predictorId": "destiny-carter", "pick": "amon-ra-dawgin", "reasoning": "Justin Jefferson's talent transcends a roster's chaos. I'm trusting the star, not the structure." }
+      ]
+    }
+  ]
+}
