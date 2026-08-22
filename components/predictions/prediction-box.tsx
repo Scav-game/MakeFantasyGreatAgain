@@ -3,25 +3,6 @@ import { getTeam } from "@/lib/league"
 import { TeamLogo } from "@/components/team/team-logo"
 import { cn } from "@/lib/utils"
 
-function WolfBadge({ correct }: { correct: boolean | null }) {
-  const style =
-    correct === true
-      ? { borderColor: "#D4A017", backgroundColor: "#D4A01733", color: "#D4A017" }
-      : correct === false
-        ? { borderColor: "#ffffff33", backgroundColor: "#ffffff1a", color: "#ffffff88" }
-        : { borderColor: "#ffffff40", backgroundColor: "#00000066", color: "#ffffffcc" }
-
-  return (
-    <span
-      title="Lone wolf pick"
-      className="absolute right-1 top-1 z-10 flex h-5 w-5 items-center justify-center rounded-full border text-[10px] leading-none"
-      style={style}
-    >
-      🐺
-    </span>
-  )
-}
-
 const TEXT_SHADOW = { textShadow: "0 1px 3px rgba(0,0,0,0.85)" }
 
 export function PredictionBox({
@@ -44,15 +25,15 @@ export function PredictionBox({
 
   return (
     <div
+      title={loneWolf ? "Lone wolf pick" : undefined}
       className={cn(
-        "relative flex min-h-[96px] flex-col items-center justify-between overflow-hidden rounded-lg border-2 p-1.5 transition-colors",
+        "relative flex min-h-[116px] flex-col items-center justify-between overflow-hidden rounded-lg border-2 p-1.5 transition-colors",
         borderClass,
+        loneWolf && "ring-2 ring-[#D4A017]",
       )}
       style={{ backgroundColor: team.colors.primary }}
     >
       <div className="pointer-events-none absolute inset-0" style={{ backgroundColor: overlayColor }} />
-
-      {loneWolf && <WolfBadge correct={correct} />}
 
       <span
         className="relative text-center text-[10px] font-semibold uppercase tracking-wide text-white"
@@ -62,7 +43,7 @@ export function PredictionBox({
       </span>
 
       <div className="relative flex flex-1 items-center justify-center py-1.5">
-        <TeamLogo team={team} size="sm" />
+        <TeamLogo team={team} size="lg" />
       </div>
 
       <span
