@@ -1,5 +1,4 @@
 import predictorsData from "@/data/predictions/predictors.json"
-import week1 from "@/data/predictions/week-1.json"
 import { getTeam } from "@/lib/league"
 
 export type Predictor = {
@@ -40,12 +39,12 @@ export type PredictionWeek = {
 export const PREDICTORS: Predictor[] = predictorsData as Predictor[]
 
 /**
- * One entry per week-N.json file in data/predictions/. Add the new import
- * and push it here whenever a new week's predictions are generated, the
- * same "update this list by hand" pattern as the team logo/avatar extension
- * maps elsewhere in this codebase.
+ * One entry per week-N.json file in data/predictions/. Add the import and
+ * push it here whenever a new week's predictions are generated, the same
+ * "update this list by hand" pattern as the team logo/avatar extension
+ * maps elsewhere in this codebase. Empty until the first week is posted.
  */
-export const PREDICTION_WEEKS: PredictionWeek[] = [week1 as PredictionWeek]
+export const PREDICTION_WEEKS: PredictionWeek[] = []
 
 export function getPredictor(id: string): Predictor | undefined {
   return PREDICTORS.find((p) => p.id === id)

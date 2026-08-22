@@ -45,7 +45,7 @@ export default function PredictionsPage() {
         ) : (
           <section className="mb-16">
             <p className="text-sm text-muted-foreground">
-              Week 1 predictions will be posted Wednesday, September 3rd.
+              Predictions are posted every Tuesday, ahead of that week's games.
             </p>
           </section>
         )}
