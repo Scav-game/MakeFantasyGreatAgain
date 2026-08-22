@@ -14,7 +14,7 @@ function WolfBadge({ correct }: { correct: boolean | null }) {
   return (
     <span
       title="Lone wolf pick"
-      className="absolute -right-1.5 -top-1.5 z-10 flex h-5 w-5 items-center justify-center rounded-full border text-[10px] leading-none"
+      className="absolute right-1 top-1 z-10 flex h-5 w-5 items-center justify-center rounded-full border text-[10px] leading-none"
       style={style}
     >
       🐺
