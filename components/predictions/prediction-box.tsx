@@ -14,13 +14,15 @@ function WolfBadge({ correct }: { correct: boolean | null }) {
   return (
     <span
       title="Lone wolf pick"
-      className="absolute -right-1.5 -top-1.5 flex h-5 w-5 items-center justify-center rounded-full border text-[10px] leading-none"
+      className="absolute -right-1.5 -top-1.5 z-10 flex h-5 w-5 items-center justify-center rounded-full border text-[10px] leading-none"
       style={style}
     >
       🐺
     </span>
   )
 }
+
+const TEXT_SHADOW = { textShadow: "0 1px 3px rgba(0,0,0,0.85)" }
 
 export function PredictionBox({
   predictor,
@@ -38,28 +40,37 @@ export function PredictionBox({
 
   const borderClass =
     correct === true ? "border-emerald-500/70" : correct === false ? "border-red-500/60" : "border-white/10"
+  const overlayColor = correct === true ? "#4CAF5026" : correct === false ? "#F4433626" : "transparent"
 
   return (
-    <div className={cn("relative flex flex-col overflow-hidden rounded-lg border-2 transition-colors", borderClass)}>
+    <div
+      className={cn(
+        "relative flex min-h-[96px] flex-col items-center justify-between overflow-hidden rounded-lg border-2 p-1.5 transition-colors",
+        borderClass,
+      )}
+      style={{ backgroundColor: team.colors.primary }}
+    >
+      <div className="pointer-events-none absolute inset-0" style={{ backgroundColor: overlayColor }} />
+
       {loneWolf && <WolfBadge correct={correct} />}
 
-      <div className="bg-black/50 px-1 py-1 text-center text-[10px] font-semibold uppercase tracking-wide text-white/80">
+      <span
+        className="relative text-center text-[10px] font-semibold uppercase tracking-wide text-white"
+        style={TEXT_SHADOW}
+      >
         {predictor.shortName}
-      </div>
+      </span>
 
-      <div className="flex flex-1 items-center justify-center py-3" style={{ backgroundColor: team.colors.primary }}>
+      <div className="relative flex flex-1 items-center justify-center py-1.5">
         <TeamLogo team={team} size="sm" />
       </div>
 
-      <div
-        className="flex h-5 items-center justify-center text-xs font-bold"
-        style={{
-          backgroundColor: correct === true ? "#4CAF50" : correct === false ? "#F44336" : "transparent",
-          color: "white",
-        }}
+      <span
+        className="relative flex h-5 w-5 items-center justify-center rounded-full text-[11px] font-bold text-white"
+        style={{ backgroundColor: correct === true ? "#4CAF50" : correct === false ? "#F44336" : "transparent" }}
       >
         {correct === true ? "✓" : correct === false ? "✕" : null}
-      </div>
+      </span>
     </div>
   )
 }

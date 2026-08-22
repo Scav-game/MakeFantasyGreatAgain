@@ -25,7 +25,9 @@ function TeamSide({
 }) {
   if (!team) return null
   return (
-    <div className={`flex min-w-0 items-center gap-3 ${align === "right" ? "flex-row-reverse text-right" : ""}`}>
+    <div
+      className={`flex min-w-0 items-center gap-3 ${align === "right" ? "flex-row-reverse justify-self-end text-right" : "justify-self-start"}`}
+    >
       <TeamLogo team={team} size="md" />
       <div className="min-w-0">
         <p
@@ -50,7 +52,7 @@ export function MatchupCard({ week, matchup }: { week: number; matchup: Matchup 
       <button
         type="button"
         onClick={() => setExpanded((v) => !v)}
-        className="flex w-full items-center gap-4 p-4 text-left"
+        className="grid w-full grid-cols-[1fr_auto_1fr] items-center gap-4 p-4 text-left"
       >
         <TeamSide team={away} record={matchup.awayRecord} align="left" winner={matchup.winner === matchup.away} />
 
