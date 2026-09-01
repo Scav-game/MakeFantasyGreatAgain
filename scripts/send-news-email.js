@@ -7,6 +7,9 @@
 // documented convention (always append, never insert/reorder), and avoids
 // false positives from edits to existing rows (fixing a typo in an old
 // story shouldn't re-email everyone).
+//
+// Auto-generated "Transaction Wire" rows are excluded entirely — see
+// isWirePost below.
 const { execFileSync } = require("child_process")
 const fs = require("fs")
 const path = require("path")
@@ -72,6 +75,19 @@ function toArticles(text) {
       return rec
     })
     .filter((a) => a.headline && a.body)
+}
+
+// The auto-generated roster-churn blurbs scripts/check-transactions.js
+// appends (waiver claims, free-agent adds, drops, trades). They still show
+// up on the site's news feed, but they're routine transaction noise rather
+// than a reported story, so they never trigger an email.
+const WIRE_AUTHOR = 'Jake "The Wire" Russo'
+const WIRE_HEADLINE = "transaction wire"
+
+function isWirePost(article) {
+  return (
+    article.author === WIRE_AUTHOR || (article.headline ?? "").trim().toLowerCase() === WIRE_HEADLINE
+  )
 }
 
 /** Trims to ~maxLen chars without cutting a word in half. */
@@ -199,13 +215,15 @@ async function main() {
 
   let newArticles
   if (SEND_LATEST_ONLY === "true") {
-    // Manual override (workflow_dispatch checkbox): resend the single most
-    // recent story regardless of what's changed since the last push.
-    if (currentArticles.length === 0) {
-      console.log("data/news.csv has no articles — nothing to send.")
+    // Manual override (workflow_dispatch checkbox): resend the most recent
+    // story regardless of what's changed since the last push. Skips past any
+    // wire posts sitting at the end of the file to the newest real story.
+    const sendable = currentArticles.filter((a) => !isWirePost(a))
+    if (sendable.length === 0) {
+      console.log("data/news.csv has no emailable articles — nothing to send.")
       return
     }
-    newArticles = currentArticles.slice(-1)
+    newArticles = sendable.slice(-1)
     console.log("Manual send-latest requested — bypassing the new-since-last-push diff.")
   } else {
     const previousText = getPreviousNewsCsv(BEFORE_SHA)
@@ -214,11 +232,16 @@ async function main() {
       return
     }
     const previousArticles = toArticles(previousText)
-    newArticles = currentArticles.slice(previousArticles.length)
+    const appended = currentArticles.slice(previousArticles.length)
+    newArticles = appended.filter((a) => !isWirePost(a))
+    const skipped = appended.length - newArticles.length
+    if (skipped > 0) {
+      console.log(`Ignoring ${skipped} auto-generated Transaction Wire row(s) — those don't trigger emails.`)
+    }
   }
 
   if (newArticles.length === 0) {
-    console.log("No new articles appended — skipping.")
+    console.log("No new articles to email — skipping.")
     return
   }
   if (newArticles.length > MAX_SANE_NEW_ARTICLES) {

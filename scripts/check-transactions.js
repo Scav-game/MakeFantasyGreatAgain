@@ -3,6 +3,11 @@
 // Wire" story to data/news.csv under intern reporter Jake "The Wire" Russo.
 // Run with `npm run transactions`, normally right after `npm run sync`.
 //
+// These rows show on the site's news feed but deliberately never trigger a
+// notification email — scripts/send-news-email.js filters them out by the
+// AUTHOR / "Transaction Wire" headline set below, so keep those two values
+// in sync with its isWirePost().
+//
 // Real transaction data has more noise than you'd expect from ESPN's docs:
 // - status can be CANCELED / FAILED_INVALIDPLAYERSOURCE / EXECUTED / missing
 //   — only EXECUTED represents something that actually happened.

@@ -104,6 +104,18 @@ recent; everything (including those 5) is searchable on the `/news`
 Archive page. There's no auto-generated filler — whatever's in this file is
 exactly what shows up, so an empty file means an empty section.
 
+### Email notifications
+
+Appending a story to this file also emails the league (via
+`scripts/send-news-email.js`, run by the deploy workflow). Two things never
+trigger an email: editing an existing row (only newly appended rows count),
+and the auto-generated **Transaction Wire** rows that `npm run transactions`
+writes under Jake "The Wire" Russo. Those waiver/free-agent/drop/trade
+blurbs still appear on the site's news feed — they just don't put anything
+in anyone's inbox, since routine roster churn isn't worth an email. Any row
+whose author is Jake "The Wire" Russo, or whose headline is
+`Transaction Wire`, is treated as one of these.
+
 ### Reporter staff & profile pictures
 
 The little square badge on each article picks a picture in this order:
