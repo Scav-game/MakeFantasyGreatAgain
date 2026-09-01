@@ -5,7 +5,7 @@ import { SiteFooter } from "@/components/home/site-footer"
 import { AuthorAvatar } from "@/components/history/author-avatar"
 import { TeamLogo } from "@/components/team/team-logo"
 import { TeamReportArticle } from "@/components/history/team-report-article"
-import { getAllNewsArticles, splitParagraphs } from "@/lib/news"
+import { getAllNewsArticles, splitCorrection, splitParagraphs } from "@/lib/news"
 import { isTeamReport } from "@/lib/team-report"
 
 export function generateStaticParams() {
@@ -26,6 +26,8 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
   const { id } = await params
   const article = getAllNewsArticles().find((a) => a.id === id)
   if (!article) notFound()
+
+  const { body, correction } = splitCorrection(article.body)
 
   return (
     <div className="min-h-screen bg-background">
@@ -52,14 +54,21 @@ export default async function NewsArticlePage({ params }: { params: Promise<{ id
             </div>
           </header>
 
-          {isTeamReport(article.body) ? (
-            <TeamReportArticle body={article.body} />
+          {isTeamReport(body) ? (
+            <TeamReportArticle body={body} />
           ) : (
-            splitParagraphs(article.body).map((paragraph, i) => (
+            splitParagraphs(body).map((paragraph, i) => (
               <p key={i} className="mb-4 text-base leading-relaxed text-muted-foreground">
                 {paragraph}
               </p>
             ))
+          )}
+
+          {correction && (
+            <aside className="mt-8 rounded-xl border border-gold/30 border-l-4 border-l-gold bg-card/60 px-5 py-4">
+              <p className="font-display text-xs font-bold uppercase tracking-widest text-gold">Correction</p>
+              <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{correction}</p>
+            </aside>
           )}
         </article>
       </main>

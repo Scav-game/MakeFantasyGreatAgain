@@ -104,6 +104,19 @@ recent; everything (including those 5) is searchable on the `/news`
 Archive page. There's no auto-generated filler — whatever's in this file is
 exactly what shows up, so an empty file means an empty section.
 
+### Corrections
+
+If a story's **last paragraph starts with `CORRECTION:`**, the article page
+pulls it out of the body and renders it as a set-off gold-bordered note
+under the piece — the way a real paper runs a correction. Everything after
+the `CORRECTION:` label is the note text. Nothing else is needed: no new
+column, no code change, just that one paragraph at the end of `body`.
+
+Use it when a reporter amends an earlier story rather than editing the old
+one — the original stays in the archive as published, and the new story
+carries the correction. Card previews and the `/news` search still see the
+correction text as part of the body, so it stays findable.
+
 ### Email notifications
 
 Appending a story to this file also emails the league (via

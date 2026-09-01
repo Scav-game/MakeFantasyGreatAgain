@@ -44,3 +44,20 @@ export function splitParagraphs(body: string): string[] {
     .map((p) => p.trim())
     .filter(Boolean)
 }
+
+const CORRECTION_PREFIX = /^CORRECTION:\s*/i
+
+/** A body whose last paragraph starts with "CORRECTION:" is a story the
+ * reporter went back and amended — the article page peels that paragraph
+ * off and renders it as a set-off note under the piece instead of as
+ * another body paragraph. It's still part of `body` everywhere else, so
+ * the homepage/archive previews and the archive's text search keep working
+ * without knowing about the convention. */
+export function splitCorrection(body: string): { body: string; correction: string | null } {
+  const paragraphs = splitParagraphs(body)
+  const last = paragraphs.at(-1)
+  if (paragraphs.length < 2 || !last || !CORRECTION_PREFIX.test(last)) {
+    return { body, correction: null }
+  }
+  return { body: paragraphs.slice(0, -1).join("\n\n"), correction: last.replace(CORRECTION_PREFIX, "") }
+}
