@@ -1,0 +1,67 @@
+name: Weekly Predictions
+
+on:
+  # Wednesdays at 14:00 UTC, ahead of that week's games.
+  schedule:
+    - cron: "0 14 * * 3"
+  workflow_dispatch:
+    inputs:
+      action:
+        description: "generate or score"
+        default: "generate"
+      week:
+        description: "Week number (leave blank on the schedule to use the current week)"
+        required: false
+
+jobs:
+  predictions:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # The scheduled run has no inputs, so fall back to the current week that
+      # the site's own data build computes from data/schedule.csv.
+      - name: Resolve action and week
+        id: resolve
+        run: |
+          ACTION="${{ github.event.inputs.action }}"
+          WEEK="${{ github.event.inputs.week }}"
+          if [ -z "$ACTION" ]; then ACTION="generate"; fi
+          if [ -z "$WEEK" ]; then
+            node scripts/build-league-data.mjs > /dev/null
+            WEEK=$(node -e "console.log(require('./lib/generated/league-data.json').CURRENT_WEEK)")
+          fi
+          echo "action=$ACTION" >> "$GITHUB_OUTPUT"
+          echo "week=$WEEK" >> "$GITHUB_OUTPUT"
+          echo "Resolved: action=$ACTION week=$WEEK"
+
+      - name: Run prediction script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          if [ "${{ steps.resolve.outputs.action }}" = "score" ]; then
+            node scripts/score-predictions.js --week=${{ steps.resolve.outputs.week }}
+          else
+            node scripts/generate-predictions.js --week=${{ steps.resolve.outputs.week }}
+          fi
+
+      - name: Commit
+        run: |
+          git config --local user.email "mfga-bot@users.noreply.github.com"
+          git config --local user.name "MFGA Predictions Bot"
+          git add data/predictions
+          if git diff --staged --quiet; then
+            echo "No prediction changes to commit."
+          else
+            git commit -m "Predictions ${{ steps.resolve.outputs.action }} week ${{ steps.resolve.outputs.week }}"
+            git push
+          fi

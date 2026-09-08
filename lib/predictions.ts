@@ -1,4 +1,5 @@
 import predictorsData from "@/data/predictions/predictors.json"
+import predictionWeeksData from "@/lib/generated/prediction-weeks.json"
 import { getTeam } from "@/lib/league"
 
 export type Predictor = {
@@ -39,12 +40,13 @@ export type PredictionWeek = {
 export const PREDICTORS: Predictor[] = predictorsData as Predictor[]
 
 /**
- * One entry per week-N.json file in data/predictions/. Add the import and
- * push it here whenever a new week's predictions are generated, the same
- * "update this list by hand" pattern as the team logo/avatar extension
- * maps elsewhere in this codebase. Empty until the first week is posted.
+ * One entry per week-N.json file in data/predictions/, compiled by
+ * scripts/build-league-data.mjs (the predev/prebuild step) into
+ * lib/generated/prediction-weeks.json. Every week-*.json in that directory is
+ * picked up automatically and sorted by week number, so posting a new week is
+ * just dropping in the file - nothing here needs editing.
  */
-export const PREDICTION_WEEKS: PredictionWeek[] = []
+export const PREDICTION_WEEKS: PredictionWeek[] = predictionWeeksData as PredictionWeek[]
 
 export function getPredictor(id: string): Predictor | undefined {
   return PREDICTORS.find((p) => p.id === id)
@@ -77,7 +79,8 @@ export function isPredictionCorrect(matchup: Matchup, prediction: Prediction): b
 }
 
 const POINTS_PER_CORRECT = 1
-const LONE_WOLF_BONUS = 2
+const LONE_WOLF_BONUS = 3
+const PERFECT_WEEK_BONUS = 5
 
 export type LeaderboardRow = {
   predictor: Predictor
@@ -136,7 +139,10 @@ export function computeLeaderboard(): LeaderboardRow[] {
         }
       }
 
-      if (weekTotal > 0 && weekCorrect === weekTotal) perfectWeeks += 1
+      if (weekTotal > 0 && weekCorrect === weekTotal) {
+        perfectWeeks += 1
+        totalPoints += PERFECT_WEEK_BONUS
+      }
     }
 
     return {
@@ -196,13 +202,16 @@ export function getPredictorWeeklyStats(predictorId: string): PredictorWeekStat[
       }
     }
 
+    const perfect = week.status === "complete" && total > 0 && correct === total
+    if (perfect) points += PERFECT_WEEK_BONUS
+
     return {
       week: week.week,
       status: week.status,
       correct,
       total,
       points,
-      perfect: week.status === "complete" && total > 0 && correct === total,
+      perfect,
       loneWolfPicks,
     }
   })

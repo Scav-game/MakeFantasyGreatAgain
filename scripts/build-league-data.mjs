@@ -3,7 +3,7 @@
 // static data (safe to bundle into both server and client code — no
 // filesystem access happens outside this script). Run automatically before
 // `next dev` / `next build` via the predev/prebuild npm scripts.
-import { readFileSync, writeFileSync, mkdirSync } from "fs"
+import { readFileSync, writeFileSync, mkdirSync, readdirSync, existsSync } from "fs"
 import path from "path"
 import { fileURLToPath } from "url"
 
@@ -210,10 +210,86 @@ const PAST_TEAMS = pastTeamsCsv
     championships: Number(p.championships || 0),
   }))
 
+// ---------------------------------------------------------------------------
+// Prediction weeks
+//
+// Every data/predictions/week-*.json file is picked up automatically, so
+// dropping in a newly generated week needs no code change. The on-disk shape
+// (a top-level "picks" object keyed by predictor id, as written by
+// scripts/generate-predictions.js) is flattened here into the per-matchup
+// "predictions" array that lib/predictions.ts and the components expect.
+// ---------------------------------------------------------------------------
+const PREDICTIONS_DIR = path.join(DATA_DIR, "predictions")
+
+function readPredictors() {
+  const file = path.join(PREDICTIONS_DIR, "predictors.json")
+  if (!existsSync(file)) return []
+  return JSON.parse(readFileSync(file, "utf8"))
+}
+
+function compilePredictionWeeks() {
+  if (!existsSync(PREDICTIONS_DIR)) return []
+  const predictorOrder = readPredictors().map((p) => p.id)
+
+  const weekFiles = readdirSync(PREDICTIONS_DIR)
+    .filter((f) => /^week-\d+\.json$/.test(f))
+    .sort((a, b) => Number(a.match(/\d+/)[0]) - Number(b.match(/\d+/)[0]))
+
+  return weekFiles.map((filename) => {
+    const raw = JSON.parse(readFileSync(path.join(PREDICTIONS_DIR, filename), "utf8"))
+    const picksByPredictor = raw.picks ?? {}
+
+    // Predictors appear in predictors.json order first (so the prediction row
+    // reads the same on every matchup), then any id present in the file but
+    // not in predictors.json, so nothing is silently dropped.
+    const ids = [
+      ...predictorOrder.filter((id) => picksByPredictor[id]),
+      ...Object.keys(picksByPredictor).filter((id) => !predictorOrder.includes(id)),
+    ]
+
+    const matchups = (raw.matchups ?? []).map((m) => {
+      const predictions = []
+      for (const id of ids) {
+        const entry = picksByPredictor[id]
+        const pick = entry?.picks?.[m.id]
+        if (!pick) continue
+        predictions.push({
+          predictorId: id,
+          pick,
+          reasoning: entry?.reasoning?.[m.id] ?? "",
+        })
+      }
+      return {
+        id: m.id,
+        away: m.away,
+        home: m.home,
+        awayRecord: m.awayRecord ?? "0-0",
+        homeRecord: m.homeRecord ?? "0-0",
+        winner: m.winner ?? null,
+        predictions,
+      }
+    })
+
+    return {
+      week: Number(raw.week),
+      status: raw.status === "complete" ? "complete" : "pending",
+      matchups,
+    }
+  })
+}
+
+const PREDICTION_WEEKS = compilePredictionWeeks()
+
 mkdirSync(OUT_DIR, { recursive: true })
 writeFileSync(
   path.join(OUT_DIR, "league-data.json"),
   JSON.stringify({ CURRENT_WEEK, TEAMS, CUSTOM_NEWS, PAST_TEAMS }, null, 2),
+)
+
+writeFileSync(path.join(OUT_DIR, "prediction-weeks.json"), JSON.stringify(PREDICTION_WEEKS, null, 2))
+
+console.log(
+  `Built lib/generated/prediction-weeks.json - ${PREDICTION_WEEKS.length} prediction week(s)`,
 )
 
 console.log(
