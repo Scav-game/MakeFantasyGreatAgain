@@ -1,0 +1,251 @@
+{
+  "week": 1,
+  "status": "pending",
+  "generatedAt": "2026-09-08T16:34:19.716Z",
+  "dataSource": "espn",
+  "generatedBy": "claude-code-session",
+  "matchups": [
+    {
+      "id": "pakistan-bombers-vs-nabers-in-paris",
+      "away": "pakistan-bombers",
+      "home": "nabers-in-paris",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null
+    },
+    {
+      "id": "i-heart-gingers-vs-mount-olympus",
+      "away": "i-heart-gingers",
+      "home": "mount-olympus",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null
+    },
+    {
+      "id": "beer-vs-the-watermark",
+      "away": "beer",
+      "home": "the-watermark",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null
+    },
+    {
+      "id": "doobs-agency-vs-vile-horrendous",
+      "away": "doobs-agency",
+      "home": "vile-horrendous",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null
+    },
+    {
+      "id": "englewood-ninjas-vs-fort-bragg",
+      "away": "englewood-ninjas",
+      "home": "fort-bragg",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null
+    },
+    {
+      "id": "amon-ra-dawgin-vs-chicago-zestiest",
+      "away": "amon-ra-dawgin",
+      "home": "chicago-zestiest",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null
+    },
+    {
+      "id": "pluto-shraazinatorz-vs-vancouver-panties",
+      "away": "pluto-shraazinatorz",
+      "home": "vancouver-panties",
+      "awayRecord": "0-0",
+      "homeRecord": "0-0",
+      "winner": null
+    }
+  ],
+  "picks": {
+    "gerald-manning": {
+      "predictorId": "gerald-manning",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "pakistan-bombers",
+        "i-heart-gingers-vs-mount-olympus": "mount-olympus",
+        "beer-vs-the-watermark": "beer",
+        "doobs-agency-vs-vile-horrendous": "doobs-agency",
+        "englewood-ninjas-vs-fort-bragg": "englewood-ninjas",
+        "amon-ra-dawgin-vs-chicago-zestiest": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-vancouver-panties": "vancouver-panties"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "Bijan Robinson and Ashton Jeanty in the same backfield is the highest projected RB floor in the league. The Ethiopians are starting Malik Willis at quarterback. This is not close on paper.",
+        "i-heart-gingers-vs-mount-olympus": "Christian McCaffrey plus Breece Hall projects to 34.1 points against a Gingers backfield projecting 21.6. Two elite running backs beat two elite receivers over a full slate.",
+        "beer-vs-the-watermark": "Amon-Ra St. Brown, Marvin Harrison Jr. and Ladd McConkey against a receiver room led by Chris Olave. The Watermark also has no kicker on the roster, which is a guaranteed zero at a position that averages 8 points.",
+        "doobs-agency-vs-vile-horrendous": "Saquon Barkley is the single highest projected player in this matchup and Doob's has Burrow and Goff as quarterback insurance. Depth wins the variance battle.",
+        "englewood-ninjas-vs-fort-bragg": "Jonathan Taylor, Jaxon Smith-Njigba and Brock Bowers are three top five players at their positions. Fort Bragg's running back room projects under 18 points and that is the gap.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Justin Jefferson is worth roughly 4 points a week over the next best receiver here, and Trevor Lawrence is a material upgrade on Jaxson Dart. The math is straightforward.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Lamar Jackson, De'Von Achane and CeeDee Lamb is the strongest top three in the league this week. Derrick Henry cannot carry a full lineup by himself at 32 years old."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "rico-delgado": {
+      "predictorId": "rico-delgado",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "nabers-in-paris",
+        "i-heart-gingers-vs-mount-olympus": "i-heart-gingers",
+        "beer-vs-the-watermark": "the-watermark",
+        "doobs-agency-vs-vile-horrendous": "doobs-agency",
+        "englewood-ninjas-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-chicago-zestiest": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-vancouver-panties": "pluto-shraazinatorz"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "Everybody in this league is going to pick the Bombers and that is exactly why I am not. Drake Maye and A.J. Brown hang 130 on somebody in week one and I want to be the only guy holding that ticket.",
+        "i-heart-gingers-vs-mount-olympus": "Ja'Marr Chase and Tee Higgins with Kittle AND LaPorta at tight end. You want to bet on Dak Prescott in September? Be my guest.",
+        "beer-vs-the-watermark": "Jahmyr Gibbs is going to run for 200 total yards and nobody wants to hear it because the roster looks ugly on paper. Ugly rosters win week one.",
+        "doobs-agency-vs-vile-horrendous": "I am not fading Saquon in a season opener. Even a contrarian knows when to sit down.",
+        "englewood-ninjas-vs-fort-bragg": "Patrick Mahomes and Davante Adams in a home opener. Everyone is in love with Brock Bowers and I am taking the guy with three rings.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Jaxson Dart is the starting quarterback for Chicago. I run a contrarian podcast, not a charity.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Josh Allen and Derrick Henry in week one against a team named after underwear. Pluto got demoted from planet status and has been angry ever since."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "earl-hutchinson": {
+      "predictorId": "earl-hutchinson",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "pakistan-bombers",
+        "i-heart-gingers-vs-mount-olympus": "mount-olympus",
+        "beer-vs-the-watermark": "beer",
+        "doobs-agency-vs-vile-horrendous": "doobs-agency",
+        "englewood-ninjas-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-chicago-zestiest": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-vancouver-panties": "pluto-shraazinatorz"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "They have two tailbacks who can carry it 20 times and a quarterback in Hurts who has been in big games. The other fella is starting Malik Willis. Next question.",
+        "i-heart-gingers-vs-mount-olympus": "McCaffrey and Breece Hall is a real backfield and Dak Prescott has taken a snap in December before. The Gingers have one quarterback on the whole roster.",
+        "beer-vs-the-watermark": "Kyren Williams and David Montgomery will run downhill all afternoon and Stafford has seen everything twice. Caleb Williams is still learning which way is north.",
+        "doobs-agency-vs-vile-horrendous": "Saquon Barkley, Cooper Kupp and Keenan Allen. Proven football players who have done it in the fourth quarter, not a bunch of names off a draft board.",
+        "englewood-ninjas-vs-fort-bragg": "Mahomes, Davante Adams and Mark Andrews have won more meaningful games than the entire Englewood roster combined. Veterans do not blink in openers.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Jefferson and Mike Evans are grown men and Trevor Lawrence has been through the fire. Chicago is starting a rookie and it will look like one.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Derrick Henry is the most physical football player in this league and I will take him over a 190 pound scatback every single week. Josh Allen does not lose openers."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "priya-nair": {
+      "predictorId": "priya-nair",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "pakistan-bombers",
+        "i-heart-gingers-vs-mount-olympus": "i-heart-gingers",
+        "beer-vs-the-watermark": "beer",
+        "doobs-agency-vs-vile-horrendous": "doobs-agency",
+        "englewood-ninjas-vs-fort-bragg": "englewood-ninjas",
+        "amon-ra-dawgin-vs-chicago-zestiest": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-vancouver-panties": "vancouver-panties"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "No results yet, so I am using roster strength as the power ranking, and the Bombers grade out top three. Jeanty and Bijan give them the highest weekly ceiling in the league.",
+        "i-heart-gingers-vs-mount-olympus": "Chase, Higgins and two top five tight ends is elite positional leverage in a league that starts one TE. Their projected variance is high but the median beats Olympus.",
+        "beer-vs-the-watermark": "St. Brown, Harrison and McConkey is the third best receiving corps by my strength model. The missing kicker on the Watermark roster costs them roughly 8 points of floor.",
+        "doobs-agency-vs-vile-horrendous": "Seven rostered receivers and six running backs means Doob's can absorb an injury or a bad matchup without a hole in the lineup. Depth is the proxy for consistency until we have trend data.",
+        "englewood-ninjas-vs-fort-bragg": "Taylor, Smith-Njigba and Bowers are three players inside my top fifteen overall. Fort Bragg's backfield is the weakest starting unit in this matchup by a wide margin.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Jefferson is the number one receiver in my model and there is no offsetting advantage for Chicago outside of Trey McBride. Quarterback play breaks it open.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Lamar, Achane, Lamb and Metcalf is the highest graded starting four this week. Pluto is top heavy and thin after Nico Collins."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "vinny-esposito": {
+      "predictorId": "vinny-esposito",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "pakistan-bombers",
+        "i-heart-gingers-vs-mount-olympus": "i-heart-gingers",
+        "beer-vs-the-watermark": "beer",
+        "doobs-agency-vs-vile-horrendous": "vile-horrendous",
+        "englewood-ninjas-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-chicago-zestiest": "chicago-zestiest",
+        "pluto-shraazinatorz-vs-vancouver-panties": "vancouver-panties"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "Bombers take QB, RB and WR. Ethiopians take TE with Tucker Kraft and D/ST with the Eagles. Three to two, Bombers, and the running back gap is the widest of the five.",
+        "i-heart-gingers-vs-mount-olympus": "Gingers win WR with Chase and Higgins, TE with Kittle and LaPorta, and D/ST with Denver. Olympus takes QB and RB. Three to two, Gingers.",
+        "beer-vs-the-watermark": "beer wins QB, WR, TE and D/ST. The Watermark only takes the running back battle with Gibbs and Swift. Four to one is not a close board.",
+        "doobs-agency-vs-vile-horrendous": "TVH wins WR on quality with Nabers and Wilson, TE with Kelce and Likely, and D/ST with Baltimore. Doob's takes QB and RB. Three to two, and I know I am off the crowd here.",
+        "englewood-ninjas-vs-fort-bragg": "Bragg wins QB with Mahomes, WR with Moore, London and Adams, and D/ST with Seattle. Englewood takes RB and TE. Three to two, Bragg.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Chicago wins RB on depth, TE with Trey McBride and D/ST with Pittsburgh. Amon Ra takes QB and WR. Three to two, Chicago, even though Jefferson is the best player on the board.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Vancouver wins QB, WR, TE and D/ST. Pluto only takes the running back room. Four to one is the clearest board of the week."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "sandy-kowalski": {
+      "predictorId": "sandy-kowalski",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "pakistan-bombers",
+        "i-heart-gingers-vs-mount-olympus": "mount-olympus",
+        "beer-vs-the-watermark": "the-watermark",
+        "doobs-agency-vs-vile-horrendous": "vile-horrendous",
+        "englewood-ninjas-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-chicago-zestiest": "chicago-zestiest",
+        "pluto-shraazinatorz-vs-vancouver-panties": "vancouver-panties"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "Normally I love a home opener but the Ethiopians spent the offseason renaming themselves for a laugh instead of preparing. Distraction is a situation too.",
+        "i-heart-gingers-vs-mount-olympus": "Home opener, brand new season, and Olympus has the kind of veteran roster that shows up on time. The Gingers feel like a team that peaks in November, not week one.",
+        "beer-vs-the-watermark": "Home opener and they are being written off by everyone, which is exactly the setup teams respond to. A roster with no kicker has nothing to lose.",
+        "doobs-agency-vs-vile-horrendous": "Hosting the season opener against a division rival with Travis Kelce on the roster is a big stage moment. TVH has been building toward this since draft night.",
+        "englewood-ninjas-vs-fort-bragg": "Home opener with Mahomes under center. Englewood has to travel in week one and road teams are always a step behind on the first Sunday.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Rookie quarterback at home in his first start with the crowd behind him is a genuine emotional edge. Amon Ra is walking in overconfident because they have Jefferson.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Home opener and this roster has the deepest lineup, so there is no situation where they get caught short. Pluto is relying on a 32 year old running back in September heat."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "marcus-whitfield": {
+      "predictorId": "marcus-whitfield",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "pakistan-bombers",
+        "i-heart-gingers-vs-mount-olympus": "mount-olympus",
+        "beer-vs-the-watermark": "beer",
+        "doobs-agency-vs-vile-horrendous": "doobs-agency",
+        "englewood-ninjas-vs-fort-bragg": "englewood-ninjas",
+        "amon-ra-dawgin-vs-chicago-zestiest": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-vancouver-panties": "vancouver-panties"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "Six of seven are on the Bombers and I am not paying for a lottery ticket when the favorite is this clear. You take the free equity in week one.",
+        "i-heart-gingers-vs-mount-olympus": "The room is split four to three toward the Gingers, so the Olympus side is the cheaper piece of a coin flip. When the crowd leans one way on a true toss up, I take the other.",
+        "beer-vs-the-watermark": "Five of seven on beer and the Watermark is missing a kicker. There is no edge in being clever here.",
+        "doobs-agency-vs-vile-horrendous": "Vinny, Sandy and Destiny all talked themselves onto TVH, which makes Doob's the majority at five. Saquon is the best player in the matchup and I will take the boring side.",
+        "englewood-ninjas-vs-fort-bragg": "Four of seven went Fort Bragg on the Mahomes name, which leaves Englewood underowned with three elite pieces. This is my second deliberate fade of the week and the one I like most.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Five of seven on Amon Ra and the other side is starting Jaxson Dart. Nothing to think about.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Four of seven on Vancouver and they have the better roster, so the contrarian play would just be bad poker. I have already taken my two swings."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "destiny-carter": {
+      "predictorId": "destiny-carter",
+      "picks": {
+        "pakistan-bombers-vs-nabers-in-paris": "pakistan-bombers",
+        "i-heart-gingers-vs-mount-olympus": "i-heart-gingers",
+        "beer-vs-the-watermark": "beer",
+        "doobs-agency-vs-vile-horrendous": "vile-horrendous",
+        "englewood-ninjas-vs-fort-bragg": "englewood-ninjas",
+        "amon-ra-dawgin-vs-chicago-zestiest": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-vancouver-panties": "pluto-shraazinatorz"
+      },
+      "reasoning": {
+        "pakistan-bombers-vs-nabers-in-paris": "You cannot rename your team as a joke about hunger and then expect the universe to feed you. The Bombers have clean energy and a crystal clear backfield.",
+        "i-heart-gingers-vs-mount-olympus": "A team built on loving gingers, carried by Ja'Marr Chase, radiating warmth and copper light. Yogurt dressing is a condiment, not a destiny.",
+        "beer-vs-the-watermark": "The Watermark has no kicker. A team with no kicker is a team with no closure, and the universe notices when you refuse to finish things.",
+        "doobs-agency-vs-vile-horrendous": "They named themselves The Vile Horrendous and then drafted Travis Kelce, who has never once lacked main character energy. That is manifestation.",
+        "englewood-ninjas-vs-fort-bragg": "Ninjas move in silence and Brock Bowers is the quietest superstar in football. Fort Bragg carries heavy historical baggage that no roster can outrun.",
+        "amon-ra-dawgin-vs-chicago-zestiest": "Their name literally invokes a sun god and they have Justin Jefferson. When you align yourself with a deity, week one is not where it falls apart.",
+        "pluto-shraazinatorz-vs-vancouver-panties": "Pluto was stripped of planet status and has been quietly furious for nineteen years. That is the exact energy that wins a season opener."
+      },
+      "correct": null,
+      "loneWolf": null
+    }
+  }
+}

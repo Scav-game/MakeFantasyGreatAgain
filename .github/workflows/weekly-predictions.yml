@@ -1,16 +1,20 @@
 name: Weekly Predictions
 
+# Manual only. The weekly schedule is intentionally commented out because
+# there is no ANTHROPIC_API_KEY secret on this repo, so a scheduled run would
+# fail every week. If a key is ever added, uncomment the schedule block below
+# and this starts running on its own with no other changes.
+#
+#  schedule:
+#    - cron: "0 14 * * 3"   # Wednesdays 14:00 UTC, ahead of that week's games
 on:
-  # Wednesdays at 14:00 UTC, ahead of that week's games.
-  schedule:
-    - cron: "0 14 * * 3"
   workflow_dispatch:
     inputs:
       action:
         description: "generate or score"
         default: "generate"
       week:
-        description: "Week number (leave blank on the schedule to use the current week)"
+        description: "Week number (leave blank to use the current week from schedule.csv)"
         required: false
 
 jobs:
