@@ -75,14 +75,25 @@ export function simulateChampionshipOdds(): TeamOdds[] {
       finalWins.set(t.slug, wins)
     }
 
-    // Each division's top 4 (by simulated final wins, tiebreak: pointsFor) make
-    // the playoffs and are seeded 1-4 within their own division.
+    // Teams still exactly level on both simulated wins and points for get a
+    // fresh random order in every sim. Without this the comparator returns 0,
+    // Array.sort is stable, and the tie silently falls back to the row order of
+    // data/teams.csv — which handed the first row in each division a real edge:
+    // at 0-0 across the board it produced a 66% vs 47% playoff spread between
+    // teams whose inputs were identical. Drawn once per sim so the comparator
+    // stays consistent within a single sort.
+    const coinToss = new Map<string, number>()
+    for (const t of TEAMS) coinToss.set(t.slug, rand())
+
+    // Each division's top 4 (simulated final wins, then points for, then the
+    // coin toss above) make the playoffs and are seeded 1-4 within the division.
     const divisionChampions: Team[] = []
     for (const division of divisions) {
       const standings = TEAMS.filter((t) => t.division === division).sort((a, b) => {
         const diff = finalWins.get(b.slug)! - finalWins.get(a.slug)!
         if (diff !== 0) return diff
-        return b.pointsFor - a.pointsFor
+        if (b.pointsFor !== a.pointsFor) return b.pointsFor - a.pointsFor
+        return coinToss.get(a.slug)! - coinToss.get(b.slug)!
       })
       const [d1, d2, d3, d4] = standings
       for (const t of [d1, d2, d3, d4]) playoffCount.set(t.slug, playoffCount.get(t.slug)! + 1)

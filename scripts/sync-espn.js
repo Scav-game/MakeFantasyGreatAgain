@@ -138,7 +138,7 @@ async function fetchLeague() {
 }
 
 function buildRosterRows(league) {
-  const rows = [] // { teamSlug, pos, name, nflTeam }
+  const rows = [] // { teamSlug, pos, name, nflTeam, points }
   const unmatchedTeams = []
 
   for (const team of league.teams ?? []) {
@@ -155,7 +155,14 @@ function buildRosterRows(league) {
       const pos = entry.lineupSlotId === IR_LINEUP_SLOT_ID ? "IR" : POSITION_MAP[player.defaultPositionId] || "?"
       const nflTeam = NFL_TEAMS[player.proTeamId] ?? "FA"
 
-      rows.push({ teamSlug: slug, pos, name: player.fullName, nflTeam })
+      // appliedStatTotal on the season-level mRoster view is actual points
+      // scored so far (not a projection — those live in player.stats with
+      // statSourceId 1). Blank for 0 so the CSV doesn't carry 240 zeros in
+      // the preseason; data/README.md documents blank as "no points yet".
+      const scored = Math.round((entry.playerPoolEntry?.appliedStatTotal ?? 0) * 100) / 100
+      const points = scored === 0 ? "" : String(scored)
+
+      rows.push({ teamSlug: slug, pos, name: player.fullName, nflTeam, points })
     }
   }
 
@@ -179,7 +186,9 @@ function buildRosterRows(league) {
 
 function toCsv(rows) {
   const header = "teamSlug,pos,name,nflTeam,points"
-  const lines = rows.map((r) => [r.teamSlug, r.pos, r.name, r.nflTeam, ""].map(csvField).join(","))
+  const lines = rows.map((r) =>
+    [r.teamSlug, r.pos, r.name, r.nflTeam, r.points ?? ""].map(csvField).join(","),
+  )
   return [header, ...lines].join("\n") + "\n"
 }
 
@@ -194,8 +203,8 @@ function readExistingRoster() {
   })
 }
 
-/** Key used to detect additions/removals — ignores points, which changes
- * every week and isn't something this script manages. */
+/** Key used to detect additions/removals — identity only, so a player whose
+ * point total moved is the same row, not an add plus a remove. */
 function rowKey(r) {
   return `${r.teamSlug}|${r.name}`
 }
@@ -205,7 +214,21 @@ function diffRosters(existing, incoming) {
   const incomingKeys = new Set(incoming.map(rowKey))
   const added = incoming.filter((r) => !existingKeys.has(rowKey(r)))
   const removed = existing.filter((r) => !incomingKeys.has(rowKey(r)))
-  return { added, removed, changed: added.length > 0 || removed.length > 0 }
+
+  // Points move every week without anyone being added or dropped, so they get
+  // their own check — otherwise a scoring-only week would exit early and the
+  // standings tiebreaker would keep reading stale totals.
+  const existingPoints = new Map(existing.map((r) => [rowKey(r), r.points ?? ""]))
+  const repointed = incoming.filter(
+    (r) => existingKeys.has(rowKey(r)) && existingPoints.get(rowKey(r)) !== (r.points ?? ""),
+  )
+
+  return {
+    added,
+    removed,
+    repointed,
+    changed: added.length > 0 || removed.length > 0 || repointed.length > 0,
+  }
 }
 
 async function main() {
@@ -228,19 +251,22 @@ async function main() {
   }
 
   const existing = readExistingRoster()
-  const { added, removed, changed } = diffRosters(existing, incoming)
+  const { added, removed, repointed, changed } = diffRosters(existing, incoming)
 
   if (!changed) {
-    console.log("No roster changes since last sync.")
+    console.log("No roster or scoring changes since last sync.")
     return
   }
 
   fs.writeFileSync(ROSTERS_CSV, toCsv(incoming))
   fs.writeFileSync(LAST_SYNC_FILE, JSON.stringify({ syncedAt: new Date().toISOString() }, null, 2) + "\n")
 
-  console.log(`Updated data/rosters.csv — ${added.length} added, ${removed.length} removed:`)
+  console.log(
+    `Updated data/rosters.csv — ${added.length} added, ${removed.length} removed, ${repointed.length} point totals changed:`,
+  )
   for (const r of added) console.log(`  + ${r.teamSlug}: ${r.name} (${r.pos}, ${r.nflTeam})`)
   for (const r of removed) console.log(`  - ${r.teamSlug}: ${r.name} (${r.pos}, ${r.nflTeam})`)
+  for (const r of repointed) console.log(`  ~ ${r.teamSlug}: ${r.name} now ${r.points} pts`)
 }
 
 main()

@@ -85,7 +85,12 @@ function posRank(pos) {
 function computeCurrentWeek(scheduleRows) {
   const weeks = [...new Set(scheduleRows.map((r) => Number(r.week)))].sort((a, b) => a - b)
   for (const week of weeks) {
-    const gamesThisWeek = scheduleRows.filter((r) => Number(r.week) === week)
+    // BYE rows never get scores, so they must not count toward "is this week
+    // complete" — otherwise CURRENT_WEEK sticks on the first week containing a
+    // bye (week 5 in the 2026 schedule) and the season never advances.
+    const gamesThisWeek = scheduleRows.filter(
+      (r) => Number(r.week) === week && r.opponent.trim().toUpperCase() !== "BYE",
+    )
     const complete = gamesThisWeek.every((r) => r.teamScore !== "" && r.oppScore !== "")
     if (!complete) return week
   }

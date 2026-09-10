@@ -115,11 +115,76 @@ export function getTeamName(slug: string): string {
 
 export type StandingRow = Team & { rank: number; divisionRank: number }
 
+/** Win percentage, and .000 for a team that hasn't played yet. Percentage
+ * rather than raw wins because every team gets one bye, and those byes fall in
+ * different weeks (5, 6, 10, 11, 13, 14), so mid-season two teams can be a
+ * game apart in games played through no fault of their own. */
+function winPct(wins: number, losses: number): number {
+  const games = wins + losses
+  return games === 0 ? 0 : wins / games
+}
+
+/** A team's record in the games it has actually played against `opponents`.
+ * BYE rows and unplayed weeks carry no result, so they never count. */
+function recordAgainst(team: Team, opponents: Set<string>): { wins: number; losses: number } {
+  let wins = 0
+  let losses = 0
+  for (const game of team.schedule) {
+    if (!game.result || !opponents.has(game.opponent)) continue
+    if (game.result.outcome === "W") wins++
+    else losses++
+  }
+  return { wins, losses }
+}
+
+/**
+ * Standings order: win percentage, then head-to-head record among the tied
+ * teams, then points for.
+ *
+ * Head-to-head is resolved as a mini round-robin *within* each tie group
+ * rather than as a pairwise comparison inside the sort. Pairwise head-to-head
+ * is not transitive once three or more teams are level (A beats B, B beats C,
+ * C beats A), and feeding a non-transitive comparator to Array.sort produces
+ * an order that depends on the sort's internal pivot choices — different
+ * answers for the same data. Grouping first avoids that entirely.
+ *
+ * Head-to-head only breaks a tie when both teams have actually played someone
+ * in the group; otherwise a team that hasn't yet faced any of its co-leaders
+ * would be ranked as though it had lost to them. In that case the tie falls
+ * straight through to points for.
+ */
 export function getStandings(): StandingRow[] {
-  const sorted = [...TEAMS].sort((a, b) => {
-    if (b.record.wins !== a.record.wins) return b.record.wins - a.record.wins
-    return b.pointsFor - a.pointsFor
-  })
+  const groups = new Map<number, Team[]>()
+  for (const team of TEAMS) {
+    const pct = winPct(team.record.wins, team.record.losses)
+    const group = groups.get(pct)
+    if (group) group.push(team)
+    else groups.set(pct, [team])
+  }
+
+  const sorted: Team[] = []
+  for (const pct of [...groups.keys()].sort((a, b) => b - a)) {
+    const tied = groups.get(pct)!
+    if (tied.length === 1) {
+      sorted.push(tied[0])
+      continue
+    }
+    const tiedSlugs = new Set(tied.map((t) => t.slug))
+    sorted.push(
+      ...[...tied].sort((a, b) => {
+        const ra = recordAgainst(a, tiedSlugs)
+        const rb = recordAgainst(b, tiedSlugs)
+        const aPlayed = ra.wins + ra.losses > 0
+        const bPlayed = rb.wins + rb.losses > 0
+        if (aPlayed && bPlayed) {
+          const diff = winPct(rb.wins, rb.losses) - winPct(ra.wins, ra.losses)
+          if (diff !== 0) return diff
+        }
+        return b.pointsFor - a.pointsFor
+      }),
+    )
+  }
+
   const divCounters: Record<Division, number> = { East: 0, West: 0 }
   return sorted.map((t, i) => {
     divCounters[t.division] += 1
