@@ -1,7 +1,42 @@
-import { CURRENT_WEEK, TEAMS, type Division, type Team } from "./league"
+import { TEAMS, type Division, type Team } from "./league"
 
-const TOTAL_WEEKS = 14
 const SIM_COUNT = 10000
+const PLAYOFF_SPOTS_PER_DIVISION = 4
+
+// ---------------------------------------------------------------------------
+// Model constants
+// ---------------------------------------------------------------------------
+
+/**
+ * Week-to-week standard deviation of a single team's score, used until this
+ * season has produced enough games to measure a team's own spread.
+ *
+ * This is the one hand-set number in the model. It can't be derived from what
+ * the repo holds: history.csv keeps season totals only, and schedule.csv holds
+ * just the current year, so there are no past game logs to measure. 27 points
+ * on a ~108 mean is a normal spread for a 14-team PPR league. Lower it and
+ * early-season odds sharpen; raise it and they flatten.
+ */
+const LEAGUE_SD_PRIOR = 27
+
+/**
+ * How much of a franchise's all-time scoring edge is assumed to carry into a
+ * new season. Rosters are re-drafted every year, so history is a weak signal,
+ * but this league runs keepers, so it isn't nothing. At 0.35 a franchise keeps
+ * roughly a third of the gap between its historical points-per-game and the
+ * league's before the season starts.
+ */
+const HISTORY_WEIGHT = 0.35
+
+/** Games of current-season scoring needed to outweigh the prior evenly. */
+const MEAN_PRIOR_GAMES = 4
+
+/** Same idea for the spread — a sample SD needs more games to mean anything. */
+const SD_PRIOR_GAMES = 6
+
+// ---------------------------------------------------------------------------
+// Deterministic RNG — the page shows the same numbers on every build.
+// ---------------------------------------------------------------------------
 
 function seedFrom(str: string): number {
   let h = 2166136261
@@ -22,100 +57,313 @@ function mulberry32(seed: number) {
   }
 }
 
+/** One standard normal draw (Box-Muller). */
+function gaussian(rand: () => number): number {
+  let u = 0
+  while (u === 0) u = rand() // log(0) guard
+  return Math.sqrt(-2 * Math.log(u)) * Math.cos(2 * Math.PI * rand())
+}
+
+// ---------------------------------------------------------------------------
+// Team scoring model
+// ---------------------------------------------------------------------------
+
+type TeamModel = {
+  team: Team
+  /** Best estimate of the team's per-week scoring average. */
+  mean: number
+  /** Week-to-week spread around that average. */
+  sd: number
+  /** Standard error on `mean` — how unsure we are of the team's true level. */
+  meanError: number
+}
+
+function playedScores(team: Team): number[] {
+  return team.schedule.filter((g) => g.result).map((g) => g.result!.teamScore)
+}
+
+/**
+ * Each team gets a scoring distribution built by shrinking this season's
+ * results toward a prior, so a team isn't declared elite off one good week.
+ * With no games played the prior is all there is, which is why every team
+ * starts level apart from franchise history.
+ */
+function buildModels(): Map<string, TeamModel> {
+  const franchisePpg = new Map<string, number>()
+  let histPoints = 0
+  let histGames = 0
+  for (const t of TEAMS) {
+    const games = t.history.allTimeRecord.wins + t.history.allTimeRecord.losses
+    if (games <= 0) continue
+    franchisePpg.set(t.slug, t.history.totalPointsFor / games)
+    histPoints += t.history.totalPointsFor
+    histGames += games
+  }
+  const leagueHistMean = histGames > 0 ? histPoints / histGames : 100
+
+  const models = new Map<string, TeamModel>()
+  for (const t of TEAMS) {
+    const scores = playedScores(t)
+    const n = scores.length
+
+    const franchise = franchisePpg.get(t.slug) ?? leagueHistMean
+    const prior = leagueHistMean + HISTORY_WEIGHT * (franchise - leagueHistMean)
+
+    const seasonMean = n > 0 ? scores.reduce((s, v) => s + v, 0) / n : 0
+    const mean = (n * seasonMean + MEAN_PRIOR_GAMES * prior) / (n + MEAN_PRIOR_GAMES)
+
+    let sd = LEAGUE_SD_PRIOR
+    if (n >= 2) {
+      const variance = scores.reduce((s, v) => s + (v - seasonMean) ** 2, 0) / (n - 1)
+      sd = (n * Math.sqrt(variance) + SD_PRIOR_GAMES * LEAGUE_SD_PRIOR) / (n + SD_PRIOR_GAMES)
+    }
+
+    models.set(t.slug, {
+      team: t,
+      mean,
+      sd,
+      meanError: sd / Math.sqrt(n + MEAN_PRIOR_GAMES),
+    })
+  }
+  return models
+}
+
+// ---------------------------------------------------------------------------
+// Schedule
+// ---------------------------------------------------------------------------
+
+type Matchup = { week: number; a: string; b: string }
+type Series = { wins: number; losses: number }
+
+const SLUGS = new Set(TEAMS.map((t) => t.slug))
+
+/**
+ * Every real matchup still to be played, once each. Both teams carry their own
+ * row in schedule.csv, so the pair is deduped; BYE rows aren't games.
+ */
+function remainingMatchups(): Matchup[] {
+  const seen = new Set<string>()
+  const out: Matchup[] = []
+  for (const team of TEAMS) {
+    for (const game of team.schedule) {
+      if (game.result) continue
+      const opponent = game.opponent.trim()
+      if (!SLUGS.has(opponent)) continue // BYE, or a placeholder opponent
+      const [a, b] = [team.slug, opponent].sort()
+      const key = `${game.week}|${a}|${b}`
+      if (seen.has(key)) continue
+      seen.add(key)
+      out.push({ week: game.week, a, b })
+    }
+  }
+  return out.sort((x, y) => x.week - y.week)
+}
+
+/** Head-to-head records from games that have actually been played. */
+function playedHeadToHead(): Map<string, Map<string, Series>> {
+  const h2h = new Map<string, Map<string, Series>>()
+  for (const team of TEAMS) {
+    const row = new Map<string, Series>()
+    for (const game of team.schedule) {
+      if (!game.result) continue
+      const prev = row.get(game.opponent) ?? { wins: 0, losses: 0 }
+      if (game.result.outcome === "W") prev.wins++
+      else prev.losses++
+      row.set(game.opponent, prev)
+    }
+    h2h.set(team.slug, row)
+  }
+  return h2h
+}
+
+function seriesAgainst(
+  slug: string,
+  opponents: Set<string>,
+  h2h: Map<string, Map<string, Series>>,
+): Series {
+  let wins = 0
+  let losses = 0
+  for (const [opponent, series] of h2h.get(slug)!) {
+    if (!opponents.has(opponent)) continue
+    wins += series.wins
+    losses += series.losses
+  }
+  return { wins, losses }
+}
+
+/**
+ * Final-standings order inside one division, using the same chain as the real
+ * standings in lib/league.ts: wins, then head-to-head among the tied teams,
+ * then points for. Raw wins is safe here because every simulated season is
+ * complete and every team plays the same 13 games.
+ */
+function sortFinalStandings(
+  teams: Team[],
+  wins: Map<string, number>,
+  points: Map<string, number>,
+  h2h: Map<string, Map<string, Series>>,
+): Team[] {
+  const groups = new Map<number, Team[]>()
+  for (const t of teams) {
+    const w = wins.get(t.slug)!
+    const group = groups.get(w)
+    if (group) group.push(t)
+    else groups.set(w, [t])
+  }
+
+  const out: Team[] = []
+  for (const w of [...groups.keys()].sort((a, b) => b - a)) {
+    const tied = groups.get(w)!
+    if (tied.length === 1) {
+      out.push(tied[0])
+      continue
+    }
+    const tiedSlugs = new Set(tied.map((t) => t.slug))
+    out.push(
+      ...[...tied].sort((a, b) => {
+        const ra = seriesAgainst(a.slug, tiedSlugs, h2h)
+        const rb = seriesAgainst(b.slug, tiedSlugs, h2h)
+        const aGames = ra.wins + ra.losses
+        const bGames = rb.wins + rb.losses
+        if (aGames > 0 && bGames > 0) {
+          const diff = rb.wins / bGames - ra.wins / aGames
+          if (diff !== 0) return diff
+        }
+        return points.get(b.slug)! - points.get(a.slug)!
+      }),
+    )
+  }
+  return out
+}
+
+// ---------------------------------------------------------------------------
+// Simulation
+// ---------------------------------------------------------------------------
+
 export type TeamOdds = {
   team: Team
   playoffPct: number
   divisionPct: number
   championshipPct: number
+  /** Mean simulated final win total. */
+  projectedWins: number
+  /** Mean simulated final points for. */
+  projectedPointsFor: number
 }
 
-function gamesPlayed(): number {
-  return Math.max(0, CURRENT_WEEK - 1)
-}
-
-function remainingGames(): number {
-  return Math.max(0, TOTAL_WEEKS - CURRENT_WEEK + 1)
-}
-
-/** Laplace-smoothed win rate so 0-7 or 7-0 teams don't collapse to a 0% or 100% coin flip. */
-function strength(wins: number, games: number): number {
-  return (wins + 1) / (games + 2)
-}
-
-function pickWinner(rand: () => number, a: Team, aWins: number, b: Team, bWins: number): Team {
-  const sa = strength(aWins, TOTAL_WEEKS)
-  const sb = strength(bWins, TOTAL_WEEKS)
-  return rand() < sa / (sa + sb) ? a : b
-}
-
+/**
+ * Monte Carlo over the rest of the season.
+ *
+ * Each sim plays out every remaining matchup on the real schedule: both teams
+ * draw a score from their own distribution and the higher score wins, so every
+ * game produces exactly one winner and strength of schedule falls out of the
+ * matchups themselves. Games already played are kept as they happened and only
+ * the remainder is simulated.
+ *
+ * The top four in each division make the playoffs, seeded by the same
+ * tiebreakers the real standings use. The bracket is 1v4 and 2v3, winners meet
+ * for the division, and the two division winners meet for the title — every
+ * one of those games decided by the same score draw, not by record.
+ */
 export function simulateChampionshipOdds(): TeamOdds[] {
   const rand = mulberry32(seedFrom("mfga-championship-odds-2026"))
-  const played = gamesPlayed()
-  const remaining = remainingGames()
+  const models = buildModels()
+  const upcoming = remainingMatchups()
+  const h2hBase = playedHeadToHead()
+  const divisions: Division[] = ["East", "West"]
 
   const playoffCount = new Map<string, number>()
   const divisionCount = new Map<string, number>()
   const championCount = new Map<string, number>()
+  const winsTotal = new Map<string, number>()
+  const pointsTotal = new Map<string, number>()
   for (const t of TEAMS) {
     playoffCount.set(t.slug, 0)
     divisionCount.set(t.slug, 0)
     championCount.set(t.slug, 0)
+    winsTotal.set(t.slug, 0)
+    pointsTotal.set(t.slug, 0)
   }
 
-  const divisions: Division[] = ["East", "West"]
-
   for (let sim = 0; sim < SIM_COUNT; sim++) {
-    const finalWins = new Map<string, number>()
-    for (const t of TEAMS) {
-      const p = strength(t.record.wins, played)
-      let wins = t.record.wins
-      for (let g = 0; g < remaining; g++) {
-        if (rand() < p) wins++
-      }
-      finalWins.set(t.slug, wins)
+    // Every sim commits to one "true" level per team, drawn from how confident
+    // we are in that team's mean. Reusing the point estimate in every sim would
+    // understate the spread of possible seasons — early on we genuinely don't
+    // know who is good, and the odds should say so.
+    const level = new Map<string, number>()
+    for (const model of models.values()) {
+      level.set(model.team.slug, model.mean + gaussian(rand) * model.meanError)
     }
 
-    // Teams still exactly level on both simulated wins and points for get a
-    // fresh random order in every sim. Without this the comparator returns 0,
-    // Array.sort is stable, and the tie silently falls back to the row order of
-    // data/teams.csv — which handed the first row in each division a real edge:
-    // at 0-0 across the board it produced a 66% vs 47% playoff spread between
-    // teams whose inputs were identical. Drawn once per sim so the comparator
-    // stays consistent within a single sort.
-    const coinToss = new Map<string, number>()
-    for (const t of TEAMS) coinToss.set(t.slug, rand())
+    const scoreFor = (slug: string): number =>
+      Math.max(0, level.get(slug)! + gaussian(rand) * models.get(slug)!.sd)
 
-    // Each division's top 4 (simulated final wins, then points for, then the
-    // coin toss above) make the playoffs and are seeded 1-4 within the division.
+    const wins = new Map<string, number>()
+    const points = new Map<string, number>()
+    const h2h = new Map<string, Map<string, Series>>()
+    for (const t of TEAMS) {
+      wins.set(t.slug, t.record.wins)
+      points.set(t.slug, t.pointsFor)
+      const row = new Map<string, Series>()
+      for (const [opponent, series] of h2hBase.get(t.slug)!) row.set(opponent, { ...series })
+      h2h.set(t.slug, row)
+    }
+
+    const recordResult = (winner: string, loser: string) => {
+      wins.set(winner, wins.get(winner)! + 1)
+      const wRow = h2h.get(winner)!
+      const lRow = h2h.get(loser)!
+      const wSeries = wRow.get(loser) ?? { wins: 0, losses: 0 }
+      const lSeries = lRow.get(winner) ?? { wins: 0, losses: 0 }
+      wSeries.wins++
+      lSeries.losses++
+      wRow.set(loser, wSeries)
+      lRow.set(winner, lSeries)
+    }
+
+    for (const game of upcoming) {
+      const scoreA = scoreFor(game.a)
+      const scoreB = scoreFor(game.b)
+      points.set(game.a, points.get(game.a)! + scoreA)
+      points.set(game.b, points.get(game.b)! + scoreB)
+      const aWon = scoreA === scoreB ? rand() < 0.5 : scoreA > scoreB
+      if (aWon) recordResult(game.a, game.b)
+      else recordResult(game.b, game.a)
+    }
+
+    for (const t of TEAMS) {
+      winsTotal.set(t.slug, winsTotal.get(t.slug)! + wins.get(t.slug)!)
+      pointsTotal.set(t.slug, pointsTotal.get(t.slug)! + points.get(t.slug)!)
+    }
+
+    /** One playoff game, decided the same way a regular-season game is. */
+    const playGame = (a: Team, b: Team): Team => {
+      const scoreA = scoreFor(a.slug)
+      const scoreB = scoreFor(b.slug)
+      if (scoreA === scoreB) return rand() < 0.5 ? a : b
+      return scoreA > scoreB ? a : b
+    }
+
     const divisionChampions: Team[] = []
     for (const division of divisions) {
-      const standings = TEAMS.filter((t) => t.division === division).sort((a, b) => {
-        const diff = finalWins.get(b.slug)! - finalWins.get(a.slug)!
-        if (diff !== 0) return diff
-        if (b.pointsFor !== a.pointsFor) return b.pointsFor - a.pointsFor
-        return coinToss.get(a.slug)! - coinToss.get(b.slug)!
-      })
-      const [d1, d2, d3, d4] = standings
-      for (const t of [d1, d2, d3, d4]) playoffCount.set(t.slug, playoffCount.get(t.slug)! + 1)
-      divisionCount.set(d1.slug, divisionCount.get(d1.slug)! + 1)
+      const standings = sortFinalStandings(
+        TEAMS.filter((t) => t.division === division),
+        wins,
+        points,
+        h2h,
+      )
+      const seeds = standings.slice(0, PLAYOFF_SPOTS_PER_DIVISION)
+      for (const t of seeds) playoffCount.set(t.slug, playoffCount.get(t.slug)! + 1)
+      divisionCount.set(seeds[0].slug, divisionCount.get(seeds[0].slug)! + 1)
 
-      // Division semifinals: 1 seed vs 4 seed, 2 seed vs 3 seed. Winners meet
-      // in the division final; that winner is the division's playoff champion.
-      const semiA = pickWinner(rand, d1, finalWins.get(d1.slug)!, d4, finalWins.get(d4.slug)!)
-      const semiB = pickWinner(rand, d2, finalWins.get(d2.slug)!, d3, finalWins.get(d3.slug)!)
-      const divisionChamp = pickWinner(rand, semiA, finalWins.get(semiA.slug)!, semiB, finalWins.get(semiB.slug)!)
-      divisionChampions.push(divisionChamp)
+      const [d1, d2, d3, d4] = seeds
+      const semiA = playGame(d1, d4)
+      const semiB = playGame(d2, d3)
+      divisionChampions.push(playGame(semiA, semiB))
     }
 
-    // Championship: the East champion vs. the West champion.
     const [eastChamp, westChamp] = divisionChampions
-    const champion = pickWinner(
-      rand,
-      eastChamp,
-      finalWins.get(eastChamp.slug)!,
-      westChamp,
-      finalWins.get(westChamp.slug)!,
-    )
+    const champion = playGame(eastChamp, westChamp)
     championCount.set(champion.slug, championCount.get(champion.slug)! + 1)
   }
 
@@ -124,6 +372,8 @@ export function simulateChampionshipOdds(): TeamOdds[] {
     playoffPct: (playoffCount.get(team.slug)! / SIM_COUNT) * 100,
     divisionPct: (divisionCount.get(team.slug)! / SIM_COUNT) * 100,
     championshipPct: (championCount.get(team.slug)! / SIM_COUNT) * 100,
+    projectedWins: winsTotal.get(team.slug)! / SIM_COUNT,
+    projectedPointsFor: pointsTotal.get(team.slug)! / SIM_COUNT,
   }))
 
   return odds.sort((a, b) => b.championshipPct - a.championshipPct)
