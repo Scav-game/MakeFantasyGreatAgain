@@ -128,8 +128,13 @@ export type StandingRow = Team & { rank: number; divisionRank: number }
 /**
  * Official record plus whatever is happening on the field right now — a team
  * currently ahead carries a provisional win, one behind a provisional loss.
- * This is what the standings sort and display use, so the table reflects the
- * live state of the week rather than sitting frozen at 0-0 until Monday night.
+ *
+ * This drives the standings order but is deliberately never rendered: the table
+ * shows the official record and lets the live result move a team's position.
+ * The consequence is that mid-week the visible columns don't fully explain the
+ * order — two teams can both show 0-0 with the lower points-for ranked higher,
+ * because the one below is currently losing its game. That's intended, not a
+ * sorting bug.
  */
 export function effectiveRecord(team: Team): { wins: number; losses: number } {
   return {
