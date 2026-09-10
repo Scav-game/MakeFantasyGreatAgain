@@ -20,19 +20,28 @@ const PLAYOFF_SPOTS_PER_DIVISION = 4
 const LEAGUE_SD_PRIOR = 27
 
 /**
- * How much of a franchise's all-time scoring edge is assumed to carry into a
- * new season. Rosters are re-drafted every year, so history is a weak signal,
- * but this league runs keepers, so it isn't nothing. At 0.35 a franchise keeps
- * roughly a third of the gap between its historical points-per-game and the
- * league's before the season starts.
+ * How many recent games feed a team's scoring average. Only this many of the
+ * most recent count — not the whole season, and not prior seasons — so the
+ * model tracks current form and a team that has turned things around isn't
+ * held to how it looked in September.
+ *
+ * The trade-off is sensitivity: four games is a small sample, so the average
+ * carries about ±13 points of sampling error and the odds will move noticeably
+ * week to week. That uncertainty is fed into the sim through `meanError` rather
+ * than ignored, so a four-week hot streak reads as "probably good" instead of
+ * "certainly good". Widen the window to steady the numbers down.
  */
-const HISTORY_WEIGHT = 0.35
-
-/** Games of current-season scoring needed to outweigh the prior evenly. */
-const MEAN_PRIOR_GAMES = 4
+const RECENT_GAMES = 4
 
 /** Same idea for the spread — a sample SD needs more games to mean anything. */
 const SD_PRIOR_GAMES = 6
+
+/**
+ * Neutral scoring level before a single game has been played. It cannot affect
+ * any result while it applies: games are decided by comparing two scores, and
+ * at that point every team shares this exact number, so it cancels out.
+ */
+const OPENING_LEVEL = 108
 
 // ---------------------------------------------------------------------------
 // Deterministic RNG — the page shows the same numbers on every build.
@@ -78,43 +87,52 @@ type TeamModel = {
   meanError: number
 }
 
+/** Every score this team has posted this season, oldest first. */
 function playedScores(team: Team): number[] {
-  return team.schedule.filter((g) => g.result).map((g) => g.result!.teamScore)
+  return team.schedule
+    .filter((g) => g.result)
+    .slice()
+    .sort((a, b) => a.week - b.week)
+    .map((g) => g.result!.teamScore)
 }
 
 /**
- * Each team gets a scoring distribution built by shrinking this season's
- * results toward a prior, so a team isn't declared elite off one good week.
- * With no games played the prior is all there is, which is why every team
- * starts level apart from franchise history.
+ * The team's most recent games, up to `RECENT_GAMES`. Sorted above rather than
+ * trusted, because taking the tail of the list is only "most recent" if the
+ * list is actually in week order.
+ */
+function recentScores(team: Team): number[] {
+  return playedScores(team).slice(-RECENT_GAMES)
+}
+
+/**
+ * Each team's scoring distribution, built from its last few games only.
+ *
+ * Nothing older than that window is consulted — not earlier weeks of this
+ * season, not previous seasons, not franchise history. A team is whatever it
+ * has been scoring lately.
  */
 function buildModels(): Map<string, TeamModel> {
-  const franchisePpg = new Map<string, number>()
-  let histPoints = 0
-  let histGames = 0
-  for (const t of TEAMS) {
-    const games = t.history.allTimeRecord.wins + t.history.allTimeRecord.losses
-    if (games <= 0) continue
-    franchisePpg.set(t.slug, t.history.totalPointsFor / games)
-    histPoints += t.history.totalPointsFor
-    histGames += games
-  }
-  const leagueHistMean = histGames > 0 ? histPoints / histGames : 100
+  // Where a team with no games of its own starts. Averaging what the rest of
+  // the league has actually scored beats inventing a number, and it matters
+  // whenever a week is only partly entered — some teams holding scores while
+  // others still have none.
+  const leagueScores = TEAMS.flatMap(playedScores)
+  const leagueLevel =
+    leagueScores.length > 0
+      ? leagueScores.reduce((s, v) => s + v, 0) / leagueScores.length
+      : OPENING_LEVEL
 
   const models = new Map<string, TeamModel>()
   for (const t of TEAMS) {
-    const scores = playedScores(t)
-    const n = scores.length
+    const window = recentScores(t)
+    const n = window.length
 
-    const franchise = franchisePpg.get(t.slug) ?? leagueHistMean
-    const prior = leagueHistMean + HISTORY_WEIGHT * (franchise - leagueHistMean)
-
-    const seasonMean = n > 0 ? scores.reduce((s, v) => s + v, 0) / n : 0
-    const mean = (n * seasonMean + MEAN_PRIOR_GAMES * prior) / (n + MEAN_PRIOR_GAMES)
+    const mean = n > 0 ? window.reduce((s, v) => s + v, 0) / n : leagueLevel
 
     let sd = LEAGUE_SD_PRIOR
     if (n >= 2) {
-      const variance = scores.reduce((s, v) => s + (v - seasonMean) ** 2, 0) / (n - 1)
+      const variance = window.reduce((s, v) => s + (v - mean) ** 2, 0) / (n - 1)
       sd = (n * Math.sqrt(variance) + SD_PRIOR_GAMES * LEAGUE_SD_PRIOR) / (n + SD_PRIOR_GAMES)
     }
 
@@ -122,7 +140,10 @@ function buildModels(): Map<string, TeamModel> {
       team: t,
       mean,
       sd,
-      meanError: sd / Math.sqrt(n + MEAN_PRIOR_GAMES),
+      // A four-game mean has real sampling error — roughly sd/2 at a full
+      // window. Carrying it into the sim is what keeps a short hot streak from
+      // being simulated as though the team were certainly that good.
+      meanError: sd / Math.sqrt(Math.max(1, n)),
     })
   }
   return models
@@ -259,6 +280,10 @@ export type TeamOdds = {
  * game produces exactly one winner and strength of schedule falls out of the
  * matchups themselves. Games already played are kept as they happened and only
  * the remainder is simulated.
+ *
+ * Those distributions come from each team's last few games only — see
+ * `RECENT_GAMES`. Standings still carry the full season's record and points,
+ * but how a team is expected to score from here is based on current form.
  *
  * The top four in each division make the playoffs, seeded by the same
  * tiebreakers the real standings use. The bracket is 1v4 and 2v3, winners meet
