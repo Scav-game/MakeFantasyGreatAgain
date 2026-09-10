@@ -34,6 +34,34 @@ export function getHomepageNewsArticles(): NewsArticle[] {
   return getAllNewsArticles().slice(0, HOMEPAGE_NEWS_LIMIT)
 }
 
+/**
+ * Transaction Wire rows are the automated add/drop/waiver feed rather than
+ * written stories. They dominate the feed by volume, so the News section and
+ * the archive both offer a toggle that hides them.
+ *
+ * Both the headline and the byline are checked. Today every one of these rows
+ * carries the headline "Transaction Wire" *and* the Jake "The Wire" Russo
+ * byline, so either test alone would work — but checking one only would fail
+ * silently the day the other convention changes, and a silent failure here
+ * looks like the toggle is broken.
+ */
+export function isTransactionPost(article: NewsArticle): boolean {
+  return (
+    article.headline.trim().toLowerCase() === "transaction wire" ||
+    (article.author ?? "").toLowerCase().includes("the wire")
+  )
+}
+
+/** The full archive with the transaction feed removed — written stories only. */
+export function getStoryNewsArticles(): NewsArticle[] {
+  return getAllNewsArticles().filter((a) => !isTransactionPost(a))
+}
+
+/** The homepage News section's list with the transaction feed removed. */
+export function getHomepageStoryArticles(): NewsArticle[] {
+  return getStoryNewsArticles().slice(0, HOMEPAGE_NEWS_LIMIT)
+}
+
 /** Splits a body into paragraphs on blank lines / line breaks, for
  * articles typed with real newlines in news.csv. If the text was pasted
  * into the spreadsheet as one unbroken line, this just returns it as a

@@ -1,68 +1,60 @@
 "use client"
 
-import { useMemo, useState } from "react"
 import Link from "next/link"
-import { getAllNewsArticles, getStoryNewsArticles } from "@/lib/news"
 import { TeamLogo } from "@/components/team/team-logo"
-import { AuthorAvatar } from "./author-avatar"
-import { Highlight } from "./highlight"
+import { AuthorAvatar } from "@/components/history/author-avatar"
 import { NewsFilterToggle, useHideTransactions } from "@/components/news/news-filter"
+import type { NewsArticle } from "@/lib/news"
 
-export function NewsArchive() {
-  const allArticles = getAllNewsArticles()
-  const storyArticles = getStoryNewsArticles()
-  const [query, setQuery] = useState("")
+/**
+ * The homepage News list and its All / Stories toggle.
+ *
+ * Both lists are built on the server and handed down already trimmed to the
+ * five that show, so toggling swaps between two small arrays instead of
+ * shipping the whole archive to the browser just to filter it.
+ */
+export function NewsFeed({
+  all,
+  stories,
+  totals,
+}: {
+  all: NewsArticle[]
+  stories: NewsArticle[]
+  totals: { all: number; stories: number }
+}) {
   const [hidden, setHidden] = useHideTransactions()
-
-  // Filter first, then search, so the result count and the "no matches" copy
-  // both describe the list the reader is actually looking at.
-  const articles = hidden ? storyArticles : allArticles
-
-  const filtered = useMemo(() => {
-    const q = query.trim().toLowerCase()
-    if (!q) return articles
-    return articles.filter(
-      (a) =>
-        a.headline.toLowerCase().includes(q) ||
-        a.body.toLowerCase().includes(q) ||
-        a.team?.name.toLowerCase().includes(q) ||
-        a.author?.toLowerCase().includes(q),
-    )
-  }, [articles, query])
+  const articles = hidden ? stories : all
+  const hasMore = (hidden ? totals.stories : totals.all) > articles.length
 
   return (
-    <div className="flex flex-col gap-4">
-      <div className="flex flex-wrap items-center gap-3">
-        <input
-          type="search"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          placeholder="Search news articles…"
-          className="min-w-0 flex-1 rounded-lg border border-border bg-card/60 px-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:border-gold/60 focus:outline-none"
-        />
-        <NewsFilterToggle
-          hidden={hidden}
-          onChange={setHidden}
-          counts={{ all: allArticles.length, stories: storyArticles.length }}
-        />
+    <>
+      <div className="mb-5 flex flex-wrap items-center justify-between gap-x-4 gap-y-3">
+        <div className="flex items-center gap-3">
+          <span className="h-6 w-1 rounded-full bg-gold" />
+          <h2 className="font-display text-2xl font-bold uppercase tracking-wide text-foreground md:text-3xl">
+            League News
+          </h2>
+        </div>
+        <div className="flex items-center gap-3">
+          <NewsFilterToggle hidden={hidden} onChange={setHidden} counts={totals} />
+          {hasMore && (
+            <Link
+              href="/news"
+              className="font-display text-xs font-semibold uppercase tracking-widest text-gold/80 transition-colors hover:text-gold"
+            >
+              View Full Archive →
+            </Link>
+          )}
+        </div>
       </div>
 
-      <p className="text-xs uppercase tracking-wider text-muted-foreground">
-        {filtered.length} {filtered.length === 1 ? "story" : "stories"}
-        {hidden ? " · transactions hidden" : ""}
-      </p>
-
-      {filtered.length === 0 ? (
+      {articles.length === 0 ? (
         <div className="rounded-xl border border-border bg-card/60 p-8 text-center">
-          <p className="text-muted-foreground">
-            {query
-              ? `No ${hidden ? "stories" : "articles"} match “${query}”.`
-              : "No stories yet."}
-          </p>
+          <p className="text-muted-foreground">No stories yet.</p>
         </div>
       ) : (
         <div className="flex flex-col gap-4">
-          {filtered.map((article) => (
+          {articles.map((article) => (
             <article
               key={article.id}
               className="rounded-xl border border-border bg-card/60 p-5 pl-6"
@@ -82,7 +74,7 @@ export function NewsArchive() {
                   <div className="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
                     <h3 className="font-display text-base font-bold uppercase tracking-wide text-foreground">
                       <Link href={`/news/${article.id}`} className="transition-colors hover:text-gold">
-                        <Highlight text={article.headline} query={query} />
+                        {article.headline}
                       </Link>
                     </h3>
                     <span className="text-[11px] uppercase tracking-wider text-muted-foreground">
@@ -91,11 +83,11 @@ export function NewsArchive() {
                   </div>
                   {article.author && (
                     <p className="mt-0.5 text-[11px] uppercase tracking-wider text-gold/70">
-                      By <Highlight text={article.author} query={query} />
+                      By {article.author}
                     </p>
                   )}
                   <p className="mt-2 line-clamp-3 text-sm leading-relaxed text-muted-foreground">
-                    <Highlight text={article.body} query={query} />
+                    {article.body}
                   </p>
                   <Link
                     href={`/news/${article.id}`}
@@ -109,6 +101,6 @@ export function NewsArchive() {
           ))}
         </div>
       )}
-    </div>
+    </>
   )
 }
