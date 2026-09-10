@@ -58,7 +58,11 @@ export type Team = {
     light: string
   }
   record: { wins: number; losses: number }
+  /** Final points from completed games plus anything scored in the week
+   * currently in progress. */
   pointsFor: number
+  /** The in-progress portion of `pointsFor` — 0 once the week is final. */
+  livePointsFor: number
   pointsAgainst: number
   streak: string
   roster: { active: Player[]; ir: Player[] }

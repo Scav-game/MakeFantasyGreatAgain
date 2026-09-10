@@ -74,6 +74,14 @@ jobs:
       - name: Sync rosters from ESPN
         run: node scripts/sync-espn.js
 
+      # Points for in the standings has nothing to sort on mid-week unless the
+      # in-progress scores are refreshed, so this runs on the same cadence.
+      # Note it makes commits routine rather than rare: live scores move
+      # constantly during games, so expect a commit (and a deploy) most cycles
+      # inside the window. Drop this step to go back to roster-only syncing.
+      - name: Sync live week scores from ESPN
+        run: node scripts/sync-live-scores.js
+
       - name: Check for changes
         id: check
         run: |
@@ -88,6 +96,6 @@ jobs:
         run: |
           git config --local user.email "mfga-bot@users.noreply.github.com"
           git config --local user.name "MFGA Roster Bot"
-          git add data/rosters.csv data/news.csv last-sync.json transaction-log.json
+          git add data/rosters.csv data/news.csv data/live-scores.csv last-sync.json transaction-log.json
           git commit -m "Auto-sync rosters from ESPN $(date +%Y-%m-%d)"
           git push

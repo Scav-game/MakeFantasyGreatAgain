@@ -13,8 +13,11 @@ const ROOT = path.join(__dirname, "..", "..")
 const DATA_DIR = path.join(ROOT, "data")
 const PREDICTIONS_DIR = path.join(DATA_DIR, "predictions")
 
-function espnUrl(views) {
-  const query = views.map((v) => `view=${v}`).join("&")
+function espnUrl(views, params = {}) {
+  const query = [
+    ...views.map((v) => `view=${v}`),
+    ...Object.entries(params).map(([k, v]) => `${k}=${encodeURIComponent(v)}`),
+  ].join("&")
   return `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${SEASON}/segments/0/leagues/${LEAGUE_ID}?${query}`
 }
 
@@ -166,8 +169,8 @@ function getWeekMatchups(week) {
 // ESPN
 // --------------------------------------------------------------------------
 
-async function fetchEspn(views) {
-  const res = await fetch(espnUrl(views), { signal: AbortSignal.timeout(20000) })
+async function fetchEspn(views, params) {
+  const res = await fetch(espnUrl(views, params), { signal: AbortSignal.timeout(20000) })
   if (!res.ok) throw new Error(`ESPN API error ${res.status} for views ${views.join(",")}`)
   return res.json()
 }
@@ -417,6 +420,8 @@ function parseWeekArg(argv) {
 module.exports = {
   LEAGUE_ID,
   SEASON,
+  IR_LINEUP_SLOT_ID,
+  slugForEspnTeam,
   PREDICTIONS_DIR,
   fetchEspn,
   fetchWeekResults,

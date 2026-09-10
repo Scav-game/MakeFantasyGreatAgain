@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { Division } from "@/lib/league"
-import { TEAMS, getStandings } from "@/lib/league"
+import { CURRENT_WEEK, TEAMS, getStandings } from "@/lib/league"
 import { TeamLogo } from "@/components/team/team-logo"
 import { assetPath } from "@/lib/asset-path"
 import { HeroSection } from "@/components/home/hero-section"
@@ -51,6 +51,10 @@ function TeamCard({ slug }: { slug: string }) {
 
 function StandingsTable({ division }: { division: Division }) {
   const rows = getStandings().filter((t) => t.division === division)
+  // Points for folds in the week still being played, which is what lets the
+  // table sort at all before any game is final. Flag it rather than passing a
+  // provisional number off as a settled one.
+  const hasLive = rows.some((t) => t.livePointsFor > 0)
   return (
     <div className="overflow-hidden rounded-xl border border-border bg-card/60">
       <div className="border-b border-border px-5 py-3">
@@ -84,11 +88,24 @@ function StandingsTable({ division }: { division: Division }) {
               </td>
               <td className="px-4 py-2.5 text-right font-display font-semibold text-foreground">
                 {t.pointsFor.toFixed(1)}
+                {t.livePointsFor > 0 && (
+                  <span
+                    className="ml-1 align-super text-[9px] text-gold"
+                    title={`Includes ${t.livePointsFor.toFixed(1)} from week ${CURRENT_WEEK}, still in progress`}
+                  >
+                    &bull;
+                  </span>
+                )}
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      {hasLive && (
+        <p className="border-t border-border/60 px-4 py-2 text-[11px] text-muted-foreground">
+          <span className="text-gold">&bull;</span> includes week {CURRENT_WEEK}, still in progress
+        </p>
+      )}
     </div>
   )
 }

@@ -60,6 +60,34 @@ There's no starters/bench split anymore — the site just lists each team's
 roster grouped by position in the order QB, RB, WR, TE, D/ST, K, and
 alphabetically by name within each position.
 
+## live-scores.csv — the week in progress, written by a script
+
+**Don't hand-edit this one.** `npm run sync:live` (and the GitHub Action)
+rewrite it from ESPN with what each team's *starting lineup* has scored in the
+week currently being played.
+
+| Column | Meaning |
+|---|---|
+| `teamSlug` | Team this row belongs to. |
+| `week` | Week the points were scored in. |
+| `points` | Points from started players only — bench and IR excluded. |
+
+This exists because `pointsFor` is summed from `schedule.csv`, and a row there
+only counts once **both** scores are filled in. That rule is deliberate: filling
+a week in early would mark it complete, push `CURRENT_WEEK` forward, and record
+wins and losses that aren't settled. The side effect is that mid-week every team
+sits at `0.0` points for and the standings have no tiebreaker to sort on.
+
+So these points ride *alongside* the schedule instead of inside it. The build
+adds a row to a team's `pointsFor` only while that team's `schedule.csv` row for
+that week has no result — so the moment you enter a real final score, the live
+figure for that week is ignored automatically and can never be double-counted.
+Records and `CURRENT_WEEK` never see it at all. Delete the file and everything
+behaves as though the week hasn't started.
+
+The standings mark the affected rows with a gold dot so a provisional total
+isn't mistaken for a final one.
+
 ## draft-picks.csv — one row per owned future draft pick
 
 | Column | Meaning |

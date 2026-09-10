@@ -13,7 +13,8 @@
     "sync": "node scripts/sync-espn.js",
     "transactions": "node scripts/check-transactions.js",
     "predict": "node scripts/generate-predictions.js",
-    "score-predictions": "node scripts/score-predictions.js"
+    "score-predictions": "node scripts/score-predictions.js",
+    "sync:live": "node scripts/sync-live-scores.js"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

@@ -52,8 +52,9 @@ function parseCsv(text) {
   return rows.filter((r) => r.some((f) => f.trim() !== ""))
 }
 
-function readCsvRecords(filename) {
+function readCsvRecords(filename, { optional = false } = {}) {
   const filePath = path.join(DATA_DIR, filename)
+  if (optional && !existsSync(filePath)) return []
   const text = readFileSync(filePath, "utf8")
   const rows = parseCsv(text)
   const header = rows[0]
@@ -73,6 +74,28 @@ const draftPicksCsv = readCsvRecords("draft-picks.csv")
 const historyCsv = readCsvRecords("history.csv")
 const newsCsv = readCsvRecords("news.csv")
 const pastTeamsCsv = readCsvRecords("past-teams.csv")
+// In-progress week scoring, written by scripts/sync-live-scores.js. Optional:
+// with the file absent everything behaves as though the week hasn't started.
+const liveScoresCsv = readCsvRecords("live-scores.csv", { optional: true })
+
+/**
+ * Live points for a team, by week. Only weeks whose schedule row has no final
+ * result are kept, so once a real score is entered the live figure for that
+ * week drops out on its own and can never be counted twice.
+ */
+function livePointsByWeek(slug, schedule) {
+  const unfinished = new Set(schedule.filter((g) => !g.result).map((g) => g.week))
+  const byWeek = new Map()
+  for (const row of liveScoresCsv) {
+    if (row.teamSlug !== slug) continue
+    const week = Number(row.week)
+    const points = Number(row.points)
+    if (!Number.isFinite(week) || !Number.isFinite(points)) continue
+    if (!unfinished.has(week)) continue
+    byWeek.set(week, points)
+  }
+  return byWeek
+}
 
 const TOTAL_WEEKS = 14
 
@@ -122,7 +145,17 @@ const TEAMS = teamsCsv.map((t) => {
   const played = schedule.filter((g) => g.result)
   const wins = played.filter((g) => g.result.outcome === "W").length
   const losses = played.filter((g) => g.result.outcome === "L").length
-  const pointsFor = Math.round(played.reduce((s, g) => s + g.result.teamScore, 0) * 10) / 10
+
+  // Points for includes the week in progress so the standings have something
+  // to sort on mid-week. Wins, losses and CURRENT_WEEK deliberately do not —
+  // an unfinished game has no winner, and treating it as one would fabricate
+  // records. `livePointsFor` is reported separately so the UI can say which
+  // part of the total isn't final yet.
+  const livePoints = livePointsByWeek(t.slug, schedule)
+  const livePointsFor =
+    Math.round([...livePoints.values()].reduce((s, v) => s + v, 0) * 10) / 10
+  const finalPointsFor = Math.round(played.reduce((s, g) => s + g.result.teamScore, 0) * 10) / 10
+  const pointsFor = Math.round((finalPointsFor + livePointsFor) * 10) / 10
   const pointsAgainst = Math.round(played.reduce((s, g) => s + g.result.oppScore, 0) * 10) / 10
 
   let streak = "—"
@@ -182,6 +215,7 @@ const TEAMS = teamsCsv.map((t) => {
     colors: { primary: t.colorPrimary, accent: t.colorAccent, dark: t.colorDark, light: t.colorLight },
     record: { wins, losses },
     pointsFor,
+    livePointsFor,
     pointsAgainst,
     streak,
     roster,
