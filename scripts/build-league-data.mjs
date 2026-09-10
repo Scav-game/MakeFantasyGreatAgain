@@ -78,6 +78,43 @@ const pastTeamsCsv = readCsvRecords("past-teams.csv")
 // with the file absent everything behaves as though the week hasn't started.
 const liveScoresCsv = readCsvRecords("live-scores.csv", { optional: true })
 
+/** Live points keyed by `slug|week`, for looking up an opponent's total. */
+const liveLookup = new Map(
+  liveScoresCsv.map((r) => [`${r.teamSlug}|${Number(r.week)}`, Number(r.points)]),
+)
+
+/**
+ * Provisional wins and losses from games currently being played: a win if a
+ * team is ahead of its opponent right now, a loss if behind.
+ *
+ * A matchup only counts once somebody in it has actually scored — with both
+ * sides on 0.0 the game hasn't kicked off and there is no one "winning". An
+ * exact mid-game tie is left alone for the same reason. Byes have no opponent
+ * and are skipped.
+ *
+ * This is kept separate from the real record rather than folded into it. The
+ * odds simulation starts from the official record and re-plays unfinished
+ * games itself, and an in-progress game genuinely still has an uncertain
+ * winner — handing it a decided result would be worse, not better.
+ */
+function liveRecordFor(slug, schedule) {
+  let wins = 0
+  let losses = 0
+  for (const game of schedule) {
+    if (game.result) continue // already final
+    const opponent = game.opponent.trim()
+    if (!opponent || opponent.toUpperCase() === "BYE") continue
+    const mine = liveLookup.get(`${slug}|${game.week}`)
+    const theirs = liveLookup.get(`${opponent}|${game.week}`)
+    if (!Number.isFinite(mine) || !Number.isFinite(theirs)) continue
+    if (mine === 0 && theirs === 0) continue // not underway
+    if (mine === theirs) continue // dead level, nobody is winning
+    if (mine > theirs) wins++
+    else losses++
+  }
+  return { wins, losses }
+}
+
 /**
  * Live points for a team, by week. Only weeks whose schedule row has no final
  * result are kept, so once a real score is entered the live figure for that
@@ -151,6 +188,7 @@ const TEAMS = teamsCsv.map((t) => {
   // an unfinished game has no winner, and treating it as one would fabricate
   // records. `livePointsFor` is reported separately so the UI can say which
   // part of the total isn't final yet.
+  const liveRecord = liveRecordFor(t.slug, schedule)
   const livePoints = livePointsByWeek(t.slug, schedule)
   const livePointsFor =
     Math.round([...livePoints.values()].reduce((s, v) => s + v, 0) * 10) / 10
@@ -214,6 +252,7 @@ const TEAMS = teamsCsv.map((t) => {
     hero: t.hero,
     colors: { primary: t.colorPrimary, accent: t.colorAccent, dark: t.colorDark, light: t.colorLight },
     record: { wins, losses },
+    liveRecord,
     pointsFor,
     livePointsFor,
     pointsAgainst,

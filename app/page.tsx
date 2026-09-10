@@ -1,6 +1,6 @@
 import Link from "next/link"
 import type { Division } from "@/lib/league"
-import { CURRENT_WEEK, TEAMS, getStandings } from "@/lib/league"
+import { CURRENT_WEEK, TEAMS, effectiveRecord, getStandings } from "@/lib/league"
 import { TeamLogo } from "@/components/team/team-logo"
 import { assetPath } from "@/lib/asset-path"
 import { HeroSection } from "@/components/home/hero-section"
@@ -51,10 +51,12 @@ function TeamCard({ slug }: { slug: string }) {
 
 function StandingsTable({ division }: { division: Division }) {
   const rows = getStandings().filter((t) => t.division === division)
-  // Points for folds in the week still being played, which is what lets the
-  // table sort at all before any game is final. Flag it rather than passing a
-  // provisional number off as a settled one.
-  const hasLive = rows.some((t) => t.livePointsFor > 0)
+  // Record and points for both fold in the week still being played, which is
+  // what lets the table sort at all before any game is final. Flag it rather
+  // than passing provisional numbers off as settled ones.
+  const hasLive = rows.some(
+    (t) => t.livePointsFor > 0 || t.liveRecord.wins > 0 || t.liveRecord.losses > 0,
+  )
   return (
     <div className="overflow-hidden rounded-xl border border-border bg-card/60">
       <div className="border-b border-border px-5 py-3">
@@ -84,7 +86,24 @@ function StandingsTable({ division }: { division: Division }) {
                 </Link>
               </td>
               <td className="px-2 py-2.5 text-center text-foreground">
-                {t.record.wins}-{t.record.losses}
+                {(() => {
+                  const rec = effectiveRecord(t)
+                  const provisional = t.liveRecord.wins > 0 || t.liveRecord.losses > 0
+                  return (
+                    <span
+                      className={provisional ? "text-gold" : undefined}
+                      title={
+                        provisional
+                          ? `${t.record.wins}-${t.record.losses} official, plus a week ${CURRENT_WEEK} game currently being ${
+                              t.liveRecord.wins > 0 ? "won" : "lost"
+                            }`
+                          : undefined
+                      }
+                    >
+                      {rec.wins}-{rec.losses}
+                    </span>
+                  )
+                })()}
               </td>
               <td className="px-4 py-2.5 text-right font-display font-semibold text-foreground">
                 {t.pointsFor.toFixed(1)}
@@ -103,7 +122,8 @@ function StandingsTable({ division }: { division: Division }) {
       </table>
       {hasLive && (
         <p className="border-t border-border/60 px-4 py-2 text-[11px] text-muted-foreground">
-          <span className="text-gold">&bull;</span> includes week {CURRENT_WEEK}, still in progress
+          <span className="text-gold">&bull;</span> record and points include week{" "}
+          {CURRENT_WEEK}, still in progress
         </p>
       )}
     </div>

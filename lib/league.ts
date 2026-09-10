@@ -57,7 +57,13 @@ export type Team = {
     dark: string
     light: string
   }
+  /** Official record — completed games only. */
   record: { wins: number; losses: number }
+  /** Provisional result of a game being played right now: a win if the team is
+   * ahead, a loss if behind, nothing if the game hasn't started or is level.
+   * Kept out of `record` so the odds simulation can still treat an unfinished
+   * game as undecided. */
+  liveRecord: { wins: number; losses: number }
   /** Final points from completed games plus anything scored in the week
    * currently in progress. */
   pointsFor: number
@@ -119,17 +125,46 @@ export function getTeamName(slug: string): string {
 
 export type StandingRow = Team & { rank: number; divisionRank: number }
 
-/** Win percentage, and .000 for a team that hasn't played yet. Percentage
- * rather than raw wins because every team gets one bye, and those byes fall in
- * different weeks (5, 6, 10, 11, 13, 14), so mid-season two teams can be a
- * game apart in games played through no fault of their own. */
-function winPct(wins: number, losses: number): number {
-  const games = wins + losses
-  return games === 0 ? 0 : wins / games
+/**
+ * Official record plus whatever is happening on the field right now — a team
+ * currently ahead carries a provisional win, one behind a provisional loss.
+ * This is what the standings sort and display use, so the table reflects the
+ * live state of the week rather than sitting frozen at 0-0 until Monday night.
+ */
+export function effectiveRecord(team: Team): { wins: number; losses: number } {
+  return {
+    wins: team.record.wins + team.liveRecord.wins,
+    losses: team.record.losses + team.liveRecord.losses,
+  }
 }
 
-/** A team's record in the games it has actually played against `opponents`.
- * BYE rows and unplayed weeks carry no result, so they never count. */
+/**
+ * Win percentage. Percentage rather than raw wins because every team gets one
+ * bye, and those byes fall in different weeks (5, 6, 10, 11, 13, 14), so
+ * mid-season two teams can be a game apart in games played through no fault of
+ * their own.
+ *
+ * A team with no decided games counts as .500, not .000 — it hasn't lost
+ * anything. Scoring it as .000 would tie it with every team that has actually
+ * lost, and mid-week that reads as a bug: a side whose game hasn't kicked off
+ * would sit below teams currently losing. At .500 the order comes out as
+ * winning, then yet to play, then losing. With nobody having played, every team
+ * is .500 and the tie falls through to head-to-head and points for exactly as
+ * it did before.
+ */
+function winPct(wins: number, losses: number): number {
+  const games = wins + losses
+  return games === 0 ? 0.5 : wins / games
+}
+
+/**
+ * A team's record in the games it has actually played against `opponents`.
+ * BYE rows and unplayed weeks carry no result, so they never count.
+ *
+ * Deliberately final games only, no provisional results. Two teams playing
+ * each other right now can't be tied on effective record anyway — one of them
+ * is ahead — so a live game never needs to break its own tie.
+ */
 function recordAgainst(team: Team, opponents: Set<string>): { wins: number; losses: number } {
   let wins = 0
   let losses = 0
@@ -160,7 +195,8 @@ function recordAgainst(team: Team, opponents: Set<string>): { wins: number; loss
 export function getStandings(): StandingRow[] {
   const groups = new Map<number, Team[]>()
   for (const team of TEAMS) {
-    const pct = winPct(team.record.wins, team.record.losses)
+    const live = effectiveRecord(team)
+    const pct = winPct(live.wins, live.losses)
     const group = groups.get(pct)
     if (group) group.push(team)
     else groups.set(pct, [team])

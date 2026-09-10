@@ -328,7 +328,10 @@ export function simulateChampionshipOdds(): TeamOdds[] {
     const h2h = new Map<string, Map<string, Series>>()
     for (const t of TEAMS) {
       wins.set(t.slug, t.record.wins)
-      points.set(t.slug, t.pointsFor)
+      // Final points only. pointsFor folds in the week being played, and the
+      // loop below re-plays that unfinished week from scratch, so starting
+      // from the full figure would count the live portion twice.
+      points.set(t.slug, t.pointsFor - t.livePointsFor)
       const row = new Map<string, Series>()
       for (const [opponent, series] of h2hBase.get(t.slug)!) row.set(opponent, { ...series })
       h2h.set(t.slug, row)
