@@ -1,13 +1,14 @@
 teamSlug,pos,name,nflTeam,points
 amon-ra-dawgin,QB,Trevor Lawrence,JAX,26.1
 amon-ra-dawgin,RB,Chris Rodriguez Jr.,JAX,2.3
-amon-ra-dawgin,RB,Javonte Williams,DAL,
+amon-ra-dawgin,RB,Emari Demercado,DAL,0.7
+amon-ra-dawgin,RB,Javonte Williams,DAL,24.2
 amon-ra-dawgin,RB,Jonah Coleman,DEN,
 amon-ra-dawgin,RB,Nicholas Singleton,TEN,
 amon-ra-dawgin,RB,Omarion Hampton,LAC,8.3
 amon-ra-dawgin,WR,Denzel Boston,CLE,13.9
 amon-ra-dawgin,WR,Ja'Kobi Lane,BAL,2.1
-amon-ra-dawgin,WR,Jayden Reed,GB,3.3
+amon-ra-dawgin,WR,Jayden Reed,GB,5
 amon-ra-dawgin,WR,Justin Jefferson,MIN,31.2
 amon-ra-dawgin,WR,KC Concepcion,CLE,7.8
 amon-ra-dawgin,WR,Makai Lemon,PHI,2.5
@@ -34,10 +35,10 @@ beer,TE,Harold Fannin Jr.,CLE,4.1
 beer,D/ST,Lions D/ST,DET,5
 beer,K,Harrison Mevis,LAR,1
 beer,IR,Zach Charbonnet,SEA,
-chicago-zestiest,QB,Jaxson Dart,NYG,
+chicago-zestiest,QB,Jaxson Dart,NYG,26.6
 chicago-zestiest,RB,Bhayshul Tuten,JAX,9.8
 chicago-zestiest,RB,Dylan Sampson,CLE,
-chicago-zestiest,RB,Jordan Mason,MIN,11.6
+chicago-zestiest,RB,Jordan Mason,MIN,11.9
 chicago-zestiest,RB,RJ Harvey,DEN,
 chicago-zestiest,RB,TreVeyon Henderson,NE,
 chicago-zestiest,WR,Devaughn Vele,NO,19.9
@@ -50,7 +51,7 @@ chicago-zestiest,WR,Xavier Worthy,KC,
 chicago-zestiest,TE,Chig Okonkwo,WSH,3.6
 chicago-zestiest,TE,Trey McBride,ARI,24.5
 chicago-zestiest,D/ST,Steelers D/ST,PIT,19
-chicago-zestiest,K,Will Reichard,MIN,6
+chicago-zestiest,K,Will Reichard,MIN,7
 chicago-zestiest,IR,Jordyn Tyson,NO,
 chicago-zestiest,IR,Tank Dell,HOU,
 doobs-agency,QB,Jared Goff,DET,16.44
@@ -61,7 +62,7 @@ doobs-agency,RB,Jonathon Brooks,CAR,7.2
 doobs-agency,RB,Kenneth Walker III,KC,
 doobs-agency,RB,Saquon Barkley,PHI,9
 doobs-agency,RB,Ty Johnson,BUF,
-doobs-agency,WR,Christian Watson,GB,30.1
+doobs-agency,WR,Christian Watson,GB,32.7
 doobs-agency,WR,Cooper Kupp,SEA,5.5
 doobs-agency,WR,Deebo Samuel Sr.,SF,18
 doobs-agency,WR,Keenan Allen,IND,9.2
@@ -100,20 +101,20 @@ fort-bragg,WR,Davante Adams,LAR,5.6
 fort-bragg,WR,DJ Moore,BUF,21
 fort-bragg,WR,Drake London,ATL,5.5
 fort-bragg,WR,Jahan Dotson,ATL,2.9
-fort-bragg,WR,Malachi Fields,NYG,
+fort-bragg,WR,Malachi Fields,NYG,4.5
 fort-bragg,WR,Tre Tucker,LV,4.7
 fort-bragg,TE,Gunnar Helm,TEN,6.8
 fort-bragg,TE,Mark Andrews,BAL,8.9
 fort-bragg,D/ST,Seahawks D/ST,SEA,14
 fort-bragg,K,Ka'imi Fairbairn,HOU,9
 fort-bragg,IR,Josh Jacobs,GB,
-i-heart-gingers,QB,Jordan Love,GB,17.16
+i-heart-gingers,QB,Jordan Love,GB,19.48
 i-heart-gingers,RB,Chase Brown,CIN,18.8
 i-heart-gingers,RB,J.K. Dobbins,DEN,
 i-heart-gingers,RB,Keaton Mitchell,LAC,0.9
 i-heart-gingers,RB,Rhamondre Stevenson,NE,14.5
 i-heart-gingers,WR,Ja'Marr Chase,CIN,3.2
-i-heart-gingers,WR,Matthew Golden,GB,10.7
+i-heart-gingers,WR,Matthew Golden,GB,15.5
 i-heart-gingers,WR,Romeo Doubs,NE,
 i-heart-gingers,WR,Stefon Diggs,WSH,15.5
 i-heart-gingers,WR,Tee Higgins,CIN,8.9
@@ -121,7 +122,7 @@ i-heart-gingers,TE,George Kittle,SF,3.2
 i-heart-gingers,TE,Sam LaPorta,DET,9.8
 i-heart-gingers,D/ST,Broncos D/ST,DEN,
 i-heart-gingers,K,Jason Myers,SEA,7
-mount-olympus,QB,Dak Prescott,DAL,
+mount-olympus,QB,Dak Prescott,DAL,14.4
 mount-olympus,QB,Sam Darnold,SEA,0.52
 mount-olympus,RB,Breece Hall,NYJ,19.8
 mount-olympus,RB,Christian McCaffrey,SF,13.8
@@ -153,11 +154,11 @@ nabers-in-paris,WR,Isaac TeSlaa,DET,
 nabers-in-paris,WR,Jameson Williams,DET,8.5
 nabers-in-paris,WR,Terry McLaurin,WSH,3.4
 nabers-in-paris,TE,Tucker Kraft,GB,9.5
-nabers-in-paris,D/ST,Eagles D/ST,PHI,6
-nabers-in-paris,K,Dominic Zvada,NYG,
+nabers-in-paris,D/ST,Eagles D/ST,PHI,5
+nabers-in-paris,K,Dominic Zvada,NYG,4
 nabers-in-paris,K,Jake Bates,DET,7
-pakistan-bombers,QB,Jalen Hurts,PHI,24.92
-pakistan-bombers,QB,Jayden Daniels,WSH,13.62
+pakistan-bombers,QB,Jalen Hurts,PHI,24.72
+pakistan-bombers,QB,Jayden Daniels,WSH,17.66
 pakistan-bombers,RB,Ashton Jeanty,LV,32.7
 pakistan-bombers,RB,Bijan Robinson,ATL,31.3
 pakistan-bombers,RB,Kaelon Black,SF,8
@@ -180,13 +181,13 @@ pluto-shraazinatorz,RB,Aaron Jones Sr.,MIN,10
 pluto-shraazinatorz,RB,Derrick Henry,BAL,35.3
 pluto-shraazinatorz,RB,Jaylen Warren,PIT,10.3
 pluto-shraazinatorz,RB,Justice Hill,BAL,3.8
-pluto-shraazinatorz,RB,Tyrone Tracy Jr.,NYG,
+pluto-shraazinatorz,RB,Tyrone Tracy Jr.,NYG,-0.6
 pluto-shraazinatorz,WR,Carnell Tate,TEN,7.8
 pluto-shraazinatorz,WR,Darius Slayton,FA,
-pluto-shraazinatorz,WR,George Pickens,DAL,
+pluto-shraazinatorz,WR,George Pickens,DAL,5.8
 pluto-shraazinatorz,WR,Nico Collins,HOU,21.2
 pluto-shraazinatorz,WR,Omar Cooper Jr.,NYJ,4
-pluto-shraazinatorz,TE,Jake Ferguson,DAL,
+pluto-shraazinatorz,TE,Jake Ferguson,DAL,2.6
 pluto-shraazinatorz,TE,Juwan Johnson,NO,14.4
 pluto-shraazinatorz,TE,Oronde Gadsden,LAC,5.2
 pluto-shraazinatorz,D/ST,Jaguars D/ST,JAX,14
@@ -211,10 +212,10 @@ the-watermark,D/ST,Rams D/ST,LAR,1
 the-watermark,K,Chase McLaughlin,TB,11
 vancouver-panties,QB,Baker Mayfield,TB,11.64
 vancouver-panties,QB,Lamar Jackson,BAL,24.96
-vancouver-panties,RB,Cam Skattebo,NYG,
+vancouver-panties,RB,Cam Skattebo,NYG,14.1
 vancouver-panties,RB,De'Von Achane,MIA,10.6
 vancouver-panties,RB,Kenny Gainwell,TB,2.8
-vancouver-panties,WR,CeeDee Lamb,DAL,
+vancouver-panties,WR,CeeDee Lamb,DAL,15.4
 vancouver-panties,WR,DK Metcalf,PIT,8
 vancouver-panties,WR,Jerry Jeudy,CLE,4.6
 vancouver-panties,WR,Parker Washington,JAX,19.3
@@ -223,8 +224,8 @@ vancouver-panties,WR,Travis Hunter,JAX,2.1
 vancouver-panties,TE,Dalton Schultz,HOU,7.5
 vancouver-panties,TE,Kyle Pitts Sr.,ATL,
 vancouver-panties,D/ST,Titans D/ST,TEN,-1
-vancouver-panties,D/ST,Vikings D/ST,MIN,6
-vancouver-panties,K,Brandon Aubrey,DAL,
+vancouver-panties,D/ST,Vikings D/ST,MIN,5
+vancouver-panties,K,Brandon Aubrey,DAL,2
 vile-horrendous,QB,Daniel Jones,IND,9.04
 vile-horrendous,QB,Justin Herbert,LAC,13.26
 vile-horrendous,RB,James Cook III,BUF,9.9
@@ -237,9 +238,9 @@ vile-horrendous,WR,Adonai Mitchell,NYJ,9
 vile-horrendous,WR,Cyrus Allen,KC,
 vile-horrendous,WR,Garrett Wilson,NYJ,13.9
 vile-horrendous,WR,Jalen Coker,CAR,33.8
-vile-horrendous,WR,Malik Nabers,NYG,
+vile-horrendous,WR,Malik Nabers,NYG,12.9
 vile-horrendous,WR,Rome Odunze,CHI,7.2
-vile-horrendous,TE,Isaiah Likely,NYG,
+vile-horrendous,TE,Isaiah Likely,NYG,27.8
 vile-horrendous,TE,Travis Kelce,KC,
 vile-horrendous,D/ST,Ravens D/ST,BAL,8
 vile-horrendous,K,Cam Little,JAX,12
