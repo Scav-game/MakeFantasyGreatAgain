@@ -1,6 +1,6 @@
 {
   "week": 1,
-  "status": "pending",
+  "status": "complete",
   "generatedAt": "2026-09-08T16:34:19.716Z",
   "dataSource": "espn",
   "generatedBy": "claude-code-session",
@@ -11,7 +11,9 @@
       "home": "nabers-in-paris",
       "awayRecord": "0-0",
       "homeRecord": "0-0",
-      "winner": null
+      "winner": "pakistan-bombers",
+      "awayScore": 139.4,
+      "homeScore": 92.8
     },
     {
       "id": "i-heart-gingers-vs-mount-olympus",
@@ -19,7 +21,9 @@
       "home": "mount-olympus",
       "awayRecord": "0-0",
       "homeRecord": "0-0",
-      "winner": null
+      "winner": "mount-olympus",
+      "awayScore": 87.3,
+      "homeScore": 105.1
     },
     {
       "id": "beer-vs-the-watermark",
@@ -27,7 +31,9 @@
       "home": "the-watermark",
       "awayRecord": "0-0",
       "homeRecord": "0-0",
-      "winner": null
+      "winner": "the-watermark",
+      "awayScore": 113.5,
+      "homeScore": 165.7
     },
     {
       "id": "doobs-agency-vs-vile-horrendous",
@@ -35,7 +41,9 @@
       "home": "vile-horrendous",
       "awayRecord": "0-0",
       "homeRecord": "0-0",
-      "winner": null
+      "winner": "doobs-agency",
+      "awayScore": 107.1,
+      "homeScore": 100.3
     },
     {
       "id": "englewood-ninjas-vs-fort-bragg",
@@ -43,7 +51,9 @@
       "home": "fort-bragg",
       "awayRecord": "0-0",
       "homeRecord": "0-0",
-      "winner": null
+      "winner": "englewood-ninjas",
+      "awayScore": 98.3,
+      "homeScore": 65.5
     },
     {
       "id": "amon-ra-dawgin-vs-chicago-zestiest",
@@ -51,7 +61,9 @@
       "home": "chicago-zestiest",
       "awayRecord": "0-0",
       "homeRecord": "0-0",
-      "winner": null
+      "winner": "amon-ra-dawgin",
+      "awayScore": 137.7,
+      "homeScore": 122.3
     },
     {
       "id": "pluto-shraazinatorz-vs-vancouver-panties",
@@ -59,7 +71,9 @@
       "home": "vancouver-panties",
       "awayRecord": "0-0",
       "homeRecord": "0-0",
-      "winner": null
+      "winner": "pluto-shraazinatorz",
+      "awayScore": 134.7,
+      "homeScore": 76.9
     }
   ],
   "picks": {
@@ -83,8 +97,24 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Justin Jefferson is worth roughly 4 points a week over the next best receiver here, and Trevor Lawrence is a material upgrade on Jaxson Dart. The math is straightforward.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Lamar Jackson, De'Von Achane and CeeDee Lamb is the strongest top three in the league this week. Derrick Henry cannot carry a full lineup by himself at 32 years old."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": true,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-fort-bragg": true,
+        "amon-ra-dawgin-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     },
     "rico-delgado": {
       "predictorId": "rico-delgado",
@@ -106,8 +136,24 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Jaxson Dart is the starting quarterback for Chicago. I run a contrarian podcast, not a charity.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Josh Allen and Derrick Henry in week one against a team named after underwear. Pluto got demoted from planet status and has been angry ever since."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": true,
+        "doobs-agency-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-vancouver-panties": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     },
     "earl-hutchinson": {
       "predictorId": "earl-hutchinson",
@@ -129,8 +175,24 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Jefferson and Mike Evans are grown men and Trevor Lawrence has been through the fire. Chicago is starting a rookie and it will look like one.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Derrick Henry is the most physical football player in this league and I will take him over a 190 pound scatback every single week. Josh Allen does not lose openers."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": true,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-vancouver-panties": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     },
     "priya-nair": {
       "predictorId": "priya-nair",
@@ -152,8 +214,24 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Jefferson is the number one receiver in my model and there is no offsetting advantage for Chicago outside of Trey McBride. Quarterback play breaks it open.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Lamar, Achane, Lamb and Metcalf is the highest graded starting four this week. Pluto is top heavy and thin after Nico Collins."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-fort-bragg": true,
+        "amon-ra-dawgin-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     },
     "vinny-esposito": {
       "predictorId": "vinny-esposito",
@@ -175,8 +253,24 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Chicago wins RB on depth, TE with Trey McBride and D/ST with Pittsburgh. Amon Ra takes QB and WR. Three to two, Chicago, even though Jefferson is the best player on the board.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Vancouver wins QB, WR, TE and D/ST. Pluto only takes the running back room. Four to one is the clearest board of the week."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     },
     "sandy-kowalski": {
       "predictorId": "sandy-kowalski",
@@ -198,8 +292,24 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Rookie quarterback at home in his first start with the crowd behind him is a genuine emotional edge. Amon Ra is walking in overconfident because they have Jefferson.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Home opener and this roster has the deepest lineup, so there is no situation where they get caught short. Pluto is relying on a 32 year old running back in September heat."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": true,
+        "beer-vs-the-watermark": true,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     },
     "marcus-whitfield": {
       "predictorId": "marcus-whitfield",
@@ -221,8 +331,24 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Five of seven on Amon Ra and the other side is starting Jaxson Dart. Nothing to think about.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Four of seven on Vancouver and they have the better roster, so the contrarian play would just be bad poker. I have already taken my two swings."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": true,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-fort-bragg": true,
+        "amon-ra-dawgin-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     },
     "destiny-carter": {
       "predictorId": "destiny-carter",
@@ -244,8 +370,25 @@
         "amon-ra-dawgin-vs-chicago-zestiest": "Their name literally invokes a sun god and they have Justin Jefferson. When you align yourself with a deity, week one is not where it falls apart.",
         "pluto-shraazinatorz-vs-vancouver-panties": "Pluto was stripped of planet status and has been quietly furious for nineteen years. That is the exact energy that wins a season opener."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-nabers-in-paris": true,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": true,
+        "amon-ra-dawgin-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-vancouver-panties": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-nabers-in-paris": false,
+        "i-heart-gingers-vs-mount-olympus": false,
+        "beer-vs-the-watermark": false,
+        "doobs-agency-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-fort-bragg": false,
+        "amon-ra-dawgin-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-vancouver-panties": false
+      }
     }
-  }
+  },
+  "scoredAt": "2026-09-15T13:04:13.641Z"
 }
