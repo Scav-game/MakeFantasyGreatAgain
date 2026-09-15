@@ -47,7 +47,7 @@ chicago-zestiest,WR,Jakobi Meyers,JAX,12.2
 chicago-zestiest,WR,Jalen Nailor,LV,5.7
 chicago-zestiest,WR,Jordan Addison,MIN,
 chicago-zestiest,WR,Malik Washington,MIA,6.3
-chicago-zestiest,WR,Xavier Worthy,KC,
+chicago-zestiest,WR,Xavier Worthy,KC,1.9
 chicago-zestiest,TE,Chig Okonkwo,WSH,3.6
 chicago-zestiest,TE,Trey McBride,ARI,24.5
 chicago-zestiest,D/ST,Steelers D/ST,PIT,19
@@ -59,7 +59,7 @@ doobs-agency,QB,Joe Burrow,CIN,14.16
 doobs-agency,RB,Alvin Kamara,NO,
 doobs-agency,RB,George Holani,SEA,2.9
 doobs-agency,RB,Jonathon Brooks,CAR,7.2
-doobs-agency,RB,Kenneth Walker III,KC,
+doobs-agency,RB,Kenneth Walker III,KC,3.2
 doobs-agency,RB,Saquon Barkley,PHI,9
 doobs-agency,RB,Ty Johnson,BUF,
 doobs-agency,WR,Christian Watson,GB,32.7
@@ -90,7 +90,7 @@ englewood-ninjas,TE,Michael Mayer,LV,9.2
 englewood-ninjas,D/ST,Chargers D/ST,LAC,
 englewood-ninjas,K,Eddy Pineiro,SF,10
 fort-bragg,QB,Kyler Murray,MIN,-0.38
-fort-bragg,QB,Patrick Mahomes,KC,
+fort-bragg,QB,Patrick Mahomes,KC,7.86
 fort-bragg,RB,Chris Brooks,GB,2.9
 fort-bragg,RB,Jacob Saylors,DET,
 fort-bragg,RB,Kendre Miller,NO,9
@@ -110,7 +110,7 @@ fort-bragg,K,Ka'imi Fairbairn,HOU,9
 fort-bragg,IR,Josh Jacobs,GB,
 i-heart-gingers,QB,Jordan Love,GB,19.48
 i-heart-gingers,RB,Chase Brown,CIN,18.8
-i-heart-gingers,RB,J.K. Dobbins,DEN,
+i-heart-gingers,RB,J.K. Dobbins,DEN,0.2
 i-heart-gingers,RB,Keaton Mitchell,LAC,0.9
 i-heart-gingers,RB,Rhamondre Stevenson,NE,14.5
 i-heart-gingers,WR,Ja'Marr Chase,CIN,3.2
@@ -120,7 +120,7 @@ i-heart-gingers,WR,Stefon Diggs,WSH,15.5
 i-heart-gingers,WR,Tee Higgins,CIN,8.9
 i-heart-gingers,TE,George Kittle,SF,3.2
 i-heart-gingers,TE,Sam LaPorta,DET,9.8
-i-heart-gingers,D/ST,Broncos D/ST,DEN,
+i-heart-gingers,D/ST,Broncos D/ST,DEN,8
 i-heart-gingers,K,Jason Myers,SEA,7
 mount-olympus,QB,Dak Prescott,DAL,14.4
 mount-olympus,QB,Sam Darnold,SEA,0.52
@@ -137,8 +137,8 @@ mount-olympus,WR,Rashee Rice,KC,
 mount-olympus,TE,Pat Freiermuth,PIT,15.6
 mount-olympus,TE,T.J. Hockenson,MIN,13.6
 mount-olympus,TE,Terrance Ferguson,LAR,
-mount-olympus,D/ST,Chiefs D/ST,KC,
-mount-olympus,K,Harrison Butker,KC,
+mount-olympus,D/ST,Chiefs D/ST,KC,13
+mount-olympus,K,Harrison Butker,KC,1
 mount-olympus,IR,Jayden Higgins,HOU,
 nabers-in-paris,QB,Bryce Young,CAR,31.44
 nabers-in-paris,QB,Drake Maye,NE,9.82
@@ -175,7 +175,7 @@ pakistan-bombers,TE,Kenyon Sadiq,NYJ,11.4
 pakistan-bombers,D/ST,Texans D/ST,HOU,-4
 pakistan-bombers,K,Chris Boswell,PIT,8
 pakistan-bombers,IR,Najee Harris,NYG,
-pluto-shraazinatorz,QB,Bo Nix,DEN,
+pluto-shraazinatorz,QB,Bo Nix,DEN,-2
 pluto-shraazinatorz,QB,Josh Allen,BUF,35.66
 pluto-shraazinatorz,RB,Aaron Jones Sr.,MIN,10
 pluto-shraazinatorz,RB,Derrick Henry,BAL,35.3
