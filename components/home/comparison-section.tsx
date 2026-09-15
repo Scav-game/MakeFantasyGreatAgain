@@ -22,7 +22,7 @@ function ComparisonRow({
   luck: "luckiest" | "unluckiest" | null
 }) {
   const [expanded, setExpanded] = useState(false)
-  const { team, actual, best, worst, bySchedule } = comparison
+  const { team, actual, best, bestIsUniversal, allPlay, bySchedule } = comparison
 
   return (
     <>
@@ -59,11 +59,12 @@ function ComparisonRow({
         </td>
         <td className="px-3 py-3 text-center">
           <span className="font-display font-semibold text-emerald-400">{fmt(best.wins, best.losses)}</span>
-          <span className="ml-1.5 text-xs text-muted-foreground">via {best.scheduleTeam.name}</span>
+          <span className="ml-1.5 text-xs text-muted-foreground">
+            {bestIsUniversal ? "via any schedule" : `via ${best.scheduleTeam.name}`}
+          </span>
         </td>
-        <td className="px-3 py-3 text-center">
-          <span className="font-display font-semibold text-red-400">{fmt(worst.wins, worst.losses)}</span>
-          <span className="ml-1.5 text-xs text-muted-foreground">via {worst.scheduleTeam.name}</span>
+        <td className="px-3 py-3 text-center font-display font-semibold text-foreground">
+          {fmt(allPlay.wins, allPlay.losses)}
         </td>
       </tr>
       {expanded && (
@@ -105,7 +106,9 @@ export function ComparisonSection() {
       <SectionHeading title="Record With Another Team's Schedule" />
       <p className="mb-6 max-w-2xl text-sm text-muted-foreground">
         Each team&apos;s actual weekly scores, checked against every other team&apos;s opponents.
-        Click a team to see their record against all fourteen schedules.
+        <span className="text-foreground"> vs Everyone</span> is the record they would have if
+        they played all thirteen rivals every week, so the week&apos;s top scorer goes 13-0 and the
+        low scorer 0-13. Click a team to see their record against all fourteen schedules.
       </p>
       <div className="overflow-x-auto rounded-xl border border-border bg-card/60">
         <table className="w-full min-w-[640px] text-left text-sm">
@@ -114,7 +117,7 @@ export function ComparisonSection() {
               <th className="px-4 py-3 font-medium">Team</th>
               <th className="px-3 py-3 text-center font-medium">Actual Record</th>
               <th className="px-3 py-3 text-center font-medium">Best Possible</th>
-              <th className="px-3 py-3 text-center font-medium">Worst Possible</th>
+              <th className="px-3 py-3 text-center font-medium">vs Everyone</th>
             </tr>
           </thead>
           <tbody>
