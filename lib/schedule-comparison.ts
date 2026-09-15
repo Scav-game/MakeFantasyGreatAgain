@@ -78,8 +78,17 @@ function allPlayRecord(team: Team): { wins: number; losses: number } {
   return { wins, losses }
 }
 
+/**
+ * Every team's comparison, ordered by their all-play record - best first, so
+ * the table reads as a ranking of who has actually outscored the league rather
+ * than league file order.
+ *
+ * Sorted on win percentage rather than raw wins so a team coming off a bye,
+ * who has played fewer all-play games, is not pushed down for it. Ties break on
+ * wins and then points for.
+ */
 export function getScheduleComparisons(): TeamScheduleComparison[] {
-  return TEAMS.map((team) => {
+  const comparisons = TEAMS.map((team) => {
     const bySchedule = TEAMS.map((scheduleTeam) => recordAgainstSchedule(team, scheduleTeam))
 
     const best = bySchedule.reduce((a, b) => (b.wins > a.wins ? b : a))
@@ -95,6 +104,18 @@ export function getScheduleComparisons(): TeamScheduleComparison[] {
       bySchedule,
     }
   })
+
+  const winPct = (r: { wins: number; losses: number }) => {
+    const games = r.wins + r.losses
+    return games > 0 ? r.wins / games : 0
+  }
+
+  return comparisons.sort(
+    (a, b) =>
+      winPct(b.allPlay) - winPct(a.allPlay) ||
+      b.allPlay.wins - a.allPlay.wins ||
+      b.team.pointsFor - a.team.pointsFor,
+  )
 }
 
 export function getLuckiest(comparisons: TeamScheduleComparison[]): TeamScheduleComparison {
