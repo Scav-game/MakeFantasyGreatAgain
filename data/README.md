@@ -46,6 +46,12 @@ games get played; the site figures out where the season is.
 Each team's row is independent — you don't need the two teams in a matchup
 to agree on anything, just fill in each team's own perspective.
 
+You don't have to type the scores in by hand: `npm run sync:results` pulls
+every week ESPN has actually settled and fills both columns for you (add
+`-- --week=3` for a single week, `-- --force` to rewrite scores already
+there). It never touches a week ESPN still has as undecided, so running it
+mid-week can't bake in a result that isn't final.
+
 ## rosters.csv — one row per player
 
 | Column | Meaning |
@@ -103,16 +109,23 @@ isn't mistaken for a final one.
 |---|---|
 | `slug` | Team. |
 | `yearJoined` | Year the franchise joined the league. |
-| `allTimeWins` / `allTimeLosses` | All-time regular season record. |
-| `totalPointsFor` | All-time total points scored. |
+| `allTimeWins` / `allTimeLosses` | Regular season record **through completed seasons only** — don't add this year's games, see below. |
+| `totalPointsFor` | Total points scored **through completed seasons only** — same. |
 | `playoffAppearances` | Count of playoff appearances. |
 | `playoffWins` | Count of playoff game wins. |
 | `championships` | Count of championships won. |
 
 This is also what powers the sortable table on the `/history` page — plus
 two stats it computes for you from these columns, not separate fields to
-fill in: **Win %** (`allTimeWins` / total games) and **PF / Year**
-(`totalPointsFor` / seasons since `yearJoined`).
+fill in: **Win %** (wins / total games) and **PF / Year**
+(total points / seasons since `yearJoined`).
+
+**You only edit this once a season is over.** The `/history` table adds the
+current season on top of these numbers itself, taking the settled games from
+`schedule.csv`, so a win entered there shows up in the all-time record
+straight away. Adding this year's results here as well would count them
+twice. When the season finishes, fold its totals into `allTimeWins` /
+`allTimeLosses` / `totalPointsFor` and the sums stay correct.
 
 ## news.csv — one row per news story, this is the entire League News section
 

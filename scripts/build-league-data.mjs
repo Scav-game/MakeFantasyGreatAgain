@@ -188,13 +188,19 @@ const TEAMS = teamsCsv.map((t) => {
   // an unfinished game has no winner, and treating it as one would fabricate
   // records. `livePointsFor` is reported separately so the UI can say which
   // part of the total isn't final yet.
+  // Kept at two decimals — the precision ESPN actually reports and that
+  // schedule.csv stores. Every on-screen figure is formatted with toFixed(1),
+  // so this changes no display; it stops a hundredth being shaved off each
+  // week and then compounding in the totals that are summed from these, like
+  // the all-time points on /history and the points tiebreak in the standings.
+  const round2 = (n) => Math.round(n * 100) / 100
+
   const liveRecord = liveRecordFor(t.slug, schedule)
   const livePoints = livePointsByWeek(t.slug, schedule)
-  const livePointsFor =
-    Math.round([...livePoints.values()].reduce((s, v) => s + v, 0) * 10) / 10
-  const finalPointsFor = Math.round(played.reduce((s, g) => s + g.result.teamScore, 0) * 10) / 10
-  const pointsFor = Math.round((finalPointsFor + livePointsFor) * 10) / 10
-  const pointsAgainst = Math.round(played.reduce((s, g) => s + g.result.oppScore, 0) * 10) / 10
+  const livePointsFor = round2([...livePoints.values()].reduce((s, v) => s + v, 0))
+  const finalPointsFor = round2(played.reduce((s, g) => s + g.result.teamScore, 0))
+  const pointsFor = round2(finalPointsFor + livePointsFor)
+  const pointsAgainst = round2(played.reduce((s, g) => s + g.result.oppScore, 0))
 
   let streak = "—"
   if (played.length) {

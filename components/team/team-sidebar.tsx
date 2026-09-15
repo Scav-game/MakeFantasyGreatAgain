@@ -1,5 +1,6 @@
 import type { Team } from "@/lib/league"
 import { getNextGame, getTeam, getDivisionRank } from "@/lib/league"
+import { getAllTimeTotals } from "@/lib/history-stats"
 import { TeamLogo } from "./team-logo"
 
 function Card({
@@ -123,16 +124,18 @@ function HistoryRow({
 
 function TeamHistoryCard({ team }: { team: Team }) {
   const { history } = team
+  // All-time with this season folded in, the same way /history does it.
+  const allTime = getAllTimeTotals(team)
   return (
     <Card team={team} title="Team History">
       <div className="flex flex-col">
         <HistoryRow label="Year Joined" value={String(history.yearJoined)} />
         <HistoryRow
           label="All-Time Record"
-          value={`${history.allTimeRecord.wins}-${history.allTimeRecord.losses}`}
+          value={`${allTime.wins}-${allTime.losses}`}
           accent={team.colors.accent}
         />
-        <HistoryRow label="Total Points For" value={history.totalPointsFor.toLocaleString()} />
+        <HistoryRow label="Total Points For" value={allTime.totalPointsFor.toLocaleString()} />
         <HistoryRow label="Playoff Appearances" value={String(history.playoffAppearances)} />
         <HistoryRow label="Playoff Wins" value={String(history.playoffWins)} />
         <HistoryRow

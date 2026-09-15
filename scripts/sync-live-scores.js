@@ -41,12 +41,40 @@ function csvField(v) {
   return v
 }
 
-/** Points scored by the players a manager actually started. */
-function startedTotal(team) {
+// A player's `stats` array carries one entry per scoring period per source.
+// statSourceId 0 is what actually happened, 1 is ESPN's projection, and
+// statSplitTypeId 1 marks a single-week (rather than season-total) split.
+const STAT_SOURCE_ACTUAL = 0
+const STAT_SPLIT_SINGLE_WEEK = 1
+
+/**
+ * What a player actually scored in `week`, or 0 if that week has no real
+ * points yet.
+ *
+ * Deliberately NOT `appliedStatTotal`: between the end of one week and the
+ * kickoff of the next, ESPN leaves that field holding the PREVIOUS week's
+ * actual score. Summing it would have published week 1's points as though
+ * they were week 2 in progress, and the build adds live points on top of the
+ * final ones — so every team's points for would have counted week 1 twice.
+ * Reading the period's own actual split gives 0 until the games kick off,
+ * which is the truth.
+ */
+function actualPointsFor(player, week) {
+  for (const stat of player?.stats ?? []) {
+    if (stat.scoringPeriodId !== week) continue
+    if (stat.statSourceId !== STAT_SOURCE_ACTUAL) continue
+    if (stat.statSplitTypeId !== STAT_SPLIT_SINGLE_WEEK) continue
+    return stat.appliedTotal ?? 0
+  }
+  return 0
+}
+
+/** Points scored by the players a manager actually started, in `week`. */
+function startedTotal(team, week) {
   let total = 0
   for (const entry of team.roster?.entries ?? []) {
     if (BENCHED.has(entry.lineupSlotId)) continue
-    total += entry.playerPoolEntry?.appliedStatTotal ?? 0
+    total += actualPointsFor(entry.playerPoolEntry?.player, week)
   }
   return Math.round(total * 100) / 100
 }
@@ -83,7 +111,7 @@ async function main() {
       unmatched.push(team.name)
       continue
     }
-    rows.push({ teamSlug: slug, week, points: startedTotal(team) })
+    rows.push({ teamSlug: slug, week, points: startedTotal(team, week) })
   }
 
   if (unmatched.length > 0) {
