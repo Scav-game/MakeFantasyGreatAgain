@@ -1,0 +1,251 @@
+{
+  "week": 2,
+  "status": "pending",
+  "generatedAt": "2026-09-16T11:19:15.008Z",
+  "dataSource": "espn",
+  "generatedBy": "claude-code-session",
+  "matchups": [
+    {
+      "id": "fort-bragg-vs-nabers-in-paris",
+      "away": "fort-bragg",
+      "home": "nabers-in-paris",
+      "awayRecord": "0-1",
+      "homeRecord": "0-1",
+      "winner": null
+    },
+    {
+      "id": "the-watermark-vs-vile-horrendous",
+      "away": "the-watermark",
+      "home": "vile-horrendous",
+      "awayRecord": "1-0",
+      "homeRecord": "0-1",
+      "winner": null
+    },
+    {
+      "id": "englewood-ninjas-vs-i-heart-gingers",
+      "away": "englewood-ninjas",
+      "home": "i-heart-gingers",
+      "awayRecord": "1-0",
+      "homeRecord": "0-1",
+      "winner": null
+    },
+    {
+      "id": "pluto-shraazinatorz-vs-amon-ra-dawgin",
+      "away": "pluto-shraazinatorz",
+      "home": "amon-ra-dawgin",
+      "awayRecord": "1-0",
+      "homeRecord": "1-0",
+      "winner": null
+    },
+    {
+      "id": "doobs-agency-vs-chicago-zestiest",
+      "away": "doobs-agency",
+      "home": "chicago-zestiest",
+      "awayRecord": "1-0",
+      "homeRecord": "0-1",
+      "winner": null
+    },
+    {
+      "id": "pakistan-bombers-vs-vancouver-panties",
+      "away": "pakistan-bombers",
+      "home": "vancouver-panties",
+      "awayRecord": "1-0",
+      "homeRecord": "0-1",
+      "winner": null
+    },
+    {
+      "id": "mount-olympus-vs-beer",
+      "away": "mount-olympus",
+      "home": "beer",
+      "awayRecord": "1-0",
+      "homeRecord": "0-1",
+      "winner": null
+    }
+  ],
+  "picks": {
+    "gerald-manning": {
+      "predictorId": "gerald-manning",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "nabers-in-paris",
+        "the-watermark-vs-vile-horrendous": "the-watermark",
+        "englewood-ninjas-vs-i-heart-gingers": "i-heart-gingers",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "pluto-shraazinatorz",
+        "doobs-agency-vs-chicago-zestiest": "chicago-zestiest",
+        "pakistan-bombers-vs-vancouver-panties": "pakistan-bombers",
+        "mount-olympus-vs-beer": "beer"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "Fort Bragg scored 65.52, the lowest total in the league, and their starting quarterback finished at minus 0.38. Nabers put up 92.82 with two backs over 20. I do not need a narrative, I need the higher number, and it is Cerquone by roughly 27 points.",
+        "the-watermark-vs-vile-horrendous": "165.66 was the highest score in the MFGA last week and it came from four starters over 28 points. Preston also left only 4.70 on his bench, which tells me the lineup is being managed correctly. Vile Horrendous scored 100.26. That gap is too large to argue with.",
+        "englewood-ninjas-vs-i-heart-gingers": "Ja'Marr Chase scored 3.20 against a 19.95 projection. That is a 16.75 point negative outlier and outliers regress. Carter's roster projects higher than Englewood's at receiver and at tight end, and Englewood won last week with three starters who combined for 2.60. Both of those results correct toward the mean.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "Amon Ra sent out 30.80 points of Week 1 production in Mike Evans and Denzel Boston and received 18.10 back. That is a measurable subtraction from a team that won by 15.40. Josh Allen gives Pluto the highest weekly floor in the league. Advantage Pluto.",
+        "doobs-agency-vs-chicago-zestiest": "Chicago scored 122.30 and lost. Doob's Agency scored 107.06 and won. The scoreboard rewarded the wrong team and the projections do not care what the standings say. Zach's roster is the stronger of the two on paper.",
+        "pakistan-bombers-vs-vancouver-panties": "139.42 against 76.86. Jeanty and Robinson alone outscored Vancouver's entire starting lineup by nearly a touchdown of fantasy points. This is the widest projected gap on the board and it is not a close call.",
+        "mount-olympus-vs-beer": "Miles scored 113.50 and lost by 52. Liam scored 105.10 and won by 17.82. Beer has the higher points-for figure and the deeper running back room with Montgomery, Kyren Williams and Judkins. I take the higher expected total."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "rico-delgado": {
+      "predictorId": "rico-delgado",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "fort-bragg",
+        "the-watermark-vs-vile-horrendous": "vile-horrendous",
+        "englewood-ninjas-vs-i-heart-gingers": "englewood-ninjas",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "pluto-shraazinatorz",
+        "doobs-agency-vs-chicago-zestiest": "chicago-zestiest",
+        "pakistan-bombers-vs-vancouver-panties": "vancouver-panties",
+        "mount-olympus-vs-beer": "beer"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "Harrison Bragg started Kyler Murray for negative points while Patrick Mahomes sat on his bench. He is not doing that twice. Nobody in this league wants to touch Fort Bragg right now and that is exactly when you buy. The defending champion with a functioning quarterback is worth a ticket.",
+        "the-watermark-vs-vile-horrendous": "Evan Brockway lost by 6.80 with Jalen Coker at 33.80 and Isaiah Likely at 27.80 rotting on his bench. Those two are going in the lineup this week and that is a 44 point swing available to him for free. Everybody is going to take the Watermark off one big number. I will take the angry man with the talent.",
+        "englewood-ninjas-vs-i-heart-gingers": "Drew Flynn is 1-0 and he did it with Jaylen Waddle at 1.20, his defense at zero and Rashid Shaheed at 1.40 in the flex. He won a game while three starters gave him nothing. Fix any one of those and Englewood is dangerous.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "Josh Allen and Derrick Henry both doubled their projections and I still think Pluto is the right side here. Amon Ra just traded away the receiver who scored 16.90 for them. You do not get better by subtracting your WR2.",
+        "doobs-agency-vs-chicago-zestiest": "Zach Ehrig scored the fifth most points in the league and took a loss for it. That is a man with a grudge and a home game. Matt Gingrich won on 107.06 with Christian Watson putting up 32.70 on his bench, which is the kind of luck that does not repeat.",
+        "pakistan-bombers-vs-vancouver-panties": "Here is my swing and I want it on the record. Everybody in this league is taking the Bombers and that is precisely why I am not. Lamar Jackson went 24.96 in a week where Josh P's kicker scored 2.00, his tight end scored 0.00 and his defense went negative. Fix the bottom of that lineup and Lamar can outscore anybody for one week. I am the only man holding this ticket and that is the point.",
+        "mount-olympus-vs-beer": "Matthew Stafford has now posted 4.10 on a 17.50 projection and Miles benched C.J. Stroud at 16.46 to do it. He is not making that mistake a third time. Beer at home with Stroud under center and Goedert at tight end is the better roster."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "earl-hutchinson": {
+      "predictorId": "earl-hutchinson",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "fort-bragg",
+        "the-watermark-vs-vile-horrendous": "the-watermark",
+        "englewood-ninjas-vs-i-heart-gingers": "englewood-ninjas",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "pluto-shraazinatorz",
+        "doobs-agency-vs-chicago-zestiest": "doobs-agency",
+        "pakistan-bombers-vs-vancouver-panties": "pakistan-bombers",
+        "mount-olympus-vs-beer": "mount-olympus"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "Fort Bragg has Patrick Mahomes, Mark Andrews and six tailbacks. The other fella is choosing between three quarterbacks and has not decided which one he likes. Mahomes has played in big games. That settles it for me.",
+        "the-watermark-vs-vile-horrendous": "Jahmyr Gibbs went 33.60 and D'Andre Swift went 32.40 out of the flex. Two backs carrying it like that wins you football games in September and in December. I do not care that Kelce is on the other side.",
+        "englewood-ninjas-vs-i-heart-gingers": "Jonathan Taylor carried it for 25.10. That is a tailback, the real kind, and the other side is running Chase Brown and a fella with a bad knee in Dobbins. Give me the team with the workhorse and the quarterback who does not turn it over.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "Derrick Henry went for 35.30. I have been watching football for fifty years and I have never seen a team lose because Derrick Henry ran too hard. Shreyus has the toughest back and the toughest quarterback in this matchup.",
+        "doobs-agency-vs-chicago-zestiest": "Saquon Barkley and Kenneth Walker in the same backfield with Joe Burrow throwing it. Walker went 34.10 last week out of the flex. The other side is starting a young quarterback in Jaxson Dart, and young quarterbacks lose games you expect them to win.",
+        "pakistan-bombers-vs-vancouver-panties": "Two tailbacks who can carry it twenty times each and a quarterback who runs it in from the three. Jeanty and Robinson went 32.70 and 31.30. Josh P has three running backs on his whole roster. Next question.",
+        "mount-olympus-vs-beer": "Christian McCaffrey and Breece Hall with Dak Prescott handing it off. Dak has been in this league a long time and he does not panic. Beer is choosing between two quarterbacks again and that tells me nobody over there knows who they are."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "priya-nair": {
+      "predictorId": "priya-nair",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "nabers-in-paris",
+        "the-watermark-vs-vile-horrendous": "the-watermark",
+        "englewood-ninjas-vs-i-heart-gingers": "englewood-ninjas",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "amon-ra-dawgin",
+        "doobs-agency-vs-chicago-zestiest": "doobs-agency",
+        "pakistan-bombers-vs-vancouver-panties": "pakistan-bombers",
+        "mount-olympus-vs-beer": "mount-olympus"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "Both teams lost, so I go to the magnitude of the loss. Nabers dropped theirs by 46.60 while scoring 92.82. Fort Bragg lost by 32.78 while scoring 65.52, which is the worst output in the league. On a points-per-game trend line Cerquone is 27 points ahead and trends are what I trade on.",
+        "the-watermark-vs-vile-horrendous": "165.66 is the highest single-week total anybody has posted this season and 97.2 percent lineup efficiency says it was not an accident. Momentum is a real signal in the first month before sample sizes stabilize. Preston is the hottest team in the MFGA and I am not betting against heat.",
+        "englewood-ninjas-vs-i-heart-gingers": "Englewood is 1-0, the Gingers are 0-1, and my model weights last week heavily this early. Drew is trending up off a win, Carter is trending down off a loss where his WR1 scored 3.20. Ride the winner.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "This is my one disagreement with the board and I am comfortable with it. Amon Ra scored 137.70, the second highest total in the league, and did it at 93.7 percent lineup efficiency with only 9.30 left on the bench. Justin Jefferson went 31.20 and Trevor Lawrence 26.10. Yes, they traded Mike Evans, but the trend line on this roster is the second steepest in the MFGA and momentum does not evaporate because one receiver changed jerseys.",
+        "doobs-agency-vs-chicago-zestiest": "Doob's Agency is 1-0 and Chicago is 0-1. I know Chicago scored more. The model reads the result, not the moral victory, and the result says Matt is trending up. Kenneth Walker at 34.10 is the kind of usage spike that persists.",
+        "pakistan-bombers-vs-vancouver-panties": "1-0, 139.42 points, and they got stronger during the week by adding Mike Evans. Vancouver is 0-1 off the lowest total in the West at 76.86. Every trend arrow on this matchup points the same direction.",
+        "mount-olympus-vs-beer": "Liam is 1-0 and Miles is 0-1 off a 52.16 point beating. Beer scored 113.50 but got run off the field, and my model treats a blowout loss as a negative momentum signal regardless of the raw total. Olympus is the trending side."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "vinny-esposito": {
+      "predictorId": "vinny-esposito",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "fort-bragg",
+        "the-watermark-vs-vile-horrendous": "vile-horrendous",
+        "englewood-ninjas-vs-i-heart-gingers": "i-heart-gingers",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "pluto-shraazinatorz",
+        "doobs-agency-vs-chicago-zestiest": "doobs-agency",
+        "pakistan-bombers-vs-vancouver-panties": "pakistan-bombers",
+        "mount-olympus-vs-beer": "beer"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "Five battles. QB goes to Fort Bragg with Mahomes over the Bryce Young committee. RB goes to Nabers on Hubbard at 23.70 and Irving at 20.30. WR goes to Fort Bragg on depth with Moore, London and Adams. TE goes to Fort Bragg, Mark Andrews over Tucker Kraft. D/ST goes to Fort Bragg, Seahawks at 14.00 against the Eagles at 5.00. Four to one, Fort Bragg.",
+        "the-watermark-vs-vile-horrendous": "QB to the Watermark, Caleb Williams at 37.26. RB to the Watermark, Gibbs and Swift. WR to Vile, Garrett Wilson and Nabers and Coker against Olave and Wan'Dale. TE to Vile, Kelce and Likely against Hunter Henry. D/ST to Vile, Ravens at 8.00 against the Rams at 1.00. Three to two, Vile Horrendous, and I am aware of the score last week. The battles are the battles.",
+        "englewood-ninjas-vs-i-heart-gingers": "QB to Englewood by a hair, Purdy 21.10 to Love 19.48. RB to the Gingers on three viable backs against Taylor and nothing. WR to the Gingers, Chase and Higgins and Diggs and Golden is four deep. TE to the Gingers, LaPorta and Kittle is the best room in the league. D/ST to the Gingers. Four to one.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "QB to Pluto, Allen 35.66 over Lawrence 26.10. RB to Pluto, Henry and Warren and Jones. WR to Amon Ra, Jefferson is the best single receiver in the matchup. TE to Amon Ra, Kincaid and Engram. D/ST to Pluto, Jaguars 14.00 against the Bears 2.00. Three to two, Pluto.",
+        "doobs-agency-vs-chicago-zestiest": "QB to Doob's, Burrow and Goff over Dart. RB to Doob's, Barkley and Walker. WR to Doob's, seven deep with McMillan and Watson and Deebo and Pittman. TE to Chicago, McBride at 24.50. D/ST to Chicago, Steelers at 19.00. Three to two, Doob's Agency.",
+        "pakistan-bombers-vs-vancouver-panties": "QB to the Bombers on projection, Hurts was 21.05 to Lamar's 19.13 even though Lamar outscored him. RB to the Bombers, Jeanty and Robinson. WR to the Bombers, eight receivers deep now. TE to Vancouver, Pitts and Schultz against Loveland at 0.00. D/ST to Vancouver, the Texans went minus 4.00. Three to two, Bombers, and the running back gap is the widest on the board.",
+        "mount-olympus-vs-beer": "QB to Beer, Stroud at 16.46 over Dak at 14.40. RB to Beer, Montgomery at 28.90 and Kyren at 15.50. WR to Beer, St. Brown and McConkey and Harrison Jr. against Rice and Burden. TE to Olympus, Hockenson and Freiermuth. D/ST to Olympus, Chiefs at 14.00 against the Lions at 5.00. Three to two, Beer."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "sandy-kowalski": {
+      "predictorId": "sandy-kowalski",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "fort-bragg",
+        "the-watermark-vs-vile-horrendous": "vile-horrendous",
+        "englewood-ninjas-vs-i-heart-gingers": "i-heart-gingers",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "pluto-shraazinatorz",
+        "doobs-agency-vs-chicago-zestiest": "chicago-zestiest",
+        "pakistan-bombers-vs-vancouver-panties": "pakistan-bombers",
+        "mount-olympus-vs-beer": "beer"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "This is a pride game and pride games are situations. Harrison Bragg is the defending champion, he finished dead last in scoring, and every reporter on the site spent the week calling him the clown of the week. A champion with something to prove at home against another 0-1 team is the easiest read on the board.",
+        "the-watermark-vs-vile-horrendous": "Classic letdown spot. The Watermark just hung 165.66, the whole league is talking about Preston, and nobody comes back down off a week like that at full attention. Meanwhile Evan lost by 6.80 with 44.30 points on his bench, which is the kind of loss that makes a man check his lineup four times. Angry and focused beats hot and satisfied.",
+        "englewood-ninjas-vs-i-heart-gingers": "Bounce-back spot. Carter Cole watched Ja'Marr Chase score 3.20 and then watched Golden and Diggs put up 15.50 each on his bench. That is an embarrassing week and embarrassed managers fix their lineups. Englewood is coming off a win they did not really earn.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "Distraction is a situation. Amon Ra Dawgin spent this week in the middle of the biggest trade story of the season with six articles written about whether Grossman knows what he is doing. That is not a team with its head in the game. Pluto had a quiet week and a big win.",
+        "doobs-agency-vs-chicago-zestiest": "Revenge on the whole league. Zach scored 122.30 and lost, then read six days of people calling him unlucky. He is home and he is furious. Matt Gingrich is coming off a win where he got outscored by his own bench, which is a letdown waiting to happen.",
+        "pakistan-bombers-vs-vancouver-panties": "Momentum from a big move. The Bombers won by 46 and then went out and added Mike Evans to a roster that did not need him. That is a team riding high with nothing bothering them. Vancouver is coming off the lowest score in their division and a 57 point loss. No situation saves that.",
+        "mount-olympus-vs-beer": "Must-win at home. Miles Hughes is 0-1, he got blown out by 52, and 0-2 in this league means chasing a playoff spot all year. Olympus won ugly by 17.82 and left 24.20 on the bench, which is a team that has not been tested. Desperation shows up in Week 2."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "marcus-whitfield": {
+      "predictorId": "marcus-whitfield",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "fort-bragg",
+        "the-watermark-vs-vile-horrendous": "the-watermark",
+        "englewood-ninjas-vs-i-heart-gingers": "i-heart-gingers",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "pluto-shraazinatorz",
+        "doobs-agency-vs-chicago-zestiest": "chicago-zestiest",
+        "pakistan-bombers-vs-vancouver-panties": "pakistan-bombers",
+        "mount-olympus-vs-beer": "beer"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "Four of the seven are on Fort Bragg and I do not see the edge in fighting it. Mahomes coming off the bench into the lineup is the single most obvious correction available to anybody in this league this week. I am tied for the lead. I take the free equity.",
+        "the-watermark-vs-vile-horrendous": "Four on the Watermark, three on Vile. I understand the letdown argument and I am not paying for it. Preston has the highest score in the league and the best lineup efficiency, and the man on the other side lost by 6.80 because he cannot read his own bench. Chalk.",
+        "englewood-ninjas-vs-i-heart-gingers": "Four of them landed on the Gingers and the reasoning is sound: Chase does not repeat 3.20 and Englewood does not win twice on three starters scoring 2.60. I am not going to be clever against a correct crowd.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "Six on Pluto, one on Amon Ra. Priya took the contrarian side and the moment she did, that lane closed for me. If I follow her there we both give up the bonus and I am risking a point to do it. Josh Allen and Derrick Henry against a team that just downgraded its receiver room. Easy.",
+        "doobs-agency-vs-chicago-zestiest": "Four on Chicago. The market has this right. Zach outscored Matt by 15.24 last week and lost anyway, and Matt won with Christian Watson at 32.70 on his bench. Regression is pointed at Doob's Agency.",
+        "pakistan-bombers-vs-vancouver-panties": "Six on the Bombers and Rico alone on Vancouver. That is the game theory working exactly as designed: he takes a three point shot at a game he will probably lose and I take the point. 139.42 against 76.86 is not a matchup I get paid to be brave in.",
+        "mount-olympus-vs-beer": "Five on Beer, two on Olympus. Here is the honest read on my own position: I am tied at the top with Gerald and Earl at five points, and there is no genuine lone wolf lane left on this board. Both contrarian seats are taken, by Priya on Amon Ra and Rico on Vancouver, and doubling into either one destroys the bonus for both of us. So I play seven favorites, bank the accuracy, and let the aggressive players pay for their own variance. That is what leading looks like."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "destiny-carter": {
+      "predictorId": "destiny-carter",
+      "picks": {
+        "fort-bragg-vs-nabers-in-paris": "nabers-in-paris",
+        "the-watermark-vs-vile-horrendous": "the-watermark",
+        "englewood-ninjas-vs-i-heart-gingers": "i-heart-gingers",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "pluto-shraazinatorz",
+        "doobs-agency-vs-chicago-zestiest": "chicago-zestiest",
+        "pakistan-bombers-vs-vancouver-panties": "pakistan-bombers",
+        "mount-olympus-vs-beer": "beer"
+      },
+      "reasoning": {
+        "fort-bragg-vs-nabers-in-paris": "Bryce Young put up 31.44 sitting on the bench and nobody saw it. That is a gift the universe left on the doorstep unopened, and this week Stephen opens it. Fort Bragg's energy is genuinely cursed right now. You cannot trade away six future picks and expect the cosmos not to send you an invoice.",
+        "the-watermark-vs-vile-horrendous": "The Watermark is vibrating at a frequency nobody else in this league can reach. Caleb Williams more than doubled his projection, Swift came out of nowhere for 32.40, and Preston benched the exact people who deserved to sit. That is alignment. You do not step in front of alignment in Week 2.",
+        "englewood-ninjas-vs-i-heart-gingers": "Ja'Marr Chase scoring 3.20 is rock bottom and rock bottom is sacred. The universe does not take the best receiver in football and hold him under four points two weeks running. Carter has been patient and the correction is coming.",
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": "You do not trade away a man four days after he catches a touchdown for you. Mike Evans blessed that roster in Melbourne and Andrew sent him to the strongest team in the league for two bench players. That is a karmic debt and it comes due at home. Josh Allen and Derrick Henry are riding clean energy.",
+        "doobs-agency-vs-chicago-zestiest": "Chicago scored the fifth most points in the entire league and was handed a loss. The universe keeps a ledger and Zach is owed. Matt won a game he had no business winning with 36.98 points on his bench, and borrowed luck always gets called in.",
+        "pakistan-bombers-vs-vancouver-panties": "The Bombers have the cleanest energy in this league and a crystal clear backfield. Jeanty and Bijan are a partnership, not a rotation, and partnerships hold. Vancouver started a tight end who caught nothing and a defense that scored negative points. That is a team at war with itself.",
+        "mount-olympus-vs-beer": "Matthew Stafford has betrayed Miles twice now and the lesson has landed. There is a specific kind of clarity that arrives after you get beaten by 52 points and read your own obituary. Beer is home, Beer is due, and Olympus won on a defense outscoring Christian McCaffrey, which is not a foundation."
+      },
+      "correct": null,
+      "loneWolf": null
+    }
+  }
+}
