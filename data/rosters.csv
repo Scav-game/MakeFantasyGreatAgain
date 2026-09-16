@@ -35,7 +35,6 @@ beer,K,Harrison Mevis,LAR,1
 beer,IR,Zach Charbonnet,SEA,
 chicago-zestiest,QB,Jaxson Dart,NYG,26.6
 chicago-zestiest,RB,Bhayshul Tuten,JAX,9.8
-chicago-zestiest,RB,Dylan Sampson,CLE,
 chicago-zestiest,RB,Jordan Mason,MIN,11.9
 chicago-zestiest,RB,RJ Harvey,DEN,8.1
 chicago-zestiest,RB,TreVeyon Henderson,NE,
@@ -45,9 +44,11 @@ chicago-zestiest,WR,Jakobi Meyers,JAX,12.2
 chicago-zestiest,WR,Jalen Nailor,LV,5.7
 chicago-zestiest,WR,Jordan Addison,MIN,
 chicago-zestiest,WR,Malik Washington,MIA,6.3
+chicago-zestiest,WR,Mike Evans,SF,16.9
 chicago-zestiest,WR,Xavier Worthy,KC,4.8
 chicago-zestiest,TE,David Njoku,LAC,10.8
-chicago-zestiest,TE,Trey McBride,ARI,24.5
+chicago-zestiest,TE,Kenyon Sadiq,NYJ,11.4
+chicago-zestiest,D/ST,Buccaneers D/ST,TB,8
 chicago-zestiest,D/ST,Steelers D/ST,PIT,19
 chicago-zestiest,K,Will Reichard,MIN,7
 chicago-zestiest,IR,Jordyn Tyson,NO,
@@ -166,12 +167,11 @@ pakistan-bombers,WR,DeVonta Smith,PHI,8.3
 pakistan-bombers,WR,Josh Downs,IND,5.7
 pakistan-bombers,WR,Mack Hollins,NE,9.1
 pakistan-bombers,WR,Michael Wilson,ARI,10.6
-pakistan-bombers,WR,Mike Evans,SF,16.9
 pakistan-bombers,WR,Puka Nacua,LAR,12.4
 pakistan-bombers,WR,Zay Flowers,BAL,26
 pakistan-bombers,TE,Colston Loveland,CHI,
-pakistan-bombers,TE,Kenyon Sadiq,NYJ,11.4
 pakistan-bombers,TE,Noah Fant,NO,13.3
+pakistan-bombers,TE,Trey McBride,ARI,24.5
 pakistan-bombers,D/ST,Texans D/ST,HOU,-4
 pakistan-bombers,K,Chris Boswell,PIT,8
 pluto-shraazinatorz,QB,Bo Nix,DEN,5.44
@@ -234,7 +234,7 @@ vile-horrendous,RB,Ray Davis,BUF,0.3
 vile-horrendous,RB,Tyjae Spears,TEN,4.4
 vile-horrendous,RB,Woody Marks,HOU,5
 vile-horrendous,WR,Adonai Mitchell,NYJ,9
-vile-horrendous,WR,Cyrus Allen,KC,
+vile-horrendous,WR,Antonio Williams,WSH,16.4
 vile-horrendous,WR,Garrett Wilson,NYJ,13.9
 vile-horrendous,WR,Jalen Coker,CAR,33.8
 vile-horrendous,WR,Malik Nabers,NYG,12.9
