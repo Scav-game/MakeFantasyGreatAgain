@@ -12,7 +12,7 @@ amon-ra-dawgin,WR,KC Concepcion,CLE,7.8
 amon-ra-dawgin,WR,Kendrick Bourne,ARI,15.5
 amon-ra-dawgin,WR,Makai Lemon,PHI,2.5
 amon-ra-dawgin,WR,Pat Bryant,DEN,8.2
-amon-ra-dawgin,TE,Dalton Kincaid,BUF,32.3
+amon-ra-dawgin,TE,Dalton Kincaid,BUF,40.5
 amon-ra-dawgin,TE,Evan Engram,DEN,14.3
 amon-ra-dawgin,D/ST,Bears D/ST,CHI,2
 amon-ra-dawgin,K,Jake Elliott,PHI,6
@@ -23,15 +23,15 @@ beer,RB,Jacory Croskey-Merritt,WSH,12.6
 beer,RB,Kyren Williams,LAR,15.5
 beer,RB,Quinshon Judkins,CLE,7
 beer,RB,Tyler Allgeier,ARI,9
-beer,WR,Amon-Ra St. Brown,DET,30.8
-beer,WR,Khalil Shakir,BUF,13.2
+beer,WR,Amon-Ra St. Brown,DET,63.9
+beer,WR,Khalil Shakir,BUF,15.8
 beer,WR,Ladd McConkey,LAC,19.2
 beer,WR,Marvin Harrison Jr.,ARI,4.3
 beer,WR,Quentin Johnston,LAC,3.7
 beer,TE,Dallas Goedert,PHI,23.7
 beer,TE,Greg Dulcich,MIA,3.8
 beer,TE,Harold Fannin Jr.,CLE,4.1
-beer,D/ST,Lions D/ST,DET,8
+beer,D/ST,Lions D/ST,DET,1
 beer,K,Harrison Mevis,LAR,1
 beer,IR,Zach Charbonnet,SEA,
 chicago-zestiest,QB,Jaxson Dart,NYG,26.6
@@ -54,7 +54,7 @@ chicago-zestiest,D/ST,Steelers D/ST,PIT,19
 chicago-zestiest,K,Will Reichard,MIN,7
 chicago-zestiest,IR,Jordyn Tyson,NO,
 chicago-zestiest,IR,Tank Dell,HOU,
-doobs-agency,QB,Jared Goff,DET,23.86
+doobs-agency,QB,Jared Goff,DET,46.22
 doobs-agency,QB,Joe Burrow,CIN,14.16
 doobs-agency,RB,Alvin Kamara,NO,
 doobs-agency,RB,George Holani,SEA,2.9
@@ -120,7 +120,7 @@ i-heart-gingers,WR,Romeo Doubs,NE,
 i-heart-gingers,WR,Stefon Diggs,WSH,15.5
 i-heart-gingers,WR,Tee Higgins,CIN,8.9
 i-heart-gingers,TE,George Kittle,SF,3.2
-i-heart-gingers,TE,Sam LaPorta,DET,13.2
+i-heart-gingers,TE,Sam LaPorta,DET,27
 i-heart-gingers,D/ST,Broncos D/ST,DEN,2
 i-heart-gingers,K,Jason Myers,SEA,7
 mount-olympus,QB,Dak Prescott,DAL,14.4
@@ -149,14 +149,14 @@ nabers-in-paris,RB,Chuba Hubbard,CAR,23.7
 nabers-in-paris,RB,Rachaad White,WSH,4.7
 nabers-in-paris,WR,Demarcus Robinson,SF,13
 nabers-in-paris,WR,DeMario Douglas,NE,7
-nabers-in-paris,WR,Isaac TeSlaa,DET,
-nabers-in-paris,WR,Jameson Williams,DET,8.5
+nabers-in-paris,WR,Isaac TeSlaa,DET,4.6
+nabers-in-paris,WR,Jameson Williams,DET,13.8
 nabers-in-paris,WR,Terry McLaurin,WSH,3.4
 nabers-in-paris,TE,Mike Gesicki,CIN,18.8
 nabers-in-paris,TE,Tucker Kraft,GB,9.5
 nabers-in-paris,D/ST,Eagles D/ST,PHI,5
 nabers-in-paris,K,Dominic Zvada,NYG,4
-nabers-in-paris,K,Jake Bates,DET,8
+nabers-in-paris,K,Jake Bates,DET,14
 nabers-in-paris,IR,A.J. Brown,NE,5.6
 nabers-in-paris,IR,Isiah Pacheco,DET,
 pakistan-bombers,QB,Jalen Hurts,PHI,24.72
@@ -178,7 +178,7 @@ pakistan-bombers,D/ST,Texans D/ST,HOU,-4
 pakistan-bombers,K,Chris Boswell,PIT,8
 pakistan-bombers,K,Evan McPherson,CIN,19
 pluto-shraazinatorz,QB,Bo Nix,DEN,5.44
-pluto-shraazinatorz,QB,Josh Allen,BUF,63.74
+pluto-shraazinatorz,QB,Josh Allen,BUF,76.48
 pluto-shraazinatorz,RB,Aaron Jones Sr.,MIN,10
 pluto-shraazinatorz,RB,Derrick Henry,BAL,35.3
 pluto-shraazinatorz,RB,Jaylen Warren,PIT,10.3
@@ -201,7 +201,7 @@ the-watermark,RB,Braelon Allen,NYJ,4
 the-watermark,RB,Corey Kiner,NE,1.1
 the-watermark,RB,D'Andre Swift,CHI,32.4
 the-watermark,RB,Jadarian Price,SEA,7.8
-the-watermark,RB,Jahmyr Gibbs,DET,51.6
+the-watermark,RB,Jahmyr Gibbs,DET,56.9
 the-watermark,WR,Chris Olave,NO,28.2
 the-watermark,WR,Jalen McMillan,TB,
 the-watermark,WR,Kalif Raymond,CHI,16.4
@@ -231,7 +231,7 @@ vancouver-panties,D/ST,Vikings D/ST,MIN,5
 vancouver-panties,K,Brandon Aubrey,DAL,2
 vile-horrendous,QB,Daniel Jones,IND,9.04
 vile-horrendous,QB,Justin Herbert,LAC,13.26
-vile-horrendous,RB,James Cook III,BUF,20
+vile-horrendous,RB,James Cook III,BUF,30.8
 vile-horrendous,RB,Jeremiyah Love,ARI,13
 vile-horrendous,RB,Mike Washington Jr.,LV,4.1
 vile-horrendous,RB,Ray Davis,BUF,0.3
