@@ -90,7 +90,6 @@ englewood-ninjas,TE,Michael Mayer,LV,9.2
 englewood-ninjas,D/ST,49ers D/ST,SF,9
 englewood-ninjas,D/ST,Chargers D/ST,LAC,
 englewood-ninjas,K,Eddy Pineiro,SF,10
-fort-bragg,QB,Kyler Murray,MIN,-0.38
 fort-bragg,QB,Patrick Mahomes,KC,21.66
 fort-bragg,RB,Chris Brooks,GB,2.9
 fort-bragg,RB,Devin Singletary,NYG,13.8
@@ -109,6 +108,7 @@ fort-bragg,TE,Mark Andrews,BAL,8.9
 fort-bragg,D/ST,Seahawks D/ST,SEA,14
 fort-bragg,K,Ka'imi Fairbairn,HOU,9
 fort-bragg,IR,Josh Jacobs,GB,
+fort-bragg,IR,Kyler Murray,MIN,-0.38
 i-heart-gingers,QB,Jordan Love,GB,19.48
 i-heart-gingers,RB,Chase Brown,CIN,18.8
 i-heart-gingers,RB,J.K. Dobbins,DEN,3.6
@@ -165,7 +165,7 @@ pakistan-bombers,QB,Jayden Daniels,WSH,17.66
 pakistan-bombers,RB,Ashton Jeanty,LV,32.7
 pakistan-bombers,RB,Bijan Robinson,ATL,31.3
 pakistan-bombers,RB,Raheim Sanders,CLE,5.6
-pakistan-bombers,WR,Chris Moore,BAL,6.3
+pakistan-bombers,WR,Darnell Mooney,NYG,4.7
 pakistan-bombers,WR,Denzel Boston,CLE,13.9
 pakistan-bombers,WR,DeVonta Smith,PHI,8.3
 pakistan-bombers,WR,Josh Downs,IND,5.7
