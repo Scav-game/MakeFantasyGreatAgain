@@ -1,15 +1,14 @@
 teamSlug,year,round,origin
 pakistan-bombers,2027,Keeper,Own
+pakistan-bombers,2027,Keeper,Starving Ethiopians
 pakistan-bombers,2027,2nd,Own
-pakistan-bombers,2027,3rd,Own
+nabers-in-paris,2027,4th,Starving Ethiopians
 pakistan-bombers,2027,4th,Own
-pakistan-bombers,2027,5th,Own
 pakistan-bombers,2027,6th,Own
 pakistan-bombers,2027,7th,Own
 pakistan-bombers,2027,8th,Own
 pakistan-bombers,2027,9th,Own
 pakistan-bombers,2027,10th,Amon Ra Dawgin
-pakistan-bombers,2027,10th,Own
 pakistan-bombers,2027,11th,Own
 pakistan-bombers,2027,12th,Own
 pakistan-bombers,2027,13th,Own
@@ -27,14 +26,15 @@ pluto-shraazinatorz,2027,10th,Own
 pluto-shraazinatorz,2027,12th,Own
 pluto-shraazinatorz,2027,13th,Own
 pluto-shraazinatorz,2027,14th,Own
-nabers-in-paris,2027,Keeper,Own
 nabers-in-paris,2027,2nd,Own
+nabers-in-paris,2027,3rd,Pakistan Bombers
 nabers-in-paris,2027,3rd,Own
-nabers-in-paris,2027,4th,Own
+nabers-in-paris,2027,5th,Pakistan Bombers
 nabers-in-paris,2027,5th,Own
 nabers-in-paris,2027,7th,Own
 nabers-in-paris,2027,8th,Own
 nabers-in-paris,2027,9th,Own
+nabers-in-paris,2027,10th,Pakistan Bombers
 nabers-in-paris,2027,10th,Beer
 nabers-in-paris,2027,12th,Own
 nabers-in-paris,2027,13th,Own
@@ -68,8 +68,8 @@ the-watermark,2027,11th,Own
 the-watermark,2027,12th,Own
 the-watermark,2027,13th,Own
 the-watermark,2027,14th,Own
+doobs-agency,2027,Keeper,Fort Bragg Confederates
 doobs-agency,2027,Keeper,Own
-doobs-agency,2027,2nd,Fort Bragg Confederates
 doobs-agency,2027,2nd,Own
 doobs-agency,2027,3rd,Own
 doobs-agency,2027,4th,Own
@@ -79,6 +79,7 @@ doobs-agency,2027,7th,Own
 doobs-agency,2027,8th,Own
 doobs-agency,2027,9th,Own
 doobs-agency,2027,10th,Own
+doobs-agency,2027,10th,Fort Bragg Confederates
 doobs-agency,2027,11th,Own
 doobs-agency,2027,12th,Own
 doobs-agency,2027,13th,Own
@@ -140,12 +141,11 @@ amon-ra-dawgin,2027,11th,Own
 amon-ra-dawgin,2027,12th,Own
 amon-ra-dawgin,2027,13th,Own
 amon-ra-dawgin,2027,14th,Own
-fort-bragg,2027,Keeper,Own
+fort-bragg,2027,2nd,Own
 fort-bragg,2027,4th,Own
 fort-bragg,2027,6th,Pluto Shraazinatorz
 fort-bragg,2027,8th,Own
 fort-bragg,2027,9th,Own
-fort-bragg,2027,10th,Own
 fort-bragg,2027,11th,Pluto Shraazinatorz
 fort-bragg,2027,12th,Own
 fort-bragg,2027,13th,Own
