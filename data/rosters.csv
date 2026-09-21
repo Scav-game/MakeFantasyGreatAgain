@@ -5,7 +5,7 @@ amon-ra-dawgin,RB,Emari Demercado,DAL,1.5
 amon-ra-dawgin,RB,Javonte Williams,DAL,32.2
 amon-ra-dawgin,RB,Kaelon Black,SF,10.5
 amon-ra-dawgin,RB,Omarion Hampton,LAC,25.8
-amon-ra-dawgin,WR,Alec Pierce,IND,10.1
+amon-ra-dawgin,WR,Alec Pierce,IND,12.2
 amon-ra-dawgin,WR,Jayden Reed,GB,6.4
 amon-ra-dawgin,WR,Justin Jefferson,MIN,39.7
 amon-ra-dawgin,WR,KC Concepcion,CLE,16
@@ -46,7 +46,7 @@ chicago-zestiest,WR,Jalen Nailor,LV,7.6
 chicago-zestiest,WR,Jordan Addison,MIN,4.1
 chicago-zestiest,WR,Malik Washington,MIA,15
 chicago-zestiest,WR,Mike Evans,SF,25.3
-chicago-zestiest,WR,Xavier Worthy,KC,4.8
+chicago-zestiest,WR,Xavier Worthy,KC,18.3
 chicago-zestiest,TE,David Njoku,LAC,12.7
 chicago-zestiest,TE,Kenyon Sadiq,NYJ,15.1
 chicago-zestiest,D/ST,Buccaneers D/ST,TB,12
@@ -59,23 +59,23 @@ doobs-agency,QB,Joe Burrow,CIN,30.34
 doobs-agency,RB,Alvin Kamara,NO,7.2
 doobs-agency,RB,George Holani,SEA,5.4
 doobs-agency,RB,Jonathon Brooks,CAR,9.3
-doobs-agency,RB,Kenneth Walker III,KC,34.1
+doobs-agency,RB,Kenneth Walker III,KC,57.9
 doobs-agency,RB,Saquon Barkley,PHI,12
 doobs-agency,RB,Ty Johnson,BUF,
 doobs-agency,WR,Christian Watson,GB,46.8
 doobs-agency,WR,Cooper Kupp,SEA,9.5
 doobs-agency,WR,Davante Adams,LAR,5.6
-doobs-agency,WR,Keenan Allen,IND,9.2
+doobs-agency,WR,Keenan Allen,IND,10.7
 doobs-agency,WR,Michael Pittman Jr.,PIT,8.8
 doobs-agency,WR,Tetairoa McMillan,CAR,25.6
 doobs-agency,WR,Xavier Legette,CAR,8.4
-doobs-agency,TE,Tyler Warren,IND,10.3
+doobs-agency,TE,Tyler Warren,IND,24.7
 doobs-agency,D/ST,Patriots D/ST,NE,27
 doobs-agency,K,Andy Borregales,NE,14
 englewood-ninjas,QB,Brock Purdy,SF,49.58
 englewood-ninjas,QB,Jacoby Brissett,ARI,22.98
 englewood-ninjas,RB,Brian Robinson Jr.,ATL,11.8
-englewood-ninjas,RB,Jonathan Taylor,IND,25.1
+englewood-ninjas,RB,Jonathan Taylor,IND,54.3
 englewood-ninjas,RB,Rico Dowdle,PIT,10.5
 englewood-ninjas,RB,Tank Bigsby,PHI,12.1
 englewood-ninjas,WR,Chris Godwin Jr.,TB,17.1
@@ -90,7 +90,7 @@ englewood-ninjas,TE,Michael Mayer,LV,14.5
 englewood-ninjas,D/ST,49ers D/ST,SF,18
 englewood-ninjas,D/ST,Chargers D/ST,LAC,4
 englewood-ninjas,K,Eddy Pineiro,SF,15
-fort-bragg,QB,Patrick Mahomes,KC,21.66
+fort-bragg,QB,Patrick Mahomes,KC,50.64
 fort-bragg,RB,Chris Brooks,GB,6.5
 fort-bragg,RB,Devin Singletary,NYG,13.8
 fort-bragg,RB,Kendre Miller,NO,9
@@ -128,19 +128,19 @@ mount-olympus,QB,Dak Prescott,DAL,44.16
 mount-olympus,QB,Sam Darnold,SEA,0.52
 mount-olympus,RB,Breece Hall,NYJ,34
 mount-olympus,RB,Christian McCaffrey,SF,36.4
-mount-olympus,RB,Emmett Johnson,KC,8.8
+mount-olympus,RB,Emmett Johnson,KC,14.3
 mount-olympus,RB,Kyle Monangai,CHI,28.2
 mount-olympus,RB,Samaje Perine,CIN,11.2
 mount-olympus,WR,Brian Thomas Jr.,JAX,14
 mount-olympus,WR,Caleb Douglas,MIA,18.3
 mount-olympus,WR,Courtland Sutton,DEN,8.6
 mount-olympus,WR,Luther Burden III,CHI,15.7
-mount-olympus,WR,Rashee Rice,KC,9.9
+mount-olympus,WR,Rashee Rice,KC,22.2
 mount-olympus,TE,Pat Freiermuth,PIT,23
 mount-olympus,TE,T.J. Hockenson,MIN,19.5
 mount-olympus,TE,Terrance Ferguson,LAR,
-mount-olympus,D/ST,Chiefs D/ST,KC,14
-mount-olympus,K,Harrison Butker,KC,7
+mount-olympus,D/ST,Chiefs D/ST,KC,15
+mount-olympus,K,Harrison Butker,KC,23
 mount-olympus,IR,Jayden Higgins,HOU,
 nabers-in-paris,QB,Bryce Young,CAR,55.52
 nabers-in-paris,QB,Drake Maye,NE,17.84
@@ -168,7 +168,7 @@ pakistan-bombers,RB,Raheim Sanders,CLE,7.7
 pakistan-bombers,WR,Darnell Mooney,NYG,4.7
 pakistan-bombers,WR,Denzel Boston,CLE,34.4
 pakistan-bombers,WR,DeVonta Smith,PHI,36
-pakistan-bombers,WR,Josh Downs,IND,5.7
+pakistan-bombers,WR,Josh Downs,IND,19.9
 pakistan-bombers,WR,Mack Hollins,NE,12.9
 pakistan-bombers,WR,Michael Wilson,ARI,14.4
 pakistan-bombers,WR,Puka Nacua,LAR,12.4
@@ -245,6 +245,6 @@ vile-horrendous,WR,Jalen Coker,CAR,48.4
 vile-horrendous,WR,Malik Nabers,NYG,12.9
 vile-horrendous,WR,Rome Odunze,CHI,14.5
 vile-horrendous,TE,Isaiah Likely,NYG,27.8
-vile-horrendous,TE,Travis Kelce,KC,10.1
+vile-horrendous,TE,Travis Kelce,KC,35.2
 vile-horrendous,D/ST,Ravens D/ST,BAL,13
 vile-horrendous,K,Cam Little,JAX,19
