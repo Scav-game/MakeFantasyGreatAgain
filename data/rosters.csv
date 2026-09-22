@@ -53,7 +53,6 @@ chicago-zestiest,D/ST,Buccaneers D/ST,TB,12
 chicago-zestiest,D/ST,Steelers D/ST,PIT,27
 chicago-zestiest,K,Will Reichard,MIN,17
 chicago-zestiest,IR,Jordyn Tyson,NO,
-chicago-zestiest,IR,Tank Dell,HOU,
 doobs-agency,QB,Jared Goff,DET,46.22
 doobs-agency,QB,Joe Burrow,CIN,30.34
 doobs-agency,RB,Alvin Kamara,NO,7.2
@@ -152,6 +151,7 @@ nabers-in-paris,WR,Demarcus Robinson,SF,19.4
 nabers-in-paris,WR,DeMario Douglas,NE,8.9
 nabers-in-paris,WR,Isaac TeSlaa,DET,4.6
 nabers-in-paris,WR,Jameson Williams,DET,13.8
+nabers-in-paris,WR,Mack Hollins,NE,12.9
 nabers-in-paris,WR,Terry McLaurin,WSH,10.4
 nabers-in-paris,TE,Mike Gesicki,CIN,18.8
 nabers-in-paris,TE,Tucker Kraft,GB,13
@@ -170,7 +170,6 @@ pakistan-bombers,WR,Denzel Boston,CLE,34.4
 pakistan-bombers,WR,DeVonta Smith,PHI,36
 pakistan-bombers,WR,Josh Downs,IND,19.9
 pakistan-bombers,WR,Konata Mumpfield,LAR,
-pakistan-bombers,WR,Mack Hollins,NE,12.9
 pakistan-bombers,WR,Michael Wilson,ARI,14.4
 pakistan-bombers,TE,Colston Loveland,CHI,1.3
 pakistan-bombers,TE,Noah Fant,NO,13.3
@@ -179,6 +178,7 @@ pakistan-bombers,D/ST,Texans D/ST,HOU,3
 pakistan-bombers,K,Chris Boswell,PIT,12
 pakistan-bombers,K,Evan McPherson,CIN,31
 pakistan-bombers,IR,Puka Nacua,LAR,12.4
+pakistan-bombers,IR,Tank Dell,HOU,
 pakistan-bombers,IR,Zay Flowers,BAL,26
 pluto-shraazinatorz,QB,Bo Nix,DEN,19.56
 pluto-shraazinatorz,QB,Josh Allen,BUF,76.48
