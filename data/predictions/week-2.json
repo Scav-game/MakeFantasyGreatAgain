@@ -1,6 +1,6 @@
 {
   "week": 2,
-  "status": "pending",
+  "status": "complete",
   "generatedAt": "2026-09-16T11:19:15.008Z",
   "dataSource": "espn",
   "generatedBy": "claude-code-session",
@@ -11,7 +11,9 @@
       "home": "nabers-in-paris",
       "awayRecord": "0-1",
       "homeRecord": "0-1",
-      "winner": null
+      "winner": "fort-bragg",
+      "awayScore": 83.7,
+      "homeScore": 62.2
     },
     {
       "id": "the-watermark-vs-vile-horrendous",
@@ -19,7 +21,9 @@
       "home": "vile-horrendous",
       "awayRecord": "1-0",
       "homeRecord": "0-1",
-      "winner": null
+      "winner": "the-watermark",
+      "awayScore": 114.5,
+      "homeScore": 81.7
     },
     {
       "id": "englewood-ninjas-vs-i-heart-gingers",
@@ -27,7 +31,9 @@
       "home": "i-heart-gingers",
       "awayRecord": "1-0",
       "homeRecord": "0-1",
-      "winner": null
+      "winner": "englewood-ninjas",
+      "awayScore": 156.5,
+      "homeScore": 106.4
     },
     {
       "id": "pluto-shraazinatorz-vs-amon-ra-dawgin",
@@ -35,7 +41,9 @@
       "home": "amon-ra-dawgin",
       "awayRecord": "1-0",
       "homeRecord": "1-0",
-      "winner": null
+      "winner": "pluto-shraazinatorz",
+      "awayScore": 125.9,
+      "homeScore": 82.2
     },
     {
       "id": "doobs-agency-vs-chicago-zestiest",
@@ -43,7 +51,9 @@
       "home": "chicago-zestiest",
       "awayRecord": "1-0",
       "homeRecord": "0-1",
-      "winner": null
+      "winner": "doobs-agency",
+      "awayScore": 167.7,
+      "homeScore": 78.5
     },
     {
       "id": "pakistan-bombers-vs-vancouver-panties",
@@ -51,7 +61,9 @@
       "home": "vancouver-panties",
       "awayRecord": "1-0",
       "homeRecord": "0-1",
-      "winner": null
+      "winner": "vancouver-panties",
+      "awayScore": 102.5,
+      "homeScore": 130.9
     },
     {
       "id": "mount-olympus-vs-beer",
@@ -59,7 +71,9 @@
       "home": "beer",
       "awayRecord": "1-0",
       "homeRecord": "0-1",
-      "winner": null
+      "winner": "mount-olympus",
+      "awayScore": 113.5,
+      "homeScore": 108
     }
   ],
   "picks": {
@@ -83,8 +97,24 @@
         "pakistan-bombers-vs-vancouver-panties": "139.42 against 76.86. Jeanty and Robinson alone outscored Vancouver's entire starting lineup by nearly a touchdown of fantasy points. This is the widest projected gap on the board and it is not a close call.",
         "mount-olympus-vs-beer": "Miles scored 113.50 and lost by 52. Liam scored 105.10 and won by 17.82. Beer has the higher points-for figure and the deeper running back room with Montgomery, Kyren Williams and Judkins. I take the higher expected total."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      }
     },
     "rico-delgado": {
       "predictorId": "rico-delgado",
@@ -106,8 +136,24 @@
         "pakistan-bombers-vs-vancouver-panties": "Here is my swing and I want it on the record. Everybody in this league is taking the Bombers and that is precisely why I am not. Lamar Jackson went 24.96 in a week where Josh P's kicker scored 2.00, his tight end scored 0.00 and his defense went negative. Fix the bottom of that lineup and Lamar can outscore anybody for one week. I am the only man holding this ticket and that is the point.",
         "mount-olympus-vs-beer": "Matthew Stafford has now posted 4.10 on a 17.50 projection and Miles benched C.J. Stroud at 16.46 to do it. He is not making that mistake a third time. Beer at home with Stroud under center and Goedert at tight end is the better roster."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": true,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": true,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": true,
+        "mount-olympus-vs-beer": false
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": true,
+        "mount-olympus-vs-beer": false
+      }
     },
     "earl-hutchinson": {
       "predictorId": "earl-hutchinson",
@@ -129,8 +175,24 @@
         "pakistan-bombers-vs-vancouver-panties": "Two tailbacks who can carry it twenty times each and a quarterback who runs it in from the three. Jeanty and Robinson went 32.70 and 31.30. Josh P has three running backs on his whole roster. Next question.",
         "mount-olympus-vs-beer": "Christian McCaffrey and Breece Hall with Dak Prescott handing it off. Dak has been in this league a long time and he does not panic. Beer is choosing between two quarterbacks again and that tells me nobody over there knows who they are."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": true,
+        "the-watermark-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-i-heart-gingers": true,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": true,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": true
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      }
     },
     "priya-nair": {
       "predictorId": "priya-nair",
@@ -152,8 +214,24 @@
         "pakistan-bombers-vs-vancouver-panties": "1-0, 139.42 points, and they got stronger during the week by adding Mike Evans. Vancouver is 0-1 off the lowest total in the West at 76.86. Every trend arrow on this matchup points the same direction.",
         "mount-olympus-vs-beer": "Liam is 1-0 and Miles is 0-1 off a 52.16 point beating. Beer scored 113.50 but got run off the field, and my model treats a blowout loss as a negative momentum signal regardless of the raw total. Olympus is the trending side."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-i-heart-gingers": true,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": true,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": true
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      }
     },
     "vinny-esposito": {
       "predictorId": "vinny-esposito",
@@ -175,8 +253,24 @@
         "pakistan-bombers-vs-vancouver-panties": "QB to the Bombers on projection, Hurts was 21.05 to Lamar's 19.13 even though Lamar outscored him. RB to the Bombers, Jeanty and Robinson. WR to the Bombers, eight receivers deep now. TE to Vancouver, Pitts and Schultz against Loveland at 0.00. D/ST to Vancouver, the Texans went minus 4.00. Three to two, Bombers, and the running back gap is the widest on the board.",
         "mount-olympus-vs-beer": "QB to Beer, Stroud at 16.46 over Dak at 14.40. RB to Beer, Montgomery at 28.90 and Kyren at 15.50. WR to Beer, St. Brown and McConkey and Harrison Jr. against Rice and Burden. TE to Olympus, Hockenson and Freiermuth. D/ST to Olympus, Chiefs at 14.00 against the Lions at 5.00. Three to two, Beer."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": true,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": true,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      }
     },
     "sandy-kowalski": {
       "predictorId": "sandy-kowalski",
@@ -198,8 +292,24 @@
         "pakistan-bombers-vs-vancouver-panties": "Momentum from a big move. The Bombers won by 46 and then went out and added Mike Evans to a roster that did not need him. That is a team riding high with nothing bothering them. Vancouver is coming off the lowest score in their division and a 57 point loss. No situation saves that.",
         "mount-olympus-vs-beer": "Must-win at home. Miles Hughes is 0-1, he got blown out by 52, and 0-2 in this league means chasing a playoff spot all year. Olympus won ugly by 17.82 and left 24.20 on the bench, which is a team that has not been tested. Desperation shows up in Week 2."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": true,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      }
     },
     "marcus-whitfield": {
       "predictorId": "marcus-whitfield",
@@ -221,8 +331,24 @@
         "pakistan-bombers-vs-vancouver-panties": "Six on the Bombers and Rico alone on Vancouver. That is the game theory working exactly as designed: he takes a three point shot at a game he will probably lose and I take the point. 139.42 against 76.86 is not a matchup I get paid to be brave in.",
         "mount-olympus-vs-beer": "Five on Beer, two on Olympus. Here is the honest read on my own position: I am tied at the top with Gerald and Earl at five points, and there is no genuine lone wolf lane left on this board. Both contrarian seats are taken, by Priya on Amon Ra and Rico on Vancouver, and doubling into either one destroys the bonus for both of us. So I play seven favorites, bank the accuracy, and let the aggressive players pay for their own variance. That is what leading looks like."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": true,
+        "the-watermark-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      }
     },
     "destiny-carter": {
       "predictorId": "destiny-carter",
@@ -244,8 +370,25 @@
         "pakistan-bombers-vs-vancouver-panties": "The Bombers have the cleanest energy in this league and a crystal clear backfield. Jeanty and Bijan are a partnership, not a rotation, and partnerships hold. Vancouver started a tight end who caught nothing and a defense that scored negative points. That is a team at war with itself.",
         "mount-olympus-vs-beer": "Matthew Stafford has betrayed Miles twice now and the lesson has landed. There is a specific kind of clarity that arrives after you get beaten by 52 points and read your own obituary. Beer is home, Beer is due, and Olympus won on a defense outscoring Christian McCaffrey, which is not a foundation."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": true,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": true,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      },
+      "loneWolf": {
+        "fort-bragg-vs-nabers-in-paris": false,
+        "the-watermark-vs-vile-horrendous": false,
+        "englewood-ninjas-vs-i-heart-gingers": false,
+        "pluto-shraazinatorz-vs-amon-ra-dawgin": false,
+        "doobs-agency-vs-chicago-zestiest": false,
+        "pakistan-bombers-vs-vancouver-panties": false,
+        "mount-olympus-vs-beer": false
+      }
     }
-  }
+  },
+  "scoredAt": "2026-09-22T13:01:14.551Z"
 }
