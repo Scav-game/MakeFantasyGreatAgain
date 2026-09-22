@@ -17,10 +17,10 @@ amon-ra-dawgin,TE,Evan Engram,DEN,17
 amon-ra-dawgin,D/ST,Bears D/ST,CHI,10
 amon-ra-dawgin,K,Jake Elliott,PHI,14
 beer,QB,C.J. Stroud,HOU,33.48
-beer,QB,Matthew Stafford,LAR,4.1
+beer,QB,Matthew Stafford,LAR,11.02
 beer,RB,David Montgomery,HOU,33.3
 beer,RB,Jacory Croskey-Merritt,WSH,18.4
-beer,RB,Kyren Williams,LAR,15.5
+beer,RB,Kyren Williams,LAR,17
 beer,RB,Quinshon Judkins,CLE,16.8
 beer,RB,Tyler Allgeier,ARI,12.9
 beer,WR,Amon-Ra St. Brown,DET,63.9
@@ -32,9 +32,9 @@ beer,TE,Dallas Goedert,PHI,25.1
 beer,TE,Greg Dulcich,MIA,7.5
 beer,TE,Harold Fannin Jr.,CLE,14.5
 beer,D/ST,Lions D/ST,DET,1
-beer,K,Harrison Mevis,LAR,1
+beer,K,Harrison Mevis,LAR,2
 beer,IR,Zach Charbonnet,SEA,
-chicago-zestiest,QB,Jaxson Dart,NYG,26.6
+chicago-zestiest,QB,Jaxson Dart,NYG,27.4
 chicago-zestiest,RB,Bhayshul Tuten,JAX,24
 chicago-zestiest,RB,Jordan Mason,MIN,11.9
 chicago-zestiest,RB,RJ Harvey,DEN,8.1
@@ -64,7 +64,7 @@ doobs-agency,RB,Saquon Barkley,PHI,12
 doobs-agency,RB,Ty Johnson,BUF,
 doobs-agency,WR,Christian Watson,GB,46.8
 doobs-agency,WR,Cooper Kupp,SEA,9.5
-doobs-agency,WR,Davante Adams,LAR,5.6
+doobs-agency,WR,Davante Adams,LAR,18.6
 doobs-agency,WR,Keenan Allen,IND,10.7
 doobs-agency,WR,Michael Pittman Jr.,PIT,8.8
 doobs-agency,WR,Tetairoa McMillan,CAR,25.6
@@ -92,7 +92,7 @@ englewood-ninjas,D/ST,Chargers D/ST,LAC,4
 englewood-ninjas,K,Eddy Pineiro,SF,15
 fort-bragg,QB,Patrick Mahomes,KC,50.64
 fort-bragg,RB,Chris Brooks,GB,6.5
-fort-bragg,RB,Devin Singletary,NYG,13.8
+fort-bragg,RB,Devin Singletary,NYG,14.5
 fort-bragg,RB,Kendre Miller,NO,9
 fort-bragg,RB,MarShawn Lloyd,GB,12.3
 fort-bragg,RB,Tony Pollard,TEN,11.9
@@ -101,7 +101,7 @@ fort-bragg,WR,Carnell Tate,TEN,13.5
 fort-bragg,WR,Deebo Samuel Sr.,SF,24.5
 fort-bragg,WR,DJ Moore,BUF,20.9
 fort-bragg,WR,Jahan Dotson,ATL,6
-fort-bragg,WR,Malachi Fields,NYG,4.5
+fort-bragg,WR,Malachi Fields,NYG,6.9
 fort-bragg,WR,Tre Tucker,LV,27.6
 fort-bragg,TE,Gunnar Helm,TEN,10.1
 fort-bragg,TE,Mark Andrews,BAL,19.8
@@ -138,13 +138,13 @@ mount-olympus,WR,Luther Burden III,CHI,15.7
 mount-olympus,WR,Rashee Rice,KC,22.2
 mount-olympus,TE,Pat Freiermuth,PIT,23
 mount-olympus,TE,T.J. Hockenson,MIN,19.5
-mount-olympus,TE,Terrance Ferguson,LAR,
+mount-olympus,TE,Terrance Ferguson,LAR,3.4
 mount-olympus,D/ST,Chiefs D/ST,KC,15
 mount-olympus,K,Harrison Butker,KC,23
 mount-olympus,IR,Jayden Higgins,HOU,
 nabers-in-paris,QB,Bryce Young,CAR,55.52
 nabers-in-paris,QB,Drake Maye,NE,17.84
-nabers-in-paris,RB,Blake Corum,LAR,5.4
+nabers-in-paris,RB,Blake Corum,LAR,7.3
 nabers-in-paris,RB,Bucky Irving,TB,33.3
 nabers-in-paris,RB,Chuba Hubbard,CAR,38.1
 nabers-in-paris,RB,Rachaad White,WSH,19
@@ -169,15 +169,16 @@ pakistan-bombers,WR,Darnell Mooney,NYG,4.7
 pakistan-bombers,WR,Denzel Boston,CLE,34.4
 pakistan-bombers,WR,DeVonta Smith,PHI,36
 pakistan-bombers,WR,Josh Downs,IND,19.9
+pakistan-bombers,WR,Konata Mumpfield,LAR,
 pakistan-bombers,WR,Mack Hollins,NE,12.9
 pakistan-bombers,WR,Michael Wilson,ARI,14.4
-pakistan-bombers,WR,Puka Nacua,LAR,12.4
 pakistan-bombers,TE,Colston Loveland,CHI,1.3
 pakistan-bombers,TE,Noah Fant,NO,13.3
 pakistan-bombers,TE,Trey McBride,ARI,42.6
 pakistan-bombers,D/ST,Texans D/ST,HOU,3
 pakistan-bombers,K,Chris Boswell,PIT,12
 pakistan-bombers,K,Evan McPherson,CIN,31
+pakistan-bombers,IR,Puka Nacua,LAR,12.4
 pakistan-bombers,IR,Zay Flowers,BAL,26
 pluto-shraazinatorz,QB,Bo Nix,DEN,19.56
 pluto-shraazinatorz,QB,Josh Allen,BUF,76.48
@@ -209,14 +210,14 @@ the-watermark,WR,Kalif Raymond,CHI,25.4
 the-watermark,WR,Kayshon Boutte,HOU,9.8
 the-watermark,WR,Wan'Dale Robinson,TEN,10.7
 the-watermark,TE,Brenton Strange,JAX,14
-the-watermark,TE,Colby Parkinson,LAR,1.6
+the-watermark,TE,Colby Parkinson,LAR,3.3
 the-watermark,TE,Cole Kmet,CHI,11.5
 the-watermark,TE,Hunter Henry,NE,12.6
-the-watermark,D/ST,Rams D/ST,LAR,1
+the-watermark,D/ST,Rams D/ST,LAR,11
 the-watermark,K,Chase McLaughlin,TB,27
 vancouver-panties,QB,Baker Mayfield,TB,23.82
 vancouver-panties,QB,Lamar Jackson,BAL,39.76
-vancouver-panties,RB,Cam Skattebo,NYG,14.1
+vancouver-panties,RB,Cam Skattebo,NYG,16.8
 vancouver-panties,RB,De'Von Achane,MIA,22.9
 vancouver-panties,RB,Kenny Gainwell,TB,7.3
 vancouver-panties,WR,CeeDee Lamb,DAL,50.7
@@ -242,9 +243,9 @@ vile-horrendous,WR,Adonai Mitchell,NYJ,21.3
 vile-horrendous,WR,Antonio Williams,WSH,21.8
 vile-horrendous,WR,Garrett Wilson,NYJ,30.6
 vile-horrendous,WR,Jalen Coker,CAR,48.4
-vile-horrendous,WR,Malik Nabers,NYG,12.9
+vile-horrendous,WR,Malik Nabers,NYG,14
 vile-horrendous,WR,Rome Odunze,CHI,14.5
-vile-horrendous,TE,Isaiah Likely,NYG,27.8
+vile-horrendous,TE,Isaiah Likely,NYG,29.2
 vile-horrendous,TE,Travis Kelce,KC,35.2
 vile-horrendous,D/ST,Ravens D/ST,BAL,13
 vile-horrendous,K,Cam Little,JAX,19
