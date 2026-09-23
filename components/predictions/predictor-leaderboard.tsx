@@ -9,6 +9,7 @@ import {
   type PredictionWeek,
 } from "@/lib/predictions"
 import { TeamLogo } from "@/components/team/team-logo"
+import { formatWinPct } from "@/lib/utils"
 import { PredictorAvatar } from "./predictor-avatar"
 
 function PredictorCard({
@@ -54,7 +55,7 @@ function PredictorCard({
         <div className="min-w-0 flex-1">
           <p className="font-display text-sm font-bold leading-tight text-foreground">{predictor.name}</p>
           <p className="text-xs text-muted-foreground">
-            {row.correctPicks}-{row.incorrectPicks} ({row.winPercentage.toFixed(1)}%)
+            {row.correctPicks}-{row.incorrectPicks} ({formatWinPct(row.winPercentage / 100)})
           </p>
         </div>
         <div className="shrink-0 text-right">

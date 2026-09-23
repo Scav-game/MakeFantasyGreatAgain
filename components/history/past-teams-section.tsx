@@ -3,6 +3,7 @@
 import { useEffect, useState, type CSSProperties } from "react"
 import { PAST_TEAMS, type PastTeam } from "@/lib/league"
 import { assetPath } from "@/lib/asset-path"
+import { formatWinPct } from "@/lib/utils"
 
 function PastTeamCard({ team, onSelect }: { team: PastTeam; onSelect: () => void }) {
   const colorVars = {
@@ -70,7 +71,7 @@ function PastTeamModal({ team, onClose }: { team: PastTeam; onClose: () => void 
   }, [onClose])
 
   const totalGames = team.allTimeRecord.wins + team.allTimeRecord.losses
-  const winPct = totalGames > 0 ? (team.allTimeRecord.wins / totalGames) * 100 : 0
+  const winPct = totalGames > 0 ? team.allTimeRecord.wins / totalGames : 0
   const seasons = Math.max(1, team.yearLeft - team.yearJoined + 1)
 
   return (
@@ -120,7 +121,7 @@ function PastTeamModal({ team, onClose }: { team: PastTeam; onClose: () => void 
             value={`${team.allTimeRecord.wins}-${team.allTimeRecord.losses}`}
             accent={team.colors.accent}
           />
-          <StatRow label="Win %" value={`${winPct.toFixed(1)}%`} />
+          <StatRow label="Win PCT" value={formatWinPct(winPct)} />
           <StatRow label="Total Points For" value={team.totalPointsFor.toLocaleString()} />
           <StatRow label="Playoff Appearances" value={String(team.playoffAppearances)} />
           <StatRow label="Playoff Wins" value={String(team.playoffWins)} />

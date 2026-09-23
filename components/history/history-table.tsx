@@ -4,6 +4,7 @@ import { useState } from "react"
 import Link from "next/link"
 import { TeamLogo } from "@/components/team/team-logo"
 import { getHistoryStats, type HistoryStatsRow } from "@/lib/history-stats"
+import { formatWinPct } from "@/lib/utils"
 
 type ColumnKey =
   | "team"
@@ -20,7 +21,7 @@ const COLUMNS: { key: ColumnKey; label: string; align: "left" | "right" }[] = [
   { key: "team", label: "Team", align: "left" },
   { key: "yearJoined", label: "Joined", align: "right" },
   { key: "wins", label: "Record", align: "right" },
-  { key: "winPct", label: "Win %", align: "right" },
+  { key: "winPct", label: "Win PCT", align: "right" },
   { key: "totalPointsFor", label: "Total PF", align: "right" },
   { key: "pointsPerYear", label: "PF / Year", align: "right" },
   { key: "playoffAppearances", label: "Playoff Apps", align: "right" },
@@ -93,7 +94,7 @@ export function HistoryTable() {
                 {row.wins}-{row.losses}
               </td>
               <td className="px-4 py-3 text-right font-display font-semibold text-foreground">
-                {(row.winPct * 100).toFixed(1)}%
+                {formatWinPct(row.winPct)}
               </td>
               <td className="px-4 py-3 text-right text-foreground">{row.totalPointsFor.toLocaleString()}</td>
               <td className="px-4 py-3 text-right text-foreground">{row.pointsPerYear.toFixed(1)}</td>
