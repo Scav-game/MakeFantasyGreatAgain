@@ -155,11 +155,29 @@ function buildRosterRows(league) {
       const pos = entry.lineupSlotId === IR_LINEUP_SLOT_ID ? "IR" : POSITION_MAP[player.defaultPositionId] || "?"
       const nflTeam = NFL_TEAMS[player.proTeamId] ?? "FA"
 
-      // appliedStatTotal on the season-level mRoster view is actual points
-      // scored so far (not a projection — those live in player.stats with
-      // statSourceId 1). Blank for 0 so the CSV doesn't carry 240 zeros in
-      // the preseason; data/README.md documents blank as "no points yet".
-      const scored = Math.round((entry.playerPoolEntry?.appliedStatTotal ?? 0) * 100) / 100
+      // Season-to-date actual points, for the whole year.
+      //
+      // Don't use playerPoolEntry.appliedStatTotal here. It looks like a season
+      // total but tracks whatever scoring period ESPN currently treats as live,
+      // so mid-season it quietly reports a single week: Josh Allen came back as
+      // 40.82 (his week 2 score) instead of 76.48, and Davante Adams as 39.50
+      // instead of 45.10. It also drifts between syncs, so two runs a day apart
+      // disagree about what the same column means.
+      //
+      // The season figure is the stats row keyed to the whole year rather than
+      // one week: scoringPeriodId 0 and statSplitTypeId 0, statSourceId 0 for
+      // actual rather than projected (projections are statSourceId 1), and this
+      // seasonId so last year's totals don't win. Blank for 0 so the CSV doesn't
+      // carry 240 zeros in the preseason; data/README.md documents blank as
+      // "no points yet".
+      const seasonStat = (player.stats ?? []).find(
+        (s) =>
+          s.scoringPeriodId === 0 &&
+          s.statSplitTypeId === 0 &&
+          s.statSourceId === 0 &&
+          s.seasonId === SEASON,
+      )
+      const scored = Math.round((seasonStat?.appliedTotal ?? 0) * 100) / 100
       const points = scored === 0 ? "" : String(scored)
 
       rows.push({ teamSlug: slug, pos, name: player.fullName, nflTeam, points })
