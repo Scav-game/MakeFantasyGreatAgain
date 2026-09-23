@@ -34,14 +34,15 @@ beer,TE,Harold Fannin Jr.,CLE,10.4
 beer,D/ST,Lions D/ST,DET,-4
 beer,K,Harrison Mevis,LAR,3
 beer,IR,Zach Charbonnet,SEA,
+chicago-zestiest,QB,Jameis Winston,NYG,2.54
 chicago-zestiest,QB,Jaxson Dart,NYG,0.8
+chicago-zestiest,QB,Kirk Cousins,LV,20.22
 chicago-zestiest,RB,Bhayshul Tuten,JAX,14.2
 chicago-zestiest,RB,RJ Harvey,DEN,
 chicago-zestiest,RB,TreVeyon Henderson,NE,13.6
 chicago-zestiest,WR,Devaughn Vele,NO,11.4
 chicago-zestiest,WR,Emeka Egbuka,TB,10.3
 chicago-zestiest,WR,Jakobi Meyers,JAX,3.8
-chicago-zestiest,WR,Jalen Nailor,LV,1.9
 chicago-zestiest,WR,Jordan Addison,MIN,4.1
 chicago-zestiest,WR,Malik Washington,MIA,8.7
 chicago-zestiest,WR,Mike Evans,SF,8.4
@@ -100,7 +101,7 @@ fort-bragg,RB,Travis Etienne Jr.,NO,7.1
 fort-bragg,WR,Carnell Tate,TEN,5.7
 fort-bragg,WR,Deebo Samuel Sr.,SF,6.5
 fort-bragg,WR,DJ Moore,BUF,-0.1
-fort-bragg,WR,Jahan Dotson,ATL,3.1
+fort-bragg,WR,Keon Coleman,BUF,12.3
 fort-bragg,WR,Malachi Fields,NYG,5
 fort-bragg,WR,Tre Tucker,LV,22.9
 fort-bragg,TE,Gunnar Helm,TEN,3.3
@@ -162,6 +163,7 @@ nabers-in-paris,IR,A.J. Brown,NE,
 nabers-in-paris,IR,Isiah Pacheco,DET,
 pakistan-bombers,QB,Jalen Hurts,PHI,16.16
 pakistan-bombers,QB,Jayden Daniels,WSH,14.74
+pakistan-bombers,QB,Michael Penix Jr.,ATL,
 pakistan-bombers,RB,Ashton Jeanty,LV,10.3
 pakistan-bombers,RB,Bijan Robinson,ATL,11.1
 pakistan-bombers,RB,Raheim Sanders,CLE,2.1
@@ -173,9 +175,10 @@ pakistan-bombers,WR,Puka Nacua,LAR,
 pakistan-bombers,WR,Zay Flowers,BAL,
 pakistan-bombers,TE,Noah Fant,NO,
 pakistan-bombers,TE,Trey McBride,ARI,18.1
+pakistan-bombers,TE,Zach Ertz,FA,
 pakistan-bombers,D/ST,Texans D/ST,HOU,7
 pakistan-bombers,K,Chris Boswell,PIT,4
-pakistan-bombers,K,Evan McPherson,CIN,12
+pakistan-bombers,K,Tyler Loop,BAL,5
 pakistan-bombers,IR,Tank Dell,HOU,
 pluto-shraazinatorz,QB,Bo Nix,DEN,14.12
 pluto-shraazinatorz,QB,Josh Allen,BUF,40.82
@@ -197,8 +200,8 @@ pluto-shraazinatorz,IR,Nico Collins,HOU,
 the-watermark,QB,Caleb Williams,CHI,7.72
 the-watermark,QB,Tyler Shough,NO,22.38
 the-watermark,RB,Braelon Allen,NYJ,8.5
-the-watermark,RB,Corey Kiner,NE,
 the-watermark,RB,D'Andre Swift,CHI,12.9
+the-watermark,RB,Emanuel Wilson,SEA,9.2
 the-watermark,RB,Jadarian Price,SEA,5
 the-watermark,RB,Jahmyr Gibbs,DET,23.3
 the-watermark,WR,Chris Olave,NO,22.6
@@ -207,8 +210,8 @@ the-watermark,WR,Kalif Raymond,CHI,9
 the-watermark,WR,Kayshon Boutte,HOU,6.7
 the-watermark,WR,Wan'Dale Robinson,TEN,1.9
 the-watermark,TE,Brenton Strange,JAX,3.7
-the-watermark,TE,Colby Parkinson,LAR,3.5
 the-watermark,TE,Cole Kmet,CHI,
+the-watermark,TE,Darren Waller,CAR,18.3
 the-watermark,TE,Hunter Henry,NE,7
 the-watermark,D/ST,Rams D/ST,LAR,11
 the-watermark,K,Chase McLaughlin,TB,16
@@ -232,8 +235,8 @@ vile-horrendous,QB,Justin Herbert,LAC,7.88
 vile-horrendous,QB,Malik Willis,MIA,12.48
 vile-horrendous,RB,James Cook III,BUF,20.9
 vile-horrendous,RB,Jeremiyah Love,ARI,7.5
+vile-horrendous,RB,Jonah Coleman,DEN,14.8
 vile-horrendous,RB,Mike Washington Jr.,LV,0.7
-vile-horrendous,RB,Ray Davis,BUF,
 vile-horrendous,RB,Tyjae Spears,TEN,9
 vile-horrendous,RB,Woody Marks,HOU,8.5
 vile-horrendous,WR,Adonai Mitchell,NYJ,12.3
