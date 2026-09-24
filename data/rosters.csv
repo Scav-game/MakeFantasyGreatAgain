@@ -1,17 +1,18 @@
 teamSlug,pos,name,nflTeam,points
 amon-ra-dawgin,QB,Trevor Lawrence,JAX,32.26
 amon-ra-dawgin,RB,Chris Rodriguez Jr.,JAX,3.6
-amon-ra-dawgin,RB,Emari Demercado,DAL,1.5
 amon-ra-dawgin,RB,Javonte Williams,DAL,32.2
 amon-ra-dawgin,RB,Kaelon Black,SF,10.5
 amon-ra-dawgin,RB,Omarion Hampton,LAC,25.8
 amon-ra-dawgin,WR,Alec Pierce,IND,12.2
+amon-ra-dawgin,WR,Carnell Tate,TEN,13.5
 amon-ra-dawgin,WR,Jayden Reed,GB,6.4
 amon-ra-dawgin,WR,Justin Jefferson,MIN,39.7
 amon-ra-dawgin,WR,KC Concepcion,CLE,16
 amon-ra-dawgin,WR,Kendrick Bourne,ARI,18.6
 amon-ra-dawgin,WR,Makai Lemon,PHI,4.4
 amon-ra-dawgin,WR,Pat Bryant,DEN,9.8
+amon-ra-dawgin,WR,Tre' Harris,LAC,11.3
 amon-ra-dawgin,TE,Dalton Kincaid,BUF,40.5
 amon-ra-dawgin,TE,Evan Engram,DEN,17
 amon-ra-dawgin,D/ST,Panthers D/ST,CAR,16
@@ -37,10 +38,10 @@ beer,IR,Zach Charbonnet,SEA,
 chicago-zestiest,QB,Jameis Winston,NYG,2.54
 chicago-zestiest,QB,Jaxson Dart,NYG,27.4
 chicago-zestiest,QB,Kirk Cousins,LV,34.02
+chicago-zestiest,QB,Kyler Murray,MIN,-0.38
 chicago-zestiest,RB,Bhayshul Tuten,JAX,24
 chicago-zestiest,RB,RJ Harvey,DEN,8.1
 chicago-zestiest,RB,TreVeyon Henderson,NE,13.6
-chicago-zestiest,WR,Devaughn Vele,NO,31.3
 chicago-zestiest,WR,Emeka Egbuka,TB,21.6
 chicago-zestiest,WR,Jakobi Meyers,JAX,16
 chicago-zestiest,WR,Jordan Addison,MIN,4.1
@@ -90,7 +91,6 @@ englewood-ninjas,TE,Michael Mayer,LV,14.5
 englewood-ninjas,D/ST,49ers D/ST,SF,18
 englewood-ninjas,D/ST,Chargers D/ST,LAC,4
 englewood-ninjas,K,Eddy Pineiro,SF,15
-fort-bragg,QB,Kyler Murray,MIN,-0.38
 fort-bragg,QB,Patrick Mahomes,KC,50.64
 fort-bragg,RB,Chris Brooks,GB,6.5
 fort-bragg,RB,Devin Singletary,NYG,14.7
@@ -98,8 +98,8 @@ fort-bragg,RB,Kaleb Johnson,GB,3.2
 fort-bragg,RB,MarShawn Lloyd,GB,12.3
 fort-bragg,RB,Tony Pollard,TEN,11.9
 fort-bragg,RB,Travis Etienne Jr.,NO,21.9
-fort-bragg,WR,Carnell Tate,TEN,13.5
 fort-bragg,WR,Deebo Samuel Sr.,SF,24.5
+fort-bragg,WR,Devaughn Vele,NO,31.3
 fort-bragg,WR,DJ Moore,BUF,20.9
 fort-bragg,WR,Keon Coleman,BUF,13.4
 fort-bragg,WR,Malachi Fields,NYG,9.5
@@ -163,6 +163,7 @@ nabers-in-paris,IR,A.J. Brown,NE,5.6
 nabers-in-paris,IR,Isiah Pacheco,DET,
 pakistan-bombers,QB,Jalen Hurts,PHI,40.88
 pakistan-bombers,QB,Jayden Daniels,WSH,32.4
+pakistan-bombers,QB,Joe Flacco,CIN,
 pakistan-bombers,QB,Michael Penix Jr.,ATL,
 pakistan-bombers,RB,AJ Dillon,CAR,2.5
 pakistan-bombers,RB,Ashton Jeanty,LV,43
@@ -173,7 +174,6 @@ pakistan-bombers,WR,Josh Downs,IND,19.9
 pakistan-bombers,WR,Michael Wilson,ARI,14.4
 pakistan-bombers,WR,Puka Nacua,LAR,12.4
 pakistan-bombers,WR,Zay Flowers,BAL,26
-pakistan-bombers,TE,Noah Fant,NO,13.3
 pakistan-bombers,TE,Trey McBride,ARI,42.6
 pakistan-bombers,TE,Zach Ertz,FA,
 pakistan-bombers,D/ST,Texans D/ST,HOU,3
