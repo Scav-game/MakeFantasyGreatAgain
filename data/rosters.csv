@@ -96,6 +96,7 @@ fort-bragg,RB,Chris Brooks,GB,6.5
 fort-bragg,RB,Devin Singletary,NYG,14.7
 fort-bragg,RB,Kaleb Johnson,GB,3.2
 fort-bragg,RB,MarShawn Lloyd,GB,12.3
+fort-bragg,RB,Rachaad White,WSH,19
 fort-bragg,RB,Tony Pollard,TEN,11.9
 fort-bragg,RB,Travis Etienne Jr.,NO,21.9
 fort-bragg,WR,Deebo Samuel Sr.,SF,24.5
@@ -103,7 +104,6 @@ fort-bragg,WR,Devaughn Vele,NO,31.3
 fort-bragg,WR,DJ Moore,BUF,20.9
 fort-bragg,WR,Keon Coleman,BUF,13.4
 fort-bragg,WR,Malachi Fields,NYG,9.5
-fort-bragg,WR,Tre Tucker,LV,27.6
 fort-bragg,TE,Cade Otton,TB,14.4
 fort-bragg,TE,Gunnar Helm,TEN,10.1
 fort-bragg,TE,Mark Andrews,BAL,19.8
@@ -148,13 +148,13 @@ nabers-in-paris,QB,Drake Maye,NE,17.84
 nabers-in-paris,RB,Blake Corum,LAR,15.6
 nabers-in-paris,RB,Bucky Irving,TB,33.3
 nabers-in-paris,RB,Chuba Hubbard,CAR,38.1
-nabers-in-paris,RB,Rachaad White,WSH,19
 nabers-in-paris,WR,Demarcus Robinson,SF,19.4
 nabers-in-paris,WR,DeMario Douglas,NE,8.9
 nabers-in-paris,WR,Isaac TeSlaa,DET,4.6
 nabers-in-paris,WR,Jameson Williams,DET,13.8
 nabers-in-paris,WR,Mack Hollins,NE,12.9
 nabers-in-paris,WR,Terry McLaurin,WSH,10.4
+nabers-in-paris,WR,Tre Tucker,LV,27.6
 nabers-in-paris,TE,Mike Gesicki,CIN,18.8
 nabers-in-paris,TE,Tucker Kraft,GB,13
 nabers-in-paris,D/ST,Eagles D/ST,PHI,9
@@ -187,7 +187,6 @@ pluto-shraazinatorz,RB,Aaron Jones Sr.,MIN,20.5
 pluto-shraazinatorz,RB,Derrick Henry,BAL,53
 pluto-shraazinatorz,RB,Jaylen Warren,PIT,20
 pluto-shraazinatorz,RB,Justice Hill,BAL,7.6
-pluto-shraazinatorz,RB,Sione Vaki,DET,5.8
 pluto-shraazinatorz,WR,Drake London,ATL,14.4
 pluto-shraazinatorz,WR,George Pickens,DAL,15.8
 pluto-shraazinatorz,WR,Nico Collins,HOU,21.2
@@ -195,9 +194,11 @@ pluto-shraazinatorz,WR,Xavier Hutchinson,HOU,12.9
 pluto-shraazinatorz,TE,Jake Ferguson,DAL,22.9
 pluto-shraazinatorz,TE,Juwan Johnson,NO,25
 pluto-shraazinatorz,TE,Oronde Gadsden,LAC,15
+pluto-shraazinatorz,D/ST,Bengals D/ST,CIN,27
 pluto-shraazinatorz,D/ST,Jaguars D/ST,JAX,15
 pluto-shraazinatorz,D/ST,Packers D/ST,GB,11
 pluto-shraazinatorz,K,Cameron Dicker,LAC,3
+pluto-shraazinatorz,K,Trey Smack,GB,21
 the-watermark,QB,Caleb Williams,CHI,44.98
 the-watermark,QB,Tyler Shough,NO,45.58
 the-watermark,RB,Braelon Allen,NYJ,12.5
