@@ -1,6 +1,6 @@
 {
   "week": 3,
-  "status": "pending",
+  "status": "complete",
   "generatedAt": "2026-09-23T18:40:00.000Z",
   "dataSource": "espn",
   "generatedBy": "claude-code-session",
@@ -11,7 +11,9 @@
       "home": "mount-olympus",
       "awayRecord": "0-2",
       "homeRecord": "2-0",
-      "winner": null
+      "winner": "mount-olympus",
+      "awayScore": 69.7,
+      "homeScore": 89.3
     },
     {
       "id": "pluto-shraazinatorz-vs-doobs-agency",
@@ -19,7 +21,9 @@
       "home": "doobs-agency",
       "awayRecord": "2-0",
       "homeRecord": "2-0",
-      "winner": null
+      "winner": "pluto-shraazinatorz",
+      "awayScore": 146.1,
+      "homeScore": 117.4
     },
     {
       "id": "the-watermark-vs-amon-ra-dawgin",
@@ -27,7 +31,9 @@
       "home": "amon-ra-dawgin",
       "awayRecord": "2-0",
       "homeRecord": "1-1",
-      "winner": null
+      "winner": "the-watermark",
+      "awayScore": 142.7,
+      "homeScore": 74.4
     },
     {
       "id": "vile-horrendous-vs-fort-bragg",
@@ -35,7 +41,9 @@
       "home": "fort-bragg",
       "awayRecord": "0-2",
       "homeRecord": "1-1",
-      "winner": null
+      "winner": "vile-horrendous",
+      "awayScore": 111,
+      "homeScore": 87.9
     },
     {
       "id": "pakistan-bombers-vs-chicago-zestiest",
@@ -43,7 +51,9 @@
       "home": "chicago-zestiest",
       "awayRecord": "1-1",
       "homeRecord": "0-2",
-      "winner": null
+      "winner": "pakistan-bombers",
+      "awayScore": 140.3,
+      "homeScore": 86
     },
     {
       "id": "i-heart-gingers-vs-vancouver-panties",
@@ -51,7 +61,9 @@
       "home": "vancouver-panties",
       "awayRecord": "0-2",
       "homeRecord": "1-1",
-      "winner": null
+      "winner": "vancouver-panties",
+      "awayScore": 111.7,
+      "homeScore": 115.4
     },
     {
       "id": "englewood-ninjas-vs-beer",
@@ -59,7 +71,9 @@
       "home": "beer",
       "awayRecord": "2-0",
       "homeRecord": "0-2",
-      "winner": null
+      "winner": "englewood-ninjas",
+      "awayScore": 134,
+      "homeScore": 129
     }
   ],
   "picks": {
@@ -83,8 +97,24 @@
         "i-heart-gingers-vs-vancouver-panties": "207.8 against 193.7 is only 14.1 points, so I looked at the composition. Vancouver has Lamar Jackson and De'Von Achane, two of the five highest weekly ceilings in this league. Carter's roster is 0-2 and its best two results are 87.3 and 106.4. I take the higher projection, narrowly.",
         "englewood-ninjas-vs-beer": "254.8 against 221.5. Englewood scored 156.5 last week and Beer has not cleared 113.5 in either week. I am aware Beer is the better roster on paper and that it is 0-2 through no fault of its own. I do not pick rosters, I pick totals, and the totals favor Englewood by roughly 17 per week."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": true,
+        "vile-horrendous-vs-fort-bragg": true,
+        "pakistan-bombers-vs-chicago-zestiest": true,
+        "i-heart-gingers-vs-vancouver-panties": true,
+        "englewood-ninjas-vs-beer": true
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     },
     "rico-delgado": {
       "predictorId": "rico-delgado",
@@ -106,8 +136,24 @@
         "i-heart-gingers-vs-vancouver-panties": "I wanted the Gingers here. Ja'Marr Chase and Tee Higgins and George Kittle on an 0-2 team is exactly my kind of buy. Then I remembered Carter Cole benched Stefon Diggs twice and started Rhamondre Stevenson for 3.60. The roster is not the problem, the guy setting it is. Vancouver.",
         "englewood-ninjas-vs-beer": "Upset number three. Miles Hughes has the third most points in the East and an 0-2 record because the schedule has been a mugging. Amon-Ra St. Brown, Kyren Williams, David Montgomery, Dallas Goedert. That team is going to drop 140 on somebody and Englewood just used up its big week with 156.5. Take the live dog."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": true,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": true,
+        "englewood-ninjas-vs-beer": false
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     },
     "earl-hutchinson": {
       "predictorId": "earl-hutchinson",
@@ -129,8 +175,24 @@
         "i-heart-gingers-vs-vancouver-panties": "Lamar Jackson is a grown man playing quarterback and De'Von Achane will outrun your linebackers to the sideline every time. The Gingers have prettier receivers. Receivers do not win you games in September, backs and quarterbacks do. Vancouver.",
         "englewood-ninjas-vs-beer": "Jonathan Taylor is a downhill tailback of the old kind and Brock Purdy does not lose his football team games. Drew has won two straight and put 156.5 on the board last week doing it the honest way. Hughes has more talent and less to show for it, and at some point that stops being bad luck and starts being who you are."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": true,
+        "the-watermark-vs-amon-ra-dawgin": true,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": true,
+        "i-heart-gingers-vs-vancouver-panties": true,
+        "englewood-ninjas-vs-beer": true
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     },
     "priya-nair": {
       "predictorId": "priya-nair",
@@ -152,8 +214,24 @@
         "i-heart-gingers-vs-vancouver-panties": "Vancouver is plus 54.0, the second largest jump in the league behind Doob's. The Gingers are plus 19.1, which is real improvement and still less than half of it. Josh P has found his lineup and Carter has not found his. Rising fast beats rising slowly.",
         "englewood-ninjas-vs-beer": "Englewood is plus 58.2. Beer is minus 5.5 and flat, which is the profile my model likes least: consistent output that consistently is not enough. Drew is the hottest team in the MFGA over the last seven days and I am not going to overthink it because Miles has nicer players."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": true,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": true,
+        "i-heart-gingers-vs-vancouver-panties": true,
+        "englewood-ninjas-vs-beer": true
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     },
     "vinny-esposito": {
       "predictorId": "vinny-esposito",
@@ -175,8 +253,24 @@
         "i-heart-gingers-vs-vancouver-panties": "QB: Lamar over Jordan Love, Vancouver. RB: Achane over Chase Brown, Vancouver. WR: Chase, Higgins, Golden and Diggs over Lamb and Metcalf, Gingers on both quality and depth. TE: LaPorta and Kittle over Pitts and Schultz, Gingers. D/ST: Broncos over Vikings, Gingers. Three to two, Gingers, and the receiver room is the widest single gap in the matchup.",
         "englewood-ninjas-vs-beer": "QB: Stroud and Stafford over Purdy, Beer. RB: five backs including Kyren and Montgomery over Taylor and Dowdle, Beer on depth. WR: Smith-Njigba, Waddle and Godwin over St. Brown and Harrison Jr., Englewood. TE: Brock Bowers over Fannin and Goedert, Englewood. D/ST: two defenses over one, Englewood. Three to two, Englewood."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": true,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": true,
+        "pakistan-bombers-vs-chicago-zestiest": true,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": true
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     },
     "sandy-kowalski": {
       "predictorId": "sandy-kowalski",
@@ -198,8 +292,24 @@
         "i-heart-gingers-vs-vancouver-panties": "Carter Cole is 0-2 with Ja'Marr Chase, Tee Higgins and George Kittle and everybody keeps telling him his roster is fine. That is the most frustrating possible position and week 3 is where it boils over. Josh P is coming off 130.9, his best week by 54, and those are exactly the weeks you do not repeat. Gingers.",
         "englewood-ninjas-vs-beer": "Miles Hughes is 0-2 with the third most points in the East. He has lost twice without doing anything wrong, he is home, and this is the week that stops or the season does. Drew just had his big one at 156.5 and is walking into a buzzsaw nobody is warning him about. Beer."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": true,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": true,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     },
     "marcus-whitfield": {
       "predictorId": "marcus-whitfield",
@@ -221,8 +331,24 @@
         "i-heart-gingers-vs-vancouver-panties": "Four to three on Vancouver and the bonus is off the table, so this is purely which side I want. Lamar Jackson and Achane is a higher ceiling than anything Carter can run out, and Carter has now lost two games with the better receiving corps because of how he sets his lineup. That is a repeating error, not variance.",
         "englewood-ninjas-vs-beer": "Four to three on Englewood. I already spent my aggression in matchup one and the discipline is to stop there, because two lottery tickets in one week is how you finish last, not first. Drew is 2-0 and coming off 156.5. Miles has the better roster and 0-2 is 0-2. Take the winner."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": true,
+        "vile-horrendous-vs-fort-bragg": true,
+        "pakistan-bombers-vs-chicago-zestiest": true,
+        "i-heart-gingers-vs-vancouver-panties": true,
+        "englewood-ninjas-vs-beer": true
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     },
     "destiny-carter": {
       "predictorId": "destiny-carter",
@@ -244,8 +370,25 @@
         "i-heart-gingers-vs-vancouver-panties": "Carter has Ja'Marr Chase, Tee Higgins and George Kittle and zero wins. The cosmos does not leave that imbalance sitting there forever, it corrects, and corrections happen when the frustration peaks. His frustration has peaked. Also his team is named after redheads and the sun is in a fire sign. Gingers.",
         "englewood-ninjas-vs-beer": "Miles is 0-2 and has done nothing to deserve it. Two losses with the third most points in his division is not failure, it is a scheduling cruelty, and the universe keeps a ledger for that. He is home, he is owed, and Amon-Ra is literally a sun god playing receiver for him. Kevin got warm when I asked about this one."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "nabers-in-paris-vs-mount-olympus": true,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": true,
+        "vile-horrendous-vs-fort-bragg": true,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      },
+      "loneWolf": {
+        "nabers-in-paris-vs-mount-olympus": false,
+        "pluto-shraazinatorz-vs-doobs-agency": false,
+        "the-watermark-vs-amon-ra-dawgin": false,
+        "vile-horrendous-vs-fort-bragg": false,
+        "pakistan-bombers-vs-chicago-zestiest": false,
+        "i-heart-gingers-vs-vancouver-panties": false,
+        "englewood-ninjas-vs-beer": false
+      }
     }
-  }
+  },
+  "scoredAt": "2026-09-29T14:41:08.884Z"
 }
