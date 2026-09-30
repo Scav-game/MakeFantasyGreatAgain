@@ -1,0 +1,251 @@
+{
+  "week": 4,
+  "status": "pending",
+  "generatedAt": "2026-09-30T11:25:10.407Z",
+  "dataSource": "espn",
+  "generatedBy": "claude-code-session",
+  "matchups": [
+    {
+      "id": "the-watermark-vs-englewood-ninjas",
+      "away": "the-watermark",
+      "home": "englewood-ninjas",
+      "awayRecord": "3-0",
+      "homeRecord": "3-0",
+      "winner": null
+    },
+    {
+      "id": "pakistan-bombers-vs-vile-horrendous",
+      "away": "pakistan-bombers",
+      "home": "vile-horrendous",
+      "awayRecord": "2-1",
+      "homeRecord": "1-2",
+      "winner": null
+    },
+    {
+      "id": "nabers-in-paris-vs-i-heart-gingers",
+      "away": "nabers-in-paris",
+      "home": "i-heart-gingers",
+      "awayRecord": "0-3",
+      "homeRecord": "0-3",
+      "winner": null
+    },
+    {
+      "id": "mount-olympus-vs-amon-ra-dawgin",
+      "away": "mount-olympus",
+      "home": "amon-ra-dawgin",
+      "awayRecord": "3-0",
+      "homeRecord": "1-2",
+      "winner": null
+    },
+    {
+      "id": "pluto-shraazinatorz-vs-chicago-zestiest",
+      "away": "pluto-shraazinatorz",
+      "home": "chicago-zestiest",
+      "awayRecord": "3-0",
+      "homeRecord": "0-3",
+      "winner": null
+    },
+    {
+      "id": "doobs-agency-vs-vancouver-panties",
+      "away": "doobs-agency",
+      "home": "vancouver-panties",
+      "awayRecord": "2-1",
+      "homeRecord": "2-1",
+      "winner": null
+    },
+    {
+      "id": "fort-bragg-vs-beer",
+      "away": "fort-bragg",
+      "home": "beer",
+      "awayRecord": "1-2",
+      "homeRecord": "0-3",
+      "winner": null
+    }
+  ],
+  "picks": {
+    "gerald-manning": {
+      "predictorId": "gerald-manning",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "the-watermark",
+        "pakistan-bombers-vs-vile-horrendous": "pakistan-bombers",
+        "nabers-in-paris-vs-i-heart-gingers": "i-heart-gingers",
+        "mount-olympus-vs-amon-ra-dawgin": "mount-olympus",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "doobs-agency",
+        "fort-bragg-vs-beer": "beer"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "422.9 points for against 388.8, a 34.1 point gap over three games, or 11.4 per week. Both are 3-0, so the record column tells me nothing and the scoring column tells me Watermark. Gibbs at 98.3 is the single highest running back total in the league. I take the higher expected output.",
+        "pakistan-bombers-vs-vile-horrendous": "Pakistan averages 127.4. Vile Horrendous averages 97.7. A 29.7 point weekly gap is the second largest separation on this slate, and Bijan Robinson at 77.7 plus Trey McBride at 59.1 is a floor Vile does not have. Favorite.",
+        "nabers-in-paris-vs-i-heart-gingers": "Two 0-3 teams, but they are not equivalent 0-3 teams. Gingers have scored 305.4 against 224.8, and their totals have gone up every week: 87.3, 106.4, 111.7. The Starving Ethiopians have not cleared 93 once. This is the easiest call on the board after Pluto.",
+        "mount-olympus-vs-amon-ra-dawgin": "The narrowest margin of the week: 102.6 per game against 98.1. I want that noted. But Amon Ra's sequence is 137.7, 82.2, 74.4, a steady decline, and they currently roster no defense at all. A missing D/ST slot is a structural zero. Mount Olympus, narrowly.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "135.5 per week against 95.6. Pluto has scored at least 125.9 in every game and Chicago has not reached that number since Week 1. Josh Allen at 93.94 is the top quarterback total in the MFGA. There is no statistical case for the other side.",
+        "doobs-agency-vs-vancouver-panties": "392.1 against 323.2, a 23 point weekly edge, and Vancouver has just moved De'Von Achane and Baker Mayfield to injured reserve. Doob's has two quarterbacks above 52 points and Kenneth Walker at 79.2. I take the higher projection.",
+        "fort-bragg-vs-beer": "Beer is 0-3 with 350.5 points for, fifth highest in the league. Fort Bragg is 1-2 with 237.1, and their best week, 87.9, would be below Beer's worst, 108.0. Records regress toward points scored. This one is not close on paper."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "rico-delgado": {
+      "predictorId": "rico-delgado",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "englewood-ninjas",
+        "pakistan-bombers-vs-vile-horrendous": "pakistan-bombers",
+        "nabers-in-paris-vs-i-heart-gingers": "i-heart-gingers",
+        "mount-olympus-vs-amon-ra-dawgin": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "vancouver-panties",
+        "fort-bragg-vs-beer": "beer"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "Everybody is going to pick the Watermark because they lead the league in points and I am telling you right now that is a trap. Jaxon Smith-Njigba has 104 points by himself and Englewood is at home. Two unbeatens, one of them loses, and I am blowing it up on the Ninjas.",
+        "pakistan-bombers-vs-vile-horrendous": "I am not a lunatic, I do not pick upsets just to pick upsets. Pakistan has Bijan and Jeanty and McBride and Vile Horrendous has not cracked 112 all year. Take the favorite, save the dynamite for where it counts.",
+        "nabers-in-paris-vs-i-heart-gingers": "Two 0-3 teams and one of them has Ja'Marr Chase and George Kittle and the other has Bryce Young. I will be contrarian when there is a contrarian case. There is not one here. Gingers.",
+        "mount-olympus-vs-amon-ra-dawgin": "THIS is the upset of the week. Mount Olympus is 3-0 with 307.9 points, which is barely more than Amon Ra's 294.2, and they only scored 89.3 last week. Amon Ra just went out and traded for Josh Downs. That is a man pushing his chips in. I am pushing mine in with him.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "Chicago Zestiest Man is 0-3 and I love a disaster but I do not love this one. Josh Allen and Derrick Henry against Kirk Cousins. Pluto.",
+        "doobs-agency-vs-vancouver-panties": "Second upset. Doob's is favored, Doob's just lost, and Doob's has to go into Vancouver and deal with Lamar Jackson and CeeDee Lamb. Vancouver won last week with a banged up roster. The Panties pull it off and I get my lone wolf money.",
+        "fort-bragg-vs-beer": "Somebody is going to take Fort Bragg because Mahomes and I am telling you it is not me. Fort Bragg has scored 237 points in three weeks. That is not a team, that is a rumor. Beer gets off the schneid."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "earl-hutchinson": {
+      "predictorId": "earl-hutchinson",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "englewood-ninjas",
+        "pakistan-bombers-vs-vile-horrendous": "pakistan-bombers",
+        "nabers-in-paris-vs-i-heart-gingers": "i-heart-gingers",
+        "mount-olympus-vs-amon-ra-dawgin": "mount-olympus",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "doobs-agency",
+        "fort-bragg-vs-beer": "beer"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "I have Brock Purdy under center and Jonathan Taylor carrying the ball, and I will take that every Sunday of my life. The Watermark has the Gibbs boy, and he can fly, but their quarterback is Tyler Shough and I am not riding a young quarterback into a fight between two unbeaten teams. Ninjas at home.",
+        "pakistan-bombers-vs-vile-horrendous": "Two tailbacks, Bijan Robinson and Ashton Jeanty, and Jalen Hurts, who runs it like a fullback when he has to. That is a physical football team. Vile Horrendous is soft in the middle. Bombers.",
+        "nabers-in-paris-vs-i-heart-gingers": "Jordan Love has been doing this a while and Chase Brown runs downhill. The other side has a quarterback room of Bryce Young, Drake Maye and a kid off the waiver wire. You do not win with three quarterbacks, you win with one. Gingers.",
+        "mount-olympus-vs-amon-ra-dawgin": "Christian McCaffrey and Breece Hall in the same backfield with Dak Prescott behind center. That is the most grown-up roster on the field. I do not care that they only scored 89 last week. Tough teams win ugly. Olympus.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "Derrick Henry. I could stop there. Josh Allen too. Pluto runs you over and then runs you over again. Chicago has a lot of receivers and not much of a spine.",
+        "doobs-agency-vs-vancouver-panties": "Saquon Barkley and Kenneth Walker, and Walker has 79 points already, which is the kind of number that wins you a conference. Vancouver lost their tailback, Achane, to the injury list. When you lose your tailback you lose your identity. Doob's.",
+        "fort-bragg-vs-beer": "Kyren Williams and David Montgomery, two tailbacks who finish runs. Matthew Stafford is a veteran who has seen everything. Fort Bragg has Mahomes and a pile of backups at running back. You cannot hand the ball to a pile. Beer."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "priya-nair": {
+      "predictorId": "priya-nair",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "the-watermark",
+        "pakistan-bombers-vs-vile-horrendous": "pakistan-bombers",
+        "nabers-in-paris-vs-i-heart-gingers": "i-heart-gingers",
+        "mount-olympus-vs-amon-ra-dawgin": "mount-olympus",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "vancouver-panties",
+        "fort-bragg-vs-beer": "beer"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "Both 3-0, so I went to the rolling average: Watermark at 141.0, Englewood at 129.6. Englewood's trend is up and I respect it, but the Watermark bounced from 114.5 back to 142.7 last week, so the dip was noise, not a trend break. Model says Watermark by about 11.",
+        "pakistan-bombers-vs-vile-horrendous": "Pakistan just posted 140.3, their best week of the year, and a 54 point beatdown of Chicago. Vile did win, but 111 is their ceiling so far and Pakistan's floor is 102.5. The hot team is the Bombers.",
+        "nabers-in-paris-vs-i-heart-gingers": "This is the cleanest trend split in the data. Gingers have gone up every single week, 87.3 to 106.4 to 111.7. The Starving Ethiopians went 92.8 to 62.2 to 69.7. Two 0-3 teams, one is climbing and one is stuck. Gingers.",
+        "mount-olympus-vs-amon-ra-dawgin": "Mount Olympus is dipping, 113.5 down to 89.3, and I flagged it. But Amon Ra is in free fall: 137.7, 82.2, 74.4, and they just lost by 68. My rule is to pick against the team that just lost, and Amon Ra lost worse than anyone in the league. Olympus.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "Pluto just put up 146.1, a season high, and beat a 2-0 team to do it. Chicago is 0-3 and just scored 86. Every signal in my model points the same direction. Pluto.",
+        "doobs-agency-vs-vancouver-panties": "This is where the model disagrees with the season totals. Doob's lost last week and my rule is to fade the team that just lost. Vancouver has won two straight after a 76.9 opener, and 130.9 and 115.4 is a real trend. Momentum says Vancouver.",
+        "fort-bragg-vs-beer": "Both teams lost last week, so I go to the rolling numbers: Beer is at 116.8 per game, Fort Bragg at 79.0. Fort Bragg is technically trending up but from a very low base. Beer lost by 5 last week. That is not a bad team, that is an unlucky one."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "vinny-esposito": {
+      "predictorId": "vinny-esposito",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "englewood-ninjas",
+        "pakistan-bombers-vs-vile-horrendous": "pakistan-bombers",
+        "nabers-in-paris-vs-i-heart-gingers": "i-heart-gingers",
+        "mount-olympus-vs-amon-ra-dawgin": "mount-olympus",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "vancouver-panties",
+        "fort-bragg-vs-beer": "beer"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "QB: Purdy, 80.86 against Shough's 69.38, Englewood. RB: Gibbs and Swift, Watermark, not close. WR: Smith-Njigba at 104 plus Waddle over Olave and Robinson, Englewood. TE: Bowers over Henry, Englewood. D/ST: Chargers and 49ers over Rams, Englewood. Ninjas win 4 of 5.",
+        "pakistan-bombers-vs-vile-horrendous": "QB: Hurts over Herbert, Pakistan. RB: Bijan and Jeanty over Cook and Love, Pakistan. WR: Garrett Wilson and Jalen Coker have outscored Pakistan's top two, so Vile. TE: McBride over Kelce, Pakistan. D/ST: Ravens over Texans, Vile. Bombers win it 3 to 2.",
+        "nabers-in-paris-vs-i-heart-gingers": "QB: Bryce Young has 69.16, Love has 51.76, Starving. RB: Chase Brown and Stevenson against Hubbard and Irving, Starving, they have scored more. WR: Chase, Higgins and Golden, Gingers, easily. TE: Kittle and LaPorta over Kraft, Gingers. D/ST: Broncos over Eagles, Gingers. Gingers 3 to 2, closer than you would think.",
+        "mount-olympus-vs-amon-ra-dawgin": "QB: Prescott over Lawrence, Olympus. RB: McCaffrey and Hall over Williams and Hampton, Olympus. WR: Jefferson, Downs and Roman Wilson over Rice and Burden, Amon Ra. TE: Kincaid over Hockenson, Amon Ra. D/ST: Chiefs against nobody, because Amon Ra does not roster a defense. Olympus 3 to 2, and that last one is a forfeit.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "QB: Allen over Cousins, Pluto. RB: Henry and Warren over Tuten and Harvey, Pluto. WR: Evans and Meyers over London and Pickens, Chicago. TE: Juwan Johnson over Sadiq, Pluto. D/ST: Jaguars over Steelers, a coin flip, I give it to Chicago. Pluto 3 to 2.",
+        "doobs-agency-vs-vancouver-panties": "QB: Lamar over Burrow, Vancouver. RB: Walker and Barkley over Skattebo, Doob's. WR: Lamb and Parker Washington over Watson and Adams, Vancouver, narrowly. TE: Schultz and Warren are a tenth of a point apart, 39.5 to 39.4, and Warren gets the targets, so Doob's. D/ST: Vikings at 40 over Patriots, Vancouver. Vancouver 3 to 2.",
+        "fort-bragg-vs-beer": "QB: Mahomes over Stafford, Fort Bragg. RB: Kyren Williams and Montgomery over Pollard and White, Beer. WR: St. Brown and McConkey over Moore and Deebo, Beer. TE: Fannin over Andrews, Beer. D/ST: Seahawks at 28 over Lions at 8, Fort Bragg. Beer 3 to 2."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "sandy-kowalski": {
+      "predictorId": "sandy-kowalski",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "englewood-ninjas",
+        "pakistan-bombers-vs-vile-horrendous": "vile-horrendous",
+        "nabers-in-paris-vs-i-heart-gingers": "i-heart-gingers",
+        "mount-olympus-vs-amon-ra-dawgin": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "doobs-agency",
+        "fort-bragg-vs-beer": "beer"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "Two undefeated teams, and one of them gets to host it. Englewood just survived a 5 point game against Beer, which is the kind of close call that sharpens a team. The Watermark has been winning comfortably, and comfortable teams walk into a road game like this a little too relaxed. Ninjas at home.",
+        "pakistan-bombers-vs-vile-horrendous": "This is my situational special. Vile Horrendous just got their first win of the season and they get to come home and build on it. Pakistan just sold a starting receiver, Josh Downs, for a future pick, and when a front office starts thinking about next year the locker room notices. Letdown spot for the Bombers.",
+        "nabers-in-paris-vs-i-heart-gingers": "The desperation bowl. Somebody leaves 0-4. The Gingers are at home and they lost a close one last week, 115.4 to 111.7, which stings in a way that motivates you. The Starving Ethiopians lost by 20 and look like a team that has stopped planning the party.",
+        "mount-olympus-vs-amon-ra-dawgin": "Amon Ra is 1-2, at home, and just made a trade to go get Josh Downs. That is a must-win team telling you it knows it is a must-win week. Mount Olympus is 3-0 and scored 89 last week, which is exactly what a team looks like right before the trap springs. Amon Ra.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "I looked for the angle on Chicago, I really did. They are 0-3 and at home. But Pluto just beat an undefeated Doob's team and they are playing loose and confident. Sometimes the situation is just that one team is rolling. Pluto.",
+        "doobs-agency-vs-vancouver-panties": "Bounce-back spot. Doob's lost their first game of the year to Pluto and they will be angry about it, and an angry good team is a dangerous thing. Vancouver just lost Achane and Mayfield to injured reserve in the same week, and that is a hard thing to rally from on short notice.",
+        "fort-bragg-vs-beer": "Beer is 0-3, lost by 5 points last week, and is home. This is the week the dam breaks. Fort Bragg has scored under 90 every single week and just lost their second game. Nobody on that roster is in a good mood right now."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "destiny-carter": {
+      "predictorId": "destiny-carter",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "the-watermark",
+        "pakistan-bombers-vs-vile-horrendous": "vile-horrendous",
+        "nabers-in-paris-vs-i-heart-gingers": "nabers-in-paris",
+        "mount-olympus-vs-amon-ra-dawgin": "amon-ra-dawgin",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "doobs-agency",
+        "fort-bragg-vs-beer": "beer"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "Water finds its way through everything, and the Watermark has been flowing all season. Three wins and the most points in the league. You do not stand in front of a river, you let it pass. The universe is on the Watermark's side this week.",
+        "pakistan-bombers-vs-vile-horrendous": "Vile Horrendous finally felt what winning feels like last week, and that first win changes a team's whole aura. Pakistan traded away Josh Downs and the energy in that locker room shifted. I felt it in my morning practice. Vile.",
+        "nabers-in-paris-vs-i-heart-gingers": "This team renamed itself the Starving Ethiopians, and I think the universe has been answering that energy for three straight weeks. But karma turns, and a team at the absolute bottom has nowhere to go but up. This is the week they get their bounce back. I trust it.",
+        "mount-olympus-vs-amon-ra-dawgin": "Amon Ra just made the bold move of the week, going out and getting Josh Downs, and bold moves send out a signal the cosmos responds to. Mount Olympus has been winning, but their energy dropped to 89 points last week. The mountain is cooling. Amon Ra rises.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "They took Pluto's planet status away and Pluto responded by going 3-0. That is the energy of a team that has been told it does not belong and refuses to listen. You do not bet against that kind of spirit.",
+        "doobs-agency-vs-vancouver-panties": "Vancouver's energy is scattered right now. Two players on injured reserve in the same week is the universe asking a team to slow down. Doob's lost last week and has been sitting with that, and a team that has had time to reflect comes back centered. Doob's.",
+        "fort-bragg-vs-beer": "Beer has been so close, losing by 5 last week, and when a team keeps knocking on the door, the door eventually opens. Fort Bragg carries heavy energy with two players on the injury list. Beer is due, and the universe settles what is due."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "marcus-whitfield": {
+      "predictorId": "marcus-whitfield",
+      "picks": {
+        "the-watermark-vs-englewood-ninjas": "the-watermark",
+        "pakistan-bombers-vs-vile-horrendous": "pakistan-bombers",
+        "nabers-in-paris-vs-i-heart-gingers": "i-heart-gingers",
+        "mount-olympus-vs-amon-ra-dawgin": "mount-olympus",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "pluto-shraazinatorz",
+        "doobs-agency-vs-vancouver-panties": "doobs-agency",
+        "fort-bragg-vs-beer": "fort-bragg"
+      },
+      "reasoning": {
+        "the-watermark-vs-englewood-ninjas": "Four for Englewood, three for the Watermark, and Earl, who I am chasing, is on Englewood. A 4-3 split means the table has no read on this game, so I take the side the leader is not on. If the Watermark covers the points-per-game gap I gain a point on Earl for free.",
+        "pakistan-bombers-vs-vile-horrendous": "Five to two for the Bombers, and the two are Sandy and Destiny, who are last and seventh for a reason. No edge in fading this. I take the chalk and keep my variance for the spots that pay.",
+        "nabers-in-paris-vs-i-heart-gingers": "Six to one Gingers, and the one is Destiny on the Starving Ethiopians. If that hits she takes three points, and I am not paying to chase it with a team that has not cleared 93 all year. Gingers.",
+        "mount-olympus-vs-amon-ra-dawgin": "Four to three for Mount Olympus, and the three are Rico, Sandy and Destiny, which is the upset caucus. Amon Ra has no defense on the roster. That is a real hole the crowd is ignoring. I stay with the majority here.",
+        "pluto-shraazinatorz-vs-chicago-zestiest": "Seven to nothing for Pluto, so Chicago is a lone wolf ticket worth four points. It is also a team that has lost to everybody. Some free money is not free. Pluto, and I will take my lone wolf shot somewhere with a real quarterback.",
+        "doobs-agency-vs-vancouver-panties": "Four to three for Doob's. Rico, Priya and Vinny are on Vancouver, Earl is on Doob's. Normally I would split from the leader on a coin flip, but I already did that once this week and Vancouver just lost Achane. One contrarian play on a close game is plenty. Doob's.",
+        "fort-bragg-vs-beer": "Seven to nothing for Beer. That is my lone wolf. Everyone is looking at Fort Bragg's 237 points for and nobody is looking at the fact that they have Patrick Mahomes and a Seahawks defense with 28 points, while Beer's defense has 8 points all season. I am four points behind the leader and I need a hand that pays. Fort Bragg for the solo pot."
+      },
+      "correct": null,
+      "loneWolf": null
+    }
+  }
+}
