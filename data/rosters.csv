@@ -3,8 +3,9 @@ amon-ra-dawgin,QB,Trevor Lawrence,JAX,52.04
 amon-ra-dawgin,RB,Chris Rodriguez Jr.,JAX,13.3
 amon-ra-dawgin,RB,Javonte Williams,DAL,50.5
 amon-ra-dawgin,RB,Kaelon Black,SF,12.2
-amon-ra-dawgin,RB,Omarion Hampton,LAC,31.4
+amon-ra-dawgin,RB,Rachaad White,WSH,30.1
 amon-ra-dawgin,WR,Carnell Tate,TEN,25.3
+amon-ra-dawgin,WR,Devaughn Vele,NO,38.2
 amon-ra-dawgin,WR,Jayden Reed,GB,6.4
 amon-ra-dawgin,WR,Josh Downs,IND,32.6
 amon-ra-dawgin,WR,Justin Jefferson,MIN,44.9
@@ -93,19 +94,19 @@ englewood-ninjas,IR,Jake Tonges,SF,
 fort-bragg,QB,Daniel Jones,IND,28.34
 fort-bragg,QB,Deshaun Watson,CLE,53.98
 fort-bragg,QB,Patrick Mahomes,KC,66.58
-fort-bragg,RB,Devin Singletary,NYG,14.7
 fort-bragg,RB,Jaylen Wright,MIA,1
 fort-bragg,RB,Kendre Miller,NO,12.9
 fort-bragg,RB,MarShawn Lloyd,GB,16.1
-fort-bragg,RB,Rachaad White,WSH,30.1
+fort-bragg,RB,Omarion Hampton,LAC,31.4
 fort-bragg,RB,Tony Pollard,TEN,25.5
 fort-bragg,WR,Chris Bell,MIA,14.2
 fort-bragg,WR,Deebo Samuel Sr.,SF,39.9
-fort-bragg,WR,Devaughn Vele,NO,38.2
 fort-bragg,WR,DJ Moore,BUF,33.6
 fort-bragg,WR,Keon Coleman,BUF,18.1
 fort-bragg,WR,Malachi Fields,NYG,13.4
+fort-bragg,WR,Skyy Moore,GB,8.7
 fort-bragg,TE,Mark Andrews,BAL,25.2
+fort-bragg,TE,Noah Fant,NO,32.6
 fort-bragg,D/ST,Seahawks D/ST,SEA,28
 fort-bragg,K,Ka'imi Fairbairn,HOU,20
 fort-bragg,IR,Josh Jacobs,GB,
@@ -167,6 +168,8 @@ pakistan-bombers,QB,Jalen Hurts,PHI,53.5
 pakistan-bombers,QB,Marcus Mariota,WSH,29.16
 pakistan-bombers,RB,Ashton Jeanty,LV,55.3
 pakistan-bombers,RB,Bijan Robinson,ATL,77.7
+pakistan-bombers,RB,Raheim Sanders,CLE,16.8
+pakistan-bombers,RB,Sione Vaki,DET,10.5
 pakistan-bombers,WR,Denzel Boston,CLE,42.5
 pakistan-bombers,WR,DeVonta Smith,PHI,48.5
 pakistan-bombers,WR,Michael Wilson,ARI,40.3
