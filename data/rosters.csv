@@ -6,11 +6,12 @@ amon-ra-dawgin,RB,Kaelon Black,SF,12.2
 amon-ra-dawgin,RB,Omarion Hampton,LAC,31.4
 amon-ra-dawgin,WR,Carnell Tate,TEN,25.3
 amon-ra-dawgin,WR,Jayden Reed,GB,6.4
+amon-ra-dawgin,WR,Josh Downs,IND,32.6
 amon-ra-dawgin,WR,Justin Jefferson,MIN,44.9
 amon-ra-dawgin,WR,KC Concepcion,CLE,18.9
 amon-ra-dawgin,WR,Kendrick Bourne,ARI,22.8
 amon-ra-dawgin,WR,Makai Lemon,PHI,10.3
-amon-ra-dawgin,WR,Pat Bryant,DEN,24.2
+amon-ra-dawgin,WR,Roman Wilson,PIT,28.4
 amon-ra-dawgin,WR,Tre' Harris,LAC,24.9
 amon-ra-dawgin,TE,Dalton Kincaid,BUF,44.3
 amon-ra-dawgin,TE,Evan Engram,DEN,17
@@ -37,6 +38,8 @@ beer,IR,Zach Charbonnet,SEA,
 chicago-zestiest,QB,Kirk Cousins,LV,56.24
 chicago-zestiest,QB,Kyler Murray,MIN,10.04
 chicago-zestiest,RB,Bhayshul Tuten,JAX,41
+chicago-zestiest,RB,Isaiah Davis,NYJ,
+chicago-zestiest,RB,Ollie Gordon II,MIA,15.2
 chicago-zestiest,RB,RJ Harvey,DEN,18.8
 chicago-zestiest,RB,TreVeyon Henderson,NE,17.5
 chicago-zestiest,WR,Emeka Egbuka,TB,32.8
@@ -88,19 +91,19 @@ englewood-ninjas,D/ST,Chargers D/ST,LAC,17
 englewood-ninjas,K,Eddy Pineiro,SF,23
 englewood-ninjas,IR,Jake Tonges,SF,
 fort-bragg,QB,Patrick Mahomes,KC,66.58
-fort-bragg,RB,Chris Brooks,GB,7.9
 fort-bragg,RB,Devin Singletary,NYG,14.7
 fort-bragg,RB,Eli Heidenreich,PIT,
-fort-bragg,RB,Kaleb Johnson,GB,5.8
+fort-bragg,RB,Jaylen Wright,MIA,1
+fort-bragg,RB,Kendre Miller,NO,12.9
 fort-bragg,RB,MarShawn Lloyd,GB,16.1
 fort-bragg,RB,Rachaad White,WSH,30.1
 fort-bragg,RB,Tony Pollard,TEN,25.5
+fort-bragg,WR,Chris Bell,MIA,14.2
 fort-bragg,WR,Deebo Samuel Sr.,SF,39.9
 fort-bragg,WR,Devaughn Vele,NO,38.2
 fort-bragg,WR,DJ Moore,BUF,33.6
 fort-bragg,WR,Keon Coleman,BUF,18.1
 fort-bragg,WR,Malachi Fields,NYG,13.4
-fort-bragg,TE,Cade Otton,TB,23
 fort-bragg,TE,Mark Andrews,BAL,25.2
 fort-bragg,D/ST,Seahawks D/ST,SEA,28
 fort-bragg,K,Ka'imi Fairbairn,HOU,20
@@ -141,6 +144,7 @@ mount-olympus,K,Harrison Butker,KC,28
 mount-olympus,IR,Jayden Higgins,HOU,
 nabers-in-paris,QB,Bryce Young,CAR,69.16
 nabers-in-paris,QB,Drake Maye,NE,21.6
+nabers-in-paris,QB,J.J. McCarthy,NYG,
 nabers-in-paris,RB,Blake Corum,LAR,19.1
 nabers-in-paris,RB,Bucky Irving,TB,41.1
 nabers-in-paris,RB,Chuba Hubbard,CAR,53.1
@@ -159,18 +163,18 @@ nabers-in-paris,K,Jake Bates,DET,21
 nabers-in-paris,IR,A.J. Brown,NE,5.6
 nabers-in-paris,IR,Isiah Pacheco,DET,
 pakistan-bombers,QB,Jalen Hurts,PHI,53.5
-pakistan-bombers,QB,Michael Penix Jr.,ATL,14.04
+pakistan-bombers,QB,Marcus Mariota,WSH,29.16
 pakistan-bombers,RB,Ashton Jeanty,LV,55.3
 pakistan-bombers,RB,Bijan Robinson,ATL,77.7
 pakistan-bombers,WR,Denzel Boston,CLE,42.5
 pakistan-bombers,WR,DeVonta Smith,PHI,48.5
-pakistan-bombers,WR,Josh Downs,IND,32.6
 pakistan-bombers,WR,Michael Wilson,ARI,40.3
 pakistan-bombers,WR,Puka Nacua,LAR,12.4
 pakistan-bombers,WR,Ryan Flournoy,DAL,15.7
 pakistan-bombers,WR,Zay Flowers,BAL,41.4
 pakistan-bombers,TE,Trey McBride,ARI,59.1
 pakistan-bombers,TE,Zach Ertz,PHI,1.9
+pakistan-bombers,D/ST,Bears D/ST,CHI,23
 pakistan-bombers,D/ST,Texans D/ST,HOU,13
 pakistan-bombers,K,Chris Boswell,PIT,25
 pakistan-bombers,K,Tyler Loop,BAL,31
@@ -190,9 +194,9 @@ pluto-shraazinatorz,TE,Jake Ferguson,DAL,32.2
 pluto-shraazinatorz,TE,Juwan Johnson,NO,52.3
 pluto-shraazinatorz,TE,Oronde Gadsden,LAC,15
 pluto-shraazinatorz,D/ST,Bengals D/ST,CIN,27
+pluto-shraazinatorz,D/ST,Bills D/ST,BUF,12
 pluto-shraazinatorz,D/ST,Jaguars D/ST,JAX,28
-pluto-shraazinatorz,D/ST,Packers D/ST,GB,5
-pluto-shraazinatorz,K,Cameron Dicker,LAC,12
+pluto-shraazinatorz,K,Evan McPherson,CIN,42
 pluto-shraazinatorz,K,Trey Smack,GB,22
 the-watermark,QB,Tyler Shough,NO,69.38
 the-watermark,RB,Braelon Allen,NYJ,17.2
@@ -226,8 +230,8 @@ vancouver-panties,D/ST,Vikings D/ST,MIN,40
 vancouver-panties,K,Brandon Aubrey,DAL,29
 vancouver-panties,IR,Baker Mayfield,TB,35.1
 vancouver-panties,IR,De'Von Achane,MIA,24.6
+vile-horrendous,QB,Geno Smith,NYJ,50.92
 vile-horrendous,QB,Justin Herbert,LAC,33.88
-vile-horrendous,QB,Malik Willis,MIA,39.18
 vile-horrendous,RB,James Cook III,BUF,50.2
 vile-horrendous,RB,Jeremiyah Love,ARI,42.4
 vile-horrendous,RB,Mike Washington Jr.,LV,16.2
