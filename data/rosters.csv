@@ -1,8 +1,8 @@
 teamSlug,pos,name,nflTeam,points
 amon-ra-dawgin,QB,Trevor Lawrence,JAX,52.04
-amon-ra-dawgin,RB,Chris Rodriguez Jr.,JAX,13.3
 amon-ra-dawgin,RB,Javonte Williams,DAL,50.5
 amon-ra-dawgin,RB,Kaelon Black,SF,12.2
+amon-ra-dawgin,RB,Kaleb Johnson,GB,5.8
 amon-ra-dawgin,RB,Rachaad White,WSH,30.1
 amon-ra-dawgin,WR,Carnell Tate,TEN,25.3
 amon-ra-dawgin,WR,Devaughn Vele,NO,38.2
@@ -10,12 +10,12 @@ amon-ra-dawgin,WR,Jayden Reed,GB,6.4
 amon-ra-dawgin,WR,Josh Downs,IND,32.6
 amon-ra-dawgin,WR,Justin Jefferson,MIN,44.9
 amon-ra-dawgin,WR,KC Concepcion,CLE,18.9
-amon-ra-dawgin,WR,Kendrick Bourne,ARI,22.8
 amon-ra-dawgin,WR,Makai Lemon,PHI,10.3
 amon-ra-dawgin,WR,Roman Wilson,PIT,28.4
 amon-ra-dawgin,WR,Tre' Harris,LAC,24.9
 amon-ra-dawgin,TE,Dalton Kincaid,BUF,44.3
 amon-ra-dawgin,TE,Evan Engram,DEN,17
+amon-ra-dawgin,D/ST,Packers D/ST,GB,5
 amon-ra-dawgin,K,Jake Elliott,PHI,15
 amon-ra-dawgin,IR,Alec Pierce,IND,12.2
 beer,QB,C.J. Stroud,HOU,45.16
@@ -59,20 +59,20 @@ doobs-agency,QB,Jared Goff,DET,65.58
 doobs-agency,QB,Joe Burrow,CIN,52.92
 doobs-agency,RB,Alvin Kamara,NO,12.3
 doobs-agency,RB,George Holani,SEA,16.2
-doobs-agency,RB,Jonathon Brooks,CAR,9.3
 doobs-agency,RB,Kenneth Walker III,KC,79.2
 doobs-agency,RB,Saquon Barkley,PHI,21
+doobs-agency,RB,Ty Johnson,BUF,9
 doobs-agency,WR,Christian Watson,GB,69.4
 doobs-agency,WR,Cooper Kupp,SEA,24.1
 doobs-agency,WR,Davante Adams,LAR,65.8
 doobs-agency,WR,Keenan Allen,IND,29
+doobs-agency,WR,Michael Pittman Jr.,PIT,12.4
 doobs-agency,WR,Tetairoa McMillan,CAR,29.3
 doobs-agency,WR,Xavier Legette,CAR,8.4
 doobs-agency,TE,Tyler Warren,IND,39.4
 doobs-agency,D/ST,Patriots D/ST,NE,27
 doobs-agency,K,Andy Borregales,NE,20
-doobs-agency,IR,Michael Pittman Jr.,PIT,12.4
-doobs-agency,IR,Ty Johnson,BUF,9
+doobs-agency,IR,Jonathon Brooks,CAR,9.3
 englewood-ninjas,QB,Brock Purdy,SF,80.86
 englewood-ninjas,QB,Jacoby Brissett,ARI,48.58
 englewood-ninjas,RB,Brian Robinson Jr.,ATL,22.8
