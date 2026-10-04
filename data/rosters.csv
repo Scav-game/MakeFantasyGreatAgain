@@ -92,17 +92,17 @@ englewood-ninjas,D/ST,Chargers D/ST,LAC,17
 englewood-ninjas,K,Eddy Pineiro,SF,23
 englewood-ninjas,IR,Jake Tonges,SF,
 englewood-ninjas,IR,Rico Dowdle,PIT,10.5
-fort-bragg,QB,Daniel Jones,IND,28.34
 fort-bragg,QB,Deshaun Watson,CLE,66.9
 fort-bragg,QB,Patrick Mahomes,KC,66.58
 fort-bragg,RB,Jaylen Wright,MIA,1
 fort-bragg,RB,Kendre Miller,NO,12.9
-fort-bragg,RB,MarShawn Lloyd,GB,16.1
 fort-bragg,RB,Omarion Hampton,LAC,31.4
 fort-bragg,RB,Tony Pollard,TEN,25.5
+fort-bragg,WR,Brycen Tremayne,CAR,12.3
 fort-bragg,WR,Chris Bell,MIA,14.2
 fort-bragg,WR,Deebo Samuel Sr.,SF,39.9
 fort-bragg,WR,DJ Moore,BUF,33.6
+fort-bragg,WR,Jauan Jennings,MIN,1.1
 fort-bragg,WR,Keon Coleman,BUF,18.1
 fort-bragg,WR,Malachi Fields,NYG,13.4
 fort-bragg,WR,Skyy Moore,GB,8.7
@@ -207,7 +207,6 @@ the-watermark,QB,Tyler Shough,NO,69.38
 the-watermark,RB,Braelon Allen,NYJ,17.2
 the-watermark,RB,D'Andre Swift,CHI,56.1
 the-watermark,RB,Emanuel Wilson,SEA,10.9
-the-watermark,RB,Jadarian Price,SEA,14
 the-watermark,RB,Jahmyr Gibbs,DET,98.3
 the-watermark,WR,Chris Olave,NO,70.5
 the-watermark,WR,Kalif Raymond,CHI,46.4
@@ -220,6 +219,7 @@ the-watermark,TE,Hunter Henry,NE,14.1
 the-watermark,D/ST,Rams D/ST,LAR,17
 the-watermark,K,Chase McLaughlin,TB,39
 the-watermark,IR,Caleb Williams,CHI,44.98
+the-watermark,IR,Jadarian Price,SEA,14
 vancouver-panties,QB,Lamar Jackson,BAL,60.2
 vancouver-panties,RB,Cam Skattebo,NYG,36.6
 vancouver-panties,RB,Kenny Gainwell,TB,10.3
