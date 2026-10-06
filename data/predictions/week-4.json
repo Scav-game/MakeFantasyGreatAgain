@@ -1,6 +1,6 @@
 {
   "week": 4,
-  "status": "pending",
+  "status": "complete",
   "generatedAt": "2026-09-30T11:25:10.407Z",
   "dataSource": "espn",
   "generatedBy": "claude-code-session",
@@ -11,7 +11,9 @@
       "home": "englewood-ninjas",
       "awayRecord": "3-0",
       "homeRecord": "3-0",
-      "winner": null
+      "winner": "englewood-ninjas",
+      "awayScore": 87.5,
+      "homeScore": 130.5
     },
     {
       "id": "pakistan-bombers-vs-vile-horrendous",
@@ -19,7 +21,9 @@
       "home": "vile-horrendous",
       "awayRecord": "2-1",
       "homeRecord": "1-2",
-      "winner": null
+      "winner": "pakistan-bombers",
+      "awayScore": 151.9,
+      "homeScore": 99.4
     },
     {
       "id": "nabers-in-paris-vs-i-heart-gingers",
@@ -27,7 +31,9 @@
       "home": "i-heart-gingers",
       "awayRecord": "0-3",
       "homeRecord": "0-3",
-      "winner": null
+      "winner": "i-heart-gingers",
+      "awayScore": 114.6,
+      "homeScore": 115.5
     },
     {
       "id": "mount-olympus-vs-amon-ra-dawgin",
@@ -35,7 +41,9 @@
       "home": "amon-ra-dawgin",
       "awayRecord": "3-0",
       "homeRecord": "1-2",
-      "winner": null
+      "winner": "amon-ra-dawgin",
+      "awayScore": 106.8,
+      "homeScore": 111.8
     },
     {
       "id": "pluto-shraazinatorz-vs-chicago-zestiest",
@@ -43,7 +51,9 @@
       "home": "chicago-zestiest",
       "awayRecord": "3-0",
       "homeRecord": "0-3",
-      "winner": null
+      "winner": "pluto-shraazinatorz",
+      "awayScore": 130.1,
+      "homeScore": 90.9
     },
     {
       "id": "doobs-agency-vs-vancouver-panties",
@@ -51,7 +61,9 @@
       "home": "vancouver-panties",
       "awayRecord": "2-1",
       "homeRecord": "2-1",
-      "winner": null
+      "winner": "doobs-agency",
+      "awayScore": 133.8,
+      "homeScore": 119.9
     },
     {
       "id": "fort-bragg-vs-beer",
@@ -59,7 +71,9 @@
       "home": "beer",
       "awayRecord": "1-2",
       "homeRecord": "0-3",
-      "winner": null
+      "winner": "fort-bragg",
+      "awayScore": 107.5,
+      "homeScore": 104.5
     }
   ],
   "picks": {
@@ -83,8 +97,24 @@
         "doobs-agency-vs-vancouver-panties": "392.1 against 323.2, a 23 point weekly edge, and Vancouver has just moved De'Von Achane and Baker Mayfield to injured reserve. Doob's has two quarterbacks above 52 points and Kenneth Walker at 79.2. I take the higher projection.",
         "fort-bragg-vs-beer": "Beer is 0-3 with 350.5 points for, fifth highest in the league. Fort Bragg is 1-2 with 237.1, and their best week, 87.9, would be below Beer's worst, 108.0. Records regress toward points scored. This one is not close on paper."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": true,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": true,
+        "fort-bragg-vs-beer": false
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      }
     },
     "rico-delgado": {
       "predictorId": "rico-delgado",
@@ -106,8 +136,24 @@
         "doobs-agency-vs-vancouver-panties": "Second upset. Doob's is favored, Doob's just lost, and Doob's has to go into Vancouver and deal with Lamar Jackson and CeeDee Lamb. Vancouver won last week with a banged up roster. The Panties pull it off and I get my lone wolf money.",
         "fort-bragg-vs-beer": "Somebody is going to take Fort Bragg because Mahomes and I am telling you it is not me. Fort Bragg has scored 237 points in three weeks. That is not a team, that is a rumor. Beer gets off the schneid."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": true,
+        "pakistan-bombers-vs-vile-horrendous": true,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": true,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      }
     },
     "earl-hutchinson": {
       "predictorId": "earl-hutchinson",
@@ -129,8 +175,24 @@
         "doobs-agency-vs-vancouver-panties": "Saquon Barkley and Kenneth Walker, and Walker has 79 points already, which is the kind of number that wins you a conference. Vancouver lost their tailback, Achane, to the injury list. When you lose your tailback you lose your identity. Doob's.",
         "fort-bragg-vs-beer": "Kyren Williams and David Montgomery, two tailbacks who finish runs. Matthew Stafford is a veteran who has seen everything. Fort Bragg has Mahomes and a pile of backups at running back. You cannot hand the ball to a pile. Beer."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": true,
+        "pakistan-bombers-vs-vile-horrendous": true,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": true,
+        "fort-bragg-vs-beer": false
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      }
     },
     "priya-nair": {
       "predictorId": "priya-nair",
@@ -152,8 +214,24 @@
         "doobs-agency-vs-vancouver-panties": "This is where the model disagrees with the season totals. Doob's lost last week and my rule is to fade the team that just lost. Vancouver has won two straight after a 76.9 opener, and 130.9 and 115.4 is a real trend. Momentum says Vancouver.",
         "fort-bragg-vs-beer": "Both teams lost last week, so I go to the rolling numbers: Beer is at 116.8 per game, Fort Bragg at 79.0. Fort Bragg is technically trending up but from a very low base. Beer lost by 5 last week. That is not a bad team, that is an unlucky one."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": true,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      }
     },
     "vinny-esposito": {
       "predictorId": "vinny-esposito",
@@ -175,8 +253,24 @@
         "doobs-agency-vs-vancouver-panties": "QB: Lamar over Burrow, Vancouver. RB: Walker and Barkley over Skattebo, Doob's. WR: Lamb and Parker Washington over Watson and Adams, Vancouver, narrowly. TE: Schultz and Warren are a tenth of a point apart, 39.5 to 39.4, and Warren gets the targets, so Doob's. D/ST: Vikings at 40 over Patriots, Vancouver. Vancouver 3 to 2.",
         "fort-bragg-vs-beer": "QB: Mahomes over Stafford, Fort Bragg. RB: Kyren Williams and Montgomery over Pollard and White, Beer. WR: St. Brown and McConkey over Moore and Deebo, Beer. TE: Fannin over Andrews, Beer. D/ST: Seahawks at 28 over Lions at 8, Fort Bragg. Beer 3 to 2."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": true,
+        "pakistan-bombers-vs-vile-horrendous": true,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      }
     },
     "sandy-kowalski": {
       "predictorId": "sandy-kowalski",
@@ -198,8 +292,24 @@
         "doobs-agency-vs-vancouver-panties": "Bounce-back spot. Doob's lost their first game of the year to Pluto and they will be angry about it, and an angry good team is a dangerous thing. Vancouver just lost Achane and Mayfield to injured reserve in the same week, and that is a hard thing to rally from on short notice.",
         "fort-bragg-vs-beer": "Beer is 0-3, lost by 5 points last week, and is home. This is the week the dam breaks. Fort Bragg has scored under 90 every single week and just lost their second game. Nobody on that roster is in a good mood right now."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": true,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": true,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": true,
+        "fort-bragg-vs-beer": false
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      }
     },
     "destiny-carter": {
       "predictorId": "destiny-carter",
@@ -221,8 +331,24 @@
         "doobs-agency-vs-vancouver-panties": "Vancouver's energy is scattered right now. Two players on injured reserve in the same week is the universe asking a team to slow down. Doob's lost last week and has been sitting with that, and a team that has had time to reflect comes back centered. Doob's.",
         "fort-bragg-vs-beer": "Beer has been so close, losing by 5 last week, and when a team keeps knocking on the door, the door eventually opens. Fort Bragg carries heavy energy with two players on the injury list. Beer is due, and the universe settles what is due."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": true,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": true,
+        "fort-bragg-vs-beer": false
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": false
+      }
     },
     "marcus-whitfield": {
       "predictorId": "marcus-whitfield",
@@ -244,8 +370,25 @@
         "doobs-agency-vs-vancouver-panties": "Four to three for Doob's. Rico, Priya and Vinny are on Vancouver, Earl is on Doob's. Normally I would split from the leader on a coin flip, but I already did that once this week and Vancouver just lost Achane. One contrarian play on a close game is plenty. Doob's.",
         "fort-bragg-vs-beer": "Seven to nothing for Beer. That is my lone wolf. Everyone is looking at Fort Bragg's 237 points for and nobody is looking at the fact that they have Patrick Mahomes and a Seahawks defense with 28 points, while Beer's defense has 8 points all season. I am four points behind the leader and I need a hand that pays. Fort Bragg for the solo pot."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": true,
+        "nabers-in-paris-vs-i-heart-gingers": true,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": true,
+        "doobs-agency-vs-vancouver-panties": true,
+        "fort-bragg-vs-beer": true
+      },
+      "loneWolf": {
+        "the-watermark-vs-englewood-ninjas": false,
+        "pakistan-bombers-vs-vile-horrendous": false,
+        "nabers-in-paris-vs-i-heart-gingers": false,
+        "mount-olympus-vs-amon-ra-dawgin": false,
+        "pluto-shraazinatorz-vs-chicago-zestiest": false,
+        "doobs-agency-vs-vancouver-panties": false,
+        "fort-bragg-vs-beer": true
+      }
     }
-  }
+  },
+  "scoredAt": "2026-10-06T13:21:35.773Z"
 }
