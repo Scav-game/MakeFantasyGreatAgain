@@ -185,6 +185,11 @@ function recordAgainst(team: Team, opponents: Set<string>): { wins: number; loss
  * Standings order: win percentage, then head-to-head record among the tied
  * teams, then points for.
  *
+ * Ties are only ever broken inside a division: seeding is per division, so a
+ * team level with someone in the other division isn't really tied with them,
+ * and letting that team into the head-to-head group would change the order
+ * of teams who are. Tie groups are therefore (division, win %) pairs.
+ *
  * Head-to-head is resolved as a mini round-robin *within* each tie group
  * rather than as a pairwise comparison inside the sort. Pairwise head-to-head
  * is not transitive once three or more teams are level (A beats B, B beats C,
@@ -198,18 +203,18 @@ function recordAgainst(team: Team, opponents: Set<string>): { wins: number; loss
  * straight through to points for.
  */
 export function getStandings(): StandingRow[] {
-  const groups = new Map<number, Team[]>()
+  const groups = new Map<string, { pct: number; teams: Team[] }>()
   for (const team of TEAMS) {
     const live = effectiveRecord(team)
     const pct = winPct(live.wins, live.losses)
-    const group = groups.get(pct)
-    if (group) group.push(team)
-    else groups.set(pct, [team])
+    const key = `${team.division}|${pct}`
+    const group = groups.get(key)
+    if (group) group.teams.push(team)
+    else groups.set(key, { pct, teams: [team] })
   }
 
   const sorted: Team[] = []
-  for (const pct of [...groups.keys()].sort((a, b) => b - a)) {
-    const tied = groups.get(pct)!
+  for (const { teams: tied } of [...groups.values()].sort((a, b) => b.pct - a.pct)) {
     if (tied.length === 1) {
       sorted.push(tied[0])
       continue
