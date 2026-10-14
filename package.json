@@ -15,7 +15,8 @@
     "predict": "node scripts/generate-predictions.js",
     "score-predictions": "node scripts/score-predictions.js",
     "sync:live": "node scripts/sync-live-scores.js",
-    "sync:results": "node scripts/sync-results.js"
+    "sync:results": "node scripts/sync-results.js",
+    "clinch": "node --no-warnings scripts/check-clinch.mjs"
   },
   "dependencies": {
     "@base-ui/react": "^1.5.0",

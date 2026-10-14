@@ -1,15 +1,17 @@
-import { describeClinchStatus, getClinchStatuses, isSecured, type ClinchStatus } from "@/lib/clinch"
+import { analyzeClinch, describeClinchStatus, isSecured, type ClinchStatus } from "@/lib/clinch"
+import { CURRENT_WEEK, TEAMS } from "@/lib/league"
 import { TeamLogo } from "@/components/team/team-logo"
 import { SectionHeading } from "./section-heading"
 
 function ClinchCard({ status }: { status: ClinchStatus }) {
   const { team } = status
   const secured = isSecured(status)
+  const eliminated = status.kind === "eliminated" || (status.kind === "scenario" && status.goal === "elimination")
 
   return (
     <div
       className="relative overflow-hidden rounded-xl border border-border bg-card/60 p-5 pl-6"
-      style={{ borderLeftColor: team.colors.accent, borderLeftWidth: 4 }}
+      style={{ borderLeftColor: eliminated ? undefined : team.colors.accent, borderLeftWidth: 4 }}
     >
       <div className="flex items-start gap-4">
         <TeamLogo team={team} size="md" />
@@ -26,9 +28,14 @@ function ClinchCard({ status }: { status: ClinchStatus }) {
                 ✓ Clinched
               </span>
             )}
+            {status.kind === "eliminated" && (
+              <span className="inline-flex items-center gap-1 rounded-full bg-muted px-2 py-0.5 font-display text-[10px] font-bold uppercase tracking-wider text-muted-foreground">
+                ✕ Eliminated
+              </span>
+            )}
           </div>
           <p className="mt-1.5 text-sm leading-relaxed text-muted-foreground">
-            {describeClinchStatus(status)}
+            {describeClinchStatus(status, TEAMS)}
           </p>
         </div>
       </div>
@@ -37,7 +44,7 @@ function ClinchCard({ status }: { status: ClinchStatus }) {
 }
 
 export function ClinchSection() {
-  const statuses = getClinchStatuses()
+  const { statuses } = analyzeClinch(TEAMS, CURRENT_WEEK)
 
   return (
     <section id="clinch" className="scroll-mt-24">
@@ -45,13 +52,13 @@ export function ClinchSection() {
       {statuses.length === 0 ? (
         <div className="rounded-xl border border-border bg-card/60 p-8 text-center">
           <p className="text-muted-foreground">
-            No teams have clinched yet. Check back as the season progresses.
+            No clinch or elimination scenarios are possible this week. Check back as the season progresses.
           </p>
         </div>
       ) : (
         <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {statuses.map((status) => (
-            <ClinchCard key={`${status.team.slug}-${status.kind}`} status={status} />
+            <ClinchCard key={`${status.team.slug}-${status.kind}-${status.kind === "scenario" ? status.goal : ""}`} status={status} />
           ))}
         </div>
       )}
