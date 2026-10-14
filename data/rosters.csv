@@ -52,6 +52,7 @@ chicago-zestiest,WR,Xavier Worthy,KC,33.3
 chicago-zestiest,TE,Colston Loveland,CHI,24
 chicago-zestiest,TE,Kenyon Sadiq,NYJ,38.9
 chicago-zestiest,D/ST,Steelers D/ST,PIT,37
+chicago-zestiest,K,Tyler Bass,BUF,45
 chicago-zestiest,K,Will Reichard,MIN,68
 chicago-zestiest,IR,Jordan Mason,MIN,11.9
 chicago-zestiest,IR,Jordyn Tyson,NO,
@@ -126,7 +127,6 @@ i-heart-gingers,TE,George Kittle,SF,71.8
 i-heart-gingers,TE,Sam LaPorta,DET,76.6
 i-heart-gingers,D/ST,Broncos D/ST,DEN,35
 i-heart-gingers,K,Jason Myers,SEA,52
-mount-olympus,QB,Carson Wentz,MIN,25.54
 mount-olympus,QB,Dak Prescott,DAL,93.84
 mount-olympus,QB,Sam Darnold,SEA,49.8
 mount-olympus,RB,Breece Hall,NYJ,42.5
@@ -137,14 +137,15 @@ mount-olympus,RB,Samaje Perine,CIN,30.1
 mount-olympus,WR,Brian Thomas Jr.,JAX,25.5
 mount-olympus,WR,Caleb Douglas,MIA,18.3
 mount-olympus,WR,Courtland Sutton,DEN,27.4
+mount-olympus,WR,Jalen Nailor,LV,10.2
 mount-olympus,WR,Luther Burden III,CHI,55.8
 mount-olympus,WR,Rashee Rice,KC,38
 mount-olympus,TE,Pat Freiermuth,PIT,60.3
 mount-olympus,TE,T.J. Hockenson,MIN,49.2
-mount-olympus,TE,Terrance Ferguson,LAR,19.3
 mount-olympus,D/ST,Chiefs D/ST,KC,23
 mount-olympus,K,Harrison Butker,KC,34
 mount-olympus,IR,Jayden Higgins,HOU,
+mount-olympus,IR,Terrance Ferguson,LAR,19.3
 nabers-in-paris,QB,Bryce Young,CAR,90.62
 nabers-in-paris,QB,Drake Maye,NE,87.22
 nabers-in-paris,QB,J.J. McCarthy,NYG,0.2
@@ -203,6 +204,7 @@ pluto-shraazinatorz,D/ST,Jaguars D/ST,JAX,36
 pluto-shraazinatorz,D/ST,Jets D/ST,NYJ,37
 pluto-shraazinatorz,K,Evan McPherson,CIN,54
 pluto-shraazinatorz,K,Spencer Shrader,IND,75
+the-watermark,QB,Caleb Williams,CHI,44.98
 the-watermark,QB,Tyler Shough,NO,85.16
 the-watermark,RB,Braelon Allen,NYJ,44.5
 the-watermark,RB,D'Andre Swift,CHI,80.8
@@ -220,7 +222,6 @@ the-watermark,TE,Hunter Henry,NE,38.7
 the-watermark,D/ST,Giants D/ST,NYG,32
 the-watermark,D/ST,Rams D/ST,LAR,23
 the-watermark,K,Chase McLaughlin,TB,48
-the-watermark,IR,Caleb Williams,CHI,44.98
 the-watermark,IR,Jadarian Price,SEA,14
 vancouver-panties,QB,Lamar Jackson,BAL,79.08
 vancouver-panties,QB,Tyson Bagent,CHI,12.16
