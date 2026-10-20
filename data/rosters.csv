@@ -1,9 +1,9 @@
 teamSlug,pos,name,nflTeam,points
 amon-ra-dawgin,QB,Trevor Lawrence,JAX,114.2
 amon-ra-dawgin,RB,Javonte Williams,DAL,109
-amon-ra-dawgin,RB,Kaelon Black,SF,15.1
+amon-ra-dawgin,RB,Kaelon Black,SF,19.8
 amon-ra-dawgin,RB,Kaleb Johnson,GB,10.4
-amon-ra-dawgin,RB,Rachaad White,WSH,33.1
+amon-ra-dawgin,RB,Rachaad White,WSH,48.8
 amon-ra-dawgin,WR,Carnell Tate,TEN,67.4
 amon-ra-dawgin,WR,Devaughn Vele,NO,69.4
 amon-ra-dawgin,WR,Josh Downs,IND,53.6
@@ -20,7 +20,6 @@ amon-ra-dawgin,IR,Alec Pierce,IND,12.2
 amon-ra-dawgin,IR,Jayden Reed,GB,6.4
 beer,QB,C.J. Stroud,HOU,112.16
 beer,QB,Matthew Stafford,LAR,105.86
-beer,RB,Jacory Croskey-Merritt,WSH,44.9
 beer,RB,James Cook III,BUF,113.6
 beer,RB,Kyren Williams,LAR,119
 beer,RB,Quinshon Judkins,CLE,56.3
@@ -35,6 +34,7 @@ beer,TE,Greg Dulcich,MIA,27.7
 beer,TE,Harold Fannin Jr.,CLE,53.6
 beer,D/ST,Seahawks D/ST,SEA,57
 beer,K,Matt Gay,LV,63
+beer,IR,Jacory Croskey-Merritt,WSH,44.9
 beer,IR,Zach Charbonnet,SEA,
 chicago-zestiest,QB,Kirk Cousins,LV,111.08
 chicago-zestiest,QB,Kyler Murray,MIN,39.78
@@ -47,7 +47,7 @@ chicago-zestiest,WR,Germie Bernard,PIT,53.1
 chicago-zestiest,WR,Jakobi Meyers,JAX,60.7
 chicago-zestiest,WR,Jordan Addison,MIN,33.2
 chicago-zestiest,WR,Malik Washington,MIA,50.2
-chicago-zestiest,WR,Mike Evans,SF,76.6
+chicago-zestiest,WR,Mike Evans,SF,89
 chicago-zestiest,WR,Xavier Worthy,KC,47.6
 chicago-zestiest,TE,Colston Loveland,CHI,42.5
 chicago-zestiest,TE,Kenyon Sadiq,NYJ,41.1
@@ -75,7 +75,7 @@ doobs-agency,TE,Tyler Warren,IND,69.9
 doobs-agency,D/ST,Patriots D/ST,NE,43
 doobs-agency,K,Andy Borregales,NE,40
 doobs-agency,IR,Jonathon Brooks,CAR,9.3
-englewood-ninjas,QB,Brock Purdy,SF,116.64
+englewood-ninjas,QB,Brock Purdy,SF,134
 englewood-ninjas,QB,Jacoby Brissett,ARI,91.22
 englewood-ninjas,RB,Brian Robinson Jr.,ATL,53.1
 englewood-ninjas,RB,Chris Rodriguez Jr.,JAX,30.4
@@ -89,9 +89,9 @@ englewood-ninjas,WR,Rashid Shaheed,SEA,40.1
 englewood-ninjas,TE,AJ Barner,SEA,34.9
 englewood-ninjas,TE,Brock Bowers,LV,82.2
 englewood-ninjas,TE,Michael Mayer,LV,60.6
-englewood-ninjas,D/ST,49ers D/ST,SF,43
+englewood-ninjas,D/ST,49ers D/ST,SF,48
 englewood-ninjas,D/ST,Chargers D/ST,LAC,29
-englewood-ninjas,K,Eddy Pineiro,SF,34
+englewood-ninjas,K,Eddy Pineiro,SF,39
 englewood-ninjas,IR,Jake Tonges,SF,
 englewood-ninjas,IR,Tank Bigsby,PHI,17.1
 fort-bragg,QB,Aaron Rodgers,PIT,99.18
@@ -121,16 +121,16 @@ i-heart-gingers,RB,Rhamondre Stevenson,NE,64.4
 i-heart-gingers,WR,Ja'Marr Chase,CIN,83.9
 i-heart-gingers,WR,Matthew Golden,GB,100.7
 i-heart-gingers,WR,Romeo Doubs,NE,58.1
-i-heart-gingers,WR,Stefon Diggs,WSH,53
+i-heart-gingers,WR,Stefon Diggs,WSH,69.4
 i-heart-gingers,WR,Tee Higgins,CIN,75.3
-i-heart-gingers,TE,George Kittle,SF,71.8
+i-heart-gingers,TE,George Kittle,SF,89.7
 i-heart-gingers,TE,Sam LaPorta,DET,76.6
 i-heart-gingers,D/ST,Broncos D/ST,DEN,46
 i-heart-gingers,K,Jason Myers,SEA,59
 mount-olympus,QB,Dak Prescott,DAL,104.86
 mount-olympus,QB,Sam Darnold,SEA,60.82
 mount-olympus,RB,Breece Hall,NYJ,42.5
-mount-olympus,RB,Christian McCaffrey,SF,91.3
+mount-olympus,RB,Christian McCaffrey,SF,122
 mount-olympus,RB,Emmett Johnson,KC,22.4
 mount-olympus,RB,Kyle Monangai,CHI,59.3
 mount-olympus,RB,Roschon Johnson,CHI,26.8
@@ -158,7 +158,7 @@ nabers-in-paris,WR,DeMario Douglas,NE,59.3
 nabers-in-paris,WR,Isaac TeSlaa,DET,27.7
 nabers-in-paris,WR,Jameson Williams,DET,57.6
 nabers-in-paris,WR,Mack Hollins,NE,35.9
-nabers-in-paris,WR,Terry McLaurin,WSH,42.3
+nabers-in-paris,WR,Terry McLaurin,WSH,46
 nabers-in-paris,WR,Tre Tucker,LV,78.5
 nabers-in-paris,TE,Mike Gesicki,CIN,51.9
 nabers-in-paris,TE,Tucker Kraft,GB,56.4
@@ -167,7 +167,7 @@ nabers-in-paris,K,Dominic Zvada,NYG,56
 nabers-in-paris,K,Jake Bates,DET,49
 nabers-in-paris,IR,Isiah Pacheco,DET,
 pakistan-bombers,QB,Jalen Hurts,PHI,80.02
-pakistan-bombers,QB,Jayden Daniels,WSH,64.66
+pakistan-bombers,QB,Jayden Daniels,WSH,85.66
 pakistan-bombers,QB,Malik Willis,MIA,60.56
 pakistan-bombers,RB,Ashton Jeanty,LV,100.4
 pakistan-bombers,RB,Bijan Robinson,ATL,128.5
@@ -247,7 +247,7 @@ vile-horrendous,RB,MarShawn Lloyd,GB,43.7
 vile-horrendous,RB,Mike Washington Jr.,LV,26.9
 vile-horrendous,RB,Tyjae Spears,TEN,27.1
 vile-horrendous,RB,Woody Marks,HOU,53.4
-vile-horrendous,WR,Antonio Williams,WSH,36.5
+vile-horrendous,WR,Antonio Williams,WSH,44.5
 vile-horrendous,WR,Garrett Wilson,NYJ,94.8
 vile-horrendous,WR,Jalen Coker,CAR,67.9
 vile-horrendous,WR,Malik Nabers,NYG,102.4
