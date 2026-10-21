@@ -23,14 +23,14 @@ beer,QB,Matthew Stafford,LAR,105.86
 beer,RB,James Cook III,BUF,113.6
 beer,RB,Kyren Williams,LAR,119
 beer,RB,Quinshon Judkins,CLE,56.3
-beer,RB,Sione Vaki,DET,14.3
 beer,RB,Tyler Allgeier,ARI,40.1
 beer,WR,Amon-Ra St. Brown,DET,104.2
+beer,WR,Jahan Dotson,ATL,46.6
 beer,WR,Khalil Shakir,BUF,55
 beer,WR,Ladd McConkey,LAC,39
 beer,WR,Quentin Johnston,LAC,24.8
+beer,WR,Travis Hunter,JAX,27.9
 beer,TE,Dallas Goedert,PHI,47
-beer,TE,Greg Dulcich,MIA,27.7
 beer,TE,Harold Fannin Jr.,CLE,53.6
 beer,D/ST,Seahawks D/ST,SEA,57
 beer,K,Matt Gay,LV,63
@@ -65,7 +65,6 @@ doobs-agency,RB,Saquon Barkley,PHI,23
 doobs-agency,RB,Ty Johnson,BUF,28.1
 doobs-agency,WR,Christian Watson,GB,118.8
 doobs-agency,WR,Cooper Kupp,SEA,39.9
-doobs-agency,WR,Davante Adams,LAR,102
 doobs-agency,WR,Keenan Allen,IND,54.7
 doobs-agency,WR,Michael Pittman Jr.,PIT,15.9
 doobs-agency,WR,Tetairoa McMillan,CAR,89.1
@@ -73,6 +72,7 @@ doobs-agency,TE,Darnell Washington,PIT,42.6
 doobs-agency,TE,Tyler Warren,IND,69.9
 doobs-agency,D/ST,Patriots D/ST,NE,43
 doobs-agency,K,Andy Borregales,NE,40
+doobs-agency,IR,Davante Adams,LAR,102
 doobs-agency,IR,Jonathon Brooks,CAR,9.3
 englewood-ninjas,QB,Brock Purdy,SF,134
 englewood-ninjas,QB,Jacoby Brissett,ARI,91.22
@@ -95,20 +95,20 @@ englewood-ninjas,IR,Jake Tonges,SF,
 englewood-ninjas,IR,Tank Bigsby,PHI,17.1
 fort-bragg,QB,Aaron Rodgers,PIT,99.18
 fort-bragg,QB,Patrick Mahomes,KC,94.06
+fort-bragg,RB,Devin Singletary,NYG,19
 fort-bragg,RB,Josh Jacobs,GB,
 fort-bragg,RB,Kimani Vidal,LAC,34.2
-fort-bragg,RB,Najee Harris,NYG,11.4
 fort-bragg,RB,Omarion Hampton,LAC,57.5
 fort-bragg,RB,Pierre Strong Jr.,GB,16.5
 fort-bragg,RB,Tony Pollard,TEN,51.3
+fort-bragg,RB,Tyrone Tracy Jr.,NYG,23.2
 fort-bragg,WR,Denzel Boston,CLE,71.5
 fort-bragg,WR,DJ Moore,BUF,36.3
 fort-bragg,WR,Efton Chism III,NE,25.64
 fort-bragg,WR,Jaylin Noel,HOU,65
 fort-bragg,WR,Keon Coleman,BUF,65.3
-fort-bragg,WR,Laquon Treadwell,IND,30.8
+fort-bragg,WR,Omar Cooper Jr.,NYJ,26.3
 fort-bragg,TE,Mark Andrews,BAL,45.1
-fort-bragg,TE,Tyler Higbee,LAR,50.6
 fort-bragg,D/ST,Browns D/ST,CLE,37
 fort-bragg,K,Ka'imi Fairbairn,HOU,64
 fort-bragg,IR,Deebo Samuel Sr.,SF,60.4
@@ -167,6 +167,7 @@ nabers-in-paris,K,Jake Bates,DET,49
 nabers-in-paris,IR,Isiah Pacheco,DET,
 pakistan-bombers,QB,Jayden Daniels,WSH,85.66
 pakistan-bombers,QB,Malik Willis,MIA,60.56
+pakistan-bombers,QB,Tanner McKee,PHI,12.6
 pakistan-bombers,RB,Ashton Jeanty,LV,100.4
 pakistan-bombers,RB,Bijan Robinson,ATL,128.5
 pakistan-bombers,RB,Jaleel McLaughlin,CLE,18.6
@@ -208,16 +209,16 @@ the-watermark,RB,Braelon Allen,NYJ,56.9
 the-watermark,RB,D'Andre Swift,CHI,103.8
 the-watermark,RB,Emanuel Wilson,SEA,56.3
 the-watermark,RB,Jahmyr Gibbs,DET,153.7
+the-watermark,RB,Jawhar Jordan,HOU,12
+the-watermark,RB,Jonah Coleman,DEN,14.8
 the-watermark,WR,Chris Olave,NO,113
-the-watermark,WR,Dohnte Meyers,CIN,28.1
 the-watermark,WR,Kalif Raymond,CHI,56.2
-the-watermark,WR,Kayshon Boutte,HOU,30.9
-the-watermark,WR,Tyreek Hill,FA,
+the-watermark,WR,Savion Williams,GB,8.1
 the-watermark,WR,Wan'Dale Robinson,TEN,56.9
 the-watermark,TE,Brenton Strange,JAX,59.9
 the-watermark,TE,Darren Waller,CAR,39.8
 the-watermark,TE,Hunter Henry,NE,53.5
-the-watermark,D/ST,Giants D/ST,NYG,33
+the-watermark,D/ST,Panthers D/ST,CAR,24
 the-watermark,D/ST,Rams D/ST,LAR,25
 the-watermark,K,Chase McLaughlin,TB,65
 the-watermark,IR,Jadarian Price,SEA,14
@@ -238,14 +239,13 @@ vancouver-panties,K,Brandon Aubrey,DAL,45
 vancouver-panties,IR,Baker Mayfield,TB,35.1
 vancouver-panties,IR,De'Von Achane,MIA,24.6
 vile-horrendous,QB,Justin Herbert,LAC,62.44
+vile-horrendous,QB,Michael Penix Jr.,ATL,64.26
 vile-horrendous,QB,Tyler Huntley,BAL,41.56
 vile-horrendous,RB,Dameon Pierce,PHI,18.2
 vile-horrendous,RB,Jeremiyah Love,ARI,51.1
 vile-horrendous,RB,MarShawn Lloyd,GB,43.7
 vile-horrendous,RB,Mike Washington Jr.,LV,26.9
-vile-horrendous,RB,Tyjae Spears,TEN,27.1
 vile-horrendous,RB,Woody Marks,HOU,53.4
-vile-horrendous,WR,Antonio Williams,WSH,44.5
 vile-horrendous,WR,Garrett Wilson,NYJ,94.8
 vile-horrendous,WR,Jalen Coker,CAR,67.9
 vile-horrendous,WR,Malik Nabers,NYG,102.4
@@ -253,6 +253,7 @@ vile-horrendous,WR,Marvin Harrison Jr.,HOU,25.9
 vile-horrendous,WR,Rome Odunze,CHI,49.2
 vile-horrendous,TE,Isaiah Likely,NYG,109.3
 vile-horrendous,TE,Travis Kelce,KC,61.9
+vile-horrendous,D/ST,Bears D/ST,CHI,43
 vile-horrendous,D/ST,Ravens D/ST,BAL,36
 vile-horrendous,K,Cam Little,JAX,56
 vile-horrendous,IR,Adonai Mitchell,NYJ,21.3
