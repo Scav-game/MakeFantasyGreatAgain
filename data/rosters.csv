@@ -1,11 +1,12 @@
 teamSlug,pos,name,nflTeam,points
+amon-ra-dawgin,QB,Geno Smith,NYJ,81.64
 amon-ra-dawgin,QB,Trevor Lawrence,JAX,114.2
 amon-ra-dawgin,RB,Javonte Williams,DAL,109
 amon-ra-dawgin,RB,Kaelon Black,SF,19.8
-amon-ra-dawgin,RB,Kaleb Johnson,GB,10.4
 amon-ra-dawgin,RB,Rachaad White,WSH,48.8
 amon-ra-dawgin,WR,Carnell Tate,TEN,67.4
 amon-ra-dawgin,WR,Devaughn Vele,NO,69.4
+amon-ra-dawgin,WR,Ja'Kobi Lane,BAL,10.1
 amon-ra-dawgin,WR,Josh Downs,IND,53.6
 amon-ra-dawgin,WR,Justin Jefferson,MIN,63.7
 amon-ra-dawgin,WR,KC Concepcion,CLE,39.7
@@ -210,7 +211,6 @@ the-watermark,RB,D'Andre Swift,CHI,103.8
 the-watermark,RB,Emanuel Wilson,SEA,56.3
 the-watermark,RB,Jahmyr Gibbs,DET,153.7
 the-watermark,RB,Jawhar Jordan,HOU,12
-the-watermark,RB,Jonah Coleman,DEN,14.8
 the-watermark,WR,Chris Olave,NO,113
 the-watermark,WR,Kalif Raymond,CHI,56.2
 the-watermark,WR,Savion Williams,GB,8.1
@@ -222,6 +222,7 @@ the-watermark,D/ST,Panthers D/ST,CAR,24
 the-watermark,D/ST,Rams D/ST,LAR,25
 the-watermark,K,Chase McLaughlin,TB,65
 the-watermark,IR,Jadarian Price,SEA,14
+the-watermark,IR,Jonah Coleman,DEN,14.8
 vancouver-panties,QB,Lamar Jackson,BAL,79.08
 vancouver-panties,QB,Tyson Bagent,CHI,12.16
 vancouver-panties,RB,Cam Skattebo,NYG,51.3
@@ -240,7 +241,6 @@ vancouver-panties,IR,Baker Mayfield,TB,35.1
 vancouver-panties,IR,De'Von Achane,MIA,24.6
 vile-horrendous,QB,Justin Herbert,LAC,62.44
 vile-horrendous,QB,Michael Penix Jr.,ATL,64.26
-vile-horrendous,QB,Tyler Huntley,BAL,41.56
 vile-horrendous,RB,Dameon Pierce,PHI,18.2
 vile-horrendous,RB,Jeremiyah Love,ARI,51.1
 vile-horrendous,RB,MarShawn Lloyd,GB,43.7
@@ -256,5 +256,6 @@ vile-horrendous,TE,Travis Kelce,KC,61.9
 vile-horrendous,D/ST,Bears D/ST,CHI,43
 vile-horrendous,D/ST,Ravens D/ST,BAL,36
 vile-horrendous,K,Cam Little,JAX,56
+vile-horrendous,K,Trey Smack,GB,44
 vile-horrendous,IR,Adonai Mitchell,NYJ,21.3
 vile-horrendous,IR,David Montgomery,HOU,45.5
