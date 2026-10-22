@@ -4,6 +4,7 @@ amon-ra-dawgin,QB,Trevor Lawrence,JAX,114.2
 amon-ra-dawgin,RB,Javonte Williams,DAL,109
 amon-ra-dawgin,RB,Kaelon Black,SF,19.8
 amon-ra-dawgin,RB,Rachaad White,WSH,48.8
+amon-ra-dawgin,RB,Tyjae Spears,TEN,27.1
 amon-ra-dawgin,WR,Carnell Tate,TEN,67.4
 amon-ra-dawgin,WR,Devaughn Vele,NO,69.4
 amon-ra-dawgin,WR,Ja'Kobi Lane,BAL,10.1
@@ -12,7 +13,6 @@ amon-ra-dawgin,WR,Justin Jefferson,MIN,63.7
 amon-ra-dawgin,WR,KC Concepcion,CLE,39.7
 amon-ra-dawgin,WR,Makai Lemon,PHI,30.2
 amon-ra-dawgin,WR,Roman Wilson,PIT,44.8
-amon-ra-dawgin,WR,Tre' Harris,LAC,37.5
 amon-ra-dawgin,TE,Dalton Kincaid,BUF,60.5
 amon-ra-dawgin,TE,Evan Engram,DEN,31.4
 amon-ra-dawgin,D/ST,Colts D/ST,IND,7
@@ -243,7 +243,6 @@ vile-horrendous,QB,Justin Herbert,LAC,62.44
 vile-horrendous,QB,Michael Penix Jr.,ATL,64.26
 vile-horrendous,RB,Dameon Pierce,PHI,18.2
 vile-horrendous,RB,Jeremiyah Love,ARI,51.1
-vile-horrendous,RB,MarShawn Lloyd,GB,43.7
 vile-horrendous,RB,Mike Washington Jr.,LV,26.9
 vile-horrendous,RB,Woody Marks,HOU,53.4
 vile-horrendous,WR,Garrett Wilson,NYJ,94.8
@@ -253,6 +252,7 @@ vile-horrendous,WR,Marvin Harrison Jr.,HOU,25.9
 vile-horrendous,WR,Rome Odunze,CHI,49.2
 vile-horrendous,TE,Isaiah Likely,NYG,109.3
 vile-horrendous,TE,Travis Kelce,KC,61.9
+vile-horrendous,TE,Tyler Higbee,LAR,50.6
 vile-horrendous,D/ST,Bears D/ST,CHI,43
 vile-horrendous,D/ST,Ravens D/ST,BAL,36
 vile-horrendous,K,Cam Little,JAX,56
