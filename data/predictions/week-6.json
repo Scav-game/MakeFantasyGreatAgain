@@ -1,6 +1,6 @@
 {
   "week": 6,
-  "status": "pending",
+  "status": "complete",
   "generatedAt": "2026-10-14T13:49:44.461Z",
   "dataSource": "espn",
   "generatedBy": "claude-code-session",
@@ -11,7 +11,9 @@
       "home": "mount-olympus",
       "awayRecord": "4-1",
       "homeRecord": "3-1",
-      "winner": null
+      "winner": "mount-olympus",
+      "awayScore": 91.3,
+      "homeScore": 106.7
     },
     {
       "id": "doobs-agency-vs-englewood-ninjas",
@@ -19,7 +21,9 @@
       "home": "englewood-ninjas",
       "awayRecord": "4-1",
       "homeRecord": "5-0",
-      "winner": null
+      "winner": "doobs-agency",
+      "awayScore": 106,
+      "homeScore": 98.7
     },
     {
       "id": "nabers-in-paris-vs-vile-horrendous",
@@ -27,7 +31,9 @@
       "home": "vile-horrendous",
       "awayRecord": "0-5",
       "homeRecord": "1-3",
-      "winner": null
+      "winner": "vile-horrendous",
+      "awayScore": 103.6,
+      "homeScore": 135
     },
     {
       "id": "i-heart-gingers-vs-amon-ra-dawgin",
@@ -35,7 +41,9 @@
       "home": "amon-ra-dawgin",
       "awayRecord": "1-4",
       "homeRecord": "2-3",
-      "winner": null
+      "winner": "i-heart-gingers",
+      "awayScore": 123.3,
+      "homeScore": 108.7
     },
     {
       "id": "the-watermark-vs-chicago-zestiest",
@@ -43,7 +51,9 @@
       "home": "chicago-zestiest",
       "awayRecord": "4-1",
       "homeRecord": "0-5",
-      "winner": null
+      "winner": "chicago-zestiest",
+      "awayScore": 105,
+      "homeScore": 156.7
     },
     {
       "id": "pluto-shraazinatorz-vs-beer",
@@ -51,7 +61,9 @@
       "home": "beer",
       "awayRecord": "5-0",
       "homeRecord": "1-4",
-      "winner": null
+      "winner": "beer",
+      "awayScore": 76.5,
+      "homeScore": 86.9
     }
   ],
   "picks": {
@@ -73,8 +85,22 @@
         "the-watermark-vs-chicago-zestiest": "Watermark averages 124.6 and Chicago averages 95.6. I do not need a second table for this one.",
         "pluto-shraazinatorz-vs-beer": "Pluto leads the league with 706.8 points for. Beer is 28 points per game behind them. Favorite."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": true,
+        "nabers-in-paris-vs-vile-horrendous": true,
+        "i-heart-gingers-vs-amon-ra-dawgin": true,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     },
     "rico-delgado": {
       "predictorId": "rico-delgado",
@@ -94,8 +120,22 @@
         "the-watermark-vs-chicago-zestiest": "Chicago is 0-5. I like upsets, I do not like setting money on fire. Watermark.",
         "pluto-shraazinatorz-vs-beer": "Josh Allen and Derrick Henry against a team that just found its first win. Not the spot. Pluto."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": true,
+        "doobs-agency-vs-englewood-ninjas": true,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     },
     "earl-hutchinson": {
       "predictorId": "earl-hutchinson",
@@ -115,8 +155,22 @@
         "the-watermark-vs-chicago-zestiest": "Jahmyr Gibbs is the toughest runner on the field. Watermark.",
         "pluto-shraazinatorz-vs-beer": "Derrick Henry. That is the whole scouting report. Pluto."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": true,
+        "nabers-in-paris-vs-vile-horrendous": true,
+        "i-heart-gingers-vs-amon-ra-dawgin": true,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     },
     "priya-nair": {
       "predictorId": "priya-nair",
@@ -136,8 +190,22 @@
         "the-watermark-vs-chicago-zestiest": "Watermark won last week and Chicago lost again. Momentum says Watermark.",
         "pluto-shraazinatorz-vs-beer": "Pluto just scored 172, the best week of anyone this season. You do not pick against that."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": true,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     },
     "vinny-esposito": {
       "predictorId": "vinny-esposito",
@@ -157,8 +225,22 @@
         "the-watermark-vs-chicago-zestiest": "Chicago takes QB and WR with Cousins and Evans. Watermark takes RB with Gibbs, TE with Henry, and D/ST with the Rams. Watermark 3 to 2.",
         "pluto-shraazinatorz-vs-beer": "Allen over Stroud, Collins and London over St. Brown and McConkey, Jaguars over Seahawks. Beer wins RB and TE. Pluto 3 to 2."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": true,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     },
     "sandy-kowalski": {
       "predictorId": "sandy-kowalski",
@@ -178,8 +260,22 @@
         "the-watermark-vs-chicago-zestiest": "Chicago is 0-5 and the season is slipping away. Watermark keeps rolling.",
         "pluto-shraazinatorz-vs-beer": "Beer is riding the high of their first win, but a first-win hangover against a 5-0 team is real. Pluto."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": true,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": true,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     },
     "destiny-carter": {
       "predictorId": "destiny-carter",
@@ -199,8 +295,22 @@
         "the-watermark-vs-chicago-zestiest": "Chicago has absorbed five losses of bad energy. Somebody has to break the curse and the zest is due. Trust the universe on this one.",
         "pluto-shraazinatorz-vs-beer": "Pluto is literally out among the stars. Cosmic alignment. Pluto."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": true,
+        "the-watermark-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": true,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     },
     "marcus-whitfield": {
       "predictorId": "marcus-whitfield",
@@ -220,8 +330,23 @@
         "the-watermark-vs-chicago-zestiest": "Destiny is out on a limb with Chicago. Let her have it. Watermark.",
         "pluto-shraazinatorz-vs-beer": "Unanimous for a reason. Pluto."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": true,
+        "nabers-in-paris-vs-vile-horrendous": true,
+        "i-heart-gingers-vs-amon-ra-dawgin": true,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-mount-olympus": false,
+        "doobs-agency-vs-englewood-ninjas": false,
+        "nabers-in-paris-vs-vile-horrendous": false,
+        "i-heart-gingers-vs-amon-ra-dawgin": false,
+        "the-watermark-vs-chicago-zestiest": false,
+        "pluto-shraazinatorz-vs-beer": false
+      }
     }
-  }
+  },
+  "scoredAt": "2026-10-22T15:51:36.218Z"
 }
