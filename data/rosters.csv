@@ -29,7 +29,7 @@ beer,WR,Jahan Dotson,ATL,46.6
 beer,WR,Khalil Shakir,BUF,55
 beer,WR,Ladd McConkey,LAC,39
 beer,WR,Quentin Johnston,LAC,24.8
-beer,WR,Rome Odunze,CHI,49.2
+beer,WR,Rome Odunze,CHI,60.1
 beer,WR,Travis Hunter,JAX,27.9
 beer,TE,Dallas Goedert,PHI,47
 beer,TE,Harold Fannin Jr.,CLE,53.6
@@ -42,7 +42,7 @@ chicago-zestiest,QB,Kyler Murray,MIN,39.78
 chicago-zestiest,RB,Bhayshul Tuten,JAX,88.4
 chicago-zestiest,RB,Ollie Gordon II,MIA,48
 chicago-zestiest,RB,RJ Harvey,DEN,53.4
-chicago-zestiest,RB,TreVeyon Henderson,NE,29.5
+chicago-zestiest,RB,TreVeyon Henderson,NE,33.8
 chicago-zestiest,WR,Emeka Egbuka,TB,71.1
 chicago-zestiest,WR,Germie Bernard,PIT,53.1
 chicago-zestiest,WR,Jakobi Meyers,JAX,60.7
@@ -50,7 +50,7 @@ chicago-zestiest,WR,Jordan Addison,MIN,33.2
 chicago-zestiest,WR,Malik Washington,MIA,50.2
 chicago-zestiest,WR,Mike Evans,SF,89
 chicago-zestiest,WR,Xavier Worthy,KC,47.6
-chicago-zestiest,TE,Colston Loveland,CHI,42.5
+chicago-zestiest,TE,Colston Loveland,CHI,62.4
 chicago-zestiest,TE,Kenyon Sadiq,NYJ,41.1
 chicago-zestiest,D/ST,Steelers D/ST,PIT,48
 chicago-zestiest,K,Will Reichard,MIN,68
@@ -71,8 +71,8 @@ doobs-agency,WR,Michael Pittman Jr.,PIT,15.9
 doobs-agency,WR,Tetairoa McMillan,CAR,89.1
 doobs-agency,TE,Darnell Washington,PIT,42.6
 doobs-agency,TE,Tyler Warren,IND,69.9
-doobs-agency,D/ST,Patriots D/ST,NE,43
-doobs-agency,K,Andy Borregales,NE,40
+doobs-agency,D/ST,Patriots D/ST,NE,42
+doobs-agency,K,Andy Borregales,NE,47
 doobs-agency,IR,Davante Adams,LAR,102
 doobs-agency,IR,Jonathon Brooks,CAR,9.3
 englewood-ninjas,QB,Brock Purdy,SF,134
@@ -116,7 +116,7 @@ i-heart-gingers,QB,Jordan Love,GB,110.36
 i-heart-gingers,RB,Chase Brown,CIN,65
 i-heart-gingers,RB,J.K. Dobbins,DEN,49.7
 i-heart-gingers,RB,Keaton Mitchell,LAC,37.1
-i-heart-gingers,RB,Rhamondre Stevenson,NE,64.4
+i-heart-gingers,RB,Rhamondre Stevenson,NE,86.9
 i-heart-gingers,WR,Ja'Marr Chase,CIN,83.9
 i-heart-gingers,WR,Matthew Golden,GB,100.7
 i-heart-gingers,WR,Romeo Doubs,NE,58.1
@@ -132,13 +132,13 @@ mount-olympus,RB,Breece Hall,NYJ,42.5
 mount-olympus,RB,Christian McCaffrey,SF,122
 mount-olympus,RB,Emmett Johnson,KC,22.4
 mount-olympus,RB,Kyle Monangai,CHI,59.3
-mount-olympus,RB,Roschon Johnson,CHI,26.8
+mount-olympus,RB,Roschon Johnson,CHI,28.1
 mount-olympus,RB,Samaje Perine,CIN,30.1
 mount-olympus,WR,Brian Thomas Jr.,JAX,25.5
 mount-olympus,WR,Caleb Douglas,MIA,18.3
 mount-olympus,WR,Courtland Sutton,DEN,31.3
 mount-olympus,WR,Jalen Nailor,LV,12.1
-mount-olympus,WR,Luther Burden III,CHI,73.3
+mount-olympus,WR,Luther Burden III,CHI,97
 mount-olympus,WR,Rashee Rice,KC,38
 mount-olympus,TE,Pat Freiermuth,PIT,63.4
 mount-olympus,TE,T.J. Hockenson,MIN,49.2
@@ -146,14 +146,14 @@ mount-olympus,D/ST,Chiefs D/ST,KC,37
 mount-olympus,K,Harrison Butker,KC,46
 mount-olympus,IR,Jayden Higgins,HOU,
 mount-olympus,IR,Terrance Ferguson,LAR,19.3
-nabers-in-paris,QB,Drake Maye,NE,111.02
+nabers-in-paris,QB,Drake Maye,NE,138.46
 nabers-in-paris,QB,J.J. McCarthy,NYG,16.52
 nabers-in-paris,RB,Blake Corum,LAR,52.4
 nabers-in-paris,RB,Bucky Irving,TB,85.6
 nabers-in-paris,RB,Chuba Hubbard,CAR,98.1
 nabers-in-paris,RB,Jaleel McLaughlin,CLE,18.6
-nabers-in-paris,WR,A.J. Brown,NE,11.3
-nabers-in-paris,WR,DeMario Douglas,NE,59.3
+nabers-in-paris,WR,A.J. Brown,NE,19.1
+nabers-in-paris,WR,DeMario Douglas,NE,64.6
 nabers-in-paris,WR,Isaac TeSlaa,DET,27.7
 nabers-in-paris,WR,Jameson Williams,DET,57.6
 nabers-in-paris,WR,Kendrick Bourne,ARI,44.5
@@ -203,10 +203,10 @@ pluto-shraazinatorz,D/ST,Jaguars D/ST,JAX,34
 pluto-shraazinatorz,D/ST,Jets D/ST,NYJ,40
 pluto-shraazinatorz,K,Evan McPherson,CIN,54
 pluto-shraazinatorz,K,Spencer Shrader,IND,84
-the-watermark,QB,Caleb Williams,CHI,61.48
+the-watermark,QB,Caleb Williams,CHI,83.6
 the-watermark,QB,Tyler Shough,NO,112.12
 the-watermark,RB,Braelon Allen,NYJ,56.9
-the-watermark,RB,D'Andre Swift,CHI,103.8
+the-watermark,RB,D'Andre Swift,CHI,122.8
 the-watermark,RB,Emanuel Wilson,SEA,56.3
 the-watermark,RB,Jahmyr Gibbs,DET,153.7
 the-watermark,WR,Chris Olave,NO,113
@@ -215,7 +215,7 @@ the-watermark,WR,Savion Williams,GB,8.1
 the-watermark,WR,Wan'Dale Robinson,TEN,56.9
 the-watermark,TE,Brenton Strange,JAX,59.9
 the-watermark,TE,Darren Waller,CAR,39.8
-the-watermark,TE,Hunter Henry,NE,53.5
+the-watermark,TE,Hunter Henry,NE,67.6
 the-watermark,D/ST,Panthers D/ST,CAR,24
 the-watermark,D/ST,Rams D/ST,LAR,25
 the-watermark,K,Chase McLaughlin,TB,65
