@@ -1,6 +1,6 @@
 {
   "week": 7,
-  "status": "pending",
+  "status": "complete",
   "generatedAt": "2026-10-22T15:57:16.111Z",
   "dataSource": "espn",
   "generatedBy": "claude-code-session",
@@ -11,7 +11,9 @@
       "home": "the-watermark",
       "awayRecord": "4-2",
       "homeRecord": "4-2",
-      "winner": null
+      "winner": "pakistan-bombers",
+      "awayScore": 142.4,
+      "homeScore": 117.2
     },
     {
       "id": "nabers-in-paris-vs-doobs-agency",
@@ -19,7 +21,9 @@
       "home": "doobs-agency",
       "awayRecord": "0-6",
       "homeRecord": "5-1",
-      "winner": null
+      "winner": "nabers-in-paris",
+      "awayScore": 118.4,
+      "homeScore": 91.9
     },
     {
       "id": "mount-olympus-vs-vile-horrendous",
@@ -27,7 +31,9 @@
       "home": "vile-horrendous",
       "awayRecord": "4-1",
       "homeRecord": "2-3",
-      "winner": null
+      "winner": "mount-olympus",
+      "awayScore": 97.3,
+      "homeScore": 66.2
     },
     {
       "id": "pluto-shraazinatorz-vs-i-heart-gingers",
@@ -35,7 +41,9 @@
       "home": "i-heart-gingers",
       "awayRecord": "5-1",
       "homeRecord": "2-4",
-      "winner": null
+      "winner": "i-heart-gingers",
+      "awayScore": 83.4,
+      "homeScore": 102.2
     },
     {
       "id": "amon-ra-dawgin-vs-fort-bragg",
@@ -43,7 +51,9 @@
       "home": "fort-bragg",
       "awayRecord": "2-4",
       "homeRecord": "2-3",
-      "winner": null
+      "winner": "fort-bragg",
+      "awayScore": 85.9,
+      "homeScore": 101.5
     },
     {
       "id": "englewood-ninjas-vs-vancouver-panties",
@@ -51,7 +61,9 @@
       "home": "vancouver-panties",
       "awayRecord": "5-1",
       "homeRecord": "2-3",
-      "winner": null
+      "winner": "vancouver-panties",
+      "awayScore": 108.7,
+      "homeScore": 114.3
     },
     {
       "id": "chicago-zestiest-vs-beer",
@@ -59,7 +71,9 @@
       "home": "beer",
       "awayRecord": "1-5",
       "homeRecord": "2-4",
-      "winner": null
+      "winner": "beer",
+      "awayScore": 100.2,
+      "homeScore": 133
     }
   ],
   "picks": {
@@ -83,8 +97,24 @@
         "englewood-ninjas-vs-vancouver-panties": "Englewood averages 122.5 and Vancouver averages 104.0. Eighteen points of expected margin is a favorite.",
         "chicago-zestiest-vs-beer": "Beer averages 109.0 to Chicago's 105.8. Chicago's 156.72 last week was its only score above 122.3 all season. I do not price in outliers."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": true,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      }
     },
     "rico-delgado": {
       "predictorId": "rico-delgado",
@@ -106,8 +136,24 @@
         "englewood-ninjas-vs-vancouver-panties": "I thought about Vancouver for a long time and then I looked at Jaxon Smith-Njigba's 164.86 points. Not this week.",
         "chicago-zestiest-vs-beer": "UPSET ALERT. Chicago just went for 156.72, the highest score in the league last week. Everybody's going to say it was a fluke. That's exactly why it isn't."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": true,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": true,
+        "amon-ra-dawgin-vs-fort-bragg": true,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      }
     },
     "earl-hutchinson": {
       "predictorId": "earl-hutchinson",
@@ -129,8 +175,24 @@
         "englewood-ninjas-vs-vancouver-panties": "Jonathan Taylor against a Vancouver backfield whose best runner has 51.3 points. That game's over at halftime.",
         "chicago-zestiest-vs-beer": "Kyren Williams and James Cook are 232.6 points of running back. Stafford's been doing this since before some of these managers could drive. Beer."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": true,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": true,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": true,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      }
     },
     "priya-nair": {
       "predictorId": "priya-nair",
@@ -152,8 +214,24 @@
         "englewood-ninjas-vs-vancouver-panties": "Englewood lost its first game, but it still scored 98.66. Vancouver has lost two straight and its last game was 76.68. The colder team is Vancouver.",
         "chicago-zestiest-vs-beer": "Chicago just broke a five-game losing streak with a 156.72, a 56.6-point jump. Beer's two wins came on 112.02 and 86.88. I'm buying Chicago's breakout."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": true,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      }
     },
     "vinny-esposito": {
       "predictorId": "vinny-esposito",
@@ -175,8 +253,24 @@
         "englewood-ninjas-vs-vancouver-panties": "Purdy over Lamar at QB, Taylor over Skattebo at RB, Bowers over Schultz at TE. Lamb's room edges Smith-Njigba's at WR and the Vikings take D/ST. Englewood 3 to 2.",
         "chicago-zestiest-vs-beer": "Stroud over Cousins at QB by 1.08, Kyren and Cook at RB, Fannin over Loveland at TE, Seahawks over Steelers at D/ST. Chicago only wins WR. Beer 4 to 1."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": true,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": true,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      }
     },
     "sandy-kowalski": {
       "predictorId": "sandy-kowalski",
@@ -198,8 +292,24 @@
         "englewood-ninjas-vs-vancouver-panties": "Vancouver is coming off the bye and Englewood is coming off its first loss of the year. Rested home team against a team still reeling. That's my upset.",
         "chicago-zestiest-vs-beer": "Beer is home on a two-game win streak and Miles finally has momentum. Chicago just got its first win after five losses, and teams that finally win often exhale. Beer."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": true,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": true,
+        "englewood-ninjas-vs-vancouver-panties": true,
+        "chicago-zestiest-vs-beer": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": true,
+        "chicago-zestiest-vs-beer": false
+      }
     },
     "destiny-carter": {
       "predictorId": "destiny-carter",
@@ -221,8 +331,24 @@
         "englewood-ninjas-vs-vancouver-panties": "Englewood lost for the first time, and the first loss humbles you in the right way. Ninjas strike back.",
         "chicago-zestiest-vs-beer": "Chicago broke the curse with 156.72. Once the dam bursts, it flows. I'm staying on the zest."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": true,
+        "mount-olympus-vs-vile-horrendous": true,
+        "pluto-shraazinatorz-vs-i-heart-gingers": true,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": true,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      }
     },
     "marcus-whitfield": {
       "predictorId": "marcus-whitfield",
@@ -244,8 +370,25 @@
         "englewood-ninjas-vs-vancouver-panties": "Six to one, Sandy alone on Vancouver. Englewood.",
         "chicago-zestiest-vs-beer": "Four to three Beer, Gerald's side again. With the lead, every pick that matches my nearest rival is a pick he can't beat me on. Beer."
       },
-      "correct": null,
-      "loneWolf": null
+      "correct": {
+        "pakistan-bombers-vs-the-watermark": true,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": true
+      },
+      "loneWolf": {
+        "pakistan-bombers-vs-the-watermark": false,
+        "nabers-in-paris-vs-doobs-agency": false,
+        "mount-olympus-vs-vile-horrendous": false,
+        "pluto-shraazinatorz-vs-i-heart-gingers": false,
+        "amon-ra-dawgin-vs-fort-bragg": false,
+        "englewood-ninjas-vs-vancouver-panties": false,
+        "chicago-zestiest-vs-beer": false
+      }
     }
-  }
+  },
+  "scoredAt": "2026-10-27T12:47:45.883Z"
 }

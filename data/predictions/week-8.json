@@ -1,0 +1,251 @@
+{
+  "week": 8,
+  "status": "pending",
+  "generatedAt": "2026-10-27T12:53:45.477Z",
+  "dataSource": "espn",
+  "generatedBy": "claude-code-session",
+  "matchups": [
+    {
+      "id": "mount-olympus-vs-the-watermark",
+      "away": "mount-olympus",
+      "home": "the-watermark",
+      "awayRecord": "5-1",
+      "homeRecord": "4-3",
+      "winner": null
+    },
+    {
+      "id": "pakistan-bombers-vs-doobs-agency",
+      "away": "pakistan-bombers",
+      "home": "doobs-agency",
+      "awayRecord": "5-2",
+      "homeRecord": "5-2",
+      "winner": null
+    },
+    {
+      "id": "pluto-shraazinatorz-vs-englewood-ninjas",
+      "away": "pluto-shraazinatorz",
+      "home": "englewood-ninjas",
+      "awayRecord": "5-2",
+      "homeRecord": "5-2",
+      "winner": null
+    },
+    {
+      "id": "i-heart-gingers-vs-vile-horrendous",
+      "away": "i-heart-gingers",
+      "home": "vile-horrendous",
+      "awayRecord": "3-4",
+      "homeRecord": "2-4",
+      "winner": null
+    },
+    {
+      "id": "chicago-zestiest-vs-fort-bragg",
+      "away": "chicago-zestiest",
+      "home": "fort-bragg",
+      "awayRecord": "1-6",
+      "homeRecord": "3-3",
+      "winner": null
+    },
+    {
+      "id": "amon-ra-dawgin-vs-vancouver-panties",
+      "away": "amon-ra-dawgin",
+      "home": "vancouver-panties",
+      "awayRecord": "2-5",
+      "homeRecord": "3-3",
+      "winner": null
+    },
+    {
+      "id": "nabers-in-paris-vs-beer",
+      "away": "nabers-in-paris",
+      "home": "beer",
+      "awayRecord": "1-6",
+      "homeRecord": "3-4",
+      "winner": null
+    }
+  ],
+  "picks": {
+    "gerald-manning": {
+      "predictorId": "gerald-manning",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "the-watermark",
+        "pakistan-bombers-vs-doobs-agency": "pakistan-bombers",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "pluto-shraazinatorz",
+        "i-heart-gingers-vs-vile-horrendous": "i-heart-gingers",
+        "chicago-zestiest-vs-fort-bragg": "chicago-zestiest",
+        "amon-ra-dawgin-vs-vancouver-panties": "vancouver-panties",
+        "nabers-in-paris-vs-beer": "beer"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "The Watermark averages 120.7 and Mount Olympus averages 103.1. A 5-1 record built on 103 points a game is a record I expect to regress.",
+        "pakistan-bombers-vs-doobs-agency": "The Bombers average 133.7, the best in the league, and Doob's averages 122.3. That is an 11.4 point edge and I take it.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Pluto averages 123.8 and Englewood averages 120.5. Two bad weeks do not erase five good ones. 3.3 points is still a favorite.",
+        "i-heart-gingers-vs-vile-horrendous": "The Gingers average 112.6 and Vile averages 98.9. The gap is 13.7 points per game.",
+        "chicago-zestiest-vs-fort-bragg": "Chicago averages 105.0. Fort Bragg averages 87.5, still the lowest in the league. The 1-6 record is irrelevant to the expected score.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Vancouver averages 105.7 and Amon Ra averages 96.5. I am aware of the quarterback situation. The mean still favors Vancouver.",
+        "nabers-in-paris-vs-beer": "Beer averages 112.4 to the Ethiopians' 100.7. One win does not change a seven-game sample."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "rico-delgado": {
+      "predictorId": "rico-delgado",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "the-watermark",
+        "pakistan-bombers-vs-doobs-agency": "pakistan-bombers",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "englewood-ninjas",
+        "i-heart-gingers-vs-vile-horrendous": "vile-horrendous",
+        "chicago-zestiest-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-vancouver-panties": "vancouver-panties",
+        "nabers-in-paris-vs-beer": "nabers-in-paris"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "I said Mount Olympus was a fake 5-1 last week and they won anyway. I'm saying it again, louder. 618 points for. Preston's at home and he's desperate. Watermark.",
+        "pakistan-bombers-vs-doobs-agency": "I'm not fading the best team in the league after a 142. I hunt upsets, I don't donate points. Bombers.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Two teams on two-game losing streaks and Smith-Njigba has 196 points. Home team. Englewood.",
+        "i-heart-gingers-vs-vile-horrendous": "UPSET ALERT. Everybody's on the Gingers because they beat Pluto. Evan scored 66 last week and he's mad about it. Nabers and Likely go off. Vile.",
+        "chicago-zestiest-vs-fort-bragg": "Chicago is 1-6 for a reason. I'm not chasing that one. Fort Bragg.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Amon Ra has lost three straight. Not even I'm touching that. Vancouver.",
+        "nabers-in-paris-vs-beer": "UPSET ALERT. Stephen finally won one and everybody's acting like it was a fluke. The Ethiopians have outscored Beer over the last month. Blow it up."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "earl-hutchinson": {
+      "predictorId": "earl-hutchinson",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "mount-olympus",
+        "pakistan-bombers-vs-doobs-agency": "doobs-agency",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "pluto-shraazinatorz",
+        "i-heart-gingers-vs-vile-horrendous": "i-heart-gingers",
+        "chicago-zestiest-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-vancouver-panties": "vancouver-panties",
+        "nabers-in-paris-vs-beer": "beer"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "Christian McCaffrey has 144 points and Dak Prescott has been in this league a long time. Mount Olympus is 5-1 because they don't beat themselves.",
+        "pakistan-bombers-vs-doobs-agency": "Joe Burrow and Jared Goff on one roster, and Kenneth Walker has 147.7 points running the football. I'll take the grown men at quarterback over Jayden Daniels and Bryce Young.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Derrick Henry. That's the whole reason. A tailback who wears you down by the fourth quarter, and Josh Allen behind center.",
+        "i-heart-gingers-vs-vile-horrendous": "Rhamondre Stevenson and Chase Brown both run hard, and Jordan Love has been doing it for years. Vile's best tailback has 62.5 points. That won't do.",
+        "chicago-zestiest-vs-fort-bragg": "Aaron Rodgers and Patrick Mahomes. Two quarterbacks with rings. Chicago's quarterback is Kirk Cousins. Fort Bragg.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Cam Skattebo runs downhill like he's angry about something. Amon Ra hasn't won since September. Vancouver.",
+        "nabers-in-paris-vs-beer": "Kyren Williams has 137 points and James Cook has 113. Two real tailbacks, and Stafford has been around forever. Beer."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "priya-nair": {
+      "predictorId": "priya-nair",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "mount-olympus",
+        "pakistan-bombers-vs-doobs-agency": "pakistan-bombers",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "englewood-ninjas",
+        "i-heart-gingers-vs-vile-horrendous": "i-heart-gingers",
+        "chicago-zestiest-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-vancouver-panties": "vancouver-panties",
+        "nabers-in-paris-vs-beer": "beer"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "Mount Olympus has won two straight. The Watermark has lost two straight. That's not complicated.",
+        "pakistan-bombers-vs-doobs-agency": "The Bombers just scored 142.42. Doob's just scored 91.88, down 14.1 from the week before and their lowest of the season. Momentum says Bombers.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Both teams lost their last two, so I'm reading the slope. Englewood went up 10.06 last week. Pluto went up 6.92. Small edge, but it's Englewood's.",
+        "i-heart-gingers-vs-vile-horrendous": "The Gingers have won two straight, including over Pluto. Vile just posted 66.22, the lowest score in the league last week. Gingers.",
+        "chicago-zestiest-vs-fort-bragg": "Fort Bragg won last week and Chicago lost. I go with the team that just won.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Amon Ra is on a three-game losing streak. Vancouver just beat a 5-1 team. Easy.",
+        "nabers-in-paris-vs-beer": "Beer is on a three-game winning streak and just scored 133.02, its season high. One win for the Ethiopians isn't a trend yet."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "vinny-esposito": {
+      "predictorId": "vinny-esposito",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "the-watermark",
+        "pakistan-bombers-vs-doobs-agency": "pakistan-bombers",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "englewood-ninjas",
+        "i-heart-gingers-vs-vile-horrendous": "i-heart-gingers",
+        "chicago-zestiest-vs-fort-bragg": "chicago-zestiest",
+        "amon-ra-dawgin-vs-vancouver-panties": "vancouver-panties",
+        "nabers-in-paris-vs-beer": "nabers-in-paris"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "Shough over Dak at QB, Gibbs and Swift over McCaffrey at RB, Olave's room over Burden's at WR, and Henry over Freiermuth at TE by 0.2 points. Chiefs take D/ST. Watermark 4 to 1.",
+        "pakistan-bombers-vs-doobs-agency": "Goff over Young at QB and Patriots over Texans at D/ST go to Doob's. Bijan and Jeanty win RB, Flowers and Nacua win WR, McBride crushes Warren at TE. Bombers 3 to 2.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Allen over Purdy at QB and Henry and Warren over Taylor at RB go to Pluto. Smith-Njigba wins WR, Bowers wins TE, and the 49ers edge the Bengals 49 to 48 at D/ST. Englewood 3 to 2.",
+        "i-heart-gingers-vs-vile-horrendous": "Love over Penix at QB, Stevenson and Brown over Marks at RB, Golden, Higgins and Chase over Nabers at WR, Broncos over Ravens at D/ST. Likely beats Kittle at TE. Gingers 4 to 1.",
+        "chicago-zestiest-vs-fort-bragg": "Cousins over Rodgers at QB, Tuten and Harvey over Pollard at RB, Evans and Egbuka over Boston at WR, Steelers over Browns at D/ST. Kelce takes TE. Chicago 4 to 1.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Lawrence over Mayfield at QB and Javonte over Skattebo at RB go to Amon Ra. Lamb wins WR, Schultz edges Kincaid at TE, Vikings over Cowboys at D/ST. Vancouver 3 to 2.",
+        "nabers-in-paris-vs-beer": "Maye over Stroud at QB, Tucker and Williams over St. Brown's room at WR by 4.6, Kraft over Fannin at TE. Beer takes RB and D/ST. Ethiopians 3 to 2."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "sandy-kowalski": {
+      "predictorId": "sandy-kowalski",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "the-watermark",
+        "pakistan-bombers-vs-doobs-agency": "doobs-agency",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "englewood-ninjas",
+        "i-heart-gingers-vs-vile-horrendous": "vile-horrendous",
+        "chicago-zestiest-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-vancouver-panties": "vancouver-panties",
+        "nabers-in-paris-vs-beer": "beer"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "Preston has lost two straight and he's at home at 4-3. This is a must-win in front of his own crowd. Mount Olympus already has its cushion.",
+        "pakistan-bombers-vs-doobs-agency": "Doob's just lost to a team that hadn't won all year. That's an embarrassed team at home. The Bombers are coming off a big win on the road. I like the bounce-back spot.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Both teams have lost two straight, so neither has the emotional edge. When it's even, I take the home team. Englewood.",
+        "i-heart-gingers-vs-vile-horrendous": "Textbook letdown spot. The Gingers just beat the best team in the West and now they have to travel to a 2-4 team. Evan is home and just got embarrassed at 66.22.",
+        "chicago-zestiest-vs-fort-bragg": "Harrison is home and sitting in a playoff spot. Chicago is 1-6 and on the road. Fort Bragg.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Josh is home after the biggest win of his season. Amon Ra has lost three straight and is playing out the string.",
+        "nabers-in-paris-vs-beer": "Miles is home on a three-game win streak with a playoff spot right there for him. The Ethiopians are coming off their first win, and teams often relax after a big one."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "destiny-carter": {
+      "predictorId": "destiny-carter",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "mount-olympus",
+        "pakistan-bombers-vs-doobs-agency": "pakistan-bombers",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "pluto-shraazinatorz",
+        "i-heart-gingers-vs-vile-horrendous": "i-heart-gingers",
+        "chicago-zestiest-vs-fort-bragg": "chicago-zestiest",
+        "amon-ra-dawgin-vs-vancouver-panties": "amon-ra-dawgin",
+        "nabers-in-paris-vs-beer": "nabers-in-paris"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "Liam keeps winning when nobody believes in him, and the universe rewards that kind of quiet faith. Mount Olympus.",
+        "pakistan-bombers-vs-doobs-agency": "Lucas has been restless all week, making move after move. That's an energy that can't sit still, and it's pointed forward.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Pluto was demoted from planet status and it never stopped being itself. Shreyus has lost two straight. He's due for his return to orbit.",
+        "i-heart-gingers-vs-vile-horrendous": "Carter's team is glowing right now. Two wins in a row and the whole roster feels lighter. Gingers.",
+        "chicago-zestiest-vs-fort-bragg": "Zach put up 156 two weeks ago, and that kind of light doesn't just go out. Chicago.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Andrew changed his defense and his kicker on the same day. That's a cleanse. Three losses was the shedding, and now comes the rebirth.",
+        "nabers-in-paris-vs-beer": "Stephen was hungry for six weeks and the universe finally fed him. Once that door opens, it doesn't close after one week. Starving Ethiopians."
+      },
+      "correct": null,
+      "loneWolf": null
+    },
+    "marcus-whitfield": {
+      "predictorId": "marcus-whitfield",
+      "picks": {
+        "mount-olympus-vs-the-watermark": "mount-olympus",
+        "pakistan-bombers-vs-doobs-agency": "doobs-agency",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "pluto-shraazinatorz",
+        "i-heart-gingers-vs-vile-horrendous": "i-heart-gingers",
+        "chicago-zestiest-vs-fort-bragg": "fort-bragg",
+        "amon-ra-dawgin-vs-vancouver-panties": "vancouver-panties",
+        "nabers-in-paris-vs-beer": "beer"
+      },
+      "reasoning": {
+        "mount-olympus-vs-the-watermark": "Last week I copied Gerald, Gerald went 2 for 7, and Earl closed to three. So I'm covering Earl now. The table is split 4 to 4 here, and Earl's on Olympus.",
+        "pakistan-bombers-vs-doobs-agency": "Five of seven on the Bombers. Earl's one of the two on Doob's. I'm three points up, so I'd rather match the man chasing me than chase the crowd.",
+        "pluto-shraazinatorz-vs-englewood-ninjas": "Four to three toward Englewood, and Earl has Pluto. Same logic. If he's right, I'm right.",
+        "i-heart-gingers-vs-vile-horrendous": "Five to two Gingers and Earl's with the majority. Easy one.",
+        "chicago-zestiest-vs-fort-bragg": "Four to three Fort Bragg, Earl's side. Matched.",
+        "amon-ra-dawgin-vs-vancouver-panties": "Six to one, Destiny alone on Amon Ra. If she hits it, she earned it. Vancouver.",
+        "nabers-in-paris-vs-beer": "Four to three Beer, Earl's side again. With a lead, every pick I share with my nearest rival is one he can't beat me on."
+      },
+      "correct": null,
+      "loneWolf": null
+    }
+  }
+}
