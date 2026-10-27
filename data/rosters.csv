@@ -1,7 +1,7 @@
 teamSlug,pos,name,nflTeam,points
 amon-ra-dawgin,QB,Geno Smith,NYJ,105.12
 amon-ra-dawgin,QB,Trevor Lawrence,JAX,114.2
-amon-ra-dawgin,RB,Javonte Williams,DAL,109
+amon-ra-dawgin,RB,Javonte Williams,DAL,130.5
 amon-ra-dawgin,RB,Kaelon Black,SF,30.7
 amon-ra-dawgin,RB,Rachaad White,WSH,48.8
 amon-ra-dawgin,RB,Tyjae Spears,TEN,27.1
@@ -11,11 +11,11 @@ amon-ra-dawgin,WR,Ja'Kobi Lane,BAL,15.6
 amon-ra-dawgin,WR,Josh Downs,IND,57.4
 amon-ra-dawgin,WR,Justin Jefferson,MIN,72.1
 amon-ra-dawgin,WR,KC Concepcion,CLE,62.9
-amon-ra-dawgin,WR,Makai Lemon,PHI,30.2
+amon-ra-dawgin,WR,Makai Lemon,PHI,49.9
 amon-ra-dawgin,WR,Roman Wilson,PIT,44.8
 amon-ra-dawgin,TE,Dalton Kincaid,BUF,60.5
 amon-ra-dawgin,TE,Evan Engram,DEN,32.6
-amon-ra-dawgin,D/ST,Cowboys D/ST,DAL,4
+amon-ra-dawgin,D/ST,Cowboys D/ST,DAL,8
 amon-ra-dawgin,K,Ryan Fitzgerald,CAR,53
 amon-ra-dawgin,IR,Alec Pierce,IND,12.2
 amon-ra-dawgin,IR,Jayden Reed,GB,6.4
@@ -31,7 +31,7 @@ beer,WR,Ladd McConkey,LAC,39
 beer,WR,Quentin Johnston,LAC,24.8
 beer,WR,Rome Odunze,CHI,60.1
 beer,WR,Travis Hunter,JAX,27.9
-beer,TE,Dallas Goedert,PHI,47
+beer,TE,Dallas Goedert,PHI,56.8
 beer,TE,Harold Fannin Jr.,CLE,66.7
 beer,D/ST,Seahawks D/ST,SEA,66
 beer,K,Matt Gay,LV,71
@@ -62,7 +62,7 @@ doobs-agency,QB,Joe Burrow,CIN,130.12
 doobs-agency,RB,Alvin Kamara,NO,65.8
 doobs-agency,RB,George Holani,SEA,35.6
 doobs-agency,RB,Kenneth Walker III,KC,147.7
-doobs-agency,RB,Saquon Barkley,PHI,23
+doobs-agency,RB,Saquon Barkley,PHI,38.1
 doobs-agency,RB,Ty Johnson,BUF,28.1
 doobs-agency,WR,Christian Watson,GB,129.5
 doobs-agency,WR,Cooper Kupp,SEA,43.9
@@ -127,7 +127,7 @@ i-heart-gingers,TE,George Kittle,SF,104.5
 i-heart-gingers,TE,Sam LaPorta,DET,79.4
 i-heart-gingers,D/ST,Broncos D/ST,DEN,49
 i-heart-gingers,K,Jason Myers,SEA,67
-mount-olympus,QB,Dak Prescott,DAL,104.86
+mount-olympus,QB,Dak Prescott,DAL,128.14
 mount-olympus,QB,Sam Darnold,SEA,74.8
 mount-olympus,RB,Breece Hall,NYJ,42.5
 mount-olympus,RB,Christian McCaffrey,SF,144
@@ -162,7 +162,7 @@ nabers-in-paris,WR,Mack Hollins,NE,35.9
 nabers-in-paris,WR,Tre Tucker,LV,99.8
 nabers-in-paris,TE,Mike Gesicki,CIN,59.5
 nabers-in-paris,TE,Tucker Kraft,GB,71.2
-nabers-in-paris,D/ST,Eagles D/ST,PHI,12
+nabers-in-paris,D/ST,Eagles D/ST,PHI,6
 nabers-in-paris,K,Dominic Zvada,NYG,57
 nabers-in-paris,K,Jake Bates,DET,58
 nabers-in-paris,IR,Isiah Pacheco,DET,
@@ -172,13 +172,11 @@ pakistan-bombers,RB,Ashton Jeanty,LV,122
 pakistan-bombers,RB,Bijan Robinson,ATL,145.7
 pakistan-bombers,RB,Kendre Miller,NO,38.6
 pakistan-bombers,RB,Mike Washington Jr.,LV,29.6
-pakistan-bombers,WR,Darius Cooper,PHI,45.9
 pakistan-bombers,WR,Michael Wilson,ARI,81.88
 pakistan-bombers,WR,Puka Nacua,LAR,113.6
-pakistan-bombers,WR,Ryan Flournoy,DAL,52.4
+pakistan-bombers,WR,Ryan Flournoy,DAL,63.4
 pakistan-bombers,WR,Tank Dell,HOU,5.5
 pakistan-bombers,WR,Zay Flowers,BAL,122.2
-pakistan-bombers,TE,Cade Otton,TB,37.6
 pakistan-bombers,TE,Colby Parkinson,LAR,30.3
 pakistan-bombers,TE,Trey McBride,ARI,130.2
 pakistan-bombers,D/ST,Texans D/ST,HOU,29
@@ -194,7 +192,7 @@ pluto-shraazinatorz,RB,Derrick Henry,BAL,122.7
 pluto-shraazinatorz,RB,Jaylen Warren,PIT,119.5
 pluto-shraazinatorz,RB,Justice Hill,BAL,35.4
 pluto-shraazinatorz,WR,Drake London,ATL,108
-pluto-shraazinatorz,WR,George Pickens,DAL,81.8
+pluto-shraazinatorz,WR,George Pickens,DAL,97.5
 pluto-shraazinatorz,WR,Nico Collins,HOU,76.1
 pluto-shraazinatorz,WR,Xavier Hutchinson,HOU,54.4
 pluto-shraazinatorz,TE,Jake Ferguson,DAL,44.5
@@ -226,7 +224,7 @@ vancouver-panties,QB,Baker Mayfield,TB,41.76
 vancouver-panties,QB,Tyson Bagent,CHI,12.16
 vancouver-panties,RB,Cam Skattebo,NYG,70.4
 vancouver-panties,RB,Kenny Gainwell,TB,39
-vancouver-panties,WR,CeeDee Lamb,DAL,131.1
+vancouver-panties,WR,CeeDee Lamb,DAL,155.5
 vancouver-panties,WR,DK Metcalf,PIT,76.5
 vancouver-panties,WR,Jerry Jeudy,CLE,33.1
 vancouver-panties,WR,Parker Washington,JAX,91.9
@@ -235,12 +233,12 @@ vancouver-panties,TE,Dalton Schultz,HOU,65.2
 vancouver-panties,TE,Kyle Pitts Sr.,ATL,63.1
 vancouver-panties,D/ST,Titans D/ST,TEN,36
 vancouver-panties,D/ST,Vikings D/ST,MIN,74
-vancouver-panties,K,Brandon Aubrey,DAL,45
+vancouver-panties,K,Brandon Aubrey,DAL,59
 vancouver-panties,IR,De'Von Achane,MIA,24.6
 vancouver-panties,IR,Lamar Jackson,BAL,79.08
 vile-horrendous,QB,Justin Herbert,LAC,62.44
 vile-horrendous,QB,Michael Penix Jr.,ATL,84.68
-vile-horrendous,RB,Dameon Pierce,PHI,18.2
+vile-horrendous,RB,Dameon Pierce,PHI,30
 vile-horrendous,RB,Omarion Hampton,LAC,57.5
 vile-horrendous,RB,Tyler Allgeier,ARI,48
 vile-horrendous,RB,Woody Marks,HOU,62.5
