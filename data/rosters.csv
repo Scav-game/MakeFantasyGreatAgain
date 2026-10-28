@@ -60,6 +60,7 @@ doobs-agency,QB,Cam Ward,TEN,74.26
 doobs-agency,QB,Jared Goff,DET,133.02
 doobs-agency,QB,Joe Burrow,CIN,130.12
 doobs-agency,RB,Alvin Kamara,NO,65.8
+doobs-agency,RB,Bucky Irving,TB,109.6
 doobs-agency,RB,George Holani,SEA,35.6
 doobs-agency,RB,Kenneth Walker III,KC,147.7
 doobs-agency,RB,Saquon Barkley,PHI,38.1
@@ -101,12 +102,13 @@ fort-bragg,RB,Devin Singletary,NYG,33.5
 fort-bragg,RB,Dylan Sampson,CLE,10.7
 fort-bragg,RB,Josh Jacobs,GB,20.1
 fort-bragg,RB,Kimani Vidal,LAC,34.2
-fort-bragg,RB,Pierre Strong Jr.,GB,16.5
 fort-bragg,RB,Tony Pollard,TEN,87.8
+fort-bragg,WR,A.J. Brown,NE,19.1
 fort-bragg,WR,Denzel Boston,CLE,77.2
 fort-bragg,WR,DJ Moore,BUF,36.3
 fort-bragg,WR,Jaylin Noel,HOU,66.7
 fort-bragg,WR,Keon Coleman,BUF,65.3
+fort-bragg,WR,Treylon Burks,WSH,36.2
 fort-bragg,TE,Mark Andrews,BAL,50.4
 fort-bragg,TE,Travis Kelce,KC,70.3
 fort-bragg,D/ST,Browns D/ST,CLE,42
@@ -151,10 +153,8 @@ mount-olympus,IR,Terrance Ferguson,LAR,19.3
 nabers-in-paris,QB,Drake Maye,NE,138.46
 nabers-in-paris,QB,J.J. McCarthy,NYG,26.7
 nabers-in-paris,RB,Blake Corum,LAR,69.5
-nabers-in-paris,RB,Bucky Irving,TB,109.6
 nabers-in-paris,RB,Chuba Hubbard,CAR,108.1
 nabers-in-paris,RB,Jaleel McLaughlin,CLE,18.6
-nabers-in-paris,WR,A.J. Brown,NE,19.1
 nabers-in-paris,WR,DeMario Douglas,NE,64.6
 nabers-in-paris,WR,Isaac TeSlaa,DET,29.7
 nabers-in-paris,WR,Jameson Williams,DET,83.7
@@ -222,8 +222,10 @@ the-watermark,D/ST,Rams D/ST,LAR,26
 the-watermark,K,Chase McLaughlin,TB,77
 the-watermark,IR,Jadarian Price,SEA,14
 vancouver-panties,QB,Baker Mayfield,TB,41.76
+vancouver-panties,QB,Lamar Jackson,BAL,79.08
 vancouver-panties,QB,Tyson Bagent,CHI,12.16
 vancouver-panties,RB,Cam Skattebo,NYG,70.4
+vancouver-panties,RB,Jeremy McNichols,WSH,1.3
 vancouver-panties,RB,Kenny Gainwell,TB,39
 vancouver-panties,WR,CeeDee Lamb,DAL,155.5
 vancouver-panties,WR,DK Metcalf,PIT,76.5
@@ -236,7 +238,6 @@ vancouver-panties,D/ST,Titans D/ST,TEN,36
 vancouver-panties,D/ST,Vikings D/ST,MIN,74
 vancouver-panties,K,Brandon Aubrey,DAL,59
 vancouver-panties,IR,De'Von Achane,MIA,24.6
-vancouver-panties,IR,Lamar Jackson,BAL,79.08
 vile-horrendous,QB,Justin Herbert,LAC,62.44
 vile-horrendous,QB,Michael Penix Jr.,ATL,84.68
 vile-horrendous,RB,Dameon Pierce,PHI,30
