@@ -1,5 +1,4 @@
 teamSlug,pos,name,nflTeam,points
-amon-ra-dawgin,QB,Geno Smith,NYJ,105.12
 amon-ra-dawgin,QB,Trevor Lawrence,JAX,114.2
 amon-ra-dawgin,RB,Javonte Williams,DAL,130.5
 amon-ra-dawgin,RB,Kaelon Black,SF,30.7
@@ -13,6 +12,7 @@ amon-ra-dawgin,WR,Justin Jefferson,MIN,72.1
 amon-ra-dawgin,WR,KC Concepcion,CLE,62.9
 amon-ra-dawgin,WR,Makai Lemon,PHI,49.9
 amon-ra-dawgin,WR,Roman Wilson,PIT,44.8
+amon-ra-dawgin,WR,Ted Hurst III,TB,33.8
 amon-ra-dawgin,TE,Dalton Kincaid,BUF,60.5
 amon-ra-dawgin,TE,Evan Engram,DEN,32.6
 amon-ra-dawgin,D/ST,Cowboys D/ST,DAL,8
@@ -172,7 +172,7 @@ pakistan-bombers,RB,Bijan Robinson,ATL,145.7
 pakistan-bombers,RB,Kendre Miller,NO,38.6
 pakistan-bombers,RB,Mike Washington Jr.,LV,29.6
 pakistan-bombers,RB,Seth McGowan,IND,18.6
-pakistan-bombers,WR,DeVonta Smith,PHI,69
+pakistan-bombers,WR,Darius Cooper,PHI,48.6
 pakistan-bombers,WR,Michael Wilson,ARI,81.88
 pakistan-bombers,WR,Puka Nacua,LAR,113.6
 pakistan-bombers,WR,Tank Dell,HOU,5.5
@@ -182,7 +182,7 @@ pakistan-bombers,TE,Trey McBride,ARI,130.2
 pakistan-bombers,D/ST,Packers D/ST,GB,56
 pakistan-bombers,D/ST,Texans D/ST,HOU,29
 pakistan-bombers,K,Chris Boswell,PIT,69
-pakistan-bombers,K,Tyler Loop,BAL,63
+pakistan-bombers,IR,DeVonta Smith,PHI,69
 pakistan-bombers,IR,Travis Etienne Jr.,NO,30.9
 pluto-shraazinatorz,QB,Bo Nix,DEN,95.84
 pluto-shraazinatorz,QB,Deshaun Watson,CLE,106.78
