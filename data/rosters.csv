@@ -16,17 +16,17 @@ amon-ra-dawgin,WR,Roman Wilson,PIT,44.8
 amon-ra-dawgin,TE,Dalton Kincaid,BUF,60.5
 amon-ra-dawgin,TE,Evan Engram,DEN,32.6
 amon-ra-dawgin,D/ST,Cowboys D/ST,DAL,8
-amon-ra-dawgin,K,Ryan Fitzgerald,CAR,53
+amon-ra-dawgin,K,Ryan Fitzgerald,CAR,62
 amon-ra-dawgin,IR,Alec Pierce,IND,12.2
 amon-ra-dawgin,IR,Jayden Reed,GB,6.4
 beer,QB,C.J. Stroud,HOU,128.68
 beer,QB,Matthew Stafford,LAR,123.36
 beer,RB,James Cook III,BUF,113.6
-beer,RB,Josh Jacobs,GB,20.1
+beer,RB,Josh Jacobs,GB,43.3
 beer,RB,Kyren Williams,LAR,137.1
 beer,WR,Amon-Ra St. Brown,DET,128.4
 beer,WR,Jahan Dotson,ATL,48.2
-beer,WR,Jalen Coker,CAR,69.8
+beer,WR,Jalen Coker,CAR,79.4
 beer,WR,Khalil Shakir,BUF,55
 beer,WR,Ladd McConkey,LAC,39
 beer,WR,Quentin Johnston,LAC,24.8
@@ -64,11 +64,11 @@ doobs-agency,RB,George Holani,SEA,35.6
 doobs-agency,RB,Kenneth Walker III,KC,147.7
 doobs-agency,RB,Saquon Barkley,PHI,38.1
 doobs-agency,RB,Ty Johnson,BUF,28.1
-doobs-agency,WR,Christian Watson,GB,129.5
+doobs-agency,WR,Christian Watson,GB,146.8
 doobs-agency,WR,Cooper Kupp,SEA,43.9
 doobs-agency,WR,Keenan Allen,IND,60.8
 doobs-agency,WR,Michael Pittman Jr.,PIT,15.9
-doobs-agency,WR,Tetairoa McMillan,CAR,97.1
+doobs-agency,WR,Tetairoa McMillan,CAR,108.9
 doobs-agency,TE,Darnell Washington,PIT,50
 doobs-agency,TE,Tyler Warren,IND,69.9
 doobs-agency,D/ST,Patriots D/ST,NE,42
@@ -114,13 +114,13 @@ fort-bragg,K,Ka'imi Fairbairn,HOU,75
 fort-bragg,K,Tyler Bass,BUF,62
 fort-bragg,IR,Deebo Samuel Sr.,SF,60.4
 fort-bragg,IR,Tyrone Tracy Jr.,NYG,31.9
-i-heart-gingers,QB,Jordan Love,GB,127.32
+i-heart-gingers,QB,Jordan Love,GB,148.84
 i-heart-gingers,RB,Chase Brown,CIN,74.8
 i-heart-gingers,RB,J.K. Dobbins,DEN,58
 i-heart-gingers,RB,Keaton Mitchell,LAC,37.1
 i-heart-gingers,RB,Rhamondre Stevenson,NE,86.9
 i-heart-gingers,WR,Ja'Marr Chase,CIN,101.1
-i-heart-gingers,WR,Matthew Golden,GB,110.6
+i-heart-gingers,WR,Matthew Golden,GB,131.5
 i-heart-gingers,WR,Romeo Doubs,NE,58.1
 i-heart-gingers,WR,Stefon Diggs,WSH,69.4
 i-heart-gingers,WR,Tee Higgins,CIN,102.1
@@ -151,7 +151,7 @@ mount-olympus,IR,Terrance Ferguson,LAR,19.3
 nabers-in-paris,QB,Drake Maye,NE,138.46
 nabers-in-paris,QB,J.J. McCarthy,NYG,26.7
 nabers-in-paris,RB,Blake Corum,LAR,69.5
-nabers-in-paris,RB,Chuba Hubbard,CAR,110.5
+nabers-in-paris,RB,Chuba Hubbard,CAR,133
 nabers-in-paris,RB,Jaleel McLaughlin,CLE,18.6
 nabers-in-paris,WR,DeMario Douglas,NE,64.6
 nabers-in-paris,WR,Isaac TeSlaa,DET,29.7
@@ -160,12 +160,12 @@ nabers-in-paris,WR,Kendrick Bourne,ARI,48.4
 nabers-in-paris,WR,Mack Hollins,NE,35.9
 nabers-in-paris,WR,Tre Tucker,LV,99.8
 nabers-in-paris,TE,Mike Gesicki,CIN,59.5
-nabers-in-paris,TE,Tucker Kraft,GB,71.2
+nabers-in-paris,TE,Tucker Kraft,GB,88.5
 nabers-in-paris,D/ST,Eagles D/ST,PHI,6
 nabers-in-paris,K,Dominic Zvada,NYG,57
 nabers-in-paris,K,Jake Bates,DET,58
 nabers-in-paris,IR,Isiah Pacheco,DET,
-pakistan-bombers,QB,Bryce Young,CAR,115.88
+pakistan-bombers,QB,Bryce Young,CAR,126.24
 pakistan-bombers,QB,Jayden Daniels,WSH,85.66
 pakistan-bombers,RB,Ashton Jeanty,LV,122
 pakistan-bombers,RB,Bijan Robinson,ATL,145.7
@@ -179,7 +179,7 @@ pakistan-bombers,WR,Tank Dell,HOU,5.5
 pakistan-bombers,WR,Zay Flowers,BAL,122.2
 pakistan-bombers,TE,Colby Parkinson,LAR,30.3
 pakistan-bombers,TE,Trey McBride,ARI,130.2
-pakistan-bombers,D/ST,Packers D/ST,GB,54
+pakistan-bombers,D/ST,Packers D/ST,GB,56
 pakistan-bombers,D/ST,Texans D/ST,HOU,29
 pakistan-bombers,K,Chris Boswell,PIT,69
 pakistan-bombers,K,Tyler Loop,BAL,63
@@ -211,10 +211,10 @@ the-watermark,RB,Jahmyr Gibbs,DET,171
 the-watermark,RB,Jonah Coleman,DEN,23.7
 the-watermark,WR,Chris Olave,NO,124.6
 the-watermark,WR,Kalif Raymond,CHI,56.2
-the-watermark,WR,Savion Williams,GB,16.2
+the-watermark,WR,Savion Williams,GB,19.5
 the-watermark,WR,Wan'Dale Robinson,TEN,61.6
 the-watermark,TE,Brenton Strange,JAX,59.9
-the-watermark,TE,Darren Waller,CAR,51.8
+the-watermark,TE,Darren Waller,CAR,53.9
 the-watermark,TE,Hunter Henry,NE,67.6
 the-watermark,D/ST,Rams D/ST,LAR,26
 the-watermark,K,Chase McLaughlin,TB,77
@@ -242,12 +242,12 @@ vile-horrendous,RB,Omarion Hampton,LAC,57.5
 vile-horrendous,RB,Quinshon Judkins,CLE,79.7
 vile-horrendous,RB,Tyler Allgeier,ARI,48
 vile-horrendous,RB,Woody Marks,HOU,62.5
-vile-horrendous,WR,Adonai Mitchell,NYJ,21.3
 vile-horrendous,WR,Garrett Wilson,NYJ,99.4
 vile-horrendous,WR,Malik Nabers,NYG,120.5
 vile-horrendous,WR,Marvin Harrison Jr.,HOU,33.5
 vile-horrendous,WR,Omar Cooper Jr.,NYJ,48.8
 vile-horrendous,WR,Rome Odunze,CHI,60.1
+vile-horrendous,WR,Ryan Flournoy,DAL,63.4
 vile-horrendous,TE,Chig Okonkwo,WSH,30
 vile-horrendous,TE,Isaiah Likely,NYG,112.5
 vile-horrendous,TE,Tyler Higbee,LAR,54
