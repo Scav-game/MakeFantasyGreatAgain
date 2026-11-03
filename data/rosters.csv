@@ -33,7 +33,7 @@ beer,WR,Quentin Johnston,LAC,32.5
 beer,WR,Travis Hunter,JAX,28.4
 beer,TE,Dallas Goedert,PHI,64
 beer,TE,Harold Fannin Jr.,CLE,90.1
-beer,D/ST,Seahawks D/ST,SEA,66
+beer,D/ST,Seahawks D/ST,SEA,67
 beer,K,Matt Gay,LV,81
 beer,IR,Jacory Croskey-Merritt,WSH,44.9
 chicago-zestiest,QB,Kirk Cousins,LV,159.66
@@ -50,7 +50,7 @@ chicago-zestiest,WR,Jordan Addison,MIN,49.1
 chicago-zestiest,WR,Malik Washington,MIA,71.7
 chicago-zestiest,WR,Mike Evans,SF,89
 chicago-zestiest,WR,Xavier Worthy,KC,56
-chicago-zestiest,TE,Colston Loveland,CHI,62.4
+chicago-zestiest,TE,Colston Loveland,CHI,73.9
 chicago-zestiest,TE,Kenyon Sadiq,NYJ,45.9
 chicago-zestiest,D/ST,Steelers D/ST,PIT,73
 chicago-zestiest,K,Will Reichard,MIN,80
@@ -60,12 +60,12 @@ doobs-agency,QB,Jared Goff,DET,142.06
 doobs-agency,QB,Joe Burrow,CIN,169.6
 doobs-agency,RB,Alvin Kamara,NO,65.8
 doobs-agency,RB,Bucky Irving,TB,130.6
-doobs-agency,RB,George Holani,SEA,35.6
+doobs-agency,RB,George Holani,SEA,36.5
 doobs-agency,RB,Kenneth Walker III,KC,160.1
 doobs-agency,RB,Saquon Barkley,PHI,50.5
 doobs-agency,RB,Ty Johnson,BUF,33.4
 doobs-agency,WR,Christian Watson,GB,146.8
-doobs-agency,WR,Cooper Kupp,SEA,43.9
+doobs-agency,WR,Cooper Kupp,SEA,51.6
 doobs-agency,WR,Keenan Allen,IND,74.5
 doobs-agency,WR,Michael Pittman Jr.,PIT,15.9
 doobs-agency,WR,Tetairoa McMillan,CAR,108.9
@@ -83,10 +83,10 @@ englewood-ninjas,RB,Jonathan Taylor,IND,144.2
 englewood-ninjas,RB,Rico Dowdle,PIT,44.6
 englewood-ninjas,WR,Chris Godwin Jr.,TB,53.1
 englewood-ninjas,WR,Dontayvion Wicks,PHI,53.4
-englewood-ninjas,WR,Jaxon Smith-Njigba,SEA,196.16
+englewood-ninjas,WR,Jaxon Smith-Njigba,SEA,219.96
 englewood-ninjas,WR,Jaylen Waddle,DEN,78.8
 englewood-ninjas,WR,Rashid Shaheed,SEA,42.2
-englewood-ninjas,TE,AJ Barner,SEA,43.5
+englewood-ninjas,TE,AJ Barner,SEA,47.8
 englewood-ninjas,TE,Brock Bowers,LV,123.7
 englewood-ninjas,TE,Michael Mayer,LV,77.1
 englewood-ninjas,D/ST,49ers D/ST,SF,49
@@ -95,15 +95,15 @@ englewood-ninjas,K,Eddy Pineiro,SF,41
 englewood-ninjas,K,Jason Sanders,NYJ,71
 englewood-ninjas,IR,Jake Tonges,SF,
 englewood-ninjas,IR,Tank Bigsby,PHI,17.1
-fort-bragg,QB,Aaron Rodgers,PIT,117.14
 fort-bragg,QB,Patrick Mahomes,KC,125.5
 fort-bragg,RB,Devin Singletary,NYG,33.5
 fort-bragg,RB,Dylan Sampson,CLE,23.6
 fort-bragg,RB,Elijah Mitchell,PHI,14.1
 fort-bragg,RB,Kimani Vidal,LAC,39.2
 fort-bragg,RB,Tony Pollard,TEN,116.5
-fort-bragg,RB,Zach Charbonnet,SEA,
+fort-bragg,RB,Zach Charbonnet,SEA,5.9
 fort-bragg,WR,A.J. Brown,NE,19.1
+fort-bragg,WR,Deebo Samuel Sr.,SF,60.4
 fort-bragg,WR,Denzel Boston,CLE,86.9
 fort-bragg,WR,DJ Moore,BUF,52.9
 fort-bragg,WR,Keon Coleman,BUF,66.7
@@ -113,7 +113,6 @@ fort-bragg,TE,Travis Kelce,KC,82
 fort-bragg,D/ST,Browns D/ST,CLE,44
 fort-bragg,K,Ka'imi Fairbairn,HOU,75
 fort-bragg,K,Tyler Bass,BUF,78
-fort-bragg,IR,Deebo Samuel Sr.,SF,60.4
 fort-bragg,IR,Tyrone Tracy Jr.,NYG,31.9
 i-heart-gingers,QB,Jordan Love,GB,148.84
 i-heart-gingers,RB,Chase Brown,CIN,90.9
@@ -128,20 +127,20 @@ i-heart-gingers,WR,Tee Higgins,CIN,139.6
 i-heart-gingers,TE,George Kittle,SF,104.5
 i-heart-gingers,TE,Sam LaPorta,DET,85.9
 i-heart-gingers,D/ST,Broncos D/ST,DEN,50
-i-heart-gingers,K,Jason Myers,SEA,67
+i-heart-gingers,K,Jason Myers,SEA,69
 mount-olympus,QB,Dak Prescott,DAL,147.94
-mount-olympus,QB,Sam Darnold,SEA,74.8
+mount-olympus,QB,Sam Darnold,SEA,92.32
 mount-olympus,RB,Breece Hall,NYJ,42.5
 mount-olympus,RB,Christian McCaffrey,SF,144
 mount-olympus,RB,Emmett Johnson,KC,51.4
 mount-olympus,RB,Kyle Monangai,CHI,59.3
-mount-olympus,RB,Roschon Johnson,CHI,28.1
+mount-olympus,RB,Roschon Johnson,CHI,31.9
 mount-olympus,RB,Samaje Perine,CIN,40.6
 mount-olympus,WR,Brian Thomas Jr.,JAX,33.7
 mount-olympus,WR,Caleb Douglas,MIA,47.6
 mount-olympus,WR,Courtland Sutton,DEN,48.1
 mount-olympus,WR,Jalen Nailor,LV,29.3
-mount-olympus,WR,Luther Burden III,CHI,97
+mount-olympus,WR,Luther Burden III,CHI,115.6
 mount-olympus,WR,Rashee Rice,KC,56.3
 mount-olympus,TE,Pat Freiermuth,PIT,79
 mount-olympus,TE,T.J. Hockenson,MIN,78.5
@@ -178,7 +177,6 @@ pakistan-bombers,WR,Michael Wilson,ARI,108.68
 pakistan-bombers,WR,Puka Nacua,LAR,138.6
 pakistan-bombers,WR,Tank Dell,HOU,5.5
 pakistan-bombers,WR,Zay Flowers,BAL,122.2
-pakistan-bombers,TE,Colby Parkinson,LAR,30.3
 pakistan-bombers,TE,Trey McBride,ARI,150.4
 pakistan-bombers,D/ST,Packers D/ST,GB,56
 pakistan-bombers,D/ST,Texans D/ST,HOU,29
@@ -203,15 +201,16 @@ pluto-shraazinatorz,D/ST,Jaguars D/ST,JAX,55
 pluto-shraazinatorz,D/ST,Jets D/ST,NYJ,38
 pluto-shraazinatorz,K,Evan McPherson,CIN,64
 pluto-shraazinatorz,K,Spencer Shrader,IND,88
-the-watermark,QB,Caleb Williams,CHI,83.6
+the-watermark,QB,Caleb Williams,CHI,97.58
 the-watermark,QB,Tyler Shough,NO,125.94
 the-watermark,RB,Braelon Allen,NYJ,99.6
-the-watermark,RB,D'Andre Swift,CHI,122.8
+the-watermark,RB,D'Andre Swift,CHI,150.7
 the-watermark,RB,Emanuel Wilson,SEA,74.8
+the-watermark,RB,Jadarian Price,SEA,19.7
 the-watermark,RB,Jahmyr Gibbs,DET,195.8
 the-watermark,RB,Jonah Coleman,DEN,44.1
 the-watermark,WR,Chris Olave,NO,124.6
-the-watermark,WR,Kalif Raymond,CHI,56.2
+the-watermark,WR,Kalif Raymond,CHI,63.5
 the-watermark,WR,Savion Williams,GB,19.5
 the-watermark,WR,Wan'Dale Robinson,TEN,77.3
 the-watermark,TE,Brenton Strange,JAX,67.4
@@ -219,7 +218,6 @@ the-watermark,TE,Darren Waller,CAR,53.9
 the-watermark,TE,Hunter Henry,NE,73.6
 the-watermark,D/ST,Rams D/ST,LAR,37
 the-watermark,K,Chase McLaughlin,TB,89
-the-watermark,IR,Jadarian Price,SEA,14
 vancouver-panties,QB,Baker Mayfield,TB,43.16
 vancouver-panties,QB,Lamar Jackson,BAL,79.08
 vancouver-panties,QB,Tyson Bagent,CHI,12.16
@@ -249,9 +247,9 @@ vile-horrendous,WR,Garrett Wilson,NYJ,113.7
 vile-horrendous,WR,Malik Nabers,NYG,120.5
 vile-horrendous,WR,Marvin Harrison Jr.,HOU,33.5
 vile-horrendous,WR,Omar Cooper Jr.,NYJ,48.8
-vile-horrendous,WR,Rome Odunze,CHI,60.1
+vile-horrendous,WR,Rome Odunze,CHI,72.8
 vile-horrendous,TE,Chig Okonkwo,WSH,33.2
 vile-horrendous,TE,Isaiah Likely,NYG,112.5
 vile-horrendous,TE,Tyler Higbee,LAR,56.4
-vile-horrendous,D/ST,Bears D/ST,CHI,46
+vile-horrendous,D/ST,Bears D/ST,CHI,56
 vile-horrendous,K,Cam Little,JAX,62
