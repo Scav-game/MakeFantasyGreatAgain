@@ -41,7 +41,6 @@ chicago-zestiest,QB,Kyler Murray,MIN,73.58
 chicago-zestiest,RB,Bhayshul Tuten,JAX,118.3
 chicago-zestiest,RB,Jordan Mason,MIN,20.7
 chicago-zestiest,RB,Ollie Gordon II,MIA,72.2
-chicago-zestiest,RB,RJ Harvey,DEN,67.4
 chicago-zestiest,RB,TreVeyon Henderson,NE,33.8
 chicago-zestiest,WR,Emeka Egbuka,TB,71.1
 chicago-zestiest,WR,Germie Bernard,PIT,66.8
@@ -55,6 +54,7 @@ chicago-zestiest,TE,Kenyon Sadiq,NYJ,45.9
 chicago-zestiest,D/ST,Steelers D/ST,PIT,73
 chicago-zestiest,K,Will Reichard,MIN,80
 chicago-zestiest,IR,Jordyn Tyson,NO,
+chicago-zestiest,IR,RJ Harvey,DEN,67.4
 doobs-agency,QB,Cam Ward,TEN,100.52
 doobs-agency,QB,Jared Goff,DET,142.06
 doobs-agency,QB,Joe Burrow,CIN,169.6
@@ -99,10 +99,10 @@ fort-bragg,QB,Patrick Mahomes,KC,125.5
 fort-bragg,RB,Devin Singletary,NYG,33.5
 fort-bragg,RB,Dylan Sampson,CLE,23.6
 fort-bragg,RB,Elijah Mitchell,PHI,14.1
+fort-bragg,RB,Jadarian Price,SEA,19.7
 fort-bragg,RB,Kimani Vidal,LAC,39.2
 fort-bragg,RB,Tony Pollard,TEN,116.5
 fort-bragg,RB,Zach Charbonnet,SEA,5.9
-fort-bragg,WR,A.J. Brown,NE,19.1
 fort-bragg,WR,Deebo Samuel Sr.,SF,60.4
 fort-bragg,WR,Denzel Boston,CLE,86.9
 fort-bragg,WR,DJ Moore,BUF,52.9
@@ -206,9 +206,9 @@ the-watermark,QB,Tyler Shough,NO,125.94
 the-watermark,RB,Braelon Allen,NYJ,99.6
 the-watermark,RB,D'Andre Swift,CHI,150.7
 the-watermark,RB,Emanuel Wilson,SEA,74.8
-the-watermark,RB,Jadarian Price,SEA,19.7
 the-watermark,RB,Jahmyr Gibbs,DET,195.8
 the-watermark,RB,Jonah Coleman,DEN,44.1
+the-watermark,WR,A.J. Brown,NE,19.1
 the-watermark,WR,Chris Olave,NO,124.6
 the-watermark,WR,Kalif Raymond,CHI,63.5
 the-watermark,WR,Savion Williams,GB,19.5
@@ -238,7 +238,6 @@ vancouver-panties,IR,De'Von Achane,MIA,24.6
 vile-horrendous,QB,Justin Herbert,LAC,70.22
 vile-horrendous,QB,Michael Penix Jr.,ATL,82.78
 vile-horrendous,RB,David Montgomery,HOU,45.5
-vile-horrendous,RB,Jeremiyah Love,ARI,53.4
 vile-horrendous,RB,Omarion Hampton,LAC,62.2
 vile-horrendous,RB,Quinshon Judkins,CLE,86.6
 vile-horrendous,RB,Tyler Allgeier,ARI,84.1
@@ -253,3 +252,4 @@ vile-horrendous,TE,Isaiah Likely,NYG,112.5
 vile-horrendous,TE,Tyler Higbee,LAR,56.4
 vile-horrendous,D/ST,Bears D/ST,CHI,56
 vile-horrendous,K,Cam Little,JAX,62
+vile-horrendous,IR,Jeremiyah Love,ARI,53.4
