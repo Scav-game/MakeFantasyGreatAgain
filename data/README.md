@@ -103,6 +103,12 @@ isn't mistaken for a final one.
 | `round` | e.g. `1st Round`. |
 | `origin` | `Own` or the name of the team the pick was acquired from. |
 
+The source of truth for pick trades is the commissioner's Google Sheet
+(draft-order grid plus a trade log under "Notes", by owner first name):
+https://docs.google.com/spreadsheets/d/1BYNfe8jVF1-xo_oAIcQPnUa6yWke-4A9fKcNDa-Cz_I/edit
+It's link-viewable, so it can be pulled as CSV from
+`.../export?format=csv&gid=0`.
+
 ## history.csv — one row per team, mostly one-time setup
 
 | Column | Meaning |
