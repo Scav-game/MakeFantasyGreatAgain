@@ -30,7 +30,7 @@ const TEAM_REPORT_NAV: { label: string; id: string }[] = [
   { label: "The Watermark", id: "the-watermark" },
   { label: "Doob's Agency", id: "doobs-agency" },
   { label: "Englewood Ninjas", id: "englewood-ninjas" },
-  { label: "The Vile Horrendous", id: "vile-horrendous" },
+  { label: "Gc7de", id: "gc7de" },
   { label: "I Heart Gingers", id: "i-heart-gingers" },
   { label: "Amon Ra Dawgin", id: "amon-ra-dawgin" },
   { label: "Fort Bragg", id: "fort-bragg" },

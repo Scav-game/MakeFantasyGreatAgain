@@ -26,9 +26,9 @@
       "homeScore": 91.9
     },
     {
-      "id": "mount-olympus-vs-vile-horrendous",
+      "id": "mount-olympus-vs-gc7de",
       "away": "mount-olympus",
-      "home": "vile-horrendous",
+      "home": "gc7de",
       "awayRecord": "4-1",
       "homeRecord": "2-3",
       "winner": "mount-olympus",
@@ -82,7 +82,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "pakistan-bombers",
         "nabers-in-paris-vs-doobs-agency": "doobs-agency",
-        "mount-olympus-vs-vile-horrendous": "vile-horrendous",
+        "mount-olympus-vs-gc7de": "gc7de",
         "pluto-shraazinatorz-vs-i-heart-gingers": "pluto-shraazinatorz",
         "amon-ra-dawgin-vs-fort-bragg": "amon-ra-dawgin",
         "englewood-ninjas-vs-vancouver-panties": "englewood-ninjas",
@@ -91,7 +91,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "The Bombers average 132.2 per game, the best in the league, against the Watermark's 121.3. One bad week at 91.3 does not change a six-week mean.",
         "nabers-in-paris-vs-doobs-agency": "Doob's averages 127.4 and the Ethiopians average 97.7. Thirty points a week is the widest gap on the board.",
-        "mount-olympus-vs-vile-horrendous": "Vile averages 105.5 and Mount Olympus averages 104.3. It is 1.2 points, and I take the higher mean even when it is 1.2 points.",
+        "mount-olympus-vs-gc7de": "Gc7de averages 105.5 and Mount Olympus averages 104.3. It is 1.2 points, and I take the higher mean even when it is 1.2 points.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "Pluto has scored 783.26, second in the league, and averages 130.5 against the Gingers' 114.3. Last week's 76.5 is one observation out of six.",
         "amon-ra-dawgin-vs-fort-bragg": "Amon Ra averages 98.3. Fort Bragg averages 84.7, the lowest in the league. Neither number is good. One is better.",
         "englewood-ninjas-vs-vancouver-panties": "Englewood averages 122.5 and Vancouver averages 104.0. Eighteen points of expected margin is a favorite.",
@@ -100,7 +100,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": true,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -109,7 +109,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -121,7 +121,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "pakistan-bombers",
         "nabers-in-paris-vs-doobs-agency": "doobs-agency",
-        "mount-olympus-vs-vile-horrendous": "vile-horrendous",
+        "mount-olympus-vs-gc7de": "gc7de",
         "pluto-shraazinatorz-vs-i-heart-gingers": "i-heart-gingers",
         "amon-ra-dawgin-vs-fort-bragg": "fort-bragg",
         "englewood-ninjas-vs-vancouver-panties": "englewood-ninjas",
@@ -130,7 +130,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "I'm not dumb enough to fade the Bombers two weeks in a row. Lucas lost once, and he's going to be furious. Bombers.",
         "nabers-in-paris-vs-doobs-agency": "0-6 is 0-6. I hunt upsets, not miracles. Doob's.",
-        "mount-olympus-vs-vile-horrendous": "UPSET ALERT. Mount Olympus is 4-1 with the second-lowest points for in the East. That record is a lie and Vile just dropped 135. Vile wins and the 4-1 team gets exposed.",
+        "mount-olympus-vs-gc7de": "UPSET ALERT. Mount Olympus is 4-1 with the second-lowest points for in the East. That record is a lie and Gc7de just dropped 135. Gc7de wins and the 4-1 team gets exposed.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "UPSET ALERT. Pluto just lost to Beer with 76.5. The Gingers have scored 265.22 over their last two weeks. The wheels are coming off in space and I'm here to watch it.",
         "amon-ra-dawgin-vs-fort-bragg": "Fort Bragg had the bye to sort out its lineup and Amon Ra has lost two straight. Home team, rested team. I'll take it.",
         "englewood-ninjas-vs-vancouver-panties": "I thought about Vancouver for a long time and then I looked at Jaxon Smith-Njigba's 164.86 points. Not this week.",
@@ -139,7 +139,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": true,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": true,
         "amon-ra-dawgin-vs-fort-bragg": true,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -148,7 +148,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -160,7 +160,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "pakistan-bombers",
         "nabers-in-paris-vs-doobs-agency": "doobs-agency",
-        "mount-olympus-vs-vile-horrendous": "mount-olympus",
+        "mount-olympus-vs-gc7de": "mount-olympus",
         "pluto-shraazinatorz-vs-i-heart-gingers": "pluto-shraazinatorz",
         "amon-ra-dawgin-vs-fort-bragg": "fort-bragg",
         "englewood-ninjas-vs-vancouver-panties": "englewood-ninjas",
@@ -169,7 +169,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "Bijan Robinson and Ashton Jeanty in the same backfield. That's two tailbacks who run downhill. I'll take that over anybody's spreadsheet.",
         "nabers-in-paris-vs-doobs-agency": "Kenneth Walker carries the ball like he means it and Goff has been around. Doob's.",
-        "mount-olympus-vs-vile-horrendous": "McCaffrey and Dak Prescott. A veteran quarterback and a tailback with 122 points. Vile's leading running back has 53.4. That's not a football team, that's a passing club.",
+        "mount-olympus-vs-gc7de": "McCaffrey and Dak Prescott. A veteran quarterback and a tailback with 122 points. Gc7de's leading running back has 53.4. That's not a football team, that's a passing club.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "Derrick Henry is 116.8 points of pure punishment and Josh Allen runs it himself. The Gingers' backs are a committee. I don't trust committees.",
         "amon-ra-dawgin-vs-fort-bragg": "Rodgers and Mahomes. Two quarterbacks who've won it all. You can keep your young guys.",
         "englewood-ninjas-vs-vancouver-panties": "Jonathan Taylor against a Vancouver backfield whose best runner has 51.3 points. That game's over at halftime.",
@@ -178,7 +178,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": true,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": true,
+        "mount-olympus-vs-gc7de": true,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": true,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -187,7 +187,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -199,7 +199,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "the-watermark",
         "nabers-in-paris-vs-doobs-agency": "doobs-agency",
-        "mount-olympus-vs-vile-horrendous": "vile-horrendous",
+        "mount-olympus-vs-gc7de": "gc7de",
         "pluto-shraazinatorz-vs-i-heart-gingers": "i-heart-gingers",
         "amon-ra-dawgin-vs-fort-bragg": "amon-ra-dawgin",
         "englewood-ninjas-vs-vancouver-panties": "englewood-ninjas",
@@ -208,7 +208,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "Both teams lost last week, so I'm reading the slope. The Bombers fell 76.64 points from week 5 to week 6. The Watermark only fell 7.34. Momentum says Watermark.",
         "nabers-in-paris-vs-doobs-agency": "Doob's is on a three-game win streak. The Ethiopians are on a six-game losing streak. This is the easiest call on my board.",
-        "mount-olympus-vs-vile-horrendous": "Both won last week, but Vile's 135 was its season high and up 35.64 from its last game. Mount Olympus scored 106.72, right on its average. Vile's curve is pointing up.",
+        "mount-olympus-vs-gc7de": "Both won last week, but Gc7de's 135 was its season high and up 35.64 from its last game. Mount Olympus scored 106.72, right on its average. Gc7de's curve is pointing up.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "Pluto just snapped a five-game win streak with a 76.5. The Gingers have won two of three and scored 141.88 and 123.34 in the last two. I go with the hot hand.",
         "amon-ra-dawgin-vs-fort-bragg": "Both lost last time out, but Amon Ra went from 74.74 to 108.74. Fort Bragg's last game was a 78.9. One trend is up.",
         "englewood-ninjas-vs-vancouver-panties": "Englewood lost its first game, but it still scored 98.66. Vancouver has lost two straight and its last game was 76.68. The colder team is Vancouver.",
@@ -217,7 +217,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": true,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -226,7 +226,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -238,7 +238,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "pakistan-bombers",
         "nabers-in-paris-vs-doobs-agency": "doobs-agency",
-        "mount-olympus-vs-vile-horrendous": "vile-horrendous",
+        "mount-olympus-vs-gc7de": "gc7de",
         "pluto-shraazinatorz-vs-i-heart-gingers": "i-heart-gingers",
         "amon-ra-dawgin-vs-fort-bragg": "amon-ra-dawgin",
         "englewood-ninjas-vs-vancouver-panties": "englewood-ninjas",
@@ -247,7 +247,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "Shough over Daniels at QB and Gibbs and Swift over Bijan and Jeanty at RB go to the Watermark. Flowers and Nacua beat Olave's room at WR, McBride over Strange at TE, Texans over Rams at D/ST. Bombers 3 to 2.",
         "nabers-in-paris-vs-doobs-agency": "Goff over Maye, Walker over Hubbard, Watson and McMillan over Tucker, Warren over Kraft, Patriots over Eagles. Doob's sweeps 5 to 0.",
-        "mount-olympus-vs-vile-horrendous": "Dak over Penix at QB and McCaffrey over Marks at RB go to Olympus. Nabers and Wilson take WR, Likely over Freiermuth at TE, and the Bears beat the Chiefs at D/ST. Vile 3 to 2.",
+        "mount-olympus-vs-gc7de": "Dak over Penix at QB and McCaffrey over Marks at RB go to Olympus. Nabers and Wilson take WR, Likely over Freiermuth at TE, and the Bears beat the Chiefs at D/ST. Gc7de 3 to 2.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "Allen and Henry take QB and RB for Pluto. Golden, Chase and Higgins outscore London, Pickens and Collins at WR, Kittle beats Juwan Johnson at TE, Broncos over Bengals at D/ST. Gingers 3 to 2.",
         "amon-ra-dawgin-vs-fort-bragg": "Lawrence over Rodgers at QB, Javonte over Hampton at RB, Kincaid over Andrews at TE. Fort Bragg takes WR by 1.3 points and the Browns crush the Colts at D/ST. Amon Ra 3 to 2.",
         "englewood-ninjas-vs-vancouver-panties": "Purdy over Lamar at QB, Taylor over Skattebo at RB, Bowers over Schultz at TE. Lamb's room edges Smith-Njigba's at WR and the Vikings take D/ST. Englewood 3 to 2.",
@@ -256,7 +256,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": true,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": true,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -265,7 +265,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -277,7 +277,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "pakistan-bombers",
         "nabers-in-paris-vs-doobs-agency": "doobs-agency",
-        "mount-olympus-vs-vile-horrendous": "vile-horrendous",
+        "mount-olympus-vs-gc7de": "gc7de",
         "pluto-shraazinatorz-vs-i-heart-gingers": "pluto-shraazinatorz",
         "amon-ra-dawgin-vs-fort-bragg": "fort-bragg",
         "englewood-ninjas-vs-vancouver-panties": "vancouver-panties",
@@ -286,7 +286,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "The Bombers just got upset by a team they were supposed to beat by 30. That's an angry team. The Watermark just gave up 156.72 to an 0-5 club. I know which locker room I'd rather be in.",
         "nabers-in-paris-vs-doobs-agency": "Doob's is at home on a three-game win streak against a team that has lost every week. No angle overrides that.",
-        "mount-olympus-vs-vile-horrendous": "Classic letdown spot. Mount Olympus just knocked off the best team in the East, and the week after is when teams relax. Vile is home and playing for fourth place.",
+        "mount-olympus-vs-gc7de": "Classic letdown spot. Mount Olympus just knocked off the best team in the East, and the week after is when teams relax. Gc7de is home and playing for fourth place.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "Pluto lost for the first time, and to a 1-4 team. A proud team responds to that. Bounce-back spot.",
         "amon-ra-dawgin-vs-fort-bragg": "Fort Bragg is coming off the bye, at home, rested. Amon Ra has lost two straight and just reshuffled its roster on the wire. Fort Bragg.",
         "englewood-ninjas-vs-vancouver-panties": "Vancouver is coming off the bye and Englewood is coming off its first loss of the year. Rested home team against a team still reeling. That's my upset.",
@@ -295,7 +295,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": true,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": true,
         "englewood-ninjas-vs-vancouver-panties": true,
@@ -304,7 +304,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": true,
@@ -316,7 +316,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "the-watermark",
         "nabers-in-paris-vs-doobs-agency": "nabers-in-paris",
-        "mount-olympus-vs-vile-horrendous": "mount-olympus",
+        "mount-olympus-vs-gc7de": "mount-olympus",
         "pluto-shraazinatorz-vs-i-heart-gingers": "i-heart-gingers",
         "amon-ra-dawgin-vs-fort-bragg": "amon-ra-dawgin",
         "englewood-ninjas-vs-vancouver-panties": "englewood-ninjas",
@@ -325,7 +325,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "Preston cleared out his whole energy field on waiver day. Tyreek gone, Giants D/ST gone, fresh claims everywhere. Watermark is in its rebirth phase.",
         "nabers-in-paris-vs-doobs-agency": "Six weeks of hunger is enough. The universe keeps a ledger and Stephen is owed. Starving Ethiopians.",
-        "mount-olympus-vs-vile-horrendous": "Liam slew the giant last week, and that kind of energy doesn't fade in seven days. Mount Olympus is riding a wave.",
+        "mount-olympus-vs-gc7de": "Liam slew the giant last week, and that kind of energy doesn't fade in seven days. Mount Olympus is riding a wave.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "Red hair, warm heart, two wins in three weeks. The Gingers' aura is glowing and Pluto's just went dim.",
         "amon-ra-dawgin-vs-fort-bragg": "Geno Smith, Tyjae Spears and Ja'Kobi Lane all walked in the door this week. Bold moves invite good fortune. Amon Ra.",
         "englewood-ninjas-vs-vancouver-panties": "Englewood lost for the first time, and the first loss humbles you in the right way. Ninjas strike back.",
@@ -334,7 +334,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": true,
-        "mount-olympus-vs-vile-horrendous": true,
+        "mount-olympus-vs-gc7de": true,
         "pluto-shraazinatorz-vs-i-heart-gingers": true,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -343,7 +343,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": true,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -355,7 +355,7 @@
       "picks": {
         "pakistan-bombers-vs-the-watermark": "pakistan-bombers",
         "nabers-in-paris-vs-doobs-agency": "doobs-agency",
-        "mount-olympus-vs-vile-horrendous": "vile-horrendous",
+        "mount-olympus-vs-gc7de": "gc7de",
         "pluto-shraazinatorz-vs-i-heart-gingers": "pluto-shraazinatorz",
         "amon-ra-dawgin-vs-fort-bragg": "amon-ra-dawgin",
         "englewood-ninjas-vs-vancouver-panties": "englewood-ninjas",
@@ -364,7 +364,7 @@
       "reasoning": {
         "pakistan-bombers-vs-the-watermark": "Five of seven on the Bombers and they average 11 points more than the Watermark. I'm up four points on the field. I take the chalk.",
         "nabers-in-paris-vs-doobs-agency": "Six to one, Destiny alone on the Ethiopians. If she hits that, she earned it. Doob's.",
-        "mount-olympus-vs-vile-horrendous": "Five of seven on Vile. Gerald is my closest chaser at 31 and he has Vile, so if I match him he can't gain on me here.",
+        "mount-olympus-vs-gc7de": "Five of seven on Gc7de. Gerald is my closest chaser at 31 and he has Gc7de, so if I match him he can't gain on me here.",
         "pluto-shraazinatorz-vs-i-heart-gingers": "The table is split four to three toward the Gingers, and there's no lone wolf available to me because both sides are taken. So I protect the lead and match Gerald on Pluto.",
         "amon-ra-dawgin-vs-fort-bragg": "Four to three Amon Ra, and Gerald has Amon Ra. I copy the man chasing me.",
         "englewood-ninjas-vs-vancouver-panties": "Six to one, Sandy alone on Vancouver. Englewood.",
@@ -373,7 +373,7 @@
       "correct": {
         "pakistan-bombers-vs-the-watermark": true,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,
@@ -382,7 +382,7 @@
       "loneWolf": {
         "pakistan-bombers-vs-the-watermark": false,
         "nabers-in-paris-vs-doobs-agency": false,
-        "mount-olympus-vs-vile-horrendous": false,
+        "mount-olympus-vs-gc7de": false,
         "pluto-shraazinatorz-vs-i-heart-gingers": false,
         "amon-ra-dawgin-vs-fort-bragg": false,
         "englewood-ninjas-vs-vancouver-panties": false,

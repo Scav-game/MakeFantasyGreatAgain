@@ -30,7 +30,7 @@ const LOGO_EXTENSION: Record<string, string> = {
   "pluto-shraazinatorz": "svg",
   "the-watermark": "svg",
   "vancouver-panties": "png",
-  "vile-horrendous": "svg",
+  "gc7de": "svg",
 }
 
 type TeamLogoProps = {
