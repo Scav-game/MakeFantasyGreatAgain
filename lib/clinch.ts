@@ -345,6 +345,35 @@ export function analyzeClinch(teams: Team[], asOfWeek: number): ClinchReport {
   return { week: asOfWeek, statuses: statuses.sort((a, b) => statusRank(a) - statusRank(b)) }
 }
 
+export type MathOutlook = {
+  playoffClinched: boolean
+  playoffAlive: boolean
+  divisionClinched: boolean
+  divisionAlive: boolean
+}
+
+/**
+ * What's mathematically locked in or still possible for each team, by slug,
+ * using results from before `asOfWeek`. Used to keep the championship odds
+ * from showing 100% / 0% for outcomes that aren't actually settled.
+ */
+export function mathematicalOutlook(teams: Team[], asOfWeek: number): Map<string, MathOutlook> {
+  const out = new Map<string, MathOutlook>()
+  const none = new Map<OpenGame, string>()
+  for (const division of DIVISIONS) {
+    const state = buildDivisionState(teams, division, asOfWeek)
+    state.teams.forEach((team, t) => {
+      out.set(team.slug, {
+        playoffClinched: check(state, t, PLAYOFF_SPOTS_PER_DIVISION, "clinch", none),
+        playoffAlive: check(state, t, PLAYOFF_SPOTS_PER_DIVISION, "alive", none),
+        divisionClinched: check(state, t, 1, "clinch", none),
+        divisionAlive: check(state, t, 1, "alive", none),
+      })
+    })
+  }
+  return out
+}
+
 function joinPlus(parts: string[]): string {
   return parts.join(" + ")
 }
