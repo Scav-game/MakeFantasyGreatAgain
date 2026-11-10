@@ -1,6 +1,9 @@
-import { TEAMS, type Division, type Team } from "./league"
+import { CURRENT_WEEK, TEAMS, type Division, type Team } from "./league"
+import { analyzeClinch } from "./clinch"
 
 const SIM_COUNT = 10000
+/** Highest figure shown for an outcome that isn't mathematically locked. */
+const MAX_UNSECURED_PCT = 99.9
 const PLAYOFF_SPOTS_PER_DIVISION = 4
 
 // ---------------------------------------------------------------------------
@@ -395,11 +398,23 @@ export function simulateChampionshipOdds(): TeamOdds[] {
     championCount.set(champion.slug, championCount.get(champion.slug)! + 1)
   }
 
+  // A sim count of 10,000/10,000 (or 9,996+, which rounds to "100.0%") only
+  // means the sims never saw the team miss — not that it can't. Unless the
+  // clinch engine says it's mathematically locked, hold the figure at 99.9.
+  const { statuses } = analyzeClinch(TEAMS, CURRENT_WEEK)
+  const secured = (slug: string, kinds: string[]) =>
+    statuses.some((s) => s.team.slug === slug && kinds.includes(s.kind))
+  const pct = (count: number, locked: boolean) => {
+    const value = (count / SIM_COUNT) * 100
+    return !locked && value >= MAX_UNSECURED_PCT ? MAX_UNSECURED_PCT : value
+  }
+
   const odds: TeamOdds[] = TEAMS.map((team) => ({
     team,
-    playoffPct: (playoffCount.get(team.slug)! / SIM_COUNT) * 100,
-    divisionPct: (divisionCount.get(team.slug)! / SIM_COUNT) * 100,
-    championshipPct: (championCount.get(team.slug)! / SIM_COUNT) * 100,
+    playoffPct: pct(playoffCount.get(team.slug)!, secured(team.slug, ["clinched", "top-seed"])),
+    divisionPct: pct(divisionCount.get(team.slug)!, secured(team.slug, ["top-seed"])),
+    // No clinch status covers winning the title, so it's never shown as certain.
+    championshipPct: pct(championCount.get(team.slug)!, false),
     projectedWins: winsTotal.get(team.slug)! / SIM_COUNT,
     projectedPointsFor: pointsTotal.get(team.slug)! / SIM_COUNT,
   }))
