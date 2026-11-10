@@ -9,11 +9,11 @@ amon-ra-dawgin,WR,Carnell Tate,TEN,77.3
 amon-ra-dawgin,WR,Devaughn Vele,NO,89.5
 amon-ra-dawgin,WR,Ja'Kobi Lane,BAL,17.9
 amon-ra-dawgin,WR,Josh Downs,IND,75.1
-amon-ra-dawgin,WR,Justin Jefferson,MIN,86.4
+amon-ra-dawgin,WR,Justin Jefferson,MIN,95.2
 amon-ra-dawgin,WR,KC Concepcion,CLE,88.4
 amon-ra-dawgin,WR,Makai Lemon,PHI,73.7
 amon-ra-dawgin,WR,Michael Wilson,ARI,120.68
-amon-ra-dawgin,TE,Dalton Kincaid,BUF,79.1
+amon-ra-dawgin,TE,Dalton Kincaid,BUF,84.9
 amon-ra-dawgin,TE,Evan Engram,DEN,39.9
 amon-ra-dawgin,D/ST,Cowboys D/ST,DAL,19
 amon-ra-dawgin,K,Ryan Fitzgerald,CAR,64
@@ -21,13 +21,13 @@ amon-ra-dawgin,IR,Alec Pierce,IND,12.2
 amon-ra-dawgin,IR,Jayden Reed,GB,6.4
 beer,QB,C.J. Stroud,HOU,164.04
 beer,QB,Matthew Stafford,LAR,142.86
-beer,RB,James Cook III,BUF,131.7
+beer,RB,James Cook III,BUF,148.4
 beer,RB,Josh Jacobs,GB,43.8
 beer,RB,Kyren Williams,LAR,159.1
 beer,WR,Amon-Ra St. Brown,DET,157.6
 beer,WR,Jahan Dotson,ATL,63.3
 beer,WR,Jalen Coker,CAR,86
-beer,WR,Khalil Shakir,BUF,66.4
+beer,WR,Khalil Shakir,BUF,76.2
 beer,WR,Ladd McConkey,LAC,51.6
 beer,WR,Quentin Johnston,LAC,45.8
 beer,WR,Travis Hunter,JAX,27.3
@@ -39,21 +39,20 @@ beer,IR,Jacory Croskey-Merritt,WSH,44.9
 chicago-zestiest,QB,Kirk Cousins,LV,172.3
 chicago-zestiest,QB,Kyler Murray,MIN,73.58
 chicago-zestiest,RB,Bhayshul Tuten,JAX,127.2
-chicago-zestiest,RB,Jordan Mason,MIN,20.7
+chicago-zestiest,RB,Jordan Mason,MIN,26.9
 chicago-zestiest,RB,Ollie Gordon II,MIA,79.6
 chicago-zestiest,RB,TreVeyon Henderson,NE,33.8
-chicago-zestiest,WR,Demarcus Robinson,SF,24.6
 chicago-zestiest,WR,Emeka Egbuka,TB,78
 chicago-zestiest,WR,Germie Bernard,PIT,66.8
 chicago-zestiest,WR,Jakobi Meyers,JAX,75.6
-chicago-zestiest,WR,Jordan Addison,MIN,49.1
+chicago-zestiest,WR,Jordan Addison,MIN,53.9
 chicago-zestiest,WR,Jordyn Tyson,NO,5
 chicago-zestiest,WR,Malik Washington,MIA,75.8
 chicago-zestiest,WR,Xavier Worthy,KC,66.8
 chicago-zestiest,TE,Colston Loveland,CHI,83.3
 chicago-zestiest,D/ST,Giants D/ST,NYG,50
 chicago-zestiest,D/ST,Steelers D/ST,PIT,73
-chicago-zestiest,K,Will Reichard,MIN,80
+chicago-zestiest,K,Will Reichard,MIN,89
 chicago-zestiest,IR,Mike Evans,SF,89
 chicago-zestiest,IR,RJ Harvey,DEN,67.4
 doobs-agency,QB,Cam Ward,TEN,100.52
@@ -64,10 +63,10 @@ doobs-agency,RB,Bucky Irving,TB,159.1
 doobs-agency,RB,George Holani,SEA,36.5
 doobs-agency,RB,Kenneth Walker III,KC,196.4
 doobs-agency,RB,Saquon Barkley,PHI,58.7
-doobs-agency,RB,Ty Johnson,BUF,33.4
+doobs-agency,RB,Ty Johnson,BUF,39.1
 doobs-agency,WR,Christian Watson,GB,176.9
 doobs-agency,WR,Cooper Kupp,SEA,57.8
-doobs-agency,WR,DJ Moore,BUF,52.9
+doobs-agency,WR,DJ Moore,BUF,59.5
 doobs-agency,WR,Michael Pittman Jr.,PIT,15.9
 doobs-agency,WR,Tetairoa McMillan,CAR,124.5
 doobs-agency,TE,Darnell Washington,PIT,62.4
@@ -104,17 +103,37 @@ fort-bragg,RB,Jadarian Price,SEA,31.5
 fort-bragg,RB,Kimani Vidal,LAC,43.8
 fort-bragg,RB,Tony Pollard,TEN,116.5
 fort-bragg,RB,Zach Charbonnet,SEA,15.5
+fort-bragg,WR,Deebo Samuel Sr.,SF,60.4
 fort-bragg,WR,Denzel Boston,CLE,102.7
 fort-bragg,WR,Keenan Allen,IND,81.1
-fort-bragg,WR,Keon Coleman,BUF,66.7
+fort-bragg,WR,Keon Coleman,BUF,71.4
 fort-bragg,WR,Malachi Fields,NYG,53.8
 fort-bragg,WR,Treylon Burks,WSH,47.3
 fort-bragg,TE,Travis Kelce,KC,99.3
-fort-bragg,D/ST,Bills D/ST,BUF,26
+fort-bragg,D/ST,Bills D/ST,BUF,41
 fort-bragg,K,Ka'imi Fairbairn,HOU,92
-fort-bragg,K,Tyler Bass,BUF,78
-fort-bragg,IR,Deebo Samuel Sr.,SF,60.4
+fort-bragg,K,Tyler Bass,BUF,91
 fort-bragg,IR,Tyrone Tracy Jr.,NYG,31.9
+gc7de,QB,Justin Herbert,LAC,80.64
+gc7de,QB,Michael Penix Jr.,ATL,96.26
+gc7de,RB,MarShawn Lloyd,GB,51.8
+gc7de,RB,Omarion Hampton,LAC,68.2
+gc7de,RB,Quinshon Judkins,CLE,92.1
+gc7de,RB,Tyler Allgeier,ARI,90.7
+gc7de,RB,Woody Marks,HOU,70.9
+gc7de,WR,Antonio Williams,WSH,60.4
+gc7de,WR,Garrett Wilson,NYJ,113.7
+gc7de,WR,Malik Nabers,NYG,129.8
+gc7de,WR,Marvin Harrison Jr.,HOU,37.5
+gc7de,WR,Omar Cooper Jr.,NYJ,62.6
+gc7de,WR,Rome Odunze,CHI,88.8
+gc7de,TE,Isaiah Likely,NYG,128.8
+gc7de,TE,Kenyon Sadiq,NYJ,54.8
+gc7de,D/ST,Bears D/ST,CHI,69
+gc7de,D/ST,Buccaneers D/ST,TB,93
+gc7de,K,Cam Little,JAX,79
+gc7de,IR,David Montgomery,HOU,45.5
+gc7de,IR,Jeremiyah Love,ARI,53.4
 i-heart-gingers,QB,Jordan Love,GB,185.02
 i-heart-gingers,RB,Chase Brown,CIN,101.4
 i-heart-gingers,RB,J.K. Dobbins,DEN,62.5
@@ -144,7 +163,7 @@ mount-olympus,WR,Jalen Nailor,LV,32.2
 mount-olympus,WR,Luther Burden III,CHI,136.3
 mount-olympus,WR,Rashee Rice,KC,66.2
 mount-olympus,TE,Pat Freiermuth,PIT,79
-mount-olympus,TE,T.J. Hockenson,MIN,78.5
+mount-olympus,TE,T.J. Hockenson,MIN,85.8
 mount-olympus,D/ST,Chiefs D/ST,KC,50
 mount-olympus,K,Harrison Butker,KC,59
 mount-olympus,IR,Jayden Higgins,HOU,
@@ -172,10 +191,8 @@ pakistan-bombers,QB,Jayden Daniels,WSH,115.2
 pakistan-bombers,RB,Bijan Robinson,ATL,180
 pakistan-bombers,RB,Chuba Hubbard,CAR,146.6
 pakistan-bombers,RB,Javonte Williams,DAL,159.6
-pakistan-bombers,RB,Kendre Miller,FA,38.6
 pakistan-bombers,RB,Mike Washington Jr.,LV,37.6
 pakistan-bombers,RB,Seth McGowan,IND,32.7
-pakistan-bombers,RB,Tyler Goodson,DAL,22.6
 pakistan-bombers,WR,Puka Nacua,LAR,173.6
 pakistan-bombers,WR,Ryan Flournoy,DAL,83.8
 pakistan-bombers,WR,Tank Dell,HOU,26
@@ -183,14 +200,13 @@ pakistan-bombers,WR,Zay Flowers,BAL,127.5
 pakistan-bombers,TE,Trey McBride,ARI,162.8
 pakistan-bombers,D/ST,Packers D/ST,GB,67
 pakistan-bombers,D/ST,Texans D/ST,HOU,41
-pakistan-bombers,K,Cairo Santos,CHI,79
 pakistan-bombers,K,Chris Boswell,PIT,77
 pakistan-bombers,IR,DeVonta Smith,PHI,69
 pakistan-bombers,IR,Travis Etienne Jr.,NO,30.9
 pluto-shraazinatorz,QB,Bo Nix,DEN,130.8
 pluto-shraazinatorz,QB,Deshaun Watson,CLE,117.94
-pluto-shraazinatorz,QB,Josh Allen,BUF,187.82
-pluto-shraazinatorz,RB,Aaron Jones Sr.,MIN,79.8
+pluto-shraazinatorz,QB,Josh Allen,BUF,200.68
+pluto-shraazinatorz,RB,Aaron Jones Sr.,MIN,82.9
 pluto-shraazinatorz,RB,Derrick Henry,BAL,142.28
 pluto-shraazinatorz,RB,Jaylen Warren,PIT,140.8
 pluto-shraazinatorz,RB,Justice Hill,BAL,61.1
@@ -239,26 +255,6 @@ vancouver-panties,WR,Rashod Bateman,BAL,55.4
 vancouver-panties,TE,Dalton Schultz,HOU,71.4
 vancouver-panties,TE,Kyle Pitts Sr.,ATL,71
 vancouver-panties,D/ST,Titans D/ST,TEN,38
-vancouver-panties,D/ST,Vikings D/ST,MIN,79
+vancouver-panties,D/ST,Vikings D/ST,MIN,85
 vancouver-panties,K,Brandon Aubrey,DAL,80
 vancouver-panties,IR,De'Von Achane,MIA,24.6
-gc7de,QB,Justin Herbert,LAC,80.64
-gc7de,QB,Michael Penix Jr.,ATL,96.26
-gc7de,RB,MarShawn Lloyd,GB,51.8
-gc7de,RB,Omarion Hampton,LAC,68.2
-gc7de,RB,Quinshon Judkins,CLE,92.1
-gc7de,RB,Tyler Allgeier,ARI,90.7
-gc7de,RB,Woody Marks,HOU,70.9
-gc7de,WR,Antonio Williams,WSH,60.4
-gc7de,WR,Garrett Wilson,NYJ,113.7
-gc7de,WR,Malik Nabers,NYG,129.8
-gc7de,WR,Marvin Harrison Jr.,HOU,37.5
-gc7de,WR,Omar Cooper Jr.,NYJ,62.6
-gc7de,WR,Rome Odunze,CHI,88.8
-gc7de,TE,Isaiah Likely,NYG,128.8
-gc7de,TE,Kenyon Sadiq,NYJ,54.8
-gc7de,D/ST,Bears D/ST,CHI,69
-gc7de,D/ST,Buccaneers D/ST,TB,93
-gc7de,K,Cam Little,JAX,79
-gc7de,IR,David Montgomery,HOU,45.5
-gc7de,IR,Jeremiyah Love,ARI,53.4
