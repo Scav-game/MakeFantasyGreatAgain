@@ -51,7 +51,7 @@ chicago-zestiest,WR,Malik Washington,MIA,75.8
 chicago-zestiest,WR,Xavier Worthy,KC,66.8
 chicago-zestiest,TE,Chig Okonkwo,WSH,44.9
 chicago-zestiest,TE,Colston Loveland,CHI,83.3
-chicago-zestiest,D/ST,Giants D/ST,NYG,50
+chicago-zestiest,D/ST,Giants D/ST,NYG,60
 chicago-zestiest,D/ST,Steelers D/ST,PIT,73
 chicago-zestiest,K,Will Reichard,MIN,89
 chicago-zestiest,IR,Mike Evans,SF,89
@@ -92,12 +92,12 @@ englewood-ninjas,TE,AJ Barner,SEA,62.8
 englewood-ninjas,TE,Brock Bowers,LV,146
 englewood-ninjas,TE,Michael Mayer,LV,81.8
 englewood-ninjas,D/ST,49ers D/ST,SF,68
-englewood-ninjas,D/ST,Commanders D/ST,WSH,42
+englewood-ninjas,D/ST,Commanders D/ST,WSH,52
 englewood-ninjas,K,Eddy Pineiro,SF,49
 englewood-ninjas,IR,Brian Robinson Jr.,ATL,53.1
 englewood-ninjas,IR,Tank Bigsby,PHI,17.1
 fort-bragg,QB,Patrick Mahomes,KC,141.98
-fort-bragg,RB,Devin Singletary,NYG,39.4
+fort-bragg,RB,Devin Singletary,NYG,39.7
 fort-bragg,RB,Dylan Sampson,CLE,31.4
 fort-bragg,RB,Jadarian Price,SEA,31.5
 fort-bragg,RB,Kaleb Johnson,GB,23.2
@@ -129,7 +129,7 @@ gc7de,WR,Malik Nabers,NYG,129.8
 gc7de,WR,Marvin Harrison Jr.,HOU,37.5
 gc7de,WR,Omar Cooper Jr.,NYJ,62.6
 gc7de,WR,Rome Odunze,CHI,88.8
-gc7de,TE,Isaiah Likely,NYG,128.8
+gc7de,TE,Isaiah Likely,NYG,130.7
 gc7de,TE,Kenyon Sadiq,NYJ,54.8
 gc7de,D/ST,Bears D/ST,CHI,69
 gc7de,D/ST,Browns D/ST,CLE,52
@@ -174,7 +174,7 @@ mount-olympus,K,Harrison Butker,KC,59
 mount-olympus,IR,Jayden Higgins,HOU,
 mount-olympus,IR,Terrance Ferguson,LAR,19.3
 nabers-in-paris,QB,Drake Maye,NE,179.18
-nabers-in-paris,QB,J.J. McCarthy,NYG,33.98
+nabers-in-paris,QB,J.J. McCarthy,NYG,34.46
 nabers-in-paris,RB,Austin Ekeler,WSH,21.1
 nabers-in-paris,RB,Blake Corum,LAR,94.6
 nabers-in-paris,RB,Jaleel McLaughlin,CLE,18.6
@@ -234,8 +234,8 @@ the-watermark,RB,Braelon Allen,NYJ,105
 the-watermark,RB,D'Andre Swift,CHI,153.8
 the-watermark,RB,Jahmyr Gibbs,DET,209.2
 the-watermark,RB,Jonah Coleman,DEN,62.9
+the-watermark,WR,A.J. Brown,NE,19.1
 the-watermark,WR,Chris Olave,NO,141.4
-the-watermark,WR,Efton Chism III,NE,50.84
 the-watermark,WR,Kalif Raymond,CHI,70.7
 the-watermark,WR,Savion Williams,GB,32.3
 the-watermark,WR,Wan'Dale Robinson,TEN,77.3
@@ -246,13 +246,12 @@ the-watermark,D/ST,Lions D/ST,DET,38
 the-watermark,D/ST,Rams D/ST,LAR,48
 the-watermark,K,Chase McLaughlin,TB,99
 the-watermark,K,Jason Sanders,NYJ,86
-the-watermark,IR,A.J. Brown,NE,19.1
 the-watermark,IR,Brandon Aiyuk,SF,
 vancouver-panties,QB,Baker Mayfield,TB,50.88
 vancouver-panties,QB,Geno Smith,NYJ,130.52
 vancouver-panties,QB,Malik Willis,MIA,105.04
 vancouver-panties,QB,Tyson Bagent,CHI,12.16
-vancouver-panties,RB,Cam Skattebo,NYG,70.4
+vancouver-panties,RB,Cam Skattebo,NYG,74
 vancouver-panties,RB,Corey Kiner,NE,32
 vancouver-panties,RB,Kenny Gainwell,TB,63.6
 vancouver-panties,RB,Lan Larison,NE,3.9
