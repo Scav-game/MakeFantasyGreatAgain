@@ -119,6 +119,7 @@ fort-bragg,IR,Tyrone Tracy Jr.,NYG,31.9
 gc7de,QB,Justin Herbert,LAC,80.64
 gc7de,QB,Michael Penix Jr.,ATL,96.26
 gc7de,RB,Audric Estime,NO,22.6
+gc7de,RB,David Montgomery,HOU,45.5
 gc7de,RB,Omarion Hampton,LAC,68.2
 gc7de,RB,Quinshon Judkins,CLE,92.1
 gc7de,RB,Tyler Allgeier,ARI,90.7
@@ -126,7 +127,6 @@ gc7de,RB,Woody Marks,HOU,70.9
 gc7de,WR,Antonio Williams,WSH,72.6
 gc7de,WR,Garrett Wilson,NYJ,113.7
 gc7de,WR,Malik Nabers,NYG,137.2
-gc7de,WR,Marvin Harrison Jr.,HOU,37.5
 gc7de,WR,Omar Cooper Jr.,NYJ,62.6
 gc7de,WR,Rome Odunze,CHI,88.8
 gc7de,TE,Isaiah Likely,NYG,156.5
@@ -134,8 +134,8 @@ gc7de,TE,Kenyon Sadiq,NYJ,54.8
 gc7de,D/ST,Bears D/ST,CHI,69
 gc7de,D/ST,Browns D/ST,CLE,52
 gc7de,K,Cam Little,JAX,79
-gc7de,IR,David Montgomery,HOU,45.5
 gc7de,IR,Jeremiyah Love,ARI,53.4
+gc7de,IR,Marvin Harrison Jr.,HOU,37.5
 i-heart-gingers,QB,Aaron Rodgers,PIT,117.14
 i-heart-gingers,QB,Drew Lock,SEA,46.78
 i-heart-gingers,QB,Jordan Love,GB,185.02
@@ -164,9 +164,9 @@ mount-olympus,RB,Samaje Perine,CIN,44.9
 mount-olympus,WR,Brian Thomas Jr.,JAX,33.7
 mount-olympus,WR,Caleb Douglas,MIA,60.6
 mount-olympus,WR,Courtland Sutton,DEN,63.6
-mount-olympus,WR,Jalen Nailor,LV,32.2
 mount-olympus,WR,Luther Burden III,CHI,136.3
 mount-olympus,WR,Rashee Rice,KC,66.2
+mount-olympus,TE,Gavin Bartholomew,MIN,12.4
 mount-olympus,TE,Pat Freiermuth,PIT,79
 mount-olympus,TE,T.J. Hockenson,MIN,85.8
 mount-olympus,D/ST,Chiefs D/ST,KC,50
@@ -200,7 +200,6 @@ pakistan-bombers,RB,Mike Washington Jr.,LV,37.6
 pakistan-bombers,RB,Seth McGowan,IND,32.7
 pakistan-bombers,WR,Jordan Watkins,SF,38.4
 pakistan-bombers,WR,Justin Jefferson,MIN,95.2
-pakistan-bombers,WR,Puka Nacua,LAR,173.6
 pakistan-bombers,WR,Ryan Flournoy,DAL,83.8
 pakistan-bombers,WR,Zay Flowers,BAL,127.5
 pakistan-bombers,TE,Colby Parkinson,LAR,35.6
@@ -209,6 +208,7 @@ pakistan-bombers,D/ST,Packers D/ST,GB,67
 pakistan-bombers,D/ST,Texans D/ST,HOU,41
 pakistan-bombers,K,Chris Boswell,PIT,77
 pakistan-bombers,IR,DeVonta Smith,PHI,69
+pakistan-bombers,IR,Puka Nacua,LAR,173.6
 pluto-shraazinatorz,QB,Bo Nix,DEN,130.8
 pluto-shraazinatorz,QB,Deshaun Watson,CLE,117.94
 pluto-shraazinatorz,QB,Josh Allen,BUF,200.68
