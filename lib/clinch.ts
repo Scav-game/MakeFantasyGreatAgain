@@ -29,10 +29,12 @@ import type { Division, Team } from "./league"
  * - With those fixed, each rival either finishes above, below, or level with
  *   the team; every combination of "who ends up level" is tried and the tie
  *   group is resolved by head-to-head.
- * - A tie that head-to-head can't separate falls to points for, which nobody
- *   can know in advance, so it goes against the team when checking a clinch
- *   and for the team when checking elimination. Clinches are never claimed on
- *   a points-for coin flip.
+ * - A tie that head-to-head can't separate falls to points for. The gap
+ *   between two teams can move by at most MAX_WEEKLY_SWING points a week, so
+ *   if one leads the other by more than that times the weeks left in the
+ *   regular season, the tiebreak is treated as already decided. Any closer
+ *   and nobody can know in advance, so it goes against the team when checking
+ *   a clinch and for the team when checking elimination.
  *
  * "This week" scenarios then try every combination of the week's results for
  * games involving the division (2^7 at most), run the check on each, and boil
@@ -50,22 +52,11 @@ const DIVISIONS: Division[] = ["East", "West"]
 const MAX_PATHS = 4
 
 /**
- * Commissioner rulings: points-for tiebreakers treated as already decided.
- * `winner: [losers]` means that whenever `winner` is level with one of those
- * teams on wins AND head-to-head, `winner` takes the spot. Everything else
- * still goes against the team being checked, as described above.
- *
- * Added 2026-11-17 going into week 11: Pakistan Bombers (1,338.5 PF) over
- * Fort Bragg (863.5), Chicago (937.5) and Gc7de (862.5). Remove once it no
- * longer matters.
+ * Most the points-for gap between two teams is assumed to move in one week
+ * (commissioner ruling, 2026-11-17). A lead bigger than this times the weeks
+ * left can't be caught, so that points-for tiebreak is already decided.
  */
-const ASSUMED_POINTS_TIEBREAKS: Record<string, string[]> = {
-  "pakistan-bombers": ["fort-bragg", "chicago-zestiest", "gc7de"],
-}
-
-function winsPointsTiebreak(winner: string, loser: string): boolean {
-  return ASSUMED_POINTS_TIEBREAKS[winner]?.includes(loser) ?? false
-}
+const MAX_WEEKLY_SWING = 100
 
 export type ClinchCondition = { week: number; winner: string; loser: string }
 export type ClinchPath = ClinchCondition[]
@@ -94,6 +85,10 @@ type DivisionState = {
   beat: boolean[][]
   /** Undecided games involving at least one division team. */
   open: OpenGame[]
+  /** Points for from decided games. */
+  pointsFor: number[]
+  /** Regular-season weeks not yet decided (asOfWeek through the last week). */
+  weeksLeft: number
 }
 
 type Mode = "clinch" | "alive"
@@ -107,6 +102,14 @@ function buildDivisionState(teams: Team[], division: Division, asOfWeek: number)
   const beat = Array.from({ length: n }, () => new Array<boolean>(n).fill(false))
   const open: OpenGame[] = []
   const seen = new Set<string>()
+  const pointsFor = new Array<number>(n).fill(0)
+  let lastWeek = 0
+  divTeams.forEach((team, i) => {
+    for (const game of team.schedule) {
+      lastWeek = Math.max(lastWeek, game.week)
+      if (game.result && game.week < asOfWeek) pointsFor[i] += game.result.teamScore
+    }
+  })
 
   for (const team of divTeams) {
     for (const game of team.schedule) {
@@ -131,7 +134,7 @@ function buildDivisionState(teams: Team[], division: Division, asOfWeek: number)
   }
 
   open.sort((x, y) => x.week - y.week || x.a.localeCompare(y.a))
-  return { teams: divTeams, index, wins, beat, open }
+  return { teams: divTeams, index, wins, beat, open, pointsFor, weeksLeft: Math.max(0, lastWeek - asOfWeek + 1) }
 }
 
 /**
@@ -179,6 +182,9 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
   }
 
   const rivals = [...Array(n).keys()].filter((i) => i !== t)
+  // x is certain to finish ahead of y on points for.
+  const pointsLocked = (x: number, y: number) =>
+    state.pointsFor[x] - state.pointsFor[y] > MAX_WEEKLY_SWING * state.weeksLeft
 
   // Leaf: every division game is decided, rivals still hold a range of
   // cross-division wins. Returns true when the leaf answers the question
@@ -213,15 +219,11 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
       for (const m of group) {
         if (m === t) continue
         const gm = groupWins(m)
-        // Level on head-to-head goes to points for: against the team when
-        // proving a clinch, for the team when proving it's still alive —
-        // unless a commissioner ruling has already settled that pairing.
+        // Level on head-to-head goes to points for. If the gap is too big to
+        // close, that decides it; otherwise it goes against the team when
+        // proving a clinch and for the team when proving it's still alive.
         if (gm > gT) ahead++
-        else if (gm === gT) {
-          const ts = state.teams[t].slug
-          const ms = state.teams[m].slug
-          if (mode === "clinch" ? !winsPointsTiebreak(ts, ms) : winsPointsTiebreak(ms, ts)) ahead++
-        }
+        else if (gm === gT && (mode === "clinch" ? !pointsLocked(t, m) : pointsLocked(m, t))) ahead++
       }
 
       if (mode === "clinch" ? ahead >= spots : ahead < spots) return true
