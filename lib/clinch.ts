@@ -29,10 +29,11 @@ import type { Division, Team } from "./league"
  * - With those fixed, each rival either finishes above, below, or level with
  *   the team; every combination of "who ends up level" is tried and the tie
  *   group is resolved by head-to-head.
- * - A tie that head-to-head can't separate falls to points for. The gap
- *   between two teams can move by at most MAX_WEEKLY_SWING points a week, so
- *   if one leads the other by more than that times the weeks left in the
- *   regular season, the tiebreak is treated as already decided. Any closer
+ * - A tie that head-to-head can't separate falls to points for. The trailing
+ *   team can close the gap by at most MAX_WEEKLY_SWING points in a week they
+ *   both play, MAX_BYE_SWING when only the leader is on bye, and not at all
+ *   when the trailing team is on bye. A lead bigger than the most the trailing
+ *   team can make up over the weeks left is treated as decided. Any closer
  *   and nobody can know in advance, so it goes against the team when checking
  *   a clinch and for the team when checking elimination.
  *
@@ -52,11 +53,13 @@ const DIVISIONS: Division[] = ["East", "West"]
 const MAX_PATHS = 4
 
 /**
- * Most the points-for gap between two teams is assumed to move in one week
- * (commissioner ruling, 2026-11-17). A lead bigger than this times the weeks
- * left can't be caught, so that points-for tiebreak is already decided.
+ * Most the trailing team can make up on points for in one week (commissioner
+ * ruling, 2026-11-17): 100 when both teams play, 200 when the leader is on bye
+ * and the trailing team plays. A lead bigger than the most that can be made up
+ * over the weeks left can't be caught, so that points-for tiebreak is decided.
  */
 const MAX_WEEKLY_SWING = 100
+const MAX_BYE_SWING = 200
 
 export type ClinchCondition = { week: number; winner: string; loser: string }
 export type ClinchPath = ClinchCondition[]
@@ -88,7 +91,9 @@ type DivisionState = {
   /** Points for from decided games. */
   pointsFor: number[]
   /** Regular-season weeks not yet decided (asOfWeek through the last week). */
-  weeksLeft: number
+  weeksLeft: number[]
+  /** Each team's bye weeks among `weeksLeft`. */
+  byes: Set<number>[]
 }
 
 type Mode = "clinch" | "alive"
@@ -103,13 +108,17 @@ function buildDivisionState(teams: Team[], division: Division, asOfWeek: number)
   const open: OpenGame[] = []
   const seen = new Set<string>()
   const pointsFor = new Array<number>(n).fill(0)
+  const byes = divTeams.map(() => new Set<number>())
   let lastWeek = 0
   divTeams.forEach((team, i) => {
     for (const game of team.schedule) {
       lastWeek = Math.max(lastWeek, game.week)
       if (game.result && game.week < asOfWeek) pointsFor[i] += game.result.teamScore
+      if (!known.has(game.opponent) && game.week >= asOfWeek) byes[i].add(game.week)
     }
   })
+  const weeksLeft: number[] = []
+  for (let w = asOfWeek; w <= lastWeek; w++) weeksLeft.push(w)
 
   for (const team of divTeams) {
     for (const game of team.schedule) {
@@ -134,7 +143,7 @@ function buildDivisionState(teams: Team[], division: Division, asOfWeek: number)
   }
 
   open.sort((x, y) => x.week - y.week || x.a.localeCompare(y.a))
-  return { teams: divTeams, index, wins, beat, open, pointsFor, weeksLeft: Math.max(0, lastWeek - asOfWeek + 1) }
+  return { teams: divTeams, index, wins, beat, open, pointsFor, weeksLeft, byes }
 }
 
 /**
@@ -183,8 +192,14 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
 
   const rivals = [...Array(n).keys()].filter((i) => i !== t)
   // x is certain to finish ahead of y on points for.
-  const pointsLocked = (x: number, y: number) =>
-    state.pointsFor[x] - state.pointsFor[y] > MAX_WEEKLY_SWING * state.weeksLeft
+  const pointsLocked = (x: number, y: number) => {
+    let catchUp = 0
+    for (const w of state.weeksLeft) {
+      if (state.byes[y].has(w)) continue
+      catchUp += state.byes[x].has(w) ? MAX_BYE_SWING : MAX_WEEKLY_SWING
+    }
+    return state.pointsFor[x] - state.pointsFor[y] > catchUp
+  }
 
   // Leaf: every division game is decided, rivals still hold a range of
   // cross-division wins. Returns true when the leaf answers the question
