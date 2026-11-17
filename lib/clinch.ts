@@ -49,6 +49,24 @@ const DIVISIONS: Division[] = ["East", "West"]
 /** Cap on paths printed per goal; the rest are summarised as "other combinations". */
 const MAX_PATHS = 4
 
+/**
+ * Commissioner rulings: points-for tiebreakers treated as already decided.
+ * `winner: [losers]` means that whenever `winner` is level with one of those
+ * teams on wins AND head-to-head, `winner` takes the spot. Everything else
+ * still goes against the team being checked, as described above.
+ *
+ * Added 2026-11-17 going into week 11: Pakistan Bombers (1,338.5 PF) over
+ * Fort Bragg (863.5), Chicago (937.5) and Gc7de (862.5). Remove once it no
+ * longer matters.
+ */
+const ASSUMED_POINTS_TIEBREAKS: Record<string, string[]> = {
+  "pakistan-bombers": ["fort-bragg", "chicago-zestiest", "gc7de"],
+}
+
+function winsPointsTiebreak(winner: string, loser: string): boolean {
+  return ASSUMED_POINTS_TIEBREAKS[winner]?.includes(loser) ?? false
+}
+
 export type ClinchCondition = { week: number; winner: string; loser: string }
 export type ClinchPath = ClinchCondition[]
 export type ClinchGoal = "top-seed" | "berth" | "elimination"
@@ -196,8 +214,14 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
         if (m === t) continue
         const gm = groupWins(m)
         // Level on head-to-head goes to points for: against the team when
-        // proving a clinch, for the team when proving it's still alive.
-        if (mode === "clinch" ? gm >= gT : gm > gT) ahead++
+        // proving a clinch, for the team when proving it's still alive —
+        // unless a commissioner ruling has already settled that pairing.
+        if (gm > gT) ahead++
+        else if (gm === gT) {
+          const ts = state.teams[t].slug
+          const ms = state.teams[m].slug
+          if (mode === "clinch" ? !winsPointsTiebreak(ts, ms) : winsPointsTiebreak(ms, ts)) ahead++
+        }
       }
 
       if (mode === "clinch" ? ahead >= spots : ahead < spots) return true
