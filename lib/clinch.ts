@@ -97,7 +97,7 @@ type DivisionState = {
   byes: Set<number>[]
 }
 
-type Mode = "clinch" | "alive"
+type Mode = "clinch" | "alive" | "destiny"
 
 function buildDivisionState(teams: Team[], division: Division, asOfWeek: number): DivisionState {
   const divTeams = teams.filter((t) => t.division === division)
@@ -148,8 +148,10 @@ function buildDivisionState(teams: Team[], division: Division, asOfWeek: number)
 }
 
 /**
- * clinch mode: true when team `t` is guaranteed a top-`spots` finish.
- * alive mode:  true when team `t` can still reach a top-`spots` finish.
+ * clinch mode:  true when team `t` is guaranteed a top-`spots` finish.
+ * alive mode:   true when team `t` can still reach a top-`spots` finish.
+ * destiny mode: true when winning out guarantees `t` a top-`spots` finish,
+ *               whatever anyone else does ("controls its own destiny").
  * `assumed` fixes the winner of some open games (this week's scenario).
  */
 function check(state: DivisionState, t: number, spots: number, mode: Mode, assumed: Map<OpenGame, string>): boolean {
@@ -158,6 +160,8 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
   const beat = state.beat.map((row) => row.slice())
   const cross = new Array<number>(n).fill(0)
   const intra: [number, number][] = []
+  // destiny is a clinch check in which the team wins its own games.
+  const proving = mode !== "alive"
 
   const record = (w: number, l: number) => {
     if (w >= 0) wins[w]++
@@ -173,7 +177,7 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
     }
     if (g.ia === t || g.ib === t) {
       const other = g.ia === t ? g.ib : g.ia
-      if (mode === "alive") record(t, other)
+      if (mode !== "clinch") record(t, other)
       else record(other, t)
       continue
     }
@@ -187,7 +191,7 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
   const potential = (i: number) => wins[i] + cross[i]
   for (const pair of intra) {
     const [x, y] = pair
-    const xFirst = mode === "clinch" ? potential(x) >= potential(y) : potential(x) <= potential(y)
+    const xFirst = proving ? potential(x) >= potential(y) : potential(x) <= potential(y)
     if (!xFirst) pair.reverse()
   }
 
@@ -220,7 +224,7 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
         if (inGroup.has(r)) continue
         const canAbove = wins[r] + cross[r] > wT
         const canBelow = wins[r] < wT
-        if (mode === "clinch") {
+        if (proving) {
           if (canAbove) ahead++
           else if (!canBelow) valid = false
         } else if (!canBelow) {
@@ -239,10 +243,10 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
         // close, that decides it; otherwise it goes against the team when
         // proving a clinch and for the team when proving it's still alive.
         if (gm > gT) ahead++
-        else if (gm === gT && (mode === "clinch" ? !pointsLocked(t, m) : pointsLocked(m, t))) ahead++
+        else if (gm === gT && (proving ? !pointsLocked(t, m) : pointsLocked(m, t))) ahead++
       }
 
-      if (mode === "clinch" ? ahead >= spots : ahead < spots) return true
+      if (proving ? ahead >= spots : ahead < spots) return true
     }
     return false
   }
@@ -261,7 +265,7 @@ function check(state: DivisionState, t: number, spots: number, mode: Mode, assum
   }
 
   const found = search(0)
-  return mode === "clinch" ? !found : found
+  return proving ? !found : found
 }
 
 /**
@@ -390,6 +394,8 @@ export function analyzeClinch(teams: Team[], asOfWeek: number): ClinchReport {
 export type MathOutlook = {
   playoffClinched: boolean
   playoffAlive: boolean
+  /** Winning every remaining game guarantees a playoff berth. */
+  playoffDestiny: boolean
   divisionClinched: boolean
   divisionAlive: boolean
 }
@@ -408,6 +414,7 @@ export function mathematicalOutlook(teams: Team[], asOfWeek: number): Map<string
       out.set(team.slug, {
         playoffClinched: check(state, t, PLAYOFF_SPOTS_PER_DIVISION, "clinch", none),
         playoffAlive: check(state, t, PLAYOFF_SPOTS_PER_DIVISION, "alive", none),
+        playoffDestiny: check(state, t, PLAYOFF_SPOTS_PER_DIVISION, "destiny", none),
         divisionClinched: check(state, t, 1, "clinch", none),
         divisionAlive: check(state, t, 1, "alive", none),
       })

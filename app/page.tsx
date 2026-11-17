@@ -56,17 +56,19 @@ function StandingsTable({ division }: { division: Division }) {
   // from a game being played feeds the sort (see getStandings) but is
   // deliberately not rendered — the displayed record stays the official one.
   const hasLive = rows.some((t) => t.livePointsFor > 0)
-  // Gold name = mathematically clinched a playoff berth; red = eliminated.
+  // Gold = clinched a playoff berth; green = controls its own destiny (win
+  // out and it's in, whatever anyone else does); red = eliminated.
   const outlook = mathematicalOutlook(TEAMS, CURRENT_WEEK)
   const nameClass = (slug: string) => {
     const o = outlook.get(slug)
     if (o?.playoffClinched) return "font-semibold text-gold"
     if (o && !o.playoffAlive) return "font-medium text-red-500"
+    if (o?.playoffDestiny) return "font-medium text-green-500"
     return "font-medium text-foreground"
   }
   const showKey = rows.some((t) => {
     const o = outlook.get(t.slug)
-    return o && (o.playoffClinched || !o.playoffAlive)
+    return o && (o.playoffClinched || !o.playoffAlive || o.playoffDestiny)
   })
   return (
     <div className="overflow-hidden rounded-xl border border-border bg-card/60">
@@ -122,6 +124,7 @@ function StandingsTable({ division }: { division: Division }) {
       {showKey && (
         <p className="border-t border-border/60 px-4 py-2 text-[11px] text-muted-foreground">
           <span className="font-semibold text-gold">Gold</span> = clinched playoff berth ·{" "}
+          <span className="font-medium text-green-500">Green</span> = controls own destiny ·{" "}
           <span className="font-medium text-red-500">Red</span> = eliminated
         </p>
       )}
