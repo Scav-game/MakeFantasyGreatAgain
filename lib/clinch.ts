@@ -54,12 +54,13 @@ const MAX_PATHS = 4
 
 /**
  * Most the trailing team can make up on points for in one week (commissioner
- * ruling, 2026-11-17): 90 when both teams play, 180 when the leader is on bye
- * and the trailing team plays. A lead bigger than the most that can be made up
+ * ruling, 2026-11-17): 116 when both teams play (the biggest single-game gap
+ * in the last 14 games), 179 when the leader is on bye and the trailing team
+ * plays (the highest score in those games). A lead bigger than the most that can be made up
  * over the weeks left can't be caught, so that points-for tiebreak is decided.
  */
-const MAX_WEEKLY_SWING = 90
-const MAX_BYE_SWING = 180
+const MAX_WEEKLY_SWING = 116
+const MAX_BYE_SWING = 179
 
 export type ClinchCondition = { week: number; winner: string; loser: string }
 export type ClinchPath = ClinchCondition[]
