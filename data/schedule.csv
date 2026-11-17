@@ -8,7 +8,7 @@ pakistan-bombers,6,mount-olympus,12-Oct-26,no,91.3,106.72
 pakistan-bombers,7,the-watermark,19-Oct-26,no,142.42,117.22
 pakistan-bombers,8,doobs-agency,26-Oct-26,no,124.88,134.18
 pakistan-bombers,9,amon-ra-dawgin,2-Nov-26,yes,150.96,82.88
-pakistan-bombers,10,pluto-shraazinatorz,9-Nov-26,yes,,
+pakistan-bombers,10,pluto-shraazinatorz,9-Nov-26,yes,126.86,151.24
 pakistan-bombers,11,BYE,16-Nov-26,no,,
 pakistan-bombers,12,beer,23-Nov-26,no,,
 pakistan-bombers,13,fort-bragg,30-Nov-26,yes,,
@@ -22,7 +22,7 @@ pluto-shraazinatorz,6,beer,12-Oct-26,no,76.5,86.88
 pluto-shraazinatorz,7,i-heart-gingers,19-Oct-26,no,83.42,102.16
 pluto-shraazinatorz,8,englewood-ninjas,26-Oct-26,no,98.46,117.66
 pluto-shraazinatorz,9,fort-bragg,2-Nov-26,no,88.24,111.48
-pluto-shraazinatorz,10,pakistan-bombers,9-Nov-26,no,,
+pluto-shraazinatorz,10,pakistan-bombers,9-Nov-26,no,151.24,126.86
 pluto-shraazinatorz,11,BYE,16-Nov-26,no,,
 pluto-shraazinatorz,12,the-watermark,23-Nov-26,no,,
 pluto-shraazinatorz,13,gc7de,30-Nov-26,no,,
@@ -36,7 +36,7 @@ nabers-in-paris,6,gc7de,12-Oct-26,no,103.6,135
 nabers-in-paris,7,doobs-agency,19-Oct-26,no,118.44,91.88
 nabers-in-paris,8,beer,26-Oct-26,no,121.56,102.88
 nabers-in-paris,9,englewood-ninjas,2-Nov-26,yes,92.06,101.28
-nabers-in-paris,10,vancouver-panties,9-Nov-26,no,,
+nabers-in-paris,10,vancouver-panties,9-Nov-26,no,63.32,121.92
 nabers-in-paris,11,the-watermark,16-Nov-26,no,,
 nabers-in-paris,12,amon-ra-dawgin,23-Nov-26,no,,
 nabers-in-paris,13,chicago-zestiest,30-Nov-26,yes,,
@@ -50,7 +50,7 @@ mount-olympus,6,pakistan-bombers,12-Oct-26,yes,106.72,91.3
 mount-olympus,7,gc7de,19-Oct-26,no,97.28,66.22
 mount-olympus,8,the-watermark,26-Oct-26,no,95.5,137.98
 mount-olympus,9,chicago-zestiest,2-Nov-26,no,120.8,82.84
-mount-olympus,10,doobs-agency,9-Nov-26,no,,
+mount-olympus,10,doobs-agency,9-Nov-26,no,179.42,112.96
 mount-olympus,11,vancouver-panties,16-Nov-26,yes,,
 mount-olympus,12,fort-bragg,23-Nov-26,no,,
 mount-olympus,13,englewood-ninjas,30-Nov-26,no,,
@@ -64,7 +64,7 @@ the-watermark,6,chicago-zestiest,12-Oct-26,no,105,156.72
 the-watermark,7,pakistan-bombers,19-Oct-26,yes,117.22,142.42
 the-watermark,8,mount-olympus,26-Oct-26,yes,137.98,95.5
 the-watermark,9,i-heart-gingers,2-Nov-26,no,104.96,167.38
-the-watermark,10,fort-bragg,9-Nov-26,yes,,
+the-watermark,10,fort-bragg,9-Nov-26,yes,113.58,127.12
 the-watermark,11,nabers-in-paris,16-Nov-26,yes,,
 the-watermark,12,pluto-shraazinatorz,23-Nov-26,yes,,
 the-watermark,13,doobs-agency,30-Nov-26,no,,
@@ -78,7 +78,7 @@ doobs-agency,6,englewood-ninjas,12-Oct-26,no,105.98,98.66
 doobs-agency,7,nabers-in-paris,19-Oct-26,yes,91.88,118.44
 doobs-agency,8,pakistan-bombers,26-Oct-26,yes,134.18,124.88
 doobs-agency,9,beer,2-Nov-26,no,153.04,114.06
-doobs-agency,10,mount-olympus,9-Nov-26,yes,,
+doobs-agency,10,mount-olympus,9-Nov-26,yes,112.96,179.42
 doobs-agency,11,BYE,16-Nov-26,no,,
 doobs-agency,12,i-heart-gingers,23-Nov-26,no,,
 doobs-agency,13,the-watermark,30-Nov-26,yes,,
@@ -106,7 +106,7 @@ gc7de,6,nabers-in-paris,12-Oct-26,yes,135,103.6
 gc7de,7,mount-olympus,19-Oct-26,yes,66.22,97.28
 gc7de,8,i-heart-gingers,26-Oct-26,yes,53.5,148.62
 gc7de,9,vancouver-panties,2-Nov-26,yes,103.38,100.02
-gc7de,10,amon-ra-dawgin,9-Nov-26,no,,
+gc7de,10,amon-ra-dawgin,9-Nov-26,no,112.04,107.08
 gc7de,11,chicago-zestiest,16-Nov-26,no,,
 gc7de,12,englewood-ninjas,23-Nov-26,no,,
 gc7de,13,pluto-shraazinatorz,30-Nov-26,yes,,
@@ -120,7 +120,7 @@ i-heart-gingers,6,amon-ra-dawgin,12-Oct-26,no,123.34,108.74
 i-heart-gingers,7,pluto-shraazinatorz,19-Oct-26,yes,102.16,83.42
 i-heart-gingers,8,gc7de,26-Oct-26,no,148.62,53.5
 i-heart-gingers,9,the-watermark,2-Nov-26,yes,167.38,104.96
-i-heart-gingers,10,beer,9-Nov-26,no,,
+i-heart-gingers,10,beer,9-Nov-26,no,116.6,111.14
 i-heart-gingers,11,fort-bragg,16-Nov-26,no,,
 i-heart-gingers,12,doobs-agency,23-Nov-26,yes,,
 i-heart-gingers,13,BYE,30-Nov-26,no,,
@@ -134,7 +134,7 @@ amon-ra-dawgin,6,i-heart-gingers,12-Oct-26,yes,108.74,123.34
 amon-ra-dawgin,7,fort-bragg,19-Oct-26,no,85.88,101.48
 amon-ra-dawgin,8,vancouver-panties,26-Oct-26,no,103.4,55.2
 amon-ra-dawgin,9,pakistan-bombers,2-Nov-26,no,82.88,150.96
-amon-ra-dawgin,10,gc7de,9-Nov-26,yes,,
+amon-ra-dawgin,10,gc7de,9-Nov-26,yes,107.08,112.04
 amon-ra-dawgin,11,englewood-ninjas,16-Nov-26,yes,,
 amon-ra-dawgin,12,nabers-in-paris,23-Nov-26,yes,,
 amon-ra-dawgin,13,BYE,30-Nov-26,no,,
@@ -148,7 +148,7 @@ fort-bragg,6,BYE,12-Oct-26,no,,
 fort-bragg,7,amon-ra-dawgin,19-Oct-26,yes,101.48,85.88
 fort-bragg,8,chicago-zestiest,26-Oct-26,yes,99.88,119.88
 fort-bragg,9,pluto-shraazinatorz,2-Nov-26,yes,111.48,88.24
-fort-bragg,10,the-watermark,9-Nov-26,no,,
+fort-bragg,10,the-watermark,9-Nov-26,no,127.12,113.58
 fort-bragg,11,i-heart-gingers,16-Nov-26,yes,,
 fort-bragg,12,mount-olympus,23-Nov-26,yes,,
 fort-bragg,13,pakistan-bombers,30-Nov-26,no,,
@@ -176,7 +176,7 @@ vancouver-panties,6,BYE,12-Oct-26,no,,
 vancouver-panties,7,englewood-ninjas,19-Oct-26,yes,114.26,108.72
 vancouver-panties,8,amon-ra-dawgin,26-Oct-26,yes,55.2,103.4
 vancouver-panties,9,gc7de,2-Nov-26,no,100.02,103.38
-vancouver-panties,10,nabers-in-paris,9-Nov-26,yes,,
+vancouver-panties,10,nabers-in-paris,9-Nov-26,yes,121.92,63.32
 vancouver-panties,11,mount-olympus,16-Nov-26,no,,
 vancouver-panties,12,chicago-zestiest,23-Nov-26,no,,
 vancouver-panties,13,beer,30-Nov-26,yes,,
@@ -190,7 +190,7 @@ beer,6,pluto-shraazinatorz,12-Oct-26,yes,86.88,76.5
 beer,7,chicago-zestiest,19-Oct-26,yes,133.02,100.2
 beer,8,nabers-in-paris,26-Oct-26,yes,102.88,121.56
 beer,9,doobs-agency,2-Nov-26,yes,114.06,153.04
-beer,10,i-heart-gingers,9-Nov-26,yes,,
+beer,10,i-heart-gingers,9-Nov-26,yes,111.14,116.6
 beer,11,BYE,16-Nov-26,no,,
 beer,12,pakistan-bombers,23-Nov-26,yes,,
 beer,13,vancouver-panties,30-Nov-26,no,,
