@@ -118,10 +118,13 @@ function liveRecordFor(slug, schedule) {
 /**
  * Live points for a team, by week. Only weeks whose schedule row has no final
  * result are kept, so once a real score is entered the live figure for that
- * week drops out on its own and can never be counted twice.
+ * week drops out on its own and can never be counted twice. Bye weeks are
+ * skipped too: ESPN still reports what a bye team's lineup scored, but those
+ * points never count toward points for.
  */
 function livePointsByWeek(slug, schedule) {
-  const unfinished = new Set(schedule.filter((g) => !g.result).map((g) => g.week))
+  const isBye = (g) => !g.opponent.trim() || g.opponent.trim().toUpperCase() === "BYE"
+  const unfinished = new Set(schedule.filter((g) => !g.result && !isBye(g)).map((g) => g.week))
   const byWeek = new Map()
   for (const row of liveScoresCsv) {
     if (row.teamSlug !== slug) continue
