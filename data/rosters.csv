@@ -41,11 +41,11 @@ chicago-zestiest,QB,Kirk Cousins,MIN,187.68
 chicago-zestiest,RB,Bhayshul Tuten,JAX,147.5
 chicago-zestiest,RB,Jordan Mason,MIN,32.8
 chicago-zestiest,RB,Ollie Gordon II,MIA,95.1
-chicago-zestiest,RB,TreVeyon Henderson,NE,33.8
 chicago-zestiest,WR,Emeka Egbuka,TB,78
 chicago-zestiest,WR,Germie Bernard,PIT,67.8
 chicago-zestiest,WR,Ja'Kobi Lane,BAL,27
 chicago-zestiest,WR,Jakobi Meyers,JAX,82
+chicago-zestiest,WR,Jordan Addison,MIN,53.9
 chicago-zestiest,WR,Jordyn Tyson,NO,24
 chicago-zestiest,WR,Malik Washington,MIA,89.16
 chicago-zestiest,WR,Mike Evans,SF,89
@@ -54,8 +54,8 @@ chicago-zestiest,TE,Chig Okonkwo,WSH,51.3
 chicago-zestiest,TE,Colston Loveland,CHI,83.3
 chicago-zestiest,D/ST,Steelers D/ST,PIT,66
 chicago-zestiest,K,Will Reichard,MIN,101
-chicago-zestiest,IR,Jordan Addison,MIN,53.9
 chicago-zestiest,IR,RJ Harvey,DEN,67.4
+chicago-zestiest,IR,TreVeyon Henderson,NE,33.8
 doobs-agency,QB,Jared Goff,DET,167.78
 doobs-agency,QB,Joe Burrow,CIN,232.3
 doobs-agency,RB,Alvin Kamara,NO,90.1
@@ -115,13 +115,13 @@ fort-bragg,D/ST,Bills D/ST,BUF,51
 fort-bragg,K,Ka'imi Fairbairn,HOU,99
 fort-bragg,K,Tyler Bass,BUF,98
 fort-bragg,IR,Tyrone Tracy Jr.,NYG,31.9
+gc7de,QB,Cam Ward,TEN,119.66
 gc7de,QB,Justin Herbert,LAC,96.9
 gc7de,QB,Michael Penix Jr.,ATL,108.6
 gc7de,RB,David Montgomery,HOU,45.5
 gc7de,RB,Omarion Hampton,LAC,85.7
 gc7de,RB,Quinshon Judkins,CLE,108.2
 gc7de,RB,Tyler Allgeier,ARI,92.1
-gc7de,RB,Woody Marks,HOU,78.4
 gc7de,WR,Antonio Williams,WSH,72.6
 gc7de,WR,DeVonta Smith,PHI,69
 gc7de,WR,Garrett Wilson,NYJ,129.3
@@ -134,7 +134,7 @@ gc7de,D/ST,Bears D/ST,CHI,69
 gc7de,D/ST,Buccaneers D/ST,TB,93
 gc7de,K,Cam Little,JAX,98
 gc7de,IR,Jeremiyah Love,ARI,53.4
-gc7de,IR,Marvin Harrison Jr.,HOU,37.5
+gc7de,IR,Woody Marks,HOU,78.4
 i-heart-gingers,QB,Aaron Rodgers,PIT,132.76
 i-heart-gingers,QB,Drew Lock,SEA,62.38
 i-heart-gingers,QB,Jordan Love,GB,195.82
@@ -203,8 +203,9 @@ pakistan-bombers,WR,Justin Jefferson,MIN,111.6
 pakistan-bombers,WR,Malik Nabers,NYG,137.2
 pakistan-bombers,WR,Pat Bryant,DEN,47.5
 pakistan-bombers,WR,Ryan Flournoy,DAL,102.9
-pakistan-bombers,TE,Colby Parkinson,LAR,38.7
+pakistan-bombers,WR,Tre' Harris,LAC,60.8
 pakistan-bombers,TE,Trey McBride,ARI,171.5
+pakistan-bombers,TE,Tyler Higbee,LAR,69.4
 pakistan-bombers,D/ST,Packers D/ST,GB,71
 pakistan-bombers,D/ST,Texans D/ST,HOU,46
 pakistan-bombers,K,Chris Boswell,PIT,82
@@ -248,7 +249,6 @@ the-watermark,D/ST,Lions D/ST,DET,51
 the-watermark,D/ST,Rams D/ST,LAR,64
 the-watermark,K,Chase McLaughlin,TB,99
 the-watermark,IR,Brandon Aiyuk,SF,
-the-watermark,IR,Wan'Dale Robinson,TEN,81.3
 vancouver-panties,QB,Baker Mayfield,TB,50.88
 vancouver-panties,QB,Geno Smith,NYJ,136.44
 vancouver-panties,QB,Malik Willis,MIA,105.04
