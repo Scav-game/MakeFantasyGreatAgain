@@ -99,7 +99,9 @@ englewood-ninjas,IR,Tank Bigsby,PHI,17.1
 fort-bragg,QB,Patrick Mahomes,KC,202.36
 fort-bragg,RB,Dylan Sampson,CLE,39.1
 fort-bragg,RB,Jadarian Price,SEA,42.9
+fort-bragg,RB,Jaylen Wright,MIA,8.6
 fort-bragg,RB,Kimani Vidal,LAC,54.6
+fort-bragg,RB,Ty Johnson,BUF,53.2
 fort-bragg,RB,Zach Charbonnet,SEA,24.9
 fort-bragg,WR,Deebo Samuel Sr.,SF,94
 fort-bragg,WR,Denzel Boston,CLE,105.3
@@ -107,10 +109,10 @@ fort-bragg,WR,Kayshon Boutte,HOU,74.9
 fort-bragg,WR,Keenan Allen,SF,99
 fort-bragg,WR,Keon Coleman,BUF,77.2
 fort-bragg,WR,Malachi Fields,NYG,67.5
-fort-bragg,WR,Tutu Atwell,LAR,21
+fort-bragg,WR,Treylon Burks,WSH,57
 fort-bragg,TE,Mark Andrews,BAL,78.3
 fort-bragg,D/ST,Bills D/ST,BUF,61
-fort-bragg,K,Ka'imi Fairbairn,HOU,105
+fort-bragg,D/ST,Giants D/ST,NYG,61
 fort-bragg,K,Tyler Bass,BUF,115
 gc7de,QB,Cam Ward,TEN,141.88
 gc7de,QB,Justin Herbert,LAC,119.34
@@ -222,8 +224,8 @@ pluto-shraazinatorz,TE,Juwan Johnson,NO,87.7
 pluto-shraazinatorz,TE,Travis Kelce,KC,129.7
 pluto-shraazinatorz,D/ST,Bengals D/ST,CIN,58
 pluto-shraazinatorz,D/ST,Jaguars D/ST,JAX,75
-pluto-shraazinatorz,K,Chad Ryland,ARI,93
 pluto-shraazinatorz,K,Evan McPherson,CIN,94
+pluto-shraazinatorz,K,Jason Sanders,NYJ,111
 pluto-shraazinatorz,K,Spencer Shrader,IND,113
 pluto-shraazinatorz,IR,Jake Ferguson,DAL,54.6
 the-watermark,QB,Caleb Williams,CHI,124.68
